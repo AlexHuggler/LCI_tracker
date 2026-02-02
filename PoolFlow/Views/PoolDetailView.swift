@@ -1,11 +1,14 @@
 import SwiftUI
+import SwiftData
 
 /// Detail view for a single pool showing water chemistry, LSI status,
 /// dosing recommendations, and profit tracking.
 struct PoolDetailView: View {
+    @Environment(\.modelContext) private var modelContext
     @Bindable var pool: Pool
     @State private var dosingVM = DosingViewModel()
     @State private var showDosingCalculator = false
+    @State private var showQuickLog = false
 
     var body: some View {
         ScrollView {
@@ -31,6 +34,10 @@ struct PoolDetailView: View {
                     }
             }
         }
+        .sheet(isPresented: $showQuickLog) {
+            QuickLogView(pool: pool)
+                .presentationDetents([.medium, .large])
+        }
         .onAppear {
             dosingVM.loadFromPool(pool)
         }
@@ -52,7 +59,7 @@ struct PoolDetailView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
         .background(Color(.systemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .clipShape(RoundedRectangle(cornerRadius: Theme.tileCornerRadius))
     }
 
     // MARK: - LSI Summary
@@ -65,15 +72,16 @@ struct PoolDetailView: View {
                 .foregroundStyle(.secondary)
             Text(String(format: "%+.2f", lsi.lsiValue))
                 .font(.system(size: 48, weight: .bold, design: .rounded))
-                .foregroundStyle(lsiColor(lsi.status))
+                .foregroundStyle(Theme.lsiColor(for: lsi.status))
+                .contentTransition(.numericText(value: lsi.lsiValue))
             Text(lsi.status.rawValue)
                 .fontWeight(.semibold)
-                .foregroundStyle(lsiColor(lsi.status))
+                .foregroundStyle(Theme.lsiColor(for: lsi.status))
         }
         .padding()
         .frame(maxWidth: .infinity)
         .background(Color(.systemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .clipShape(RoundedRectangle(cornerRadius: Theme.tileCornerRadius))
     }
 
     // MARK: - Chemistry Grid
@@ -107,8 +115,8 @@ struct PoolDetailView: View {
         }
         .padding()
         .frame(maxWidth: .infinity)
-        .background(color.opacity(0.08))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .background(color.opacity(Theme.cardTintOpacity))
+        .clipShape(RoundedRectangle(cornerRadius: Theme.tileCornerRadius))
     }
 
     // MARK: - Profit Card
@@ -169,13 +177,28 @@ struct PoolDetailView: View {
         .padding()
         .frame(maxWidth: .infinity)
         .background(Color(.systemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .clipShape(RoundedRectangle(cornerRadius: Theme.tileCornerRadius))
     }
 
     // MARK: - Action Buttons (large for gloved hands)
 
     private var actionButtons: some View {
         VStack(spacing: 12) {
+            // Primary: Quick Log (P1 — core workflow)
+            Button {
+                showQuickLog = true
+            } label: {
+                Label("Quick Log Service", systemImage: "checkmark.circle.fill")
+                    .font(.headline)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.green)
+                    .foregroundStyle(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: Theme.cornerRadius))
+            }
+            .frame(minHeight: Theme.buttonHeight)
+
+            // Secondary: Full Dosing Calculator
             Button {
                 showDosingCalculator = true
             } label: {
@@ -185,17 +208,9 @@ struct PoolDetailView: View {
                     .padding()
                     .background(Color.blue)
                     .foregroundStyle(.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
+                    .clipShape(RoundedRectangle(cornerRadius: Theme.cornerRadius))
             }
-            .frame(minHeight: 56)
-        }
-    }
-
-    private func lsiColor(_ status: LSICalculator.WaterCondition) -> Color {
-        switch status {
-        case .corrosive: return .blue
-        case .balanced: return .green
-        case .scaleForming: return .orange
+            .frame(minHeight: Theme.buttonHeight)
         }
     }
 }

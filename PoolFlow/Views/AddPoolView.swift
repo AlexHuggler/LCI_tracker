@@ -1,8 +1,10 @@
 import SwiftUI
 import SwiftData
+import CoreLocation
 
 /// Simple form for adding a new pool to the route.
 /// Large text fields and minimal required inputs for quick entry.
+/// Geocodes the address on save to populate lat/lon for directions (D5/F4).
 struct AddPoolView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
@@ -13,6 +15,7 @@ struct AddPoolView: View {
     @State private var poolVolume = "15000"
     @State private var serviceDayOfWeek = Calendar.current.component(.weekday, from: Date())
     @State private var notes = ""
+    @State private var isSaving = false
 
     var body: some View {
         NavigationStack {
@@ -22,6 +25,7 @@ struct AddPoolView: View {
                         .font(.title3)
                     TextField("Address", text: $address)
                         .font(.title3)
+                        .textContentType(.fullStreetAddress)
                 }
 
                 Section("Service") {
@@ -59,11 +63,11 @@ struct AddPoolView: View {
                 }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("Save") {
+                        isSaving = true
                         savePool()
-                        dismiss()
                     }
                     .fontWeight(.bold)
-                    .disabled(customerName.isEmpty || address.isEmpty)
+                    .disabled(customerName.isEmpty || address.isEmpty || isSaving)
                 }
             }
         }
@@ -79,5 +83,28 @@ struct AddPoolView: View {
             serviceDayOfWeek: serviceDayOfWeek
         )
         modelContext.insert(pool)
+
+        // Geocode the address asynchronously to populate lat/lon.
+        // The pool is already saved locally (offline-first); coordinates
+        // will update in the background when connectivity allows.
+        let geocoder = CLGeocoder()
+        let addressToGeocode = address
+        Task {
+            do {
+                let placemarks = try await geocoder.geocodeAddressString(addressToGeocode)
+                if let location = placemarks.first?.location {
+                    await MainActor.run {
+                        pool.latitude = location.coordinate.latitude
+                        pool.longitude = location.coordinate.longitude
+                    }
+                }
+            } catch {
+                // Geocoding failed (no network, bad address) — directions
+                // will fall back to address-string search in openInMaps().
+            }
+            await MainActor.run {
+                dismiss()
+            }
+        }
     }
 }

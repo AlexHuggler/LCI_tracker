@@ -21,7 +21,7 @@ final class Pool {
 
     // Service & billing
     var monthlyServiceFee: Double
-    var poolVollumeGallons: Double
+    var poolVolumeGallons: Double
     var notes: String
 
     // Scheduling
@@ -62,7 +62,7 @@ final class Pool {
         self.totalAlkalinity = totalAlkalinity
         self.totalDissolvedSolids = totalDissolvedSolids
         self.monthlyServiceFee = monthlyServiceFee
-        self.poolVollumeGallons = poolVolumeGallons
+        self.poolVolumeGallons = poolVolumeGallons
         self.notes = notes
         self.serviceDayOfWeek = serviceDayOfWeek
         self.routeOrder = routeOrder

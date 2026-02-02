@@ -12,15 +12,47 @@ struct DosingEngine {
     struct DosingRecommendation: Identifiable {
         let id = UUID()
         let chemicalName: String
-        let chemicalType: String
+        let chemicalType: ChemicalType
         let quantityOz: Double
         let quantityLabel: String
         let instruction: String
         let priority: Int // 1 = do first
-        let estimatedCostPerOz: Double
+        let costPerOz: Double
 
         var estimatedCost: Double {
-            quantityOz * estimatedCostPerOz
+            quantityOz * costPerOz
+        }
+    }
+
+    // MARK: - Cost Lookup
+
+    /// Resolves the actual cost-per-oz from inventory, falling back to industry defaults.
+    struct CostLookup {
+        private let inventoryByType: [ChemicalType: Double]
+
+        /// Default industry-average costs when no inventory is present.
+        static let defaults: [ChemicalType: Double] = [
+            .acid:       0.05,
+            .base:       0.09,
+            .calcium:    0.07,
+            .alkalinity: 0.04,
+            .chlorine:   0.02,
+            .stabilizer: 0.12,
+        ]
+
+        init(inventory: [ChemicalInventory] = []) {
+            var map: [ChemicalType: Double] = [:]
+            for item in inventory {
+                // Use the first matching item per type (cheapest-first would be a future upgrade)
+                if map[item.chemicalType] == nil {
+                    map[item.chemicalType] = item.costPerOz
+                }
+            }
+            self.inventoryByType = map
+        }
+
+        func costPerOz(for type: ChemicalType) -> Double {
+            inventoryByType[type] ?? Self.defaults[type] ?? 0.0
         }
     }
 
@@ -51,7 +83,8 @@ struct DosingEngine {
         currentPH: Double,
         currentTA: Double,
         currentCH: Double,
-        poolVolumeGallons: Double
+        poolVolumeGallons: Double,
+        costs: CostLookup = CostLookup()
     ) -> [DosingRecommendation] {
         let volumeFactor = poolVolumeGallons / 10_000.0
         var recommendations: [DosingRecommendation] = []
@@ -62,12 +95,12 @@ struct DosingEngine {
             return [
                 DosingRecommendation(
                     chemicalName: "None",
-                    chemicalType: "none",
+                    chemicalType: .none,
                     quantityOz: 0,
                     quantityLabel: "—",
                     instruction: "Water is balanced. No chemical adjustment needed.",
                     priority: 0,
-                    estimatedCostPerOz: 0
+                    costPerOz: 0
                 )
             ]
         }
@@ -84,12 +117,12 @@ struct DosingEngine {
 
                 recommendations.append(DosingRecommendation(
                     chemicalName: "Soda Ash (Sodium Carbonate)",
-                    chemicalType: "base",
+                    chemicalType: .base,
                     quantityOz: rounded,
                     quantityLabel: formatQuantity(rounded),
-                    instruction: "Add \(formatQuantity(rounded)) of Soda Ash to raise pH from \(String(format: "%.1f", currentPH)) → 7.4",
+                    instruction: "Add \(formatQuantity(rounded)) of Soda Ash to raise pH from \(String(format: "%.1f", currentPH)) to 7.4",
                     priority: priority,
-                    estimatedCostPerOz: 0.09
+                    costPerOz: costs.costPerOz(for: .base)
                 ))
                 priority += 1
             }
@@ -103,12 +136,12 @@ struct DosingEngine {
 
                 recommendations.append(DosingRecommendation(
                     chemicalName: "Sodium Bicarbonate (Baking Soda)",
-                    chemicalType: "alkalinity",
+                    chemicalType: .alkalinity,
                     quantityOz: rounded,
                     quantityLabel: formatQuantity(rounded),
-                    instruction: "Add \(formatQuantity(rounded)) of Sodium Bicarbonate to raise alkalinity from \(Int(currentTA)) → 80 ppm",
+                    instruction: "Add \(formatQuantity(rounded)) of Sodium Bicarbonate to raise alkalinity from \(Int(currentTA)) to 80 ppm",
                     priority: priority,
-                    estimatedCostPerOz: 0.04
+                    costPerOz: costs.costPerOz(for: .alkalinity)
                 ))
                 priority += 1
             }
@@ -122,12 +155,12 @@ struct DosingEngine {
 
                 recommendations.append(DosingRecommendation(
                     chemicalName: "Calcium Chloride (Hardness Up)",
-                    chemicalType: "calcium",
+                    chemicalType: .calcium,
                     quantityOz: rounded,
                     quantityLabel: formatQuantity(rounded),
-                    instruction: "Add \(formatQuantity(rounded)) of Calcium Chloride to raise hardness from \(Int(currentCH)) → 200 ppm",
+                    instruction: "Add \(formatQuantity(rounded)) of Calcium Chloride to raise hardness from \(Int(currentCH)) to 200 ppm",
                     priority: priority,
-                    estimatedCostPerOz: 0.07
+                    costPerOz: costs.costPerOz(for: .calcium)
                 ))
                 priority += 1
             }
@@ -144,34 +177,31 @@ struct DosingEngine {
 
                 recommendations.append(DosingRecommendation(
                     chemicalName: "Muriatic Acid (31.45%)",
-                    chemicalType: "acid",
+                    chemicalType: .acid,
                     quantityOz: rounded,
                     quantityLabel: formatQuantity(rounded),
-                    instruction: "Add \(formatQuantity(rounded)) of Muriatic Acid to lower pH from \(String(format: "%.1f", currentPH)) → 7.6",
+                    instruction: "Add \(formatQuantity(rounded)) of Muriatic Acid to lower pH from \(String(format: "%.1f", currentPH)) to 7.6",
                     priority: priority,
-                    estimatedCostPerOz: 0.05
+                    costPerOz: costs.costPerOz(for: .acid)
                 ))
                 priority += 1
             }
 
             // Step 2: Lower alkalinity if above 120 ppm (use acid — lowers both pH and TA)
             if currentTA > 120 && currentPH <= 7.6 {
-                // If pH is already OK, we still need acid to lower TA.
-                // Aerate after to raise pH back without raising TA.
                 let taExcess = currentTA - 120.0
                 let incrementsNeeded = taExcess / 10.0
-                // ~26 oz acid per 10k gal also lowers TA by ~10 ppm
                 let ozNeeded = incrementsNeeded * muriaticAcidOzPer10kGalPerPointTwoPH * 0.5 * volumeFactor
                 let rounded = ceilToNearest(ozNeeded, nearest: 1.0)
 
                 recommendations.append(DosingRecommendation(
                     chemicalName: "Muriatic Acid (31.45%)",
-                    chemicalType: "acid",
+                    chemicalType: .acid,
                     quantityOz: rounded,
                     quantityLabel: formatQuantity(rounded),
-                    instruction: "Add \(formatQuantity(rounded)) of Muriatic Acid to lower alkalinity from \(Int(currentTA)) → 120 ppm, then aerate to restore pH",
+                    instruction: "Add \(formatQuantity(rounded)) of Muriatic Acid to lower alkalinity from \(Int(currentTA)) to 120 ppm, then aerate to restore pH",
                     priority: priority,
-                    estimatedCostPerOz: 0.05
+                    costPerOz: costs.costPerOz(for: .acid)
                 ))
                 priority += 1
             }
@@ -180,12 +210,12 @@ struct DosingEngine {
             if currentCH > 400 {
                 recommendations.append(DosingRecommendation(
                     chemicalName: "Partial Drain & Refill",
-                    chemicalType: "dilution",
+                    chemicalType: .dilution,
                     quantityOz: 0,
                     quantityLabel: "—",
                     instruction: "Calcium at \(Int(currentCH)) ppm is too high for chemical correction. Recommend partial drain and fresh water refill to dilute below 400 ppm.",
                     priority: priority,
-                    estimatedCostPerOz: 0.0
+                    costPerOz: 0.0
                 ))
                 priority += 1
             }
@@ -198,23 +228,23 @@ struct DosingEngine {
                 let nudgeOz = ceilToNearest(3.0 * volumeFactor, nearest: 1.0)
                 recommendations.append(DosingRecommendation(
                     chemicalName: "Soda Ash (Sodium Carbonate)",
-                    chemicalType: "base",
+                    chemicalType: .base,
                     quantityOz: nudgeOz,
                     quantityLabel: formatQuantity(nudgeOz),
                     instruction: "Add \(formatQuantity(nudgeOz)) of Soda Ash to nudge pH up slightly. Retest in 4 hours.",
                     priority: 1,
-                    estimatedCostPerOz: 0.09
+                    costPerOz: costs.costPerOz(for: .base)
                 ))
             } else {
                 let nudgeOz = ceilToNearest(8.0 * volumeFactor, nearest: 1.0)
                 recommendations.append(DosingRecommendation(
                     chemicalName: "Muriatic Acid (31.45%)",
-                    chemicalType: "acid",
+                    chemicalType: .acid,
                     quantityOz: nudgeOz,
                     quantityLabel: formatQuantity(nudgeOz),
                     instruction: "Add \(formatQuantity(nudgeOz)) of Muriatic Acid to nudge pH down slightly. Retest in 4 hours.",
                     priority: 1,
-                    estimatedCostPerOz: 0.05
+                    costPerOz: costs.costPerOz(for: .acid)
                 ))
             }
         }
@@ -223,14 +253,15 @@ struct DosingEngine {
     }
 
     /// Convenience: generate recommendations directly from a Pool model.
-    static func recommend(for pool: Pool) -> [DosingRecommendation] {
+    static func recommend(for pool: Pool, costs: CostLookup = CostLookup()) -> [DosingRecommendation] {
         let lsi = LSICalculator.calculate(for: pool)
         return recommend(
             lsiResult: lsi,
             currentPH: pool.pH,
             currentTA: pool.totalAlkalinity,
             currentCH: pool.calciumHardness,
-            poolVolumeGallons: pool.poolVollumeGallons
+            poolVolumeGallons: pool.poolVolumeGallons,
+            costs: costs
         )
     }
 
