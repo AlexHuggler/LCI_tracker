@@ -41,7 +41,7 @@ struct LSICalculator {
         }
     }
 
-    enum WaterCondition: String {
+    enum WaterCondition: String, Equatable {
         case corrosive = "Corrosive"
         case balanced = "Balanced"
         case scaleForming = "Scale-Forming"

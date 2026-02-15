@@ -9,6 +9,7 @@ struct PoolListView: View {
     @State private var viewModel = PoolListViewModel()
     @Query(sort: \Pool.routeOrder) private var allPools: [Pool]
     @State private var showingAddPool = false
+    @State private var showingQuickLog: Pool?
 
     private var todaysPools: [Pool] {
         allPools.filter { $0.serviceDayOfWeek == viewModel.selectedDayOfWeek }
@@ -34,6 +35,10 @@ struct PoolListView: View {
             .sheet(isPresented: $showingAddPool) {
                 AddPoolView()
             }
+            .sheet(item: $showingQuickLog) { pool in
+                QuickLogView(pool: pool)
+                    .presentationDetents([.medium, .large])
+            }
         }
     }
 
@@ -48,7 +53,12 @@ struct PoolListView: View {
                     let isSelected = day == viewModel.selectedDayOfWeek
 
                     Button {
-                        viewModel.selectedDayOfWeek = day
+                        withAnimation(.snappy(duration: 0.2)) {
+                            viewModel.selectedDayOfWeek = day
+                        }
+                        #if canImport(UIKit)
+                        Theme.hapticLight()
+                        #endif
                     } label: {
                         Text(label)
                             .font(.headline)
@@ -82,6 +92,14 @@ struct PoolListView: View {
                             PoolDetailView(pool: pool)
                         } label: {
                             poolRow(pool)
+                        }
+                        .swipeActions(edge: .trailing) {
+                            Button {
+                                showingQuickLog = pool
+                            } label: {
+                                Label("Log", systemImage: "checkmark.circle")
+                            }
+                            .tint(.green)
                         }
                     }
                     .onMove { source, destination in
@@ -118,10 +136,10 @@ struct PoolListView: View {
             Text(String(format: "%+.1f", lsi.lsiValue))
                 .font(.subheadline)
                 .fontWeight(.bold)
-                .foregroundStyle(lsiRowColor(lsi.status))
+                .foregroundStyle(Theme.lsiColor(for: lsi.status))
                 .padding(.horizontal, 8)
                 .padding(.vertical, 4)
-                .background(lsiRowColor(lsi.status).opacity(0.15))
+                .background(Theme.lsiColor(for: lsi.status).opacity(Theme.badgeTintOpacity))
                 .clipShape(Capsule())
 
             // Directions button — large for gloved hands
@@ -133,7 +151,7 @@ struct PoolListView: View {
                     .foregroundStyle(.green)
             }
             .buttonStyle(.plain)
-            .frame(width: 44, height: 44)
+            .frame(width: Theme.minTouchTarget, height: Theme.minTouchTarget)
         }
         .padding(.vertical, 4)
     }
@@ -141,23 +159,23 @@ struct PoolListView: View {
     // MARK: - Maps
 
     private func openInMaps(_ pool: Pool) {
-        let coordinate = CLLocationCoordinate2D(
-            latitude: pool.latitude,
-            longitude: pool.longitude
-        )
-        let placemark = MKPlacemark(coordinate: coordinate)
-        let mapItem = MKMapItem(placemark: placemark)
-        mapItem.name = pool.customerName
-        mapItem.openInMaps(launchOptions: [
-            MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving
-        ])
-    }
-
-    private func lsiRowColor(_ status: LSICalculator.WaterCondition) -> Color {
-        switch status {
-        case .corrosive: return .blue
-        case .balanced: return .green
-        case .scaleForming: return .orange
+        if pool.latitude == 0.0 && pool.longitude == 0.0 {
+            // No coordinates — open Apple Maps with address search instead
+            let query = pool.address.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+            if let url = URL(string: "http://maps.apple.com/?daddr=\(query)&dirflg=d") {
+                UIApplication.shared.open(url)
+            }
+        } else {
+            let coordinate = CLLocationCoordinate2D(
+                latitude: pool.latitude,
+                longitude: pool.longitude
+            )
+            let placemark = MKPlacemark(coordinate: coordinate)
+            let mapItem = MKMapItem(placemark: placemark)
+            mapItem.name = pool.customerName
+            mapItem.openInMaps(launchOptions: [
+                MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving
+            ])
         }
     }
 }

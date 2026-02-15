@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 /// Main dosing calculator screen.
 ///
@@ -7,7 +8,11 @@ import SwiftUI
 /// - Large touch targets for gloved/wet hands ("One-Tap Rule")
 /// - Minimal depth — all readings and results on one scrollable screen
 struct DosingCalculatorView: View {
+    @Environment(\.modelContext) private var modelContext
     @State private var viewModel = DosingViewModel()
+    @Query private var inventory: [ChemicalInventory]
+    @State private var showSavedConfirmation = false
+
     var pool: Pool?
 
     var body: some View {
@@ -16,6 +21,10 @@ struct DosingCalculatorView: View {
                 lsiGaugeSection
                 waterReadingsSection
                 recommendationsSection
+
+                if pool != nil {
+                    saveButton
+                }
             }
             .padding()
         }
@@ -26,10 +35,24 @@ struct DosingCalculatorView: View {
             if let pool {
                 viewModel.loadFromPool(pool)
             }
+            viewModel.loadCosts(from: inventory)
+        }
+        .onChange(of: viewModel.lsiResult.lsiValue) {
+            viewModel.checkHapticTrigger()
+        }
+        .overlay {
+            if showSavedConfirmation {
+                savedToast
+                    .transition(.move(edge: .top).combined(with: .opacity))
+            }
         }
     }
 
     // MARK: - LSI Gauge
+
+    private var lsiColor: Color {
+        Theme.lsiColor(for: viewModel.lsiResult.status)
+    }
 
     private var lsiGaugeSection: some View {
         VStack(spacing: 8) {
@@ -41,6 +64,8 @@ struct DosingCalculatorView: View {
             Text(String(format: "%+.2f", viewModel.lsiResult.lsiValue))
                 .font(.system(size: 64, weight: .bold, design: .rounded))
                 .foregroundStyle(lsiColor)
+                .contentTransition(.numericText(value: viewModel.lsiResult.lsiValue))
+                .animation(.snappy(duration: 0.25), value: viewModel.lsiResult.lsiValue)
 
             Text(viewModel.lsiResult.status.rawValue.uppercased())
                 .font(.title3)
@@ -48,8 +73,9 @@ struct DosingCalculatorView: View {
                 .foregroundStyle(lsiColor)
                 .padding(.horizontal, 16)
                 .padding(.vertical, 6)
-                .background(lsiColor.opacity(0.15))
+                .background(lsiColor.opacity(Theme.badgeTintOpacity))
                 .clipShape(Capsule())
+                .animation(.easeInOut(duration: 0.3), value: viewModel.lsiResult.status)
 
             Text(viewModel.lsiResult.status.description)
                 .font(.subheadline)
@@ -60,7 +86,7 @@ struct DosingCalculatorView: View {
         .padding()
         .frame(maxWidth: .infinity)
         .background(Color(.systemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: Theme.cardCornerRadius))
     }
 
     // MARK: - Water Readings Input
@@ -128,7 +154,7 @@ struct DosingCalculatorView: View {
         }
         .padding()
         .background(Color(.systemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: Theme.cardCornerRadius))
     }
 
     // MARK: - Recommendations
@@ -155,7 +181,49 @@ struct DosingCalculatorView: View {
         }
         .padding()
         .background(Color(.systemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: Theme.cardCornerRadius))
+    }
+
+    // MARK: - Save Button (F3)
+
+    private var saveButton: some View {
+        Button {
+            guard let pool else { return }
+            viewModel.saveToPool(pool)
+            _ = viewModel.createServiceEvent(for: pool, in: modelContext)
+            #if canImport(UIKit)
+            Theme.hapticSuccess()
+            #endif
+            withAnimation(.spring(duration: 0.4)) {
+                showSavedConfirmation = true
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                withAnimation { showSavedConfirmation = false }
+            }
+        } label: {
+            Label("Save Readings & Log Service", systemImage: "checkmark.circle.fill")
+                .font(.headline)
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(Color.green)
+                .foregroundStyle(.white)
+                .clipShape(RoundedRectangle(cornerRadius: Theme.cornerRadius))
+        }
+        .frame(minHeight: Theme.buttonHeight)
+    }
+
+    private var savedToast: some View {
+        VStack {
+            Text("Service Logged")
+                .font(.headline)
+                .foregroundStyle(.white)
+                .padding(.horizontal, 24)
+                .padding(.vertical, 12)
+                .background(Capsule().fill(.green))
+                .shadow(radius: 8)
+            Spacer()
+        }
+        .padding(.top, 8)
     }
 
     // MARK: - Components
@@ -178,35 +246,45 @@ struct DosingCalculatorView: View {
                     .font(.title2)
                     .fontWeight(.bold)
                     .monospacedDigit()
+                    .contentTransition(.numericText(value: value.wrappedValue))
+                    .animation(.snappy(duration: 0.2), value: value.wrappedValue)
             }
 
             HStack(spacing: 12) {
-                // Large minus button for gloved hands
                 Button {
                     let new = value.wrappedValue - step
-                    if new >= range.lowerBound { value.wrappedValue = new }
+                    if new >= range.lowerBound {
+                        value.wrappedValue = new
+                        #if canImport(UIKit)
+                        Theme.hapticLight()
+                        #endif
+                    }
                 } label: {
                     Image(systemName: "minus.circle.fill")
                         .font(.title)
                         .foregroundStyle(.blue)
                 }
                 .buttonStyle(.plain)
-                .frame(width: 44, height: 44)
+                .frame(width: Theme.minTouchTarget, height: Theme.minTouchTarget)
 
                 Slider(value: value, in: range, step: step)
-                    .tint(sliderTint(for: label))
+                    .tint(Theme.sliderTint(for: label))
 
-                // Large plus button for gloved hands
                 Button {
                     let new = value.wrappedValue + step
-                    if new <= range.upperBound { value.wrappedValue = new }
+                    if new <= range.upperBound {
+                        value.wrappedValue = new
+                        #if canImport(UIKit)
+                        Theme.hapticLight()
+                        #endif
+                    }
                 } label: {
                     Image(systemName: "plus.circle.fill")
                         .font(.title)
                         .foregroundStyle(.blue)
                 }
                 .buttonStyle(.plain)
-                .frame(width: 44, height: 44)
+                .frame(width: Theme.minTouchTarget, height: Theme.minTouchTarget)
             }
         }
         .padding(.vertical, 4)
@@ -214,14 +292,13 @@ struct DosingCalculatorView: View {
 
     private func recommendationCard(_ rec: DosingEngine.DosingRecommendation) -> some View {
         HStack(alignment: .top, spacing: 12) {
-            // Priority badge
             if rec.priority > 0 {
                 Text("\(rec.priority)")
                     .font(.headline)
                     .fontWeight(.bold)
                     .foregroundStyle(.white)
                     .frame(width: 32, height: 32)
-                    .background(Circle().fill(priorityColor(rec.chemicalType)))
+                    .background(Circle().fill(Theme.chemicalColor(for: rec.chemicalType)))
             }
 
             VStack(alignment: .leading, spacing: 4) {
@@ -239,38 +316,7 @@ struct DosingCalculatorView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(priorityColor(rec.chemicalType).opacity(0.08))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
-    }
-
-    // MARK: - Styling
-
-    private var lsiColor: Color {
-        switch viewModel.lsiResult.status {
-        case .corrosive: return .blue
-        case .balanced: return .green
-        case .scaleForming: return .orange
-        }
-    }
-
-    private func sliderTint(for label: String) -> Color {
-        switch label {
-        case "pH": return .purple
-        case "Temp": return .red
-        case "Calcium": return .cyan
-        case "Alkalinity": return .teal
-        default: return .gray
-        }
-    }
-
-    private func priorityColor(_ chemType: String) -> Color {
-        switch chemType {
-        case "acid": return .red
-        case "base": return .blue
-        case "calcium": return .cyan
-        case "alkalinity": return .teal
-        case "dilution": return .orange
-        default: return .gray
-        }
+        .background(Theme.chemicalColor(for: rec.chemicalType).opacity(Theme.cardTintOpacity))
+        .clipShape(RoundedRectangle(cornerRadius: Theme.tileCornerRadius))
     }
 }

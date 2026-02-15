@@ -28,8 +28,25 @@ struct PoolFlowApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    seedDefaultInventoryIfNeeded()
+                }
         }
         .modelContainer(sharedModelContainer)
+    }
+
+    /// Seeds the default chemical catalog on first launch (D7/F5).
+    /// Only inserts if the inventory table is empty so we never duplicate.
+    private func seedDefaultInventoryIfNeeded() {
+        let context = sharedModelContainer.mainContext
+        let descriptor = FetchDescriptor<ChemicalInventory>()
+        let count = (try? context.fetchCount(descriptor)) ?? 0
+
+        if count == 0 {
+            for chemical in ChemicalInventory.defaultCatalog() {
+                context.insert(chemical)
+            }
+        }
     }
 }
 

@@ -1,6 +1,33 @@
 import Foundation
 import SwiftData
 
+/// Type-safe chemical categories. Stored as raw String for SwiftData compatibility.
+enum ChemicalType: String, Codable, CaseIterable, Identifiable {
+    case acid
+    case base
+    case calcium
+    case alkalinity
+    case chlorine
+    case stabilizer
+    case dilution
+    case none
+
+    var id: String { rawValue }
+
+    var displayName: String {
+        switch self {
+        case .acid:        return "Acid"
+        case .base:        return "Base"
+        case .calcium:     return "Calcium"
+        case .alkalinity:  return "Alkalinity"
+        case .chlorine:    return "Chlorine"
+        case .stabilizer:  return "Stabilizer"
+        case .dilution:    return "Dilution"
+        case .none:        return "None"
+        }
+    }
+}
+
 /// Represents a chemical product the operator carries on the truck.
 /// Tracks cost-per-unit for profit calculations and provides
 /// the link between dosing recommendations and actual products.
@@ -8,7 +35,7 @@ import SwiftData
 final class ChemicalInventory {
     var id: UUID
     var name: String
-    var chemicalType: String // "acid", "base", "calcium", "alkalinity", "chlorine", "stabilizer"
+    var chemicalTypeRaw: String
     var costPerOz: Double
     var currentStockOz: Double
     var unitLabel: String // "oz", "lbs", "gallons"
@@ -17,9 +44,14 @@ final class ChemicalInventory {
     @Relationship(deleteRule: .nullify, inverse: \ChemicalDose.chemical)
     var doses: [ChemicalDose] = []
 
+    var chemicalType: ChemicalType {
+        get { ChemicalType(rawValue: chemicalTypeRaw) ?? .none }
+        set { chemicalTypeRaw = newValue.rawValue }
+    }
+
     init(
         name: String,
-        chemicalType: String,
+        chemicalType: ChemicalType,
         costPerOz: Double,
         currentStockOz: Double = 0.0,
         unitLabel: String = "oz",
@@ -27,7 +59,7 @@ final class ChemicalInventory {
     ) {
         self.id = UUID()
         self.name = name
-        self.chemicalType = chemicalType
+        self.chemicalTypeRaw = chemicalType.rawValue
         self.costPerOz = costPerOz
         self.currentStockOz = currentStockOz
         self.unitLabel = unitLabel
@@ -43,7 +75,7 @@ extension ChemicalInventory {
         [
             ChemicalInventory(
                 name: "Muriatic Acid (31.45%)",
-                chemicalType: "acid",
+                chemicalType: .acid,
                 costPerOz: 0.05,
                 currentStockOz: 256.0, // 2 gallons
                 unitLabel: "oz",
@@ -51,7 +83,7 @@ extension ChemicalInventory {
             ),
             ChemicalInventory(
                 name: "Soda Ash (Sodium Carbonate)",
-                chemicalType: "base",
+                chemicalType: .base,
                 costPerOz: 0.09,
                 currentStockOz: 160.0, // 10 lbs
                 unitLabel: "oz",
@@ -59,7 +91,7 @@ extension ChemicalInventory {
             ),
             ChemicalInventory(
                 name: "Calcium Chloride (Hardness Up)",
-                chemicalType: "calcium",
+                chemicalType: .calcium,
                 costPerOz: 0.07,
                 currentStockOz: 400.0, // 25 lbs
                 unitLabel: "oz",
@@ -67,7 +99,7 @@ extension ChemicalInventory {
             ),
             ChemicalInventory(
                 name: "Sodium Bicarbonate (Alkalinity Up)",
-                chemicalType: "alkalinity",
+                chemicalType: .alkalinity,
                 costPerOz: 0.04,
                 currentStockOz: 320.0, // 20 lbs
                 unitLabel: "oz",
@@ -75,7 +107,7 @@ extension ChemicalInventory {
             ),
             ChemicalInventory(
                 name: "Trichlor Tabs (Stabilized Chlorine)",
-                chemicalType: "chlorine",
+                chemicalType: .chlorine,
                 costPerOz: 0.18,
                 currentStockOz: 400.0, // 25 lbs
                 unitLabel: "oz",
@@ -83,7 +115,7 @@ extension ChemicalInventory {
             ),
             ChemicalInventory(
                 name: "Liquid Chlorine (12.5% Sodium Hypochlorite)",
-                chemicalType: "chlorine",
+                chemicalType: .chlorine,
                 costPerOz: 0.02,
                 currentStockOz: 512.0, // 4 gallons
                 unitLabel: "oz",
@@ -91,7 +123,7 @@ extension ChemicalInventory {
             ),
             ChemicalInventory(
                 name: "Cyanuric Acid (Stabilizer)",
-                chemicalType: "stabilizer",
+                chemicalType: .stabilizer,
                 costPerOz: 0.12,
                 currentStockOz: 64.0, // 4 lbs
                 unitLabel: "oz",
