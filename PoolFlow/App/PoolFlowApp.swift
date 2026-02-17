@@ -51,13 +51,29 @@ struct PoolFlowApp: App {
 }
 
 /// Root view with tab navigation. Large icons for wet/gloved hands.
+/// C7: Badge shows count of unserviced pools for today.
 struct ContentView: View {
+    @Query(sort: \Pool.routeOrder) private var allPools: [Pool]
+
+    private var todayWeekday: Int {
+        Calendar.current.component(.weekday, from: Date())
+    }
+
+    private var unservicedTodayCount: Int {
+        let todayPools = allPools.filter { $0.serviceDayOfWeek == todayWeekday }
+        let unserviced = todayPools.filter { pool in
+            !pool.serviceEvents.contains { Calendar.current.isDateInToday($0.timestamp) }
+        }
+        return unserviced.count
+    }
+
     var body: some View {
         TabView {
             PoolListView()
                 .tabItem {
                     Label("Route", systemImage: "map.fill")
                 }
+                .badge(unservicedTodayCount > 0 ? unservicedTodayCount : 0)
 
             NavigationStack {
                 DosingCalculatorView()
