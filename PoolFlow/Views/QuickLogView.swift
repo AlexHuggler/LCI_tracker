@@ -30,6 +30,39 @@ struct QuickLogView: View {
     // Confirmation
     @State private var didSave = false
 
+    // A4: Range bounds for steppers
+    private static let phRange: ClosedRange<Double> = 6.0...9.0
+    private static let tempRange: ClosedRange<Double> = 32...120
+    private static let calciumRange: ClosedRange<Double> = 0...1000
+    private static let alkalinityRange: ClosedRange<Double> = 0...500
+
+    // A7: Single computed LSI to avoid double computation
+    private var currentLSI: LSICalculator.LSIResult {
+        LSICalculator.calculate(
+            pH: pH,
+            waterTempF: waterTempF,
+            calciumHardness: calciumHardness,
+            totalAlkalinity: totalAlkalinity,
+            tds: pool.totalDissolvedSolids
+        )
+    }
+
+    private var currentRecommendations: [DosingEngine.DosingRecommendation] {
+        let costs = DosingEngine.CostLookup(inventory: inventory)
+        return DosingEngine.recommend(
+            lsiResult: currentLSI,
+            currentPH: pH,
+            currentTA: totalAlkalinity,
+            currentCH: calciumHardness,
+            poolVolumeGallons: pool.poolVolumeGallons,
+            costs: costs
+        )
+    }
+
+    private var totalEstimatedCost: Double {
+        currentRecommendations.reduce(0.0) { $0 + $1.estimatedCost }
+    }
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -63,16 +96,6 @@ struct QuickLogView: View {
 
     // MARK: - LSI Badge
 
-    private var currentLSI: LSICalculator.LSIResult {
-        LSICalculator.calculate(
-            pH: pH,
-            waterTempF: waterTempF,
-            calciumHardness: calciumHardness,
-            totalAlkalinity: totalAlkalinity,
-            tds: pool.totalDissolvedSolids
-        )
-    }
-
     private var lsiBadge: some View {
         HStack(spacing: 12) {
             VStack(alignment: .leading) {
@@ -95,19 +118,22 @@ struct QuickLogView: View {
         .clipShape(RoundedRectangle(cornerRadius: Theme.tileCornerRadius))
     }
 
-    // MARK: - Readings Grid (compact for half-sheet)
+    // MARK: - Readings Grid (A4: with range bounds)
 
     private var readingsGrid: some View {
         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-            compactStepper("pH", value: $pH, step: 0.1, format: "%.1f")
-            compactStepper("Temp °F", value: $waterTempF, step: 2, format: "%.0f")
-            compactStepper("Calcium", value: $calciumHardness, step: 25, format: "%.0f")
-            compactStepper("Alk", value: $totalAlkalinity, step: 10, format: "%.0f")
+            compactStepper("pH", value: $pH, range: Self.phRange, step: 0.1, format: "%.1f")
+            compactStepper("Temp °F", value: $waterTempF, range: Self.tempRange, step: 2, format: "%.0f")
+            compactStepper("Calcium", value: $calciumHardness, range: Self.calciumRange, step: 25, format: "%.0f")
+            compactStepper("Alk", value: $totalAlkalinity, range: Self.alkalinityRange, step: 10, format: "%.0f")
         }
     }
 
-    private func compactStepper(_ label: String, value: Binding<Double>, step: Double, format: String) -> some View {
-        VStack(spacing: 6) {
+    private func compactStepper(_ label: String, value: Binding<Double>, range: ClosedRange<Double>, step: Double, format: String) -> some View {
+        let atMin = value.wrappedValue <= range.lowerBound
+        let atMax = value.wrappedValue >= range.upperBound
+
+        return VStack(spacing: 6) {
             Text(label)
                 .font(.caption)
                 .foregroundStyle(.secondary)
@@ -119,28 +145,44 @@ struct QuickLogView: View {
                 .animation(.snappy(duration: 0.2), value: value.wrappedValue)
             HStack(spacing: 16) {
                 Button {
-                    value.wrappedValue -= step
-                    #if canImport(UIKit)
-                    Theme.hapticLight()
-                    #endif
+                    let new = value.wrappedValue - step
+                    if new >= range.lowerBound {
+                        value.wrappedValue = new
+                        #if canImport(UIKit)
+                        Theme.hapticLight()
+                        #endif
+                    } else {
+                        #if canImport(UIKit)
+                        Theme.hapticError()
+                        #endif
+                    }
                 } label: {
                     Image(systemName: "minus.circle.fill")
                         .font(.title2)
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(atMin ? .gray : .blue)
                 }
                 .frame(width: Theme.minTouchTarget, height: Theme.minTouchTarget)
+                .disabled(atMin)
 
                 Button {
-                    value.wrappedValue += step
-                    #if canImport(UIKit)
-                    Theme.hapticLight()
-                    #endif
+                    let new = value.wrappedValue + step
+                    if new <= range.upperBound {
+                        value.wrappedValue = new
+                        #if canImport(UIKit)
+                        Theme.hapticLight()
+                        #endif
+                    } else {
+                        #if canImport(UIKit)
+                        Theme.hapticError()
+                        #endif
+                    }
                 } label: {
                     Image(systemName: "plus.circle.fill")
                         .font(.title2)
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(atMax ? .gray : .blue)
                 }
                 .frame(width: Theme.minTouchTarget, height: Theme.minTouchTarget)
+                .disabled(atMax)
             }
             .buttonStyle(.plain)
         }
@@ -149,10 +191,10 @@ struct QuickLogView: View {
         .clipShape(RoundedRectangle(cornerRadius: Theme.tileCornerRadius))
     }
 
-    // MARK: - Photo
+    // MARK: - Photo (A5: with preview)
 
     private var photoSection: some View {
-        HStack {
+        VStack(spacing: 8) {
             PhotosPicker(selection: $selectedPhoto, matching: .images) {
                 Label(
                     photoData != nil ? "Photo Added" : "Add Proof Photo",
@@ -172,39 +214,51 @@ struct QuickLogView: View {
                     }
                 }
             }
+
+            // A5: Photo thumbnail preview
+            if let photoData, let uiImage = UIImage(data: photoData) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 80)
+                    .frame(maxWidth: .infinity)
+                    .clipShape(RoundedRectangle(cornerRadius: Theme.tileCornerRadius))
+            }
         }
     }
 
-    // MARK: - Notes
+    // MARK: - Notes (A6: multi-line)
 
     private var notesField: some View {
-        TextField("Notes (optional)", text: $techNotes)
-            .font(.body)
-            .padding()
-            .background(Color(.systemBackground))
-            .clipShape(RoundedRectangle(cornerRadius: Theme.tileCornerRadius))
+        ZStack(alignment: .topLeading) {
+            TextEditor(text: $techNotes)
+                .font(.body)
+                .frame(minHeight: 72, maxHeight: 120)
+                .scrollContentBackground(.hidden)
+
+            if techNotes.isEmpty {
+                Text("Notes (optional)")
+                    .font(.body)
+                    .foregroundStyle(.tertiary)
+                    .padding(.top, 8)
+                    .padding(.leading, 5)
+                    .allowsHitTesting(false)
+            }
+        }
+        .padding()
+        .background(Color(.systemBackground))
+        .clipShape(RoundedRectangle(cornerRadius: Theme.tileCornerRadius))
     }
 
-    // MARK: - Cost Summary
+    // MARK: - Cost Summary (A7: uses shared computation)
 
     private var costSummary: some View {
-        let costs = DosingEngine.CostLookup(inventory: inventory)
-        let recs = DosingEngine.recommend(
-            lsiResult: currentLSI,
-            currentPH: pH,
-            currentTA: totalAlkalinity,
-            currentCH: calciumHardness,
-            poolVolumeGallons: pool.poolVolumeGallons,
-            costs: costs
-        )
-        let total = recs.reduce(0.0) { $0 + $1.estimatedCost }
-
-        return HStack {
+        HStack {
             Text("Estimated Chemical Cost")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
             Spacer()
-            Text("$\(String(format: "%.2f", total))")
+            Text("$\(String(format: "%.2f", totalEstimatedCost))")
                 .font(.headline)
                 .fontWeight(.bold)
                 .foregroundStyle(.orange)
@@ -251,17 +305,7 @@ struct QuickLogView: View {
     }
 
     private func saveServiceEvent() {
-        let costs = DosingEngine.CostLookup(inventory: inventory)
-        let recs = DosingEngine.recommend(
-            lsiResult: currentLSI,
-            currentPH: pH,
-            currentTA: totalAlkalinity,
-            currentCH: calciumHardness,
-            poolVolumeGallons: pool.poolVolumeGallons,
-            costs: costs
-        )
-        let totalCost = recs.reduce(0.0) { $0 + $1.estimatedCost }
-
+        // A7: Reuse the shared computed cost instead of recalculating
         let event = ServiceEvent(
             pool: pool,
             waterTempF: waterTempF,
@@ -270,7 +314,7 @@ struct QuickLogView: View {
             totalAlkalinity: totalAlkalinity,
             lsiValue: currentLSI.lsiValue,
             photoData: photoData,
-            totalChemicalCost: totalCost,
+            totalChemicalCost: totalEstimatedCost,
             techNotes: techNotes
         )
         modelContext.insert(event)

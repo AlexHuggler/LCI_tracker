@@ -12,6 +12,7 @@ struct DosingCalculatorView: View {
     @State private var viewModel = DosingViewModel()
     @Query private var inventory: [ChemicalInventory]
     @State private var showSavedConfirmation = false
+    @State private var cardsAppeared = false
 
     var pool: Pool?
 
@@ -31,11 +32,33 @@ struct DosingCalculatorView: View {
         .background(Color(.systemGroupedBackground))
         .navigationTitle("Dosing Calculator")
         .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            // B4: Reset button when opened from a pool
+            if pool != nil {
+                ToolbarItem(placement: .secondaryAction) {
+                    Button {
+                        if let pool {
+                            viewModel.loadFromPool(pool)
+                            #if canImport(UIKit)
+                            Theme.hapticMedium()
+                            #endif
+                        }
+                    } label: {
+                        Label("Reset", systemImage: "arrow.counterclockwise")
+                    }
+                }
+            }
+        }
         .onAppear {
             if let pool {
                 viewModel.loadFromPool(pool)
             }
             viewModel.loadCosts(from: inventory)
+
+            // C2: Trigger staggered entrance
+            withAnimation(.easeOut(duration: 0.4).delay(0.1)) {
+                cardsAppeared = true
+            }
         }
         .onChange(of: viewModel.lsiResult.lsiValue) {
             viewModel.checkHapticTrigger()
@@ -87,6 +110,9 @@ struct DosingCalculatorView: View {
         .frame(maxWidth: .infinity)
         .background(Color(.systemBackground))
         .clipShape(RoundedRectangle(cornerRadius: Theme.cardCornerRadius))
+        // C2: Staggered entrance
+        .opacity(cardsAppeared ? 1 : 0)
+        .offset(y: cardsAppeared ? 0 : 20)
     }
 
     // MARK: - Water Readings Input
@@ -155,6 +181,10 @@ struct DosingCalculatorView: View {
         .padding()
         .background(Color(.systemBackground))
         .clipShape(RoundedRectangle(cornerRadius: Theme.cardCornerRadius))
+        // C2: Staggered entrance
+        .opacity(cardsAppeared ? 1 : 0)
+        .offset(y: cardsAppeared ? 0 : 20)
+        .animation(.easeOut(duration: 0.4).delay(0.15), value: cardsAppeared)
     }
 
     // MARK: - Recommendations
@@ -175,13 +205,24 @@ struct DosingCalculatorView: View {
                 }
             }
 
-            ForEach(viewModel.recommendations) { rec in
+            ForEach(Array(viewModel.recommendations.enumerated()), id: \.element.id) { index, rec in
                 recommendationCard(rec)
+                    // C2: Staggered entrance per card
+                    .opacity(cardsAppeared ? 1 : 0)
+                    .offset(y: cardsAppeared ? 0 : 15)
+                    .animation(
+                        .easeOut(duration: 0.35).delay(0.25 + Double(index) * 0.05),
+                        value: cardsAppeared
+                    )
             }
         }
         .padding()
         .background(Color(.systemBackground))
         .clipShape(RoundedRectangle(cornerRadius: Theme.cardCornerRadius))
+        // C2: Staggered entrance
+        .opacity(cardsAppeared ? 1 : 0)
+        .offset(y: cardsAppeared ? 0 : 20)
+        .animation(.easeOut(duration: 0.4).delay(0.2), value: cardsAppeared)
     }
 
     // MARK: - Save Button (F3)

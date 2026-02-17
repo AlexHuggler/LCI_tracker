@@ -62,12 +62,16 @@ struct AddPoolView: View {
                     Button("Cancel") { dismiss() }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Save") {
-                        isSaving = true
-                        savePool()
+                    if isSaving {
+                        ProgressView()
+                    } else {
+                        Button("Save") {
+                            isSaving = true
+                            savePool()
+                        }
+                        .fontWeight(.bold)
+                        .disabled(customerName.isEmpty || address.isEmpty)
                     }
-                    .fontWeight(.bold)
-                    .disabled(customerName.isEmpty || address.isEmpty || isSaving)
                 }
             }
         }
@@ -83,6 +87,14 @@ struct AddPoolView: View {
             serviceDayOfWeek: serviceDayOfWeek
         )
         modelContext.insert(pool)
+
+        // A10: Haptic confirmation on save
+        #if canImport(UIKit)
+        Theme.hapticSuccess()
+        #endif
+
+        // A10: Dismiss immediately — geocoding continues in background
+        dismiss()
 
         // Geocode the address asynchronously to populate lat/lon.
         // The pool is already saved locally (offline-first); coordinates
@@ -101,9 +113,6 @@ struct AddPoolView: View {
             } catch {
                 // Geocoding failed (no network, bad address) — directions
                 // will fall back to address-string search in openInMaps().
-            }
-            await MainActor.run {
-                dismiss()
             }
         }
     }
