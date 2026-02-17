@@ -297,11 +297,7 @@ struct PoolDetailView: View {
     }
 
     private func serviceEventRow(_ event: ServiceEvent) -> some View {
-        let lsiStatus = LSICalculator.LSIResult(
-            lsiValue: event.lsiValue,
-            temperatureFactor: 0, calciumFactor: 0, alkalinityFactor: 0,
-            pH: event.pH, tdsFactor: 0
-        ).status
+        let lsiStatus = LSICalculator.WaterCondition.from(lsiValue: event.lsiValue)
 
         return HStack(spacing: 10) {
             // Date

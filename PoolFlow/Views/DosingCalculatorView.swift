@@ -238,7 +238,8 @@ struct DosingCalculatorView: View {
             withAnimation(.spring(duration: 0.4)) {
                 showSavedConfirmation = true
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            Task {
+                try? await Task.sleep(for: .seconds(2))
                 withAnimation { showSavedConfirmation = false }
             }
         } label: {

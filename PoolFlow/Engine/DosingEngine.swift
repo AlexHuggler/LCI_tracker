@@ -10,7 +10,11 @@ struct DosingEngine {
     // MARK: - Dosing Recommendation
 
     struct DosingRecommendation: Identifiable {
-        let id = UUID()
+        /// MED-3: Stable identity derived from content rather than random UUID.
+        /// Prevents SwiftUI ForEach from destroying/recreating views on every recomputation.
+        var id: String {
+            "\(chemicalType.rawValue)-\(priority)"
+        }
         let chemicalName: String
         let chemicalType: ChemicalType
         let quantityOz: Double

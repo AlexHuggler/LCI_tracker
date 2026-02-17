@@ -93,6 +93,12 @@ struct AddPoolView: View {
         Theme.hapticSuccess()
         #endif
 
+        // CRIT-3: Capture the pool's persistent ID and the container before dismiss.
+        // After dismiss, the view's @Environment(\.modelContext) may be invalid,
+        // so we resolve the pool via the container's mainContext instead.
+        let poolID = pool.persistentModelID
+        let container = modelContext.container
+
         // A10: Dismiss immediately — geocoding continues in background
         dismiss()
 
@@ -106,8 +112,13 @@ struct AddPoolView: View {
                 let placemarks = try await geocoder.geocodeAddressString(addressToGeocode)
                 if let location = placemarks.first?.location {
                     await MainActor.run {
-                        pool.latitude = location.coordinate.latitude
-                        pool.longitude = location.coordinate.longitude
+                        // Re-fetch the pool from the container's mainContext —
+                        // safe even after the AddPoolView has been dismissed.
+                        let context = container.mainContext
+                        if let savedPool = context.model(for: poolID) as? Pool {
+                            savedPool.latitude = location.coordinate.latitude
+                            savedPool.longitude = location.coordinate.longitude
+                        }
                     }
                 }
             } catch {

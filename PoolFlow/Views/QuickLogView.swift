@@ -210,7 +210,9 @@ struct QuickLogView: View {
             .onChange(of: selectedPhoto) { _, newItem in
                 Task {
                     if let data = try? await newItem?.loadTransferable(type: Data.self) {
-                        photoData = data
+                        // HIGH-5: Downsample to max 1200px to reduce memory pressure.
+                        // Full-res iPhone photos (12MP) consume 30-50 MB in memory.
+                        photoData = Self.downsample(data: data, maxPixelSize: 1200)
                     }
                 }
             }
@@ -290,8 +292,7 @@ struct QuickLogView: View {
 
     private func prefill() {
         if let lastEvent = pool.serviceEvents
-            .sorted(by: { $0.timestamp > $1.timestamp })
-            .first {
+            .max(by: { $0.timestamp < $1.timestamp }) {
             pH = lastEvent.pH
             waterTempF = lastEvent.waterTempF
             calciumHardness = lastEvent.calciumHardness
@@ -333,7 +334,8 @@ struct QuickLogView: View {
         withAnimation(.spring(duration: 0.3)) {
             didSave = true
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        Task {
+            try? await Task.sleep(for: .seconds(1))
             dismiss()
         }
     }
@@ -349,5 +351,27 @@ struct QuickLogView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.ultraThinMaterial)
+    }
+
+    // HIGH-5: Downsample image data to reduce memory pressure.
+    // Uses ImageIO for efficient thumbnail generation without decoding full image.
+    private static func downsample(data: Data, maxPixelSize: CGFloat) -> Data {
+        let options: [CFString: Any] = [
+            kCGImageSourceShouldCache: false
+        ]
+        guard let source = CGImageSourceCreateWithData(data as CFData, options as CFDictionary) else {
+            return data
+        }
+        let downsampleOptions: [CFString: Any] = [
+            kCGImageSourceCreateThumbnailFromImageAlways: true,
+            kCGImageSourceThumbnailMaxPixelSize: maxPixelSize,
+            kCGImageSourceCreateThumbnailWithTransform: true,
+            kCGImageSourceShouldCacheImmediately: true,
+        ]
+        guard let thumbnail = CGImageSourceCreateThumbnailAtIndex(source, 0, downsampleOptions as CFDictionary) else {
+            return data
+        }
+        let uiImage = UIImage(cgImage: thumbnail)
+        return uiImage.jpegData(compressionQuality: 0.8) ?? data
     }
 }

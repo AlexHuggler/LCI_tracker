@@ -41,10 +41,18 @@ struct LSICalculator {
         }
     }
 
-    enum WaterCondition: String, Equatable {
+    enum WaterCondition: String, Equatable, Hashable, Codable {
         case corrosive = "Corrosive"
         case balanced = "Balanced"
         case scaleForming = "Scale-Forming"
+
+        /// Resolve a WaterCondition directly from an LSI value
+        /// without constructing a full LSIResult.
+        static func from(lsiValue: Double) -> WaterCondition {
+            if lsiValue < -0.3 { return .corrosive }
+            if lsiValue > 0.3  { return .scaleForming }
+            return .balanced
+        }
 
         var emoji: String {
             switch self {
@@ -147,15 +155,15 @@ struct LSICalculator {
     /// If the input falls below the first entry, returns the first factor.
     /// If above the last entry, returns the last factor.
     static func interpolate(value: Double, table: [(Double, Double)]) -> Double {
-        guard !table.isEmpty else { return 0.0 }
+        guard let first = table.first, let last = table.last else { return 0.0 }
 
         // Below range
-        if value <= table.first!.0 {
-            return table.first!.1
+        if value <= first.0 {
+            return first.1
         }
         // Above range
-        if value >= table.last!.0 {
-            return table.last!.1
+        if value >= last.0 {
+            return last.1
         }
 
         // Find bracketing entries and interpolate
@@ -168,7 +176,7 @@ struct LSICalculator {
             }
         }
 
-        return table.last!.1
+        return last.1
     }
 
     // MARK: - Factor Lookups
