@@ -48,8 +48,8 @@ struct PoolListView: View {
     // A3: Last serviced date
     private func lastServiceDate(_ pool: Pool) -> Date? {
         pool.serviceEvents
-            .sorted(by: { $0.timestamp > $1.timestamp })
-            .first?.timestamp
+            .max(by: { $0.timestamp < $1.timestamp })?
+            .timestamp
     }
 
     private func lastServiceLabel(_ pool: Pool) -> String? {
@@ -122,7 +122,8 @@ struct PoolListView: View {
                     withAnimation(.spring(duration: 0.5)) {
                         showRouteComplete = true
                     }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                    Task {
+                        try? await Task.sleep(for: .seconds(2))
                         withAnimation(.easeOut(duration: 0.3)) {
                             showRouteComplete = false
                         }

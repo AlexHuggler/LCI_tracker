@@ -21,7 +21,34 @@ struct PoolFlowApp: App {
         do {
             return try ModelContainer(for: schema, configurations: [config])
         } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+            // CRIT-2: Schema migration failed — attempt recovery instead of crashing.
+            // Delete the corrupt store and create a fresh one. Data is lost, but the
+            // app remains usable. Log the error for diagnostics.
+            print("[PoolFlow] ModelContainer failed: \(error). Attempting store reset.")
+
+            if let storeURL = config.url {
+                let related = [
+                    storeURL,
+                    storeURL.appendingPathExtension("wal"),
+                    storeURL.appendingPathExtension("shm"),
+                ]
+                for url in related {
+                    try? FileManager.default.removeItem(at: url)
+                }
+            }
+
+            do {
+                return try ModelContainer(for: schema, configurations: [config])
+            } catch {
+                // Last resort: in-memory container so the app doesn't crash.
+                print("[PoolFlow] Store reset also failed: \(error). Falling back to in-memory.")
+                let memoryConfig = ModelConfiguration(
+                    schema: schema,
+                    isStoredInMemoryOnly: true
+                )
+                // swiftlint:disable:next force_try
+                return try! ModelContainer(for: schema, configurations: [memoryConfig])
+            }
         }
     }()
 

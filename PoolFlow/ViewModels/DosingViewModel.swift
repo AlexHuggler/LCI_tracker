@@ -51,8 +51,7 @@ final class DosingViewModel {
     /// Prefers the most recent ServiceEvent readings (F2) over the Pool's static defaults.
     func loadFromPool(_ pool: Pool) {
         if let lastEvent = pool.serviceEvents
-            .sorted(by: { $0.timestamp > $1.timestamp })
-            .first {
+            .max(by: { $0.timestamp < $1.timestamp }) {
             // Use last service visit readings as the starting point
             waterTempF = lastEvent.waterTempF
             pH = lastEvent.pH
