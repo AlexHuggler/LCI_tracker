@@ -1,34 +1,31 @@
-- title: "Today's Route"
-  description: "Filter by service day, reorder stops, one-tap directions, and live completion tracking."
-  icon: "map-pin"
-
-- title: "LSI Calculator"
-  description: "Real-time Langelier Saturation Index with CYA correction and instant water balance assessment."
-  icon: "beaker"
-
-- title: "Smart Dosing"
-  description: "Dosing recommendations scaled to pool volume. Inventory-aware with cost estimates included."
+- title: "Real-Time LSI Calculator"
+  description: "Instant Langelier Saturation Index with CYA-corrected alkalinity. Watch the LSI animate as you slide your readings."
   icon: "calculator"
 
-- title: "Quick Log"
-  description: "Pre-filled readings from last visit, fast adjustments, save-and-done workflow, and proof-of-service photos."
+- title: "Smart Chemical Dosing"
+  description: "Exact dosing recommendations calculated from your actual chemical inventory and costs. Your chemicals, your prices."
+  icon: "beaker"
+
+- title: "Sub-2-Minute Quick Log"
+  description: "Log a pool visit in under 2 minutes. Pre-filled readings from last visit, one-tap completion, proof-of-service photos."
   icon: "clipboard-check"
 
-- title: "Profit Analytics"
-  description: "Spot money-loser pools, sort by worst margin, and see highest chemical spend at a glance."
-  icon: "chart-bar"
-  pro: true
-
 - title: "Route Optimization"
-  description: "Optimize for drive time or distance. Works with coordinates and flags unresolved stops."
-  icon: "arrows-right-left"
-  pro: true
+  description: "Save hours every week. Nearest-neighbor + 2-opt algorithm with Apple Maps driving time estimates."
+  icon: "map"
+
+- title: "Profit Analytics"
+  description: "See which pools make money and which ones lose it. 30% chemical cost threshold flags money-losers instantly."
+  icon: "chart-bar"
 
 - title: "Chemical Inventory"
-  description: "Track inventory levels with low-stock alerts. Tie chemical usage to costs per pool."
-  icon: "archive-box"
+  description: "Track every chemical on your truck. Low-stock alerts. Cost-per-unit tied to your dosing recommendations."
+  icon: "archive"
 
-- title: "iCloud Sync"
-  description: "Cross-device sync and safe backups. Still works fully offline."
-  icon: "cloud-arrow-up"
-  pro: true
+- title: "Offline-First"
+  description: "No internet required poolside. All data stored locally via SwiftData. Works in dead zones, basements, remote properties."
+  icon: "wifi-off"
+
+- title: "Wet-Hand UX"
+  description: "56-point touch targets and haptic feedback. Designed for gloved and wet hands — built for the field from day one."
+  icon: "hand"

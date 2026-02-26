@@ -3,13 +3,13 @@
   period: "forever"
   highlighted: false
   badge: ""
-  pool_limit: 5
   features:
-    - "Route workflow (Today's Route)"
-    - "LSI calculator with CYA correction"
-    - "Basic service logging"
-    - "Service history"
-    - "Chemical inventory tracking"
+    - "Up to 5 pools"
+    - "LSI Calculator with CYA correction"
+    - "Chemical dosing recommendations"
+    - "Service logging with photos"
+    - "Basic route management"
+    - "Equipment tracking"
   cta: "Download Free"
   cta_url: "#"
 
@@ -24,9 +24,10 @@
     - "Unlimited pools"
     - "Route optimization"
     - "Profit analytics"
-    - "iCloud sync & backup"
-    - "PDF reports & CSV export"
-    - "Advanced data tools"
+    - "Chemical inventory with low-stock alerts"
+    - "CSV import/export & PDF reports"
+    - "Full backup/restore"
+    - "iCloud sync across devices"
   cta: "Start Free Trial"
   cta_url: "#"
 
@@ -34,16 +35,10 @@
   price: "$299.99"
   period: "/year"
   highlighted: false
-  badge: "Save 17%"
+  badge: "Save $59.89"
   trial: "7-day free trial"
-  monthly_equivalent: "$24.99/mo"
   features:
-    - "Everything in Free, plus:"
-    - "Unlimited pools"
-    - "Route optimization"
-    - "Profit analytics"
-    - "iCloud sync & backup"
-    - "PDF reports & CSV export"
-    - "Advanced data tools"
+    - "Everything in Pro Monthly"
+    - "Best value — 2 months free"
   cta: "Start Free Trial"
   cta_url: "#"

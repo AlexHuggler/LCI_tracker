@@ -1,23 +1,23 @@
 - question: "Does PoolFlow work without internet?"
-  answer: "Yes, PoolFlow is offline-first. All core features work without connectivity. Data syncs when you're back online (Pro)."
+  answer: "Yes. PoolFlow is built offline-first. All your data is stored locally on your iPhone using Apple's SwiftData framework. The app works fully at poolside with no cell service required. Internet is only needed for iCloud sync (Pro feature) and address autocomplete."
 
-- question: "What is LSI and why does it matter?"
-  answer: "The Langelier Saturation Index measures water balance. Corrosive water damages equipment; scale-forming water clogs filters. PoolFlow calculates LSI in real time with CYA correction so you can dose accurately."
+- question: "What is the Langelier Saturation Index (LSI)?"
+  answer: "The LSI is a calculated number that predicts whether pool water will tend to dissolve (corrode) or deposit (scale) calcium carbonate. PoolFlow calculates LSI in real-time with CYA correction, factoring in pH, temperature, calcium hardness, total alkalinity, TDS, and cyanuric acid. An LSI between -0.3 and +0.3 is considered balanced."
 
-- question: "Can I import my customer list?"
-  answer: "Yes. PoolFlow supports CSV import for pools and customer data. You can also export service reports as PDF."
+- question: "What's included in the free tier?"
+  answer: "The free tier includes up to 5 pools, the full LSI calculator with CYA correction, chemical dosing recommendations, service logging with photos, basic route management, and equipment tracking. No credit card required."
 
-- question: "Does it support iCloud sync?"
-  answer: "Yes, with Pro. Your data syncs across devices and backs up automatically. Free tier stores everything locally on-device."
+- question: "Can I import my existing customer list?"
+  answer: "Yes. PoolFlow supports CSV import for your customer and pool data. You can import names, addresses, service fees, and pool specifications from a spreadsheet."
 
-- question: "What's included in Pro?"
-  answer: "Route optimization, profit analytics, iCloud sync/backup, advanced data tools, and unlimited pools. Free tier includes route workflow, LSI calculator, and basic logging for up to 5 pools."
+- question: "How does route optimization save time?"
+  answer: "PoolFlow uses a nearest-neighbor seeding algorithm improved with 2-opt optimization, combined with real Apple Maps driving time estimates. Most technicians save 30-60 minutes per day by optimizing their route order."
 
-- question: "Can I export reports for customers or accounting?"
-  answer: "Yes. Generate PDF service reports and CSV data exports for accounting, insurance, or customer documentation."
+- question: "Is my data stored on a server?"
+  answer: "No. PoolFlow does not operate a backend server. All data is stored locally on your device. If you upgrade to Pro, you can optionally enable iCloud sync, which stores data in your personal iCloud account — never on our servers."
 
-- question: "How does profit analytics identify money-loser pools?"
-  answer: "PoolFlow tracks chemical costs, drive time, and service frequency per pool. It flags accounts where costs exceed revenue and ranks pools by profitability."
+- question: "What happens if I cancel my subscription?"
+  answer: "If you cancel Pro, you keep access until the end of your billing period. After that, you return to the free tier (5 pool limit). All your data remains on your device — nothing is deleted."
 
-- question: "Can I use Apple Maps for directions?"
-  answer: "Yes. One-tap directions open in Apple Maps with optimized stop order."
+- question: "Does PoolFlow support multiple languages?"
+  answer: "Yes. PoolFlow supports English, Spanish, French, Portuguese, and German. The app detects your device language automatically, or you can override it in Settings."
