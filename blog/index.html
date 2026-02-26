@@ -1,0 +1,70 @@
+---
+layout: default
+title: "Blog — Pool Service Guides & Industry Resources"
+description: "Expert guides on pool water chemistry, regulatory compliance, route optimization, and business management for pool service technicians."
+permalink: /blog/
+---
+
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <!-- Heading -->
+  <div class="text-center mb-12">
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">Pool Service Guides & Resources</h1>
+    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Expert guides for pool service professionals — from water chemistry to business growth.</p>
+  </div>
+
+  <!-- Category Filter Bar -->
+  <div class="flex flex-wrap justify-center gap-3 mb-12">
+    <button class="px-4 py-2 rounded-full text-sm font-medium bg-blue-600 text-white" data-category="all">All</button>
+    <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors" data-category="regulatory-guidance">Regulatory Guidance</button>
+    <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors" data-category="water-chemistry">Water Chemistry</button>
+    <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors" data-category="business">Business</button>
+    <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors" data-category="customer-management">Customer Management</button>
+  </div>
+
+  <!-- Posts Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {% for post in site.posts %}
+    <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+      <div class="p-6">
+        <!-- Categories -->
+        <div class="flex flex-wrap gap-2 mb-3">
+          {% for category in post.categories %}
+          <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">{{ category }}</span>
+          {% endfor %}
+        </div>
+
+        <!-- Title -->
+        <h2 class="text-xl font-semibold text-gray-900 mb-2">
+          <a href="{{ post.url | relative_url }}" class="hover:text-blue-600 transition-colors">{{ post.title }}</a>
+        </h2>
+
+        <!-- Date -->
+        <time class="text-sm text-gray-500 block mb-3" datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%B %-d, %Y" }}
+        </time>
+
+        <!-- Summary -->
+        <p class="text-gray-600 text-sm mb-4">
+          {% if post.executive_summary %}
+            {{ post.executive_summary | truncate: 150 }}
+          {% else %}
+            {{ post.excerpt | strip_html | truncate: 150 }}
+          {% endif %}
+        </p>
+
+        <!-- Read More -->
+        <a href="{{ post.url | relative_url }}" class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors">
+          Read More &rarr;
+        </a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <!-- Empty state -->
+  {% if site.posts.size == 0 %}
+  <div class="text-center py-16">
+    <p class="text-gray-500 text-lg">No posts yet. Check back soon for expert pool service guides.</p>
+  </div>
+  {% endif %}
+</section>

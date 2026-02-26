@@ -1,0 +1,67 @@
+/* Critical styles - prevent FOUC */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero gradient */
+.hero-gradient {
+  background: linear-gradient(135deg, #0071e3 0%, #00b4d8 50%, #34c759 100%);
+}
+
+/* Pricing card hover */
+.pricing-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Executive summary block */
+.executive-summary {
+  border-left: 4px solid #0071e3;
+  background: #eff6ff;
+  padding: 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin-bottom: 2rem;
+}
+
+/* FAQ accordion */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-answer.open {
+  max-height: 500px;
+}
+
+/* Feature icon circles */
+.feature-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: #eff6ff;
+  color: #0071e3;
+}
+
+/* Prose overrides for article content */
+.prose h2 {
+  scroll-margin-top: 5rem;
+}
+
+/* Mobile menu animation */
+.mobile-menu {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #0071e3, #00b4d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

@@ -1,0 +1,31 @@
+- title: "Real-Time LSI Calculator"
+  description: "Instant Langelier Saturation Index with CYA-corrected alkalinity. Watch the LSI animate as you slide your readings."
+  icon: "calculator"
+
+- title: "Smart Chemical Dosing"
+  description: "Exact dosing recommendations calculated from your actual chemical inventory and costs. Your chemicals, your prices."
+  icon: "beaker"
+
+- title: "Sub-2-Minute Quick Log"
+  description: "Log a pool visit in under 2 minutes. Pre-filled readings from last visit, one-tap completion, proof-of-service photos."
+  icon: "clipboard-check"
+
+- title: "Route Optimization"
+  description: "Save hours every week. Nearest-neighbor + 2-opt algorithm with Apple Maps driving time estimates."
+  icon: "map"
+
+- title: "Profit Analytics"
+  description: "See which pools make money and which ones lose it. 30% chemical cost threshold flags money-losers instantly."
+  icon: "chart-bar"
+
+- title: "Chemical Inventory"
+  description: "Track every chemical on your truck. Low-stock alerts. Cost-per-unit tied to your dosing recommendations."
+  icon: "archive"
+
+- title: "Offline-First"
+  description: "No internet required poolside. All data stored locally via SwiftData. Works in dead zones, basements, remote properties."
+  icon: "wifi-off"
+
+- title: "Wet-Hand UX"
+  description: "56-point touch targets and haptic feedback. Designed for gloved and wet hands — built for the field from day one."
+  icon: "hand"

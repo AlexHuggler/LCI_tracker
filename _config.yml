@@ -1,0 +1,60 @@
+title: "PoolFlow — Pool Service Management App"
+description: "The all-in-one iOS app for pool service technicians. Real-time LSI calculator, chemical dosing, route optimization, and profit analytics. Offline-first. Built for the field."
+url: "https://poolflowapp.com"
+baseurl: ""
+lang: "en"
+
+markdown: kramdown
+permalink: /blog/:title/
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+author:
+  name: "Alex Huggler"
+  email: "alexhuggler@gmail.com"
+
+twitter:
+  card: "summary_large_image"
+
+logo: "/assets/images/poolflow-icon-512.png"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "PoolFlow Team"
+      image: "/assets/images/og-image.png"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+exclude:
+  - README.md
+  - project_map.md
+  - 01_App_Blueprint.md
+  - 02_Product_Strategy.md
+  - 03_Feature_Inventory.md
+  - 04_Functional_Scope.md
+  - 05_Customer_Journeys.md
+  - ISSUE_LOG.md
+  - PoolFlow/
+  - PoolFlowTests/
+  - "PoolFlow 1024x1024.png"
+  - "PoolFlow Name and Icon - translucent.png"
+  - privacy-policy.html
+  - terms-of-service.html
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - "*.swift"
+  - "*.xcodeproj"
+  - "*.xcworkspace"

@@ -1,0 +1,44 @@
+- tier: "Free"
+  price: "$0"
+  period: "forever"
+  highlighted: false
+  badge: ""
+  features:
+    - "Up to 5 pools"
+    - "LSI Calculator with CYA correction"
+    - "Chemical dosing recommendations"
+    - "Service logging with photos"
+    - "Basic route management"
+    - "Equipment tracking"
+  cta: "Download Free"
+  cta_url: "#"
+
+- tier: "Pro Monthly"
+  price: "$29.99"
+  period: "/month"
+  highlighted: true
+  badge: "Most Popular"
+  trial: "7-day free trial"
+  features:
+    - "Everything in Free, plus:"
+    - "Unlimited pools"
+    - "Route optimization"
+    - "Profit analytics"
+    - "Chemical inventory with low-stock alerts"
+    - "CSV import/export & PDF reports"
+    - "Full backup/restore"
+    - "iCloud sync across devices"
+  cta: "Start Free Trial"
+  cta_url: "#"
+
+- tier: "Pro Annual"
+  price: "$299.99"
+  period: "/year"
+  highlighted: false
+  badge: "Save $59.89"
+  trial: "7-day free trial"
+  features:
+    - "Everything in Pro Monthly"
+    - "Best value — 2 months free"
+  cta: "Start Free Trial"
+  cta_url: "#"
