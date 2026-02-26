@@ -10,7 +10,7 @@ sitemap: true
 
 Effective Date: February 24, 2026 · Last Updated: February 24, 2026
 
-PoolFlow ("we", "our", or "the app") is developed by Alex Huggler. This Privacy Policy explains how information is collected, used, and protected when you use the PoolFlow iOS application.
+PoolFlow ("we", "our", or "the app") is developed by Huggler Holdings LLC.. This Privacy Policy explains how information is collected, used, and protected when you use the PoolFlow iOS application.
 
 ## 1. Information We Collect
 
@@ -80,4 +80,4 @@ We may update this Privacy Policy from time to time. Changes will be posted on t
 
 If you have questions about this Privacy Policy, contact us at:
 
-[alexhuggler@gmail.com](mailto:alexhuggler@gmail.com)
+[contact@poolflowapp.com](mailto:contact@poolflowapp.com)

@@ -1,17 +1,31 @@
-<!-- Favicon -->
-<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/poolflow-icon-192.png">
-<link rel="apple-touch-icon" href="/assets/images/poolflow-icon-192.png">
+<!-- Character encoding & viewport -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0c2340">
+
+<!-- SEO: Title & Description -->
+<title>{{ page.title | default: site.title | escape }}</title>
+<meta name="description" content="{{ page.description | default: site.description | escape }}">
 
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 
+<!-- Favicon & Touch Icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/poolflow-icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="/assets/images/poolflow-icon-512.png">
+
 <!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+
+<!-- Google Fonts: Inter 400, 500, 600, 700 -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Open Graph Meta Tags -->
 <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
 <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
-<meta property="og:image" content="{{ page.image | default: '/assets/images/poolflow-icon-512.png' | absolute_url }}">
+<meta property="og:image" content="{{ '/assets/images/og-image.png' | absolute_url }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
 <meta property="og:site_name" content="PoolFlow">
@@ -20,4 +34,48 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
 <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
-<meta name="twitter:image" content="{{ page.image | default: '/assets/images/poolflow-icon-512.png' | absolute_url }}">
+<meta name="twitter:image" content="{{ '/assets/images/og-image.png' | absolute_url }}">
+
+<!-- Tailwind CSS CDN with custom PoolFlow config -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'pf-navy': '#0c2340',
+          'pf-blue': '#1e5f8a',
+          'pf-teal': '#0d7377',
+          'pf-aqua': '#7ec8d9',
+          'pf-ice': '#edf4f8',
+          'pf-snow': '#f7fafb',
+        },
+        fontFamily: {
+          'sans': ['Inter', 'SF Pro Display', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+<!-- Custom Stylesheet -->
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<!-- Jekyll SEO Tag -->
+{% seo %}
+
+<!-- JSON-LD: Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PoolFlow",
+  "url": "{{ site.url }}",
+  "logo": "{{ '/assets/images/poolflow-logo.png' | absolute_url }}",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "contact@poolflowapp.com",
+    "contactType": "customer support"
+  }
+}
+</script>
