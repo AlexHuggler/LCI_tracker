@@ -10,7 +10,7 @@ sitemap: true
 
 Effective Date: February 24, 2026 · Last Updated: February 24, 2026
 
-These Terms of Service ("Terms") govern your use of the PoolFlow iOS application ("the App") developed by Huggler Holdings LLC. ("we", "us", "our"). By downloading, installing, or using PoolFlow, you agree to be bound by these Terms.
+These Terms of Service ("Terms") govern your use of the PoolFlow iOS application ("the App") developed by Alex Huggler ("we", "us", "our"). By downloading, installing, or using PoolFlow, you agree to be bound by these Terms.
 
 ## 1. Description of Service
 
@@ -53,7 +53,7 @@ PoolFlow is provided "as is" and "as available" without warranties of any kind, 
 
 ## 7. Limitation of Liability
 
-To the maximum extent permitted by applicable law, Huggler Holdings LLC. shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, business, or goodwill, arising from your use of or inability to use the App. This includes, without limitation, any damages arising from:
+To the maximum extent permitted by applicable law, Alex Huggler shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, business, or goodwill, arising from your use of or inability to use the App. This includes, without limitation, any damages arising from:
 
 - Reliance on dosing recommendations or water chemistry calculations
 - Data loss or corruption
@@ -64,7 +64,7 @@ In no event shall our total liability exceed the amount you have paid for the Ap
 
 ## 8. Intellectual Property
 
-PoolFlow and all related trademarks, logos, and content are the property of Huggler Holdings LLC.. You are granted a limited, non-exclusive, non-transferable license to use the App for its intended purpose, subject to these Terms.
+PoolFlow and all related trademarks, logos, and content are the property of Alex Huggler. You are granted a limited, non-exclusive, non-transferable license to use the App for its intended purpose, subject to these Terms.
 
 ## 9. Third-Party Services
 
@@ -86,4 +86,4 @@ These Terms shall be governed by and construed in accordance with the laws of th
 
 If you have questions about these Terms, contact us at:
 
-[contact@poolflowapp.com](mailto:contact@poolflowapp.com)
+[alexhuggler@gmail.com](mailto:alexhuggler@gmail.com)

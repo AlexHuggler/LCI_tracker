@@ -3,27 +3,18 @@ layout: default
 ---
 
 <div class="max-w-3xl mx-auto px-6 py-16">
-  <h1 class="text-4xl font-bold tracking-tight text-pf-navy mb-10 sm:text-5xl">
+  <h1 class="text-4xl font-bold tracking-tight text-pool-dark mb-8 sm:text-5xl">
     {{ page.title }}
   </h1>
 
-  <div class="prose prose-lg max-w-none text-pf-navy/80 leading-relaxed space-y-6
-              [&>h2]:text-2xl [&>h2]:font-semibold [&>h2]:tracking-tight [&>h2]:text-pf-navy [&>h2]:mt-12 [&>h2]:mb-4
-              [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:tracking-tight [&>h3]:text-pf-navy [&>h3]:mt-8 [&>h3]:mb-3
-              [&>h4]:text-lg [&>h4]:font-semibold [&>h4]:text-pf-navy [&>h4]:mt-6 [&>h4]:mb-2
-              [&>p]:text-base [&>p]:leading-relaxed
-              [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:space-y-2
-              [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:space-y-2
-              [&_li]:text-pf-navy/80
-              [&_a]:text-pf-teal [&_a]:underline [&_a]:decoration-pf-teal/30 [&_a]:underline-offset-2 hover:[&_a]:decoration-pf-teal
-              [&>blockquote]:border-l-4 [&>blockquote]:border-pf-aqua [&>blockquote]:pl-5 [&>blockquote]:text-pf-navy/60 [&>blockquote]:italic
-              [&>hr]:border-gray-200 [&>hr]:my-10
-              [&>img]:rounded-xl [&>img]:shadow-md
-              [&_code]:text-pf-blue [&_code]:bg-pf-ice [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-sm
-              [&>pre]:bg-pf-navy [&>pre]:text-pf-ice [&>pre]:rounded-xl [&>pre]:p-5 [&>pre]:overflow-x-auto [&>pre_code]:bg-transparent [&>pre_code]:p-0
-              [&>table]:w-full [&>table]:text-left [&>table]:border-collapse
-              [&_th]:bg-pf-ice [&_th]:px-4 [&_th]:py-2.5 [&_th]:text-sm [&_th]:font-semibold [&_th]:text-pf-navy
-              [&_td]:px-4 [&_td]:py-2.5 [&_td]:border-t [&_td]:border-gray-100">
+  <div class="prose prose-lg prose-gray max-w-none
+              prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-pool-dark
+              prose-a:text-pool-blue prose-a:no-underline hover:prose-a:underline
+              prose-strong:text-pool-dark
+              prose-code:text-pool-blue prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+              prose-img:rounded-xl prose-img:shadow-md
+              prose-blockquote:border-pool-blue prose-blockquote:text-gray-600
+              prose-li:marker:text-pool-blue">
     {{ content }}
   </div>
 </div>

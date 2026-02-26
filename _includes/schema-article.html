@@ -5,23 +5,13 @@
   "headline": "{{ page.title | escape }}",
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
-  "author": {
-    "@type": "Person",
-    "name": "{{ page.author | default: 'PoolFlow Team' }}"
-  },
+  "author": { "@type": "Person", "name": "{{ page.author | default: 'PoolFlow Team' }}" },
   "publisher": {
     "@type": "Organization",
-    "name": "Huggler Holdings LLC.",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ '/assets/images/poolflow-icon-512.png' | absolute_url }}"
-    },
-    "email": "contact@poolflowapp.com"
+    "name": "PoolFlow",
+    "logo": { "@type": "ImageObject", "url": "{{ '/assets/images/poolflow-icon-512.png' | absolute_url }}" }
   },
   "description": "{{ page.description | escape }}",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ page.url | absolute_url }}"
-  }
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" }
 }
 </script>
