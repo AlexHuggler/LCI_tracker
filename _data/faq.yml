@@ -1,0 +1,23 @@
+- question: "Does PoolFlow work without internet?"
+  answer: "Yes. PoolFlow is built offline-first. All your data is stored locally on your iPhone using Apple's SwiftData framework. The app works fully at poolside with no cell service required. Internet is only needed for iCloud sync (Pro feature) and address autocomplete."
+
+- question: "What is the Langelier Saturation Index (LSI)?"
+  answer: "The LSI is a calculated number that predicts whether pool water will tend to dissolve (corrode) or deposit (scale) calcium carbonate. PoolFlow calculates LSI in real-time with CYA correction, factoring in pH, temperature, calcium hardness, total alkalinity, TDS, and cyanuric acid. An LSI between -0.3 and +0.3 is considered balanced."
+
+- question: "What's included in the free tier?"
+  answer: "The free tier includes up to 5 pools, the full LSI calculator with CYA correction, chemical dosing recommendations, service logging with photos, basic route management, and equipment tracking. No credit card required."
+
+- question: "Can I import my existing customer list?"
+  answer: "Yes. PoolFlow supports CSV import for your customer and pool data. You can import names, addresses, service fees, and pool specifications from a spreadsheet."
+
+- question: "How does route optimization save time?"
+  answer: "PoolFlow uses a nearest-neighbor seeding algorithm improved with 2-opt optimization, combined with real Apple Maps driving time estimates. Most technicians save 30-60 minutes per day by optimizing their route order."
+
+- question: "Is my data stored on a server?"
+  answer: "No. PoolFlow does not operate a backend server. All data is stored locally on your device. If you upgrade to Pro, you can optionally enable iCloud sync, which stores data in your personal iCloud account — never on our servers."
+
+- question: "What happens if I cancel my subscription?"
+  answer: "If you cancel Pro, you keep access until the end of your billing period. After that, you return to the free tier (5 pool limit). All your data remains on your device — nothing is deleted."
+
+- question: "Does PoolFlow support multiple languages?"
+  answer: "Yes. PoolFlow supports English, Spanish, French, Portuguese, and German. The app detects your device language automatically, or you can override it in Settings."

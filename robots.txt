@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://poolflowapp.com/sitemap.xml
