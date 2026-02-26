@@ -39,22 +39,13 @@ defaults:
 
 exclude:
   - README.md
-  - project_map.md
   - 01_App_Blueprint.md
   - 02_Product_Strategy.md
   - 03_Feature_Inventory.md
   - 04_Functional_Scope.md
   - 05_Customer_Journeys.md
-  - ISSUE_LOG.md
-  - PoolFlow/
-  - PoolFlowTests/
-  - "PoolFlow 1024x1024.png"
-  - "PoolFlow Name and Icon - translucent.png"
   - privacy-policy.html
   - terms-of-service.html
   - Gemfile.lock
   - node_modules/
   - vendor/
-  - "*.swift"
-  - "*.xcodeproj"
-  - "*.xcworkspace"
