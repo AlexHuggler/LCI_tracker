@@ -1,41 +1,42 @@
-<nav class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+<nav class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
 
       <!-- Logo -->
-      <a href="/" class="flex items-center space-x-2 text-xl font-bold" style="color: #0071e3;">
-        PoolFlow
+      <a href="/" class="flex-shrink-0">
+        <img src="/assets/images/poolflow-logo.png" alt="PoolFlow" class="h-8 w-auto">
       </a>
 
-      <!-- Desktop Navigation -->
+      <!-- Desktop Navigation (center/right) -->
       <div class="hidden md:flex items-center space-x-8">
-        <a href="/#features" class="text-gray-700 hover:text-gray-900 transition-colors font-medium">Features</a>
-        <a href="/#pricing" class="text-gray-700 hover:text-gray-900 transition-colors font-medium">Pricing</a>
-        <a href="/blog/" class="text-gray-700 hover:text-gray-900 transition-colors font-medium">Blog</a>
-        <a href="/resources/" class="text-gray-700 hover:text-gray-900 transition-colors font-medium">Resources</a>
+        <a href="/#features" class="text-sm font-medium text-pf-navy/70 hover:text-pf-navy transition-colors duration-200">Features</a>
+        <a href="/#pricing" class="text-sm font-medium text-pf-navy/70 hover:text-pf-navy transition-colors duration-200">Pricing</a>
+        <a href="/blog/" class="text-sm font-medium text-pf-navy/70 hover:text-pf-navy transition-colors duration-200">Blog</a>
+        <a href="/#faq" class="text-sm font-medium text-pf-navy/70 hover:text-pf-navy transition-colors duration-200">FAQ</a>
+        <a href="/#support" class="text-sm font-medium text-pf-navy/70 hover:text-pf-navy transition-colors duration-200">Support</a>
       </div>
 
-      <!-- Desktop CTA Button -->
+      <!-- Desktop CTA -->
       <div class="hidden md:flex items-center">
-        <a href="/#download" class="inline-block px-5 py-2.5 text-white font-semibold rounded-full text-sm transition-opacity hover:opacity-90" style="background-color: #0071e3;">
-          Download App
+        <a href="#" class="inline-flex items-center px-5 py-2 bg-pf-teal text-white text-sm font-semibold rounded-full hover:bg-pf-teal/90 transition-all duration-200 shadow-sm hover:shadow-md">
+          Download
         </a>
       </div>
 
       <!-- Mobile Hamburger Button -->
       <button
         type="button"
-        class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+        class="md:hidden inline-flex items-center justify-center p-2 rounded-lg text-pf-navy/60 hover:text-pf-navy hover:bg-pf-ice transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-pf-teal/30"
         data-mobile-menu-toggle
         aria-expanded="false"
         aria-label="Toggle navigation menu"
       >
         <!-- Hamburger icon -->
-        <svg class="h-6 w-6" data-menu-icon-open fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        <svg class="h-6 w-6" data-menu-icon-open fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
         </svg>
         <!-- Close icon (hidden by default) -->
-        <svg class="h-6 w-6 hidden" data-menu-icon-close fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <svg class="h-6 w-6 hidden" data-menu-icon-close fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
@@ -43,16 +44,17 @@
     </div>
   </div>
 
-  <!-- Mobile Menu (hidden by default, toggled via main.js) -->
+  <!-- Mobile Menu (hidden by default, toggled via JS) -->
   <div class="md:hidden hidden" data-mobile-menu>
-    <div class="px-4 pt-2 pb-4 space-y-1 bg-white border-t border-gray-100 shadow-lg">
-      <a href="/#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
-      <a href="/#pricing" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Pricing</a>
-      <a href="/blog/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Blog</a>
-      <a href="/resources/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Resources</a>
-      <div class="pt-2">
-        <a href="/#download" class="block text-center px-5 py-2.5 text-white font-semibold rounded-full text-sm transition-opacity hover:opacity-90" style="background-color: #0071e3;">
-          Download App
+    <div class="px-4 pt-3 pb-6 space-y-1 bg-white/95 backdrop-blur-lg border-t border-gray-100">
+      <a href="/#features" class="block px-4 py-2.5 rounded-lg text-base font-medium text-pf-navy/70 hover:text-pf-navy hover:bg-pf-ice transition-colors duration-200">Features</a>
+      <a href="/#pricing" class="block px-4 py-2.5 rounded-lg text-base font-medium text-pf-navy/70 hover:text-pf-navy hover:bg-pf-ice transition-colors duration-200">Pricing</a>
+      <a href="/blog/" class="block px-4 py-2.5 rounded-lg text-base font-medium text-pf-navy/70 hover:text-pf-navy hover:bg-pf-ice transition-colors duration-200">Blog</a>
+      <a href="/#faq" class="block px-4 py-2.5 rounded-lg text-base font-medium text-pf-navy/70 hover:text-pf-navy hover:bg-pf-ice transition-colors duration-200">FAQ</a>
+      <a href="/#support" class="block px-4 py-2.5 rounded-lg text-base font-medium text-pf-navy/70 hover:text-pf-navy hover:bg-pf-ice transition-colors duration-200">Support</a>
+      <div class="pt-3 px-4">
+        <a href="#" class="block w-full text-center px-5 py-3 bg-pf-teal text-white text-base font-semibold rounded-full hover:bg-pf-teal/90 transition-all duration-200 shadow-sm">
+          Download
         </a>
       </div>
     </div>

@@ -1,56 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Tailwind CSS via CDN with custom PoolFlow config -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'pool-blue': '#0071e3',
-            'pool-dark': '#1d1d1f',
-            'pool-green': '#34c759',
-            'pool-cyan': '#00b4d8',
-          },
-          fontFamily: {
-            sans: ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-          },
-        },
-      },
-    }
-  </script>
-
   {% include head.html %}
-
-  {% seo %}
-
-  <link rel="stylesheet" href="/assets/css/styles.css">
-
-  <!-- Critical inline CSS to prevent FOUC -->
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background-color: #ffffff;
-      color: #1d1d1f;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-  </style>
 </head>
-<body class="bg-white text-pool-dark font-sans min-h-screen flex flex-col">
-
+<body class="font-sans text-pf-navy bg-white antialiased">
   {% include nav.html %}
-
-  <main class="flex-1">
+  <main class="pt-16">
     {{ content }}
   </main>
-
   {% include footer.html %}
-
-  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
