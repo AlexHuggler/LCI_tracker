@@ -46,4 +46,35 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // Waitlist form submission via Formspree (AJAX)
+  document.querySelectorAll('.waitlist-form').forEach(function(form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var formData = new FormData(form);
+      var button = form.querySelector('button[type="submit"]');
+      var successMsg = form.parentElement.querySelector('.waitlist-success');
+      button.disabled = true;
+      button.textContent = 'Joining...';
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        if (response.ok) {
+          form.classList.add('hidden');
+          if (successMsg) successMsg.classList.remove('hidden');
+        } else {
+          button.disabled = false;
+          button.textContent = 'Join Waitlist';
+          alert('Something went wrong. Please try again.');
+        }
+      }).catch(function() {
+        button.disabled = false;
+        button.textContent = 'Join Waitlist';
+        alert('Network error. Please try again.');
+      });
+    });
+  });
 });
