@@ -21,6 +21,9 @@ author:
 twitter:
   card: "summary_large_image"
 
+# Waitlist form — replace with your Formspree form ID from https://formspree.io
+formspree_id: "YOUR_FORM_ID"
+
 logo: "/assets/images/poolflow-icon-512.png"
 
 defaults:
