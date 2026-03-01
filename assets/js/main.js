@@ -47,6 +47,63 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Scroll animations (Intersection Observer)
+  var animatedElements = document.querySelectorAll('.animate-on-scroll');
+  if (animatedElements.length > 0 && 'IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    animatedElements.forEach(function(el) { observer.observe(el); });
+  }
+
+  // Mobile sticky CTA bar (show after scrolling past hero)
+  var stickyBar = document.querySelector('.mobile-sticky-cta');
+  var heroSection = document.getElementById('hero');
+  if (stickyBar && heroSection) {
+    var heroObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          stickyBar.classList.remove('is-visible');
+        } else {
+          stickyBar.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0 });
+    heroObserver.observe(heroSection);
+  }
+
+  // Blog category filter
+  var filterButtons = document.querySelectorAll('[data-category]');
+  if (filterButtons.length > 0) {
+    filterButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var category = this.getAttribute('data-category');
+        // Update active button styling
+        filterButtons.forEach(function(b) {
+          b.classList.remove('bg-pool-blue', 'text-white');
+          b.classList.add('bg-gray-100', 'text-gray-700');
+        });
+        this.classList.remove('bg-gray-100', 'text-gray-700');
+        this.classList.add('bg-pool-blue', 'text-white');
+        // Filter posts
+        var posts = document.querySelectorAll('[data-post-categories]');
+        posts.forEach(function(post) {
+          if (category === 'all') {
+            post.style.display = '';
+          } else {
+            var cats = post.getAttribute('data-post-categories');
+            post.style.display = cats && cats.indexOf(category) !== -1 ? '' : 'none';
+          }
+        });
+      });
+    });
+  }
+
   // Waitlist form submission via Formspree (AJAX)
   document.querySelectorAll('.waitlist-form').forEach(function(form) {
     form.addEventListener('submit', function(e) {

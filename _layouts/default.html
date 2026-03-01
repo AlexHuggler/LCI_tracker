@@ -46,9 +46,12 @@
 </head>
 <body class="bg-white text-pool-dark font-sans min-h-screen flex flex-col">
 
+  <!-- Skip to content (accessibility) -->
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+
   {% include nav.html %}
 
-  <main class="flex-1">
+  <main id="main-content" class="flex-1" role="main">
     {{ content }}
   </main>
 
