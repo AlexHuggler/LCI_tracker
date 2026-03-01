@@ -24,7 +24,7 @@ permalink: /blog/
   <!-- Posts Grid -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {% for post in site.posts %}
-    <article class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+    <article class="blog-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden" data-post-categories="{{ post.categories | join: ' ' | downcase | replace: ' ', '-' }}">
       <div class="p-6">
         <!-- Categories -->
         <div class="flex flex-wrap gap-2 mb-3">
@@ -38,13 +38,15 @@ permalink: /blog/
           <a href="{{ post.url | relative_url }}" class="hover:text-pool-blue transition-colors">{{ post.title }}</a>
         </h2>
 
-        <!-- Date -->
-        <time class="text-sm text-gray-500 block mb-3" datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date: "%B %-d, %Y" }}
-        </time>
+        <!-- Date & Reading Time -->
+        <div class="flex items-center gap-3 text-sm text-gray-500 mb-3">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+          <span>&middot;</span>
+          <span>{% assign words = post.content | number_of_words %}{% if words < 250 %}1{% else %}{{ words | divided_by: 250 }}{% endif %} min read</span>
+        </div>
 
         <!-- Summary -->
-        <p class="text-gray-600 text-sm mb-4">
+        <p class="text-gray-700 text-sm mb-4">
           {% if post.executive_summary %}
             {{ post.executive_summary | truncate: 150 }}
           {% else %}
@@ -67,4 +69,13 @@ permalink: /blog/
     <p class="text-gray-500 text-lg">No posts yet. Check back soon for expert pool service guides.</p>
   </div>
   {% endif %}
+
+  <!-- Subscribe CTA -->
+  <div class="mt-16 text-center bg-pool-section rounded-2xl p-8 sm:p-10">
+    <h3 class="text-xl font-bold text-pool-dark mb-2">Get Pool Service Insights</h3>
+    <p class="text-gray-700 text-sm mb-4">Join the waitlist to receive expert guides and launch updates.</p>
+    <a href="/#waitlist" class="inline-block px-6 py-3 rounded-full text-white font-semibold text-sm transition-opacity hover:opacity-90" style="background-color: #53849F;">
+      Join Waitlist
+    </a>
+  </div>
 </section>

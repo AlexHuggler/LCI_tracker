@@ -27,8 +27,8 @@ image: /assets/images/og-image.png
         <div id="waitlist" class="mt-8 max-w-lg mx-auto lg:mx-0">
           <p class="text-sm font-medium text-blue-100 mb-3">Coming soon to the App Store. Join the waitlist to get notified at launch.</p>
           <form action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" class="waitlist-form flex flex-col sm:flex-row gap-3">
-            <input type="email" name="email" required placeholder="you@email.com" class="flex-1 px-5 py-3.5 rounded-full text-pool-dark text-lg focus:outline-none focus:ring-2 focus:ring-pool-cyan shadow-lg">
-            <button type="submit" class="inline-flex items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-nowrap">
+            <input type="email" name="email" required placeholder="you@email.com" class="flex-1 px-5 py-3.5 sm:py-3.5 py-4 rounded-full text-pool-dark text-lg focus:outline-none focus:ring-2 focus:ring-pool-cyan shadow-lg">
+            <button type="submit" class="btn-shimmer relative inline-flex items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 sm:py-3.5 py-4 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-nowrap">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
               </svg>
@@ -44,15 +44,26 @@ image: /assets/images/og-image.png
           </a>
         </div>
 
-        <!-- Trust Signal -->
-        <p class="mt-6 text-sm text-blue-200">
-          No account required &middot; No backend server &middot; Your data stays on your device
-        </p>
+        <!-- Trust Signals with Icons -->
+        <div class="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 text-sm text-blue-200">
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z"/></svg>
+            No account required
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12l-3-3m0 0l-3 3m3-3v6.75"/></svg>
+            No backend server
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+            Your data stays on your device
+          </span>
+        </div>
       </div>
 
       <!-- Right Column: App Screenshot -->
       <div class="flex-1 flex items-center justify-center w-full max-w-md lg:max-w-lg">
-        <div class="relative w-72 sm:w-80">
+        <div class="relative w-72 sm:w-80 phone-float">
           <div class="rounded-[2.5rem] border-[6px] border-white/30 shadow-2xl overflow-hidden bg-black">
             <img
               src="/assets/images/simulator_screenshot.png"
@@ -63,12 +74,27 @@ image: /assets/images/og-image.png
               loading="eager"
             >
           </div>
+          <!-- Platform badge -->
+          <div class="mt-4 flex justify-center">
+            <span class="inline-flex items-center gap-1.5 text-xs font-medium text-white/70 bg-white/10 rounded-full px-3 py-1">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              iOS App
+            </span>
+          </div>
         </div>
       </div>
 
     </div>
   </div>
 </section>
+
+<!-- Wave divider: hero → features -->
+<div class="wave-divider bg-white">
+  <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0 60V20C240 50 480 0 720 20C960 40 1200 10 1440 30V60H0Z" fill="white"/>
+    <path d="M0 0V20C240 50 480 0 720 20C960 40 1200 10 1440 30V0H0Z" fill="#6B9AB8"/>
+  </svg>
+</div>
 
 <!-- ============================================
      SECTION 2: FEATURES
@@ -81,7 +107,7 @@ image: /assets/images/og-image.png
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pool-dark">
         Everything You Need Poolside
       </h2>
-      <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+      <p class="mt-4 text-lg text-gray-700 leading-relaxed">
         PoolFlow replaces paper logs, manual calculations, and spreadsheets with one powerful app.
       </p>
     </div>
@@ -90,109 +116,137 @@ image: /assets/images/og-image.png
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
       <!-- Feature 1: Real-Time LSI Calculator -->
-      <article class="bg-pool-section rounded-2xl p-6 hover:shadow-lg transition-shadow">
+      <article class="feature-card bg-pool-section rounded-2xl p-6 animate-on-scroll" style="animation-delay: 0s">
         <div class="feature-icon mb-4">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25v-.008zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007v-.008zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008v-.008zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008v-.008zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z"/>
           </svg>
         </div>
         <h3 class="text-lg font-semibold text-pool-dark mb-2">Real-Time LSI Calculator</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
+        <p class="text-sm text-gray-700 leading-relaxed">
           Instant Langelier Saturation Index with CYA-corrected alkalinity. Watch the LSI animate as you slide your readings.
         </p>
       </article>
 
       <!-- Feature 2: Smart Chemical Dosing -->
-      <article class="bg-pool-section rounded-2xl p-6 hover:shadow-lg transition-shadow">
+      <article class="feature-card bg-pool-section rounded-2xl p-6 animate-on-scroll" style="animation-delay: 0.1s">
         <div class="feature-icon mb-4">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/>
           </svg>
         </div>
         <h3 class="text-lg font-semibold text-pool-dark mb-2">Smart Chemical Dosing</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
+        <p class="text-sm text-gray-700 leading-relaxed">
           Exact dosing recommendations calculated from your actual chemical inventory and costs. Your chemicals, your prices.
         </p>
       </article>
 
       <!-- Feature 3: Sub-2-Minute Quick Log -->
-      <article class="bg-pool-section rounded-2xl p-6 hover:shadow-lg transition-shadow">
+      <article class="feature-card bg-pool-section rounded-2xl p-6 animate-on-scroll" style="animation-delay: 0.2s">
         <div class="feature-icon mb-4">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
           </svg>
         </div>
         <h3 class="text-lg font-semibold text-pool-dark mb-2">Sub-2-Minute Quick Log</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
+        <p class="text-sm text-gray-700 leading-relaxed">
           Log a pool visit in under 2 minutes. Pre-filled readings from last visit, one-tap completion, proof-of-service photos.
         </p>
       </article>
 
       <!-- Feature 4: Route Optimization -->
-      <article class="bg-pool-section rounded-2xl p-6 hover:shadow-lg transition-shadow">
+      <article class="feature-card bg-pool-section rounded-2xl p-6 animate-on-scroll" style="animation-delay: 0.3s">
         <div class="feature-icon mb-4">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-semibold text-pool-dark mb-2">Route Optimization</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
+        <div class="flex items-center gap-2 mb-2">
+          <h3 class="text-lg font-semibold text-pool-dark">Route Optimization</h3>
+          <span class="text-[10px] font-bold uppercase tracking-wider bg-pool-blue/10 text-pool-blue px-1.5 py-0.5 rounded">Pro</span>
+        </div>
+        <p class="text-sm text-gray-700 leading-relaxed">
           Save hours every week. Nearest-neighbor + 2-opt algorithm with Apple Maps driving time estimates.
         </p>
       </article>
 
       <!-- Feature 5: Profit Analytics -->
-      <article class="bg-pool-section rounded-2xl p-6 hover:shadow-lg transition-shadow">
+      <article class="feature-card bg-pool-section rounded-2xl p-6 animate-on-scroll" style="animation-delay: 0.1s">
         <div class="feature-icon mb-4">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18v-.008zm-12 0h.008v.008H6v-.008z"/>
           </svg>
         </div>
-        <h3 class="text-lg font-semibold text-pool-dark mb-2">Profit Analytics</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
+        <div class="flex items-center gap-2 mb-2">
+          <h3 class="text-lg font-semibold text-pool-dark">Profit Analytics</h3>
+          <span class="text-[10px] font-bold uppercase tracking-wider bg-pool-blue/10 text-pool-blue px-1.5 py-0.5 rounded">Pro</span>
+        </div>
+        <p class="text-sm text-gray-700 leading-relaxed">
           See which pools make money and which ones lose it. 30% chemical cost threshold flags money-losers instantly.
         </p>
       </article>
 
       <!-- Feature 6: Chemical Inventory -->
-      <article class="bg-pool-section rounded-2xl p-6 hover:shadow-lg transition-shadow">
+      <article class="feature-card bg-pool-section rounded-2xl p-6 animate-on-scroll" style="animation-delay: 0.2s">
         <div class="feature-icon mb-4">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/>
           </svg>
         </div>
         <h3 class="text-lg font-semibold text-pool-dark mb-2">Chemical Inventory</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
+        <p class="text-sm text-gray-700 leading-relaxed">
           Track every chemical on your truck. Low-stock alerts. Cost-per-unit tied to your dosing recommendations.
         </p>
       </article>
 
       <!-- Feature 7: Offline-First -->
-      <article class="bg-pool-section rounded-2xl p-6 hover:shadow-lg transition-shadow">
+      <article class="feature-card bg-pool-section rounded-2xl p-6 animate-on-scroll" style="animation-delay: 0.3s">
         <div class="feature-icon mb-4">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z"/>
           </svg>
         </div>
         <h3 class="text-lg font-semibold text-pool-dark mb-2">Offline-First</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
+        <p class="text-sm text-gray-700 leading-relaxed">
           No internet required poolside. All data stored locally via SwiftData. Works in dead zones, basements, remote properties.
         </p>
       </article>
 
       <!-- Feature 8: Wet-Hand UX -->
-      <article class="bg-pool-section rounded-2xl p-6 hover:shadow-lg transition-shadow">
+      <article class="feature-card bg-pool-section rounded-2xl p-6 animate-on-scroll" style="animation-delay: 0.4s">
         <div class="feature-icon mb-4">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M10.05 4.575a1.575 1.575 0 10-3.15 0v3m3.15-3v-1.5a1.575 1.575 0 013.15 0v1.5m-3.15 0l.075 5.925m3.075.75V4.575m0 0a1.575 1.575 0 013.15 0V15M6.9 7.575a1.575 1.575 0 10-3.15 0v8.175a6.75 6.75 0 006.75 6.75h2.018a5.25 5.25 0 003.712-1.538l1.732-1.732a5.25 5.25 0 001.538-3.712l.003-2.024a.668.668 0 00-.668-.668 1.336 1.336 0 00-1.336 1.336v0"/>
           </svg>
         </div>
         <h3 class="text-lg font-semibold text-pool-dark mb-2">Wet-Hand UX</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
+        <p class="text-sm text-gray-700 leading-relaxed">
           56-point touch targets and haptic feedback. Designed for gloved and wet hands — built for the field from day one.
         </p>
       </article>
 
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 2B: SOCIAL PROOF / FOUNDER STORY
+     ============================================ -->
+<section class="py-16 sm:py-20 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="animate-on-scroll bg-pool-light border border-pool-blue/10 rounded-2xl p-8 sm:p-10 text-center">
+      <div class="inline-flex items-center gap-2 text-pool-blue text-sm font-semibold uppercase tracking-wider mb-4">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z"/></svg>
+        Built by a Pool Tech
+      </div>
+      <blockquote class="text-lg sm:text-xl text-pool-dark leading-relaxed italic">
+        "I built PoolFlow because I was tired of spreadsheets, paper logs, and apps that weren't designed for wet hands. After years servicing pools, I knew exactly what technicians needed — and built it."
+      </blockquote>
+      <div class="mt-4 text-sm font-medium text-pool-blue">— Alex Huggler, Founder</div>
+      <div class="mt-6 flex items-center justify-center gap-2 text-sm text-pool-dark/60">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
+        Join pool techs already on the waitlist
+      </div>
     </div>
   </div>
 </section>
@@ -208,13 +262,16 @@ image: /assets/images/og-image.png
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pool-dark">
         How PoolFlow Works
       </h2>
+      <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+        From water testing to profit tracking — four simple steps to a smarter pool route.
+      </p>
     </div>
 
     <!-- 4-Step Flow -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
 
       <!-- Step 1 -->
-      <div class="relative text-center lg:text-left">
+      <div class="relative text-center lg:text-left animate-on-scroll" style="animation-delay: 0s">
         <div class="flex items-center justify-center lg:justify-start mb-4">
           <div class="w-12 h-12 rounded-full bg-pool-blue text-white flex items-center justify-center text-xl font-bold flex-shrink-0">
             1
@@ -223,13 +280,13 @@ image: /assets/images/og-image.png
           <div class="hidden lg:block flex-1 h-0.5 bg-gray-300 ml-4"></div>
         </div>
         <h3 class="text-lg font-semibold text-pool-dark mb-2">Test Your Water</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
+        <p class="text-sm text-gray-700 leading-relaxed">
           Enter readings poolside. PoolFlow calculates LSI with CYA correction following industry-standard Langelier methodology.
         </p>
       </div>
 
       <!-- Step 2 -->
-      <div class="relative text-center lg:text-left">
+      <div class="relative text-center lg:text-left animate-on-scroll" style="animation-delay: 0.15s">
         <div class="flex items-center justify-center lg:justify-start mb-4">
           <div class="w-12 h-12 rounded-full bg-pool-cyan text-white flex items-center justify-center text-xl font-bold flex-shrink-0">
             2
@@ -237,13 +294,13 @@ image: /assets/images/og-image.png
           <div class="hidden lg:block flex-1 h-0.5 bg-gray-300 ml-4"></div>
         </div>
         <h3 class="text-lg font-semibold text-pool-dark mb-2">Get Your Dose</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
+        <p class="text-sm text-gray-700 leading-relaxed">
           Receive precise chemical dosing recommendations tied to your actual inventory costs.
         </p>
       </div>
 
       <!-- Step 3 -->
-      <div class="relative text-center lg:text-left">
+      <div class="relative text-center lg:text-left animate-on-scroll" style="animation-delay: 0.3s">
         <div class="flex items-center justify-center lg:justify-start mb-4">
           <div class="w-12 h-12 rounded-full bg-pool-green text-white flex items-center justify-center text-xl font-bold flex-shrink-0">
             3
@@ -251,20 +308,20 @@ image: /assets/images/og-image.png
           <div class="hidden lg:block flex-1 h-0.5 bg-gray-300 ml-4"></div>
         </div>
         <h3 class="text-lg font-semibold text-pool-dark mb-2">Log Your Service</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
+        <p class="text-sm text-gray-700 leading-relaxed">
           Complete service documentation with timestamps, readings, photos, and chemicals used. Under 2 minutes.
         </p>
       </div>
 
       <!-- Step 4 -->
-      <div class="relative text-center lg:text-left">
+      <div class="relative text-center lg:text-left animate-on-scroll" style="animation-delay: 0.45s">
         <div class="flex items-center justify-center lg:justify-start mb-4">
           <div class="w-12 h-12 rounded-full bg-pool-dark text-white flex items-center justify-center text-xl font-bold flex-shrink-0">
             4
           </div>
         </div>
         <h3 class="text-lg font-semibold text-pool-dark mb-2">Know Your Numbers</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
+        <p class="text-sm text-gray-700 leading-relaxed">
           Real-time profit analytics show revenue per pool, chemical costs, and margin analysis.
         </p>
       </div>
@@ -273,7 +330,7 @@ image: /assets/images/og-image.png
 
     <!-- Regulatory Context -->
     <div class="mt-16 max-w-4xl mx-auto">
-      <p class="text-gray-600 leading-relaxed text-center">
+      <p class="text-gray-700 leading-relaxed text-center">
         Pool service professionals operate under a complex regulatory framework. CPO and AFO certifications require understanding water chemistry and the Langelier Saturation Index. State health departments mandate service records and water quality documentation. OSHA standards govern chemical handling and storage. PoolFlow helps technicians meet these professional standards efficiently, replacing paper logs with automated, auditable digital records.
       </p>
     </div>
@@ -292,7 +349,7 @@ image: /assets/images/og-image.png
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pool-dark">
         Simple, Transparent Pricing
       </h2>
-      <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+      <p class="mt-4 text-lg text-gray-700 leading-relaxed">
         Start free. Upgrade when you're ready.
       </p>
     </div>
@@ -301,12 +358,13 @@ image: /assets/images/og-image.png
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-start">
 
       <!-- Free Tier -->
-      <div class="pricing-card bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+      <div class="pricing-card bg-white border border-gray-200 rounded-2xl p-8 shadow-sm animate-on-scroll" style="animation-delay: 0s">
         <h3 class="text-xl font-bold text-pool-dark">Free</h3>
         <div class="mt-4 flex items-baseline">
           <span class="text-5xl font-bold text-pool-dark">$0</span>
           <span class="ml-2 text-gray-500">/forever</span>
         </div>
+        <p class="mt-2 text-sm text-pool-blue font-medium">No credit card required</p>
         <ul class="mt-8 space-y-4">
           <li class="flex items-start gap-3">
             <svg class="w-5 h-5 text-pool-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
@@ -351,7 +409,7 @@ image: /assets/images/og-image.png
       </div>
 
       <!-- Pro Monthly (Highlighted) -->
-      <div class="pricing-card relative bg-white border-2 border-pool-blue rounded-2xl p-8 shadow-lg">
+      <div class="pricing-card relative bg-white border-2 border-pool-blue rounded-2xl p-8 shadow-lg animate-on-scroll" style="animation-delay: 0.15s">
         <!-- Most Popular Badge -->
         <div class="absolute -top-4 left-1/2 -translate-x-1/2">
           <span class="inline-block bg-pool-blue text-white text-sm font-semibold px-4 py-1 rounded-full">
@@ -363,7 +421,10 @@ image: /assets/images/og-image.png
           <span class="text-5xl font-bold text-pool-dark">$29.99</span>
           <span class="ml-2 text-gray-500">/month</span>
         </div>
-        <p class="mt-2 text-sm text-gray-500">7-day free trial</p>
+        <p class="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-pool-blue bg-pool-light rounded-full px-3 py-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          7-day free trial
+        </p>
         <ul class="mt-8 space-y-4">
           <li class="flex items-start gap-3">
             <svg class="w-5 h-5 text-pool-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
@@ -420,7 +481,7 @@ image: /assets/images/og-image.png
       </div>
 
       <!-- Pro Annual -->
-      <div class="pricing-card relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+      <div class="pricing-card relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm animate-on-scroll" style="animation-delay: 0.3s">
         <!-- Save Badge -->
         <div class="absolute -top-4 left-1/2 -translate-x-1/2">
           <span class="inline-block bg-pool-green text-white text-sm font-semibold px-4 py-1 rounded-full">
@@ -432,7 +493,11 @@ image: /assets/images/og-image.png
           <span class="text-5xl font-bold text-pool-dark">$299.99</span>
           <span class="ml-2 text-gray-500">/year</span>
         </div>
-        <p class="mt-2 text-sm text-gray-500">7-day free trial</p>
+        <p class="mt-2 text-sm text-gray-700">$25.00/mo billed annually</p>
+        <p class="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-pool-blue bg-pool-light rounded-full px-3 py-1">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          7-day free trial
+        </p>
         <ul class="mt-8 space-y-4">
           <li class="flex items-start gap-3">
             <svg class="w-5 h-5 text-pool-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
@@ -470,10 +535,10 @@ image: /assets/images/og-image.png
     </div>
 
     <!-- FAQ Accordion -->
-    <div class="space-y-4" id="faq-accordion">
+    <div class="space-y-4" id="faq-accordion" role="region" aria-label="Frequently Asked Questions">
 
       <!-- FAQ 1 -->
-      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white">
+      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
         <button
           class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset"
           aria-expanded="false"
@@ -483,13 +548,13 @@ image: /assets/images/og-image.png
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
           </svg>
         </button>
-        <div class="faq-content hidden px-6 pb-5 text-gray-600 leading-relaxed">
+        <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
           <p>Yes. PoolFlow is built offline-first. All your data is stored locally on your iPhone using Apple's SwiftData framework. The app works fully at poolside with no cell service required. Internet is only needed for iCloud sync (Pro) and address autocomplete.</p>
         </div>
       </div>
 
       <!-- FAQ 2 -->
-      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white">
+      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
         <button
           class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset"
           aria-expanded="false"
@@ -499,13 +564,13 @@ image: /assets/images/og-image.png
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
           </svg>
         </button>
-        <div class="faq-content hidden px-6 pb-5 text-gray-600 leading-relaxed">
+        <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
           <p>The LSI is a calculated number that predicts whether pool water will tend to corrode or scale. PoolFlow calculates LSI in real-time with CYA correction, factoring in pH, temperature, calcium hardness, total alkalinity, TDS, and cyanuric acid. An LSI between -0.3 and +0.3 is balanced.</p>
         </div>
       </div>
 
       <!-- FAQ 3 -->
-      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white">
+      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
         <button
           class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset"
           aria-expanded="false"
@@ -515,13 +580,13 @@ image: /assets/images/og-image.png
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
           </svg>
         </button>
-        <div class="faq-content hidden px-6 pb-5 text-gray-600 leading-relaxed">
+        <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
           <p>The free tier includes up to 5 pools, the full LSI calculator with CYA correction, chemical dosing recommendations, service logging with photos, basic route management, and equipment tracking. No credit card required.</p>
         </div>
       </div>
 
       <!-- FAQ 4 -->
-      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white">
+      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
         <button
           class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset"
           aria-expanded="false"
@@ -531,13 +596,13 @@ image: /assets/images/og-image.png
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
           </svg>
         </button>
-        <div class="faq-content hidden px-6 pb-5 text-gray-600 leading-relaxed">
+        <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
           <p>Yes. PoolFlow supports CSV import for your customer and pool data. You can import names, addresses, service fees, and pool specifications from a spreadsheet.</p>
         </div>
       </div>
 
       <!-- FAQ 5 -->
-      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white">
+      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
         <button
           class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset"
           aria-expanded="false"
@@ -547,13 +612,13 @@ image: /assets/images/og-image.png
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
           </svg>
         </button>
-        <div class="faq-content hidden px-6 pb-5 text-gray-600 leading-relaxed">
+        <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
           <p>PoolFlow uses a nearest-neighbor seeding algorithm improved with 2-opt optimization, combined with real Apple Maps driving time estimates. Most technicians save 30-60 minutes per day by optimizing their route order.</p>
         </div>
       </div>
 
       <!-- FAQ 6 -->
-      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white">
+      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
         <button
           class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset"
           aria-expanded="false"
@@ -563,13 +628,13 @@ image: /assets/images/og-image.png
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
           </svg>
         </button>
-        <div class="faq-content hidden px-6 pb-5 text-gray-600 leading-relaxed">
+        <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
           <p>No. PoolFlow does not operate a backend server. All data is stored locally on your device. If you upgrade to Pro, you can optionally enable iCloud sync, which stores data in your personal iCloud account — never on our servers.</p>
         </div>
       </div>
 
       <!-- FAQ 7 -->
-      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white">
+      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
         <button
           class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset"
           aria-expanded="false"
@@ -579,13 +644,13 @@ image: /assets/images/og-image.png
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
           </svg>
         </button>
-        <div class="faq-content hidden px-6 pb-5 text-gray-600 leading-relaxed">
+        <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
           <p>If you cancel Pro, you keep access until the end of your billing period. After that, you return to the free tier (5 pool limit). All your data remains on your device — nothing is deleted.</p>
         </div>
       </div>
 
       <!-- FAQ 8 -->
-      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white">
+      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
         <button
           class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset"
           aria-expanded="false"
@@ -595,7 +660,7 @@ image: /assets/images/og-image.png
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
           </svg>
         </button>
-        <div class="faq-content hidden px-6 pb-5 text-gray-600 leading-relaxed">
+        <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
           <p>Yes. PoolFlow supports English, Spanish, French, Portuguese, and German. The app detects your device language automatically, or you can override it in Settings.</p>
         </div>
       </div>
@@ -725,6 +790,13 @@ image: /assets/images/og-image.png
     </div>
   </div>
 </section>
+
+<!-- Mobile Sticky CTA Bar (appears after scrolling past hero) -->
+<div class="mobile-sticky-cta fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 backdrop-blur border-t border-gray-200 px-4 py-3">
+  <a href="#waitlist" class="block w-full text-center px-5 py-3 text-white font-semibold rounded-full text-sm transition-opacity hover:opacity-90" style="background-color: #53849F;">
+    Join the Waitlist
+  </a>
+</div>
 
 <!-- ============================================
      SECTION 7: SOFTWARE APPLICATION SCHEMA
