@@ -14,7 +14,7 @@ permalink: /blog/
 
   <!-- Category Filter Bar -->
   <div class="flex flex-wrap justify-center gap-3 mb-12">
-    <button class="px-4 py-2 rounded-full text-sm font-medium bg-blue-600 text-white" data-category="all">All</button>
+    <button class="px-4 py-2 rounded-full text-sm font-medium bg-pool-blue text-white" data-category="all">All</button>
     <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors" data-category="regulatory-guidance">Regulatory Guidance</button>
     <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors" data-category="water-chemistry">Water Chemistry</button>
     <button class="px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors" data-category="business">Business</button>
@@ -29,13 +29,13 @@ permalink: /blog/
         <!-- Categories -->
         <div class="flex flex-wrap gap-2 mb-3">
           {% for category in post.categories %}
-          <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">{{ category }}</span>
+          <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium bg-pool-light text-pool-dark">{{ category }}</span>
           {% endfor %}
         </div>
 
         <!-- Title -->
         <h2 class="text-xl font-semibold text-gray-900 mb-2">
-          <a href="{{ post.url | relative_url }}" class="hover:text-blue-600 transition-colors">{{ post.title }}</a>
+          <a href="{{ post.url | relative_url }}" class="hover:text-pool-blue transition-colors">{{ post.title }}</a>
         </h2>
 
         <!-- Date -->
@@ -53,7 +53,7 @@ permalink: /blog/
         </p>
 
         <!-- Read More -->
-        <a href="{{ post.url | relative_url }}" class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors">
+        <a href="{{ post.url | relative_url }}" class="inline-flex items-center text-sm font-medium text-pool-blue hover:text-pool-dark transition-colors">
           Read More &rarr;
         </a>
       </div>

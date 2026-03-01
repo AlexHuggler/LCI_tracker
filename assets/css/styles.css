@@ -5,7 +5,7 @@ html {
 
 /* Hero gradient */
 .hero-gradient {
-  background: linear-gradient(135deg, #0071e3 0%, #00b4d8 50%, #34c759 100%);
+  background: linear-gradient(135deg, #567A8C 0%, #53849F 50%, #6B9AB8 100%);
 }
 
 /* Pricing card hover */
@@ -19,8 +19,8 @@ html {
 
 /* Executive summary block */
 .executive-summary {
-  border-left: 4px solid #0071e3;
-  background: #eff6ff;
+  border-left: 4px solid #53849F;
+  background: #F7FBFD;
   padding: 1.5rem;
   border-radius: 0 0.5rem 0.5rem 0;
   margin-bottom: 2rem;
@@ -44,8 +44,8 @@ html {
   align-items: center;
   justify-content: center;
   border-radius: 0.75rem;
-  background: #eff6ff;
-  color: #0071e3;
+  background: #F7FBFD;
+  color: #53849F;
 }
 
 /* Prose overrides for article content */
@@ -60,7 +60,7 @@ html {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #0071e3, #00b4d8);
+  background: linear-gradient(135deg, #53849F, #567A8C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
