@@ -104,35 +104,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Contact form submission via Formspree (AJAX)
+  // Contact form — opens mailto with form fields
   var contactForm = document.querySelector('.contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      var formData = new FormData(contactForm);
-      var button = contactForm.querySelector('button[type="submit"]');
-      var successMsg = contactForm.parentElement.querySelector('.contact-success');
-      button.disabled = true;
-      button.textContent = 'Sending...';
-
-      fetch(contactForm.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      }).then(function(response) {
-        if (response.ok) {
-          contactForm.classList.add('hidden');
-          if (successMsg) successMsg.classList.remove('hidden');
-        } else {
-          button.disabled = false;
-          button.textContent = 'Send Message';
-          alert('Something went wrong. Please try again.');
-        }
-      }).catch(function() {
-        button.disabled = false;
-        button.textContent = 'Send Message';
-        alert('Network error. Please try again.');
-      });
+      var name = contactForm.querySelector('#contact-name').value.trim();
+      var email = contactForm.querySelector('#contact-email').value.trim();
+      var subject = contactForm.querySelector('#contact-subject').value;
+      var message = contactForm.querySelector('#contact-message').value.trim();
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+      window.location.href = 'mailto:contact@poolflowapp.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     });
   }
 
