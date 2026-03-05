@@ -104,6 +104,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
+  // Contact form submission via Formspree (AJAX)
+  var contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var formData = new FormData(contactForm);
+      var button = contactForm.querySelector('button[type="submit"]');
+      var successMsg = contactForm.parentElement.querySelector('.contact-success');
+      button.disabled = true;
+      button.textContent = 'Sending...';
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        if (response.ok) {
+          contactForm.classList.add('hidden');
+          if (successMsg) successMsg.classList.remove('hidden');
+        } else {
+          button.disabled = false;
+          button.textContent = 'Send Message';
+          alert('Something went wrong. Please try again.');
+        }
+      }).catch(function() {
+        button.disabled = false;
+        button.textContent = 'Send Message';
+        alert('Network error. Please try again.');
+      });
+    });
+  }
+
   // Waitlist form submission via Formspree (AJAX)
   document.querySelectorAll('.waitlist-form').forEach(function(form) {
     form.addEventListener('submit', function(e) {
