@@ -154,4 +154,14 @@ Penalties for these violations vary by jurisdiction and enforcing agency. OSHA c
 
 ## How PoolFlow Helps
 
-PoolFlow provides pool service professionals with tools to maintain regulatory compliance alongside operational efficiency. The platform's chemical tracking features help you monitor inventory levels against maximum allowable quantities, ensuring you stay within fire code thresholds. By calculating precise chemical dosing requirements using the Langelier Saturation Index, where LSI equals pH plus Temperature Factor plus Calcium Factor plus Alkalinity Factor minus TDS Constant, PoolFlow helps you carry only the chemicals you need, reducing storage and transport risks. The platform's route optimization features enable more efficient delivery schedules, minimizing the quantity of chemicals stored on vehicles at any given time. Digital record-keeping through PoolFlow also simplifies the documentation requirements for chemical inventory, usage logs, and service records that regulators expect to see during inspections.
+[PoolFlow](/#features) provides pool service professionals with tools to maintain regulatory compliance alongside operational efficiency.
+
+The platform's **chemical tracking features** help you monitor inventory levels against maximum allowable quantities, ensuring you stay within fire code thresholds.
+
+By calculating precise chemical dosing requirements using the Langelier Saturation Index, where LSI equals pH plus Temperature Factor plus Calcium Factor plus Alkalinity Factor minus TDS Constant, PoolFlow helps you carry only the chemicals you need, reducing storage and transport risks.
+
+The platform's **route optimization features** enable more efficient delivery schedules, minimizing the quantity of chemicals stored on vehicles at any given time.
+
+**Digital record-keeping** through PoolFlow simplifies the documentation requirements for chemical inventory, usage logs, and service records that regulators expect to see during inspections.
+
+Start with PoolFlow's free tier for up to 5 pools, or upgrade to [PoolFlow Pro at $29.99/mo ($299.99/yr)](/#pricing) for full route management with complete inventory tracking and compliance documentation.
