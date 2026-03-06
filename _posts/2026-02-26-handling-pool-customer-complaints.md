@@ -50,7 +50,7 @@ Resolution should be proportional to the problem and the cause. A weather-relate
 
 After resolving the immediate issue, identify the root cause to prevent recurrence. Was it a one-time event (freak weather, equipment failure) or a systemic issue (undersized pump, recurring chemical imbalance, customer behavior pattern)? If it is systemic, address it now — recommend equipment upgrades, adjust the chemical regimen, or reset expectations about what the service can achieve given the pool's specific challenges.
 
-## Common Complaints and How to Handle Them
+## What Are the Most Common Pool Service Complaints and How Do You Handle Them?
 
 ### Green Pool Callbacks
 
@@ -123,7 +123,7 @@ After resolving a complaint, follow up within 48 to 72 hours. A brief text — "
 
 Psychology research demonstrates the service recovery paradox: customers who experience a problem that is handled exceptionally well report higher satisfaction than customers who never experienced a problem at all. A green pool callback resolved within 24 hours with clear communication and a professional explanation can strengthen the customer relationship beyond its pre-complaint level. Document every complaint, your response, and the resolution — this protects you legally and identifies recurring issues that need systemic solutions.
 
-## When to Offer Credits vs. Stand Firm
+## When Should You Offer Credits vs. Stand Firm?
 
 Not every complaint warrants compensation. The decision framework is straightforward:
 
@@ -145,7 +145,7 @@ Not every complaint warrants compensation. The decision framework is straightfor
 - The customer is attempting to negotiate a lower price through complaints
 - The issue stems from the customer refusing previously recommended repairs
 
-## Red Flag Customers to Avoid
+## How Do You Identify Red Flag Customers?
 
 Experience teaches most technicians to recognize customer profiles that generate disproportionate complaints regardless of service quality:
 
@@ -158,8 +158,14 @@ Identifying these patterns early — ideally during the initial consultation —
 
 ## How PoolFlow Helps
 
-PoolFlow provides the documentation infrastructure that makes professional complaint resolution possible. Every service visit is logged with timestamped chemical readings, chemicals applied, work performed, and proof-of-service photos — all captured in under two minutes. When a complaint arises, you can pull up the complete service history for that pool instantly, showing exactly what was done and when.
+[PoolFlow](/#features) provides the documentation infrastructure that makes professional complaint resolution possible.
 
-PDF service reports can be generated and shared with customers to support your explanation of what happened and why. The customer profile stores notes from previous interactions, including any documented complaints and resolutions, so you always have context when a customer calls. Chemical inventory tracking shows exactly what products were used at each pool, supporting your case when chemical costs or treatment decisions are questioned.
+**Timestamped service logs.** Every service visit is logged with timestamped chemical readings, chemicals applied, work performed, and proof-of-service photos — all captured in under two minutes. When a complaint arises, you can pull up the complete service history for that pool instantly, showing exactly what was done and when.
 
-Equipment tracking with warranty and service dates lets you demonstrate that you proactively identified failing equipment before it became a problem. With PoolFlow's complete digital record of every visit, every reading, and every recommendation, you always have the evidence needed to resolve disputes professionally and protect your business reputation.
+**PDF service reports.** Reports can be generated and shared with customers to support your explanation of what happened and why. The customer profile stores notes from previous interactions, including any documented complaints and resolutions, so you always have context when a customer calls.
+
+**Chemical inventory tracking.** PoolFlow shows exactly what products were used at each pool, supporting your case when chemical costs or treatment decisions are questioned.
+
+**Equipment tracking.** Warranty and service dates let you demonstrate that you proactively identified failing equipment before it became a problem.
+
+With PoolFlow's complete digital record of every visit, every reading, and every recommendation, you always have the evidence needed to resolve disputes professionally and protect your business reputation. See [PoolFlow's pricing](/#pricing) to get started.

@@ -16,13 +16,15 @@ faq:
     answer: "Yes, though the scope depends on the climate. In regions where pools are closed with covers, monthly inspections are recommended to check cover condition, water level, and antifreeze levels in plumbing. In warmer climates where pools remain open year-round, winter maintenance continues on a reduced schedule, typically biweekly, with adjusted chemical targets for lower water temperatures. Neglecting winter maintenance invites staining, algae growth under covers, and equipment damage from freezing, all of which create expensive problems at spring opening."
 ---
 
+Seasonal pool maintenance requires different chemical targets, equipment inspections, and service schedules throughout the year. This comprehensive checklist covers all four phases of the annual pool maintenance cycle — spring opening, summer peak season, fall transition, and winter closing — with specific protocols, chemical ranges, and customer communication strategies for service professionals.
+
 ## The Four Seasons of Pool Service
 
 Pool maintenance is not a static discipline. The demands placed on water chemistry, equipment, and your service schedule shift dramatically across the calendar year. A technician who applies the same approach in January as in July is either wasting time and chemicals or falling short of what the water actually needs.
 
 This seasonal checklist is designed for service professionals who manage residential and light commercial accounts. It provides a structured framework for each phase of the annual cycle, with specific chemical targets, equipment inspection protocols, and customer communication timelines. Whether you operate in a climate with full seasonal closings or service pools year-round in a southern market, the principles here apply. Adapt the timing to your region, but follow the sequence.
 
-## Spring Opening: March Through May
+## How Do You Open a Pool for Spring?
 
 Spring opening is the most labor-intensive service event of the year. It sets the tone for the entire season. A clean, well-executed opening earns customer confidence. A sloppy one generates callbacks and complaints that persist for months.
 
@@ -137,7 +139,7 @@ Reach out to customers in September or early October to discuss:
 
 Early communication prevents the last-minute scramble that leads to rushed closings and missed details.
 
-## Winter Closing: November Through February
+## How Do You Close a Pool for Winter?
 
 In climates where pools are closed for winter, the closing procedure is as critical as the opening. Mistakes made during closing create expensive problems in spring, from cracked plumbing to severe staining.
 

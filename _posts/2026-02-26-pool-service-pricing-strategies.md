@@ -16,6 +16,8 @@ faq:
     answer: "Raise prices annually, ideally at the start of the service season or at the beginning of the calendar year. Notify customers in writing 30 to 60 days before the increase takes effect. Annual increases of 3 to 5 percent keep pace with inflation and rising chemical costs. If you have not raised prices in more than two years, you are almost certainly undercharging. Additional triggers for price increases include significant chemical cost spikes, fuel price jumps, added services or improved equipment, and any account where your chemical costs exceed 30 percent of the service fee."
 ---
 
+Setting the right price for pool service accounts is the single most important business decision a service professional makes. This guide covers cost-based and market-based pricing frameworks, the critical 30 percent chemical cost threshold, strategies for raising prices without losing customers, and how to use add-on services to increase revenue per account.
+
 ## The Cost of Getting Pricing Wrong
 
 Every pool on your route is either making you money or costing you money. There is no neutral. The difference between a profitable account and a losing one often comes down to five or ten dollars per month, which is why pricing precision matters so much in this industry.

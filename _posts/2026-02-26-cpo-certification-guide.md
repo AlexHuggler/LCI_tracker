@@ -74,7 +74,7 @@ An LSI value of zero indicates perfectly balanced water. Negative values indicat
 
 The CPO exam typically includes questions that require candidates to calculate LSI values using provided water chemistry data and the LSI calculation table in the handbook. Candidates must also demonstrate understanding of how to adjust individual water chemistry parameters to bring the LSI into the acceptable range of -0.3 to +0.3.
 
-For pool service professionals, LSI management is not merely an exam topic but a daily operational concern. Maintaining balanced LSI values prevents costly damage to pool surfaces and equipment, reduces chemical consumption, and ensures swimmer comfort. For a deeper understanding of water balance principles, see our guide on [pool water chemistry fundamentals](/blog/pool-water-chemistry-fundamentals/).
+For pool service professionals, LSI management is not merely an exam topic but a daily operational concern. Maintaining balanced LSI values prevents costly damage to pool surfaces and equipment, reduces chemical consumption, and ensures swimmer comfort. For a deeper understanding of water balance principles, see our guide on [pool water chemistry fundamentals](/blog/pool-water-balance-chemistry-guide/).
 
 ### Filtration Systems
 
@@ -98,7 +98,7 @@ Candidates must also understand the Model Aquatic Health Code (MAHC), developed 
 
 Understanding record-keeping requirements is also tested, as most jurisdictions require commercial pool operators to maintain daily logs of water chemistry readings, chemical additions, and maintenance activities.
 
-## CPO Certification Cost
+## How Much Does CPO Certification Cost?
 
 The total cost of CPO certification typically ranges from $300 to $450, depending on the instructor, location, and format. This fee generally includes the instructional course, the PHTA handbook, and one exam attempt.
 
@@ -106,7 +106,7 @@ Some training providers charge additional fees for exam retakes, typically in th
 
 Employers frequently cover the cost of CPO certification for their staff, particularly when the certification is required by local regulations or client contracts. Independent pool service operators should consider the certification cost as a business investment that opens access to the commercial pool service market.
 
-## Five-Year Validity and Renewal
+## How Long Does CPO Certification Last?
 
 CPO certification is valid for five years from the date of issuance. Unlike some professional certifications that require continuing education credits during the certification period, the CPO certification does not have interim continuing education requirements.
 
@@ -158,10 +158,12 @@ Understanding [OSHA chemical handling requirements](/blog/osha-chemical-handling
 
 ## How PoolFlow Helps
 
-PoolFlow provides pool service professionals with the tools they need to apply their CPO knowledge effectively in daily operations. The platform's water chemistry tracking features allow technicians to log readings, calculate chemical dosing requirements, and monitor LSI values across all service accounts in real time.
+PoolFlow provides pool service professionals with the tools they need to apply their CPO knowledge effectively in daily operations. The platform's [water chemistry tracking features](/#features) allow technicians to log readings, calculate chemical dosing requirements, and monitor LSI values across all service accounts in real time.
 
 For CPO-certified operators managing commercial accounts, PoolFlow's compliance documentation features generate the water chemistry logs and maintenance records that health departments require during inspections. Digital record-keeping eliminates the risk of lost paper logs and ensures that historical data is always accessible.
 
-PoolFlow's route management and scheduling tools help service companies efficiently coordinate technician assignments, ensuring that CPO-certified staff are dispatched to commercial accounts that require their credentials. The platform also tracks certification expiration dates and sends renewal reminders, so operators never face a lapse in their CPO status.
+PoolFlow's route management and scheduling tools help service companies efficiently coordinate technician assignments, ensuring that CPO-certified staff are dispatched to commercial accounts that require their credentials.
+
+The platform also tracks certification expiration dates and sends renewal reminders, so operators never face a lapse in their CPO status. Check out [PoolFlow's pricing](/#pricing) to get started.
 
 By combining professional certification with modern service management technology, pool operators can deliver higher-quality service, maintain regulatory compliance, and grow their businesses with confidence.

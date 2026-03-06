@@ -16,6 +16,8 @@ faq:
     answer: "Most health codes require commercial pools to be tested a minimum of twice per day during operating hours. Many jurisdictions require testing before the pool opens each day and at regular intervals throughout the day, with some high-traffic facilities requiring hourly testing. All test results must be recorded in a log book that is available for inspection by health department officials at any time. Parameters tested typically include free chlorine, combined chlorine, pH, and temperature at minimum."
 ---
 
+Commercial and residential pools are governed by fundamentally different regulatory frameworks in the United States. Commercial pools face strict requirements for CPO-certified operators, twice-daily water testing, extensive record-keeping, VGB Act drain safety compliance, and ADA accessibility, while residential pools have far fewer mandated obligations. This guide breaks down every major regulatory difference to help pool service professionals deliver compliant service across both market segments.
+
 ## Introduction: Two Worlds of Pool Regulation
 
 The regulatory landscape for swimming pools in the United States is split into two distinct categories: commercial pools and residential pools. While both contain the same water chemistry fundamentals where the Langelier Saturation Index governs water balance, the legal, operational, and safety requirements diverge dramatically.
@@ -24,7 +26,7 @@ For pool service professionals, understanding these differences is not merely ac
 
 This guide provides a comprehensive comparison of the regulatory requirements governing commercial and residential pools, equipping pool service companies with the knowledge to deliver compliant, professional service across both market segments.
 
-## Defining Commercial vs Residential Pools
+## What Defines a Commercial vs Residential Pool?
 
 Before examining the regulations, it is essential to understand how authorities classify pools. The distinction is not based on the pool's size, construction, or even the volume of water. It is based on access and purpose.
 

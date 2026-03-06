@@ -16,6 +16,8 @@ faq:
     answer: "Currently, partial draining and refilling with fresh water is the only widely accepted and reliable method for lowering CYA. Some bio-active CYA reduction products have entered the market, but results are inconsistent and slow. Reverse osmosis water treatment is another option, though it requires specialized equipment and is expensive. For most service professionals, a calculated partial drain remains the fastest, most cost-effective solution."
 ---
 
+Cyanuric acid (CYA) protects chlorine from UV degradation, but excessive levels reduce chlorine's sanitizing power and distort LSI calculations. This guide covers the ideal CYA range of 30 to 50 ppm, the CYA-to-chlorine ratio, how CYA accumulates through stabilized chlorine products, and why partial draining is the only reliable method for lowering CYA concentration.
+
 ## Understanding Cyanuric Acid and Its Role in Pool Chemistry
 
 Cyanuric acid, commonly abbreviated as CYA and often sold under the brand name "stabilizer" or "conditioner," is one of the most misunderstood chemicals in the pool service industry. Every outdoor pool needs it, yet too much of it can silently undermine your entire sanitation program. For service professionals managing dozens of accounts, understanding the nuances of CYA is not optional. It is foundational.
@@ -32,7 +34,7 @@ As CYA concentration increases, a greater percentage of total free chlorine is b
 
 This is the phenomenon many technicians refer to as **chlorine lock**, though the more accurate description is that the ratio of active to bound chlorine has shifted too far toward the inactive side.
 
-## Why CYA Accumulates Over Time
+## Why Does CYA Accumulate Over Time?
 
 CYA accumulation is an inevitable consequence of using stabilized chlorine products, specifically **dichlor** (sodium dichloro-s-triazinetrione) and **trichlor** (trichloroisocyanuric acid). These are the most common forms of chlorine in residential pool care, found in tablets, granules, and pucks.
 
@@ -53,7 +55,7 @@ Notice the problem. As CYA climbs, the chlorine requirement climbs with it. At 1
 
 The ratio is also a powerful diagnostic tool. If a pool has persistent algae despite 3 ppm free chlorine, testing CYA may reveal it sitting at 120 ppm. At that level, 3 ppm free chlorine is functionally useless.
 
-## How CYA Affects LSI and Adjusted Alkalinity
+## How Does CYA Affect LSI and Adjusted Alkalinity?
 
 CYA also impacts the **Langelier Saturation Index (LSI)**, the gold standard for predicting whether water is corrosive or scale-forming. When CYA is present, a portion of measured alkalinity is contributed by cyanurate alkalinity rather than carbonate alkalinity, which skews the LSI calculation.
 
@@ -65,7 +67,7 @@ If your total alkalinity test reads 100 ppm and CYA is 60 ppm, adjusted alkalini
 
 This correction matters enormously for managing plaster, pebble, or tile surfaces. Failing to account for CYA can lead to etching on plaster pools. It also means your [chemical dosing calculations](/blog/chemical-dosing-calculations-pool-service/) for alkalinity adjustment may be off if you are not starting from the corrected number. At 120 ppm CYA, you are subtracting 40 ppm from your alkalinity reading, a shift that can move your LSI from balanced into corrosive territory.
 
-## Partial Drain: The Only Reliable Reduction Method
+## How Do You Lower CYA in a Pool?
 
 Here is the reality every pool service professional must communicate to their customers: **the only proven, cost-effective way to lower CYA is to partially drain and refill the pool**. No chemical breaks down CYA in a meaningful timeframe. Some enzymatic products claim to reduce CYA, but the process is slow, unpredictable, and often insufficient for pools well above 100 ppm.
 
@@ -109,10 +111,10 @@ CYA does not change rapidly. For most residential accounts, testing once per mon
 
 ## How PoolFlow Helps
 
-Managing CYA across a full route demands consistent tracking and intelligent calculation. PoolFlow is built for exactly this.
+Managing CYA across a full route demands consistent tracking and intelligent calculation. [PoolFlow](/#features) is built for exactly this.
 
 Every time you log water chemistry, PoolFlow automatically applies the **adjusted alkalinity formula (Adjusted Alkalinity = Total Alkalinity - CYA / 3)** for accurate LSI readings. The **dosing engine** calculates exact chemical quantities based on current readings and pool volume, including muriatic acid at 26 oz per 0.2 pH reduction per 10,000 gallons, soda ash at 6 oz per 0.2 pH increase per 10,000 gallons, and sodium bicarbonate at 24 oz per 10 ppm total alkalinity increase per 10,000 gallons. Every dose is tracked with cost data.
 
 The **chemical inventory system** tracks your supplies, and **service logging** with photo documentation lets you record CYA test results and partial drain progress. PoolFlow's **profit analytics** flag accounts where chemical costs exceed the 30 percent threshold, which high-CYA pools frequently trigger due to excessive chlorine consumption.
 
-Get started with PoolFlow's free tier covering up to 5 pools, or upgrade to Pro at $29.99 per month ($299.99 per year) to manage your full route with complete chemistry tracking and analytics.
+Get started with PoolFlow's free tier covering up to 5 pools, or upgrade to [PoolFlow Pro at $29.99 per month ($299.99 per year)](/#pricing) to manage your full route with complete chemistry tracking and analytics.

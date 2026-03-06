@@ -58,7 +58,7 @@ For pool service companies, training should be specific and practical. Rather th
 
 Training documentation is essential. OSHA inspectors will request records of employee training during inspections, and employers must be able to demonstrate that all employees have received the required training. Records should include the date of training, topics covered, trainer identity, and employee signatures confirming participation.
 
-## Personal Protective Equipment Requirements
+## What PPE Do Pool Technicians Need?
 
 OSHA's PPE standards, codified in 29 CFR 1910 Subpart I, require employers to assess workplace hazards, determine the appropriate PPE for each hazard, provide PPE to employees at no cost, and train employees on proper use, care, and limitations of the equipment.
 
@@ -86,7 +86,7 @@ For most pool service applications, a half-face respirator with combination orga
 
 While OSHA does not mandate specific body coverings for all pool chemical handling, the general duty clause requires employers to protect employees from recognized hazards. Long sleeves, long pants, and closed-toe shoes are considered minimum appropriate attire when handling pool chemicals. Chemical-resistant aprons provide additional protection when handling large quantities of liquid chemicals or performing tasks with high splash potential.
 
-## Chemical Mixing Dangers
+## Why Is Mixing Pool Chemicals Dangerous?
 
 The most serious chemical accidents in the pool service industry involve the mixing of incompatible chemicals. These reactions can produce toxic gases, explosions, or fires, and they have caused fatalities among pool service technicians and facility operators.
 
@@ -146,7 +146,7 @@ OSHA requires employers to report any workplace incident that results in a fatal
 
 Even incidents that do not result in injury should be documented and reviewed to identify corrective actions that prevent recurrence. A near-miss chemical spill or exposure incident provides valuable information about safety gaps in the company's operations.
 
-## Record-Keeping and Documentation
+## What Records Does OSHA Require for Chemical Safety?
 
 OSHA compliance requires maintaining several categories of records related to chemical safety. These include the written hazard communication program, the chemical inventory list, SDS documents for all hazardous chemicals, employee training records, PPE hazard assessments, respiratory protection program documentation, and incident reports.
 
@@ -158,10 +158,14 @@ For information on maintaining compliance with other regulatory bodies, see our 
 
 ## How PoolFlow Helps
 
-PoolFlow supports OSHA chemical safety compliance through several integrated features designed for pool service operations. The platform's chemical inventory tracking monitors the types and quantities of chemicals stored at the company's facility and in each service vehicle, helping ensure that incompatible chemicals are properly segregated.
+[PoolFlow](/#features) supports OSHA chemical safety compliance through several integrated features designed for pool service operations.
 
-PoolFlow's documentation management system provides a centralized repository for SDS documents, making them accessible to technicians in the field through the mobile application. When a technician needs to reference the SDS for a specific product, they can access it immediately on their device rather than searching through paper files in their vehicle.
+**Chemical inventory tracking.** The platform monitors the types and quantities of chemicals stored at the company's facility and in each service vehicle, helping ensure that incompatible chemicals are properly segregated.
 
-The platform's employee training tracker records completion dates, topics covered, and certification status for all safety training programs, ensuring that OSHA training requirements are met and documented. Automated reminders alert managers when training renewals are due, preventing compliance gaps.
+**SDS document management.** PoolFlow's documentation management system provides a centralized repository for SDS documents, making them accessible to technicians in the field through the mobile application. When a technician needs to reference the SDS for a specific product, they can access it immediately on their device rather than searching through paper files in their vehicle.
 
-PoolFlow's incident reporting feature allows technicians to document spills, exposures, and near-miss events directly from the field, creating a timestamped record that supports OSHA reporting requirements and enables prompt corrective action. By integrating chemical safety management into daily operations, PoolFlow helps pool service companies maintain the level of OSHA compliance that protects their technicians and their business.
+**Employee training tracker.** The platform records completion dates, topics covered, and certification status for all safety training programs, ensuring that OSHA training requirements are met and documented. Automated reminders alert managers when training renewals are due, preventing compliance gaps.
+
+**Incident reporting.** PoolFlow allows technicians to document spills, exposures, and near-miss events directly from the field, creating a timestamped record that supports OSHA reporting requirements and enables prompt corrective action.
+
+By integrating chemical safety management into daily operations, PoolFlow helps pool service companies maintain the level of OSHA compliance that protects their technicians and their business. Check out [PoolFlow's pricing](/#pricing) to get started.

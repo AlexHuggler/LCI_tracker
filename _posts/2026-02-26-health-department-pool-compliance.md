@@ -34,7 +34,7 @@ The frequency of health department inspections varies by jurisdiction and facili
 
 In addition to routine scheduled inspections, health departments may conduct unannounced inspections in response to complaints, reported illnesses, or follow-up on previously identified violations. Pool operators should maintain their facilities at inspection-ready standards at all times, not just in anticipation of scheduled visits.
 
-## What Inspectors Evaluate
+## What Do Health Department Inspectors Evaluate?
 
 Health department inspections cover a broad range of operational, chemical, and physical aspects of pool facilities. Understanding each evaluation area allows pool operators and service technicians to focus their maintenance efforts on the elements that inspectors prioritize.
 
@@ -118,7 +118,7 @@ Flow meters and pressure gauges must be installed, operational, and reading with
 
 Chemical feed systems must be properly calibrated and operational. Inspectors may check that erosion feeders, liquid feed pumps, or salt chlorine generators are functioning correctly and delivering chemicals at the appropriate rate.
 
-## Common Violations
+## What Are the Most Common Pool Inspection Violations?
 
 Understanding the most frequent inspection violations helps pool operators and service technicians prioritize their compliance efforts. The following violations appear consistently across jurisdictions as the leading causes of failed inspections.
 
@@ -146,7 +146,7 @@ Missing, damaged, or improperly positioned safety equipment is a frequent inspec
 
 Malfunctioning self-closing and self-latching gates are among the most frequently cited structural violations. Gate closers and latches require regular maintenance, as exposure to weather, chlorine vapor, and heavy use causes degradation over time.
 
-## The Importance of Documentation
+## Why Is Documentation So Important for Pool Compliance?
 
 Thorough, consistent documentation is the foundation of successful health department compliance. Documentation serves multiple purposes: it demonstrates ongoing compliance to inspectors, creates a defensible record in the event of incidents or litigation, identifies trends that indicate developing problems, and provides the basis for effective maintenance planning.
 
@@ -182,12 +182,14 @@ Professional development through [CPO certification](/blog/cpo-certification-gui
 
 ## How PoolFlow Helps
 
-PoolFlow is specifically designed to support the documentation and compliance requirements that health department inspections demand. The platform's water chemistry logging features enable technicians to record readings directly from the pool deck using the mobile application, creating timestamped, geo-located records that demonstrate consistent monitoring.
+[PoolFlow's features](/#features) are specifically designed to support the documentation and compliance requirements that health department inspections demand.
 
-PoolFlow automatically calculates combined chlorine from free and total chlorine readings, flags readings that fall outside acceptable ranges, and generates alerts when parameters approach violation thresholds. This proactive monitoring helps prevent compliance failures before they occur.
+**Water chemistry logging.** The platform enables technicians to record readings directly from the pool deck using the mobile application, creating timestamped, geo-located records that demonstrate consistent monitoring.
 
-The platform's inspection readiness dashboard consolidates all documentation that health department inspectors typically request, including water chemistry logs, maintenance records, drain cover inspection dates, safety equipment check records, and equipment maintenance history. When an inspector arrives, PoolFlow users can generate a comprehensive compliance report in seconds.
+**Automated compliance alerts.** PoolFlow automatically calculates combined chlorine from free and total chlorine readings, flags readings that fall outside acceptable ranges, and generates alerts when parameters approach violation thresholds. This proactive monitoring helps prevent compliance failures before they occur.
 
-For pool service companies managing multiple commercial accounts, PoolFlow's multi-location dashboard provides an at-a-glance view of compliance status across all managed facilities, highlighting any locations that require attention before their next scheduled inspection. Automated record retention ensures that documentation is maintained for the required period without manual file management.
+**Inspection readiness dashboard.** The platform consolidates all documentation that health department inspectors typically request, including water chemistry logs, maintenance records, drain cover inspection dates, safety equipment check records, and equipment maintenance history. When an inspector arrives, PoolFlow users can generate a comprehensive compliance report in seconds.
 
-By digitizing compliance documentation and integrating it into daily service workflows, PoolFlow transforms health department compliance from a periodic scramble into a routine part of professional pool management.
+**Multi-location management.** For pool service companies managing multiple commercial accounts, PoolFlow's multi-location dashboard provides an at-a-glance view of compliance status across all managed facilities, highlighting any locations that require attention before their next scheduled inspection. Automated record retention ensures that documentation is maintained for the required period without manual file management.
+
+By digitizing compliance documentation and integrating it into daily service workflows, PoolFlow transforms health department compliance from a periodic scramble into a routine part of professional pool management. Explore [PoolFlow's pricing](/#pricing) to get started.

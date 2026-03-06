@@ -16,13 +16,15 @@ faq:
     answer: "Adjust pH first, then total alkalinity, then calcium hardness. The reason is that both alkalinity adjustments and calcium hardness adjustments can shift pH. If you correct alkalinity first, you may need to re-correct pH afterward, doubling your work. By setting pH first, then fine-tuning alkalinity with sodium bicarbonate (which has a minimal effect on pH compared to soda ash), you reduce the number of corrections needed and get to balanced water faster."
 ---
 
-## Why Precise Dosing Matters
+Accurate chemical dosing is the foundation of professional pool service. This guide provides the exact dosing rates for muriatic acid, soda ash, sodium bicarbonate, and calcium chloride per 10,000 gallons, along with pool volume formulas, proper correction sequencing, and safety protocols so you can deliver consistent results on every service visit.
+
+## Why Does Precise Chemical Dosing Matter?
 
 Every chemical you add to a pool costs money. Every miscalculation wastes product, wastes time, and risks pushing the water further out of balance than when you started. The pool service industry has a persistent culture of approximation: "a cup of this, a splash of that" might avoid disaster often enough, but it breeds inconsistency. One week you overshoot pH and create cloudy water. The next week you underdose alkalinity and pH bounces back within days.
 
 Precision dosing requires three things: an accurate pool volume, a reliable water test, and the correct dosing rates. This article gives you all three.
 
-## Pool Volume Calculation Formulas
+## How Do You Calculate Pool Volume?
 
 Every dosing calculation starts with pool volume. If your volume is wrong, every chemical measurement downstream is wrong. Take the time to calculate it properly rather than inheriting estimates from previous providers.
 
@@ -80,7 +82,7 @@ Target range: 200 to 400 ppm. Example: A 12,000-gallon pool at 180 ppm targeting
 
 **Critical safety note:** Calcium chloride generates significant heat when dissolving. Always pre-dissolve in a bucket, adding chemical to water slowly. Never dump dry calcium chloride directly into the pool or through the skimmer.
 
-## The Correct Sequencing of Chemical Corrections
+## What Is the Correct Order for Pool Chemical Corrections?
 
 When multiple parameters are out of range, order matters.
 
@@ -138,6 +140,8 @@ PoolFlow's **dosing engine** eliminates manual calculations entirely. Enter curr
 
 The engine automatically applies the **CYA-adjusted alkalinity formula** (Adjusted Alkalinity = Total Alkalinity - CYA / 3) and enforces correct sequencing: pH first, then alkalinity, then calcium hardness.
 
-Every dose is logged with **cost tracking**, and **profit analytics** monitor the 30 percent chemical cost threshold across your route. The **chemical inventory system** prevents mid-route supply shortages, while **route optimization** using nearest-neighbor and 2-opt algorithms minimizes drive time.
+Every dose is logged with **cost tracking**, and **profit analytics** monitor the 30 percent chemical cost threshold across your route.
 
-Start with the free tier for up to 5 pools, or unlock the full dosing engine with PoolFlow Pro at $29.99 per month or $299.99 per year.
+The **chemical inventory system** prevents mid-route supply shortages, while **route optimization** using nearest-neighbor and 2-opt algorithms minimizes drive time. Explore all [PoolFlow features](/#features) to see how dosing, tracking, and routing work together.
+
+Start with the free tier for up to 5 pools, or unlock the full dosing engine with PoolFlow Pro at [$29.99 per month or $299.99 per year](/#pricing).
