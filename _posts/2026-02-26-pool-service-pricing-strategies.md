@@ -231,9 +231,16 @@ This review process turns pricing from an emotional decision into a data-driven 
 
 ## How PoolFlow Helps
 
-PoolFlow provides the data infrastructure that makes intelligent pricing possible. The platform's **profit analytics** track chemical costs per pool, per visit, and per month, giving you real-time visibility into the 30 percent chemical cost threshold across your entire route. When an account's chemical spending creeps above the threshold, PoolFlow flags it so you can investigate and adjust before it erodes your margins.
+[PoolFlow](/#features) provides the data infrastructure that makes intelligent pricing possible. The platform's **profit analytics** track chemical costs per pool, per visit, and per month, giving you real-time visibility into the 30 percent chemical cost threshold across your entire route. When an account's chemical spending creeps above the threshold, PoolFlow flags it so you can investigate and adjust before it erodes your margins.
 
-The **dosing engine** with built-in cost tracking records exactly what you apply at each stop. Muriatic acid at 26 oz per 0.2 pH per 10,000 gallons, soda ash at 6 oz per 0.2 pH per 10,000 gallons, sodium bicarbonate at 24 oz per 10 ppm TA per 10,000 gallons, and calcium chloride at 20 oz per 10 ppm CH per 10,000 gallons, each dose is logged with its cost so you always know what each pool is consuming. The CYA correction (Adjusted Alkalinity = Total Alkalinity - CYA / 3) ensures your chemistry is accurate, which in turn keeps chemical waste to a minimum.
+The **dosing engine** with built-in cost tracking records exactly what you apply at each stop:
+
+- Muriatic acid at 26 oz per 0.2 pH per 10,000 gallons
+- Soda ash at 6 oz per 0.2 pH per 10,000 gallons
+- Sodium bicarbonate at 24 oz per 10 ppm TA per 10,000 gallons
+- Calcium chloride at 20 oz per 10 ppm CH per 10,000 gallons
+
+Each dose is logged with its cost so you always know what each pool is consuming. The CYA correction (Adjusted Alkalinity = Total Alkalinity - CYA / 3) ensures your chemistry is accurate, which in turn keeps chemical waste to a minimum.
 
 **Chemical inventory tracking** monitors your supply levels and spending, feeding directly into your cost analysis. When you know exactly how many gallons of muriatic acid or pounds of sodium bicarbonate you consume per month, you can negotiate better pricing with suppliers and forecast expenses accurately.
 
@@ -243,4 +250,4 @@ The **dosing engine** with built-in cost tracking records exactly what you apply
 
 **Equipment tracking** turns routine observations into revenue opportunities. When you log a worn pump bearing or a scaling salt cell, PoolFlow keeps that record so you can proactively recommend and schedule the repair, generating add-on service revenue.
 
-PoolFlow's **free tier** supports up to 5 pools, giving new operators the tools to track profitability from day one. **PoolFlow Pro** at $29.99 per month or $299.99 per year unlocks the full analytics suite for operators managing larger routes who need comprehensive cost and profitability data to make confident pricing decisions.
+PoolFlow's **free tier** supports up to 5 pools, giving new operators the tools to track profitability from day one. **[PoolFlow Pro at $29.99 per month or $299.99 per year](/#pricing)** unlocks the full analytics suite for operators managing larger routes who need comprehensive cost and profitability data to make confident pricing decisions.

@@ -16,6 +16,8 @@ faq:
     answer: "Absolutely not. Muriatic acid (hydrochloric acid) and chlorine products must never be stored together. If these chemicals come into contact, they produce toxic chlorine gas, which can be lethal even in small concentrations. Regulations require a minimum physical separation, typically at least 20 feet apart or in separate rooms with independent ventilation. Many jurisdictions require a physical barrier such as a non-combustible wall between incompatible chemicals."
 ---
 
+Pool chemical storage is governed by federal, state, and local regulations that every pool service professional must follow. This guide covers the critical separation requirements between oxidizers and acids, OSHA and DOT compliance rules, ventilation and containment standards, and the penalties for common violations, so you can protect your team, your customers, and your business.
+
 ## Introduction: Why Chemical Storage Regulations Matter
 
 Every pool service technician handles hazardous chemicals on a daily basis. Muriatic acid, calcium hypochlorite, sodium hypochlorite, cyanuric acid, and various specialty chemicals are the tools of the trade, but they are also some of the most dangerous substances found in any service industry. The consequences of improper storage are not hypothetical. Each year, emergency responders across the country deal with chemical incidents at pool supply facilities and on service vehicles that result in toxic gas releases, chemical burns, fires, and even fatalities.
@@ -24,7 +26,7 @@ Pool chemical storage regulations exist to prevent these incidents. They are enf
 
 This guide breaks down the key regulatory requirements that every pool service operation must follow, whether you are a solo technician with a truck-mounted chemical supply or a large company operating a warehouse facility.
 
-## Separation Requirements: The Most Critical Rule
+## What Are the Separation Requirements for Pool Chemicals?
 
 The single most important rule in pool chemical storage is the separation of incompatible chemicals. This requirement appears in virtually every applicable regulation, and for good reason. When chlorine-based oxidizers come into contact with acids, the reaction produces chlorine gas, a toxic substance that caused thousands of casualties in World War I.
 
@@ -104,7 +106,7 @@ The containment area must be constructed of materials that are chemically compat
 
 If chemicals are stored outdoors, secondary containment must also account for rainwater accumulation. This may require covered containment areas or systems for managing accumulated water that may become contaminated.
 
-## Labeling Requirements
+## What Are the Labeling Requirements for Pool Chemicals?
 
 OSHA's Hazard Communication Standard (HazCom, 29 CFR 1910.1200) requires that all chemical containers in the workplace be properly labeled. For pool chemicals, this means maintaining the manufacturer's original labels on all containers. If chemicals are transferred to secondary containers, those containers must also be labeled with the product identity and appropriate hazard warnings.
 
@@ -144,7 +146,7 @@ Maintaining proper documentation is both a regulatory requirement and a best pra
 
 For guidance on the broader regulatory landscape affecting your pool service business, see our article on [commercial vs residential pool regulations](/blog/commercial-pool-vs-residential-regulations/) and the importance of maintaining proper documentation across all aspects of your operation.
 
-## Common Violations and Penalties
+## What Are the Most Common Violations and Penalties?
 
 The most frequently cited violations in pool chemical storage include storing incompatible chemicals without adequate separation, missing or outdated Safety Data Sheets, inadequate ventilation in storage areas, lack of secondary containment for liquid chemicals, missing or illegible container labels, failure to provide employee training documentation, and exceeding maximum allowable quantities without proper permits.
 
