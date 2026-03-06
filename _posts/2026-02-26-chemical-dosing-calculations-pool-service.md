@@ -116,7 +116,7 @@ After one full turnover cycle (6 to 8 hours), retest all parameters. Minor pH ad
 
 **Respect waiting times.** After muriatic acid, wait 15 to 20 minutes. After soda ash, 20 to 30 minutes. After calcium chloride, 15 minutes. These intervals allow chemicals to disperse before layering additional corrections.
 
-## Common Dosing Mistakes
+## What Are the Most Common Chemical Dosing Mistakes?
 
 **Using the wrong pool volume.** A 20 percent volume error means a 20 percent dosing error. Measure and calculate rather than estimate.
 

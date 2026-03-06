@@ -80,7 +80,7 @@ The format and delivery method for service reports should match your customers' 
 
 The key principle is consistency. A report sent after every visit builds trust. A report sent sporadically does not establish the same pattern of reliability.
 
-## How Transparency Reduces Cancellations
+## How Does Transparency Reduce Cancellations?
 
 Customer cancellations in pool service follow a predictable pattern. The customer gradually loses confidence in the service value, begins wondering if they need professional help at all, and eventually cancels — often after a triggering event like a perceived service failure, a price increase, or a neighbor's suggestion that "pool care is easy."
 
@@ -98,7 +98,7 @@ Consistent documentation creates what behavioral economists call switching costs
 
 When you need to raise prices, documented service history is your strongest asset. Instead of simply announcing a higher fee, you can show the customer their pool's service record: "Over the past year, your pool has required an average of $52 per month in chemicals, 25 minutes of service time per visit, and three additional callback visits for weather-related issues. The current fee of $140 does not cover these costs, which is why I need to adjust to $170." Data-driven price conversations are dramatically more successful than arbitrary increases. For more on the profitability math behind pricing decisions, see our guide on [pool service profitability](/blog/pool-service-profitability-guide/).
 
-## The Compounding Effect of Consistent Documentation
+## How Does Consistent Documentation Build Value Over Time?
 
 Documentation builds value over time in ways that are not immediately obvious.
 
@@ -150,8 +150,14 @@ If you are not currently documenting visits, start with the basics: a photo and 
 
 ## How PoolFlow Helps
 
-PoolFlow was built around the principle that documentation should take less than two minutes per pool while producing professional results that build customer trust. The app captures chemical readings, chemicals applied, work performed, and proof-of-service photos in a streamlined workflow designed for technicians working in the field.
+[PoolFlow](/#features) was built around the principle that documentation should take less than two minutes per pool while producing professional results that build customer trust.
 
-PDF service reports are generated automatically and can be shared with customers via email or text immediately after each visit, including chemical readings, chemicals used, service notes, and photos. The customer profile stores complete service history, equipment records with warranty dates, and pool-specific notes that accumulate into a comprehensive management record over time.
+**Streamlined service logging.** The app captures chemical readings, chemicals applied, work performed, and proof-of-service photos in a streamlined workflow designed for technicians working in the field.
 
-CSV export provides raw data for annual reviews, profitability analysis, or commercial contract proposals. iCloud sync ensures your complete documentation is available on any device. With PoolFlow, professional documentation becomes the natural byproduct of your daily workflow rather than an additional burden.
+**Automated PDF service reports.** Reports are generated automatically and can be shared with customers via email or text immediately after each visit, including chemical readings, chemicals used, service notes, and photos.
+
+**Customer profiles.** The customer profile stores complete service history, equipment records with warranty dates, and pool-specific notes that accumulate into a comprehensive management record over time.
+
+**Data export and sync.** CSV export provides raw data for annual reviews, profitability analysis, or commercial contract proposals. iCloud sync ensures your complete documentation is available on any device.
+
+With PoolFlow, professional documentation becomes the natural byproduct of your daily workflow rather than an additional burden. See [PoolFlow's pricing](/#pricing) to get started.

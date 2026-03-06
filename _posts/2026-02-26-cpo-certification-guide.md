@@ -28,7 +28,7 @@ Today, the PHTA administers the CPO certification program and maintains the curr
 
 The CPO credential is distinct from state-issued contractor licenses or business permits. While those credentials authorize you to operate a business or perform specific types of work, the CPO certification specifically validates your technical knowledge of pool and spa operations.
 
-## Who Should Get CPO Certified?
+## Who Should Get CPO Certified and Is It Worth It?
 
 CPO certification is relevant to a broad range of professionals in the aquatic industry. Commercial pool operators at hotels, resorts, waterparks, and municipal facilities are the most common candidates, as many jurisdictions require at least one CPO-certified individual on staff at every commercial aquatic facility.
 
@@ -56,7 +56,7 @@ The CPO exam is a proctored, open-book test consisting of 50 multiple-choice que
 
 Candidates who do not pass the exam on their first attempt may retake it, though policies on retake timing and fees vary by instructor and location.
 
-## CPO Exam Topics
+## What Topics Does the CPO Exam Cover?
 
 The CPO exam covers a comprehensive range of topics related to pool and spa operations. Understanding these subject areas in depth is critical for both passing the exam and performing competent pool service in the field.
 
@@ -136,7 +136,7 @@ A small number of states do not have statewide requirements for pool operator ce
 
 For detailed information about licensing requirements in your state, see our comprehensive guide on [state pool service licensing requirements](/blog/state-pool-service-licensing-requirements/).
 
-## Tips for Passing the CPO Exam
+## How Do You Pass the CPO Exam on the First Try?
 
 Preparation is the key to passing the CPO exam on the first attempt. While the exam is open-book, time management is important, and candidates who are unfamiliar with the material will struggle to locate answers within the two-hour time limit.
 

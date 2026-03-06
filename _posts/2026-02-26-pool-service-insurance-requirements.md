@@ -48,7 +48,7 @@ Understanding exclusions is as important as understanding coverage. General liab
 
 Pool service companies should also be aware that some general liability policies contain exclusions specific to chemical handling or pollution events. Given that chemical work is central to pool service, it is essential to confirm that your policy does not exclude these risks or to obtain separate pollution liability coverage if needed.
 
-## Professional Liability Insurance
+## What Is Professional Liability Insurance for Pool Service?
 
 Professional liability insurance, also known as errors and omissions (E&O) insurance, covers claims arising from mistakes, negligence, or failures in the professional services you provide. For pool service companies, this coverage addresses a category of risk that general liability does not touch.
 
@@ -114,7 +114,7 @@ Many states require pool service contractors to obtain a surety bond as a condit
 
 Some commercial clients require performance bonds for pool service contracts. These bonds guarantee that you will perform the contracted services as specified. If you fail to perform, the client can make a claim against the bond to recover damages or the cost of engaging a replacement service provider.
 
-## Certificates of Insurance
+## What Are Certificates of Insurance and Why Do You Need Them?
 
 Understanding certificates of insurance (COIs) is essential for pool service companies, as you will both need to provide them and sometimes need to receive them.
 

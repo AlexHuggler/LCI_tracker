@@ -67,7 +67,7 @@ Still profitable, but the margin has been cut nearly in half. Push chemical cost
 
 The 30 percent rule is a screening tool, not a final verdict. Some pools with 35 percent chemical costs are still profitable if they are fast to service and located between other stops. But any pool crossing the 30 percent line deserves closer scrutiny.
 
-## Common Causes of Unprofitable Pools
+## What Causes a Pool Account to Lose Money?
 
 Understanding why a pool loses money is essential for deciding how to fix it. The causes fall into predictable categories.
 
@@ -110,7 +110,7 @@ Analyze profitability over different time windows to capture seasonal variation:
 
 A pool that looks marginally profitable in a mild spring month may become a clear money-loser in the heat of summer when chemical demand spikes.
 
-## Strategies to Fix Unprofitable Accounts
+## How Do You Fix an Unprofitable Pool Account?
 
 Once you have identified money-losing pools, you have four options, listed in order of preference.
 

@@ -26,7 +26,7 @@ At its core, CYA is a chemical shield. When chlorine is added to pool water, it 
 
 Without CYA, you would burn through chlorine at an unsustainable rate. With the right amount, you maintain a steady residual that keeps the water safe between service visits.
 
-## The Ideal CYA Range: 30 to 50 PPM
+## What Is the Ideal CYA Range for a Swimming Pool?
 
 The industry consensus places the ideal CYA concentration for residential pools between 30 and 50 ppm. At this range, you get meaningful UV protection without significantly diminishing chlorine's sanitizing power. Some saltwater pool operators push toward 60 to 80 ppm because salt chlorine generators produce chlorine continuously, but even in those systems, crossing 80 ppm introduces real risks.
 
@@ -42,7 +42,7 @@ Every time you add a trichlor tablet to a floater or inline chlorinator, you are
 
 The critical point: **chlorine is consumed, but CYA is not**. Chlorine gets used up killing contaminants and breaking down under UV. CYA does not evaporate, does not get filtered out, and degrades extremely slowly. The only meaningful ways CYA leaves a pool are through splash-out, backwashing, and deliberate draining.
 
-## The CYA-to-Chlorine Ratio
+## What Is the Recommended CYA-to-Chlorine Ratio?
 
 Rather than relying on a single free chlorine target, experienced technicians manage the **CYA-to-free-chlorine ratio**. The widely referenced guideline is to maintain free chlorine at approximately 7.5 percent of the CYA level:
 
@@ -113,7 +113,15 @@ CYA does not change rapidly. For most residential accounts, testing once per mon
 
 Managing CYA across a full route demands consistent tracking and intelligent calculation. [PoolFlow](/#features) is built for exactly this.
 
-Every time you log water chemistry, PoolFlow automatically applies the **adjusted alkalinity formula (Adjusted Alkalinity = Total Alkalinity - CYA / 3)** for accurate LSI readings. The **dosing engine** calculates exact chemical quantities based on current readings and pool volume, including muriatic acid at 26 oz per 0.2 pH reduction per 10,000 gallons, soda ash at 6 oz per 0.2 pH increase per 10,000 gallons, and sodium bicarbonate at 24 oz per 10 ppm total alkalinity increase per 10,000 gallons. Every dose is tracked with cost data.
+Every time you log water chemistry, PoolFlow automatically applies the **adjusted alkalinity formula (Adjusted Alkalinity = Total Alkalinity - CYA / 3)** for accurate LSI readings.
+
+The **dosing engine** calculates exact chemical quantities based on current readings and pool volume:
+
+- Muriatic acid at 26 oz per 0.2 pH reduction per 10,000 gallons
+- Soda ash at 6 oz per 0.2 pH increase per 10,000 gallons
+- Sodium bicarbonate at 24 oz per 10 ppm total alkalinity increase per 10,000 gallons
+
+Every dose is tracked with cost data.
 
 The **chemical inventory system** tracks your supplies, and **service logging** with photo documentation lets you record CYA test results and partial drain progress. PoolFlow's **profit analytics** flag accounts where chemical costs exceed the 30 percent threshold, which high-CYA pools frequently trigger due to excessive chlorine consumption.
 

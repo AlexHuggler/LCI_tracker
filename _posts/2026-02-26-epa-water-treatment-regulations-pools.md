@@ -156,7 +156,7 @@ Empty chemical containers should be disposed of in accordance with label instruc
 
 Containers that held hazardous materials must never be reused for other purposes, as residual chemicals can contaminate anything subsequently stored in the container and may create dangerous reactions with incompatible materials.
 
-## Staying Current With EPA Regulations
+## How Do You Stay Current With EPA Pool Regulations?
 
 EPA regulations affecting the pool industry evolve over time as new research emerges, environmental concerns are identified, and regulatory priorities shift. Pool service professionals should stay informed about regulatory changes that may affect their operations.
 
@@ -168,10 +168,14 @@ State and local regulations often incorporate or exceed EPA standards, making it
 
 ## How PoolFlow Helps
 
-PoolFlow supports EPA regulatory compliance through integrated chemical management features designed for pool service operations. The platform's chemical tracking system records every product used at each service location, including manufacturer, EPA registration number, and application rate, creating a detailed compliance trail that demonstrates adherence to label directions.
+PoolFlow supports EPA regulatory compliance through integrated chemical management features designed for pool service operations:
 
-PoolFlow's water chemistry monitoring tracks CYA levels alongside other water parameters, providing visual trend analysis that alerts technicians when CYA concentrations approach regulatory limits. The platform calculates the dilution volume needed to reduce CYA to target levels, helping technicians recommend timely partial drains to their clients before compliance thresholds are exceeded.
+- **Chemical tracking:** Records every product used at each service location, including manufacturer, EPA registration number, and application rate, creating a detailed compliance trail that demonstrates adherence to label directions.
 
-The platform's inventory management features track chemical expiration dates and alert service managers when products are approaching the end of their shelf life, preventing the accumulation of expired chemicals that require special disposal procedures. PoolFlow also maintains digital records of chemical purchases and usage that support environmental compliance documentation.
+- **CYA monitoring:** Tracks CYA levels alongside other water parameters with visual trend analysis that alerts technicians when concentrations approach regulatory limits. The platform calculates the dilution volume needed to reduce CYA to target levels, helping technicians recommend timely partial drains before compliance thresholds are exceeded.
 
-For pool service companies committed to environmental responsibility, PoolFlow's discharge documentation features help record dechlorination procedures and water quality testing results when pool water is discharged, creating the documentation that environmental regulators may request. By integrating EPA compliance into everyday service workflows, PoolFlow helps pool professionals maintain the highest standards of regulatory compliance and environmental stewardship.
+- **Inventory management:** Tracks chemical expiration dates and alerts service managers when products are approaching the end of their shelf life, preventing the accumulation of expired chemicals that require special disposal procedures. Digital records of chemical purchases and usage support environmental compliance documentation.
+
+- **Discharge documentation:** Records dechlorination procedures and water quality testing results when pool water is discharged, creating the documentation that environmental regulators may request.
+
+By integrating EPA compliance into everyday service workflows, PoolFlow helps pool professionals maintain the highest standards of regulatory compliance and environmental stewardship. Explore [PoolFlow's features](/#features) to see how chemical tracking and compliance tools work together, or view [pricing](/#pricing) to get started.

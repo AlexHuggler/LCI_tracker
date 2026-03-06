@@ -65,7 +65,7 @@ Explain your policy on holidays and severe weather upfront. If you skip service 
 
 Customers often do not understand that pool chemistry changes continuously between visits. Bather load, rainfall, wind-blown debris, ambient temperature, and sunlight all affect water quality daily. Set the expectation that a pool serviced on Tuesday may not look identical on Saturday after a pool party and a thunderstorm. This is normal, not a service failure.
 
-## Seasonal Communication Strategies
+## What Should You Communicate Each Season?
 
 Proactive seasonal communication prevents complaints by preparing customers for predictable challenges before they occur.
 
@@ -107,7 +107,7 @@ A photo of the pool taken at the end of each visit is the single most convincing
 
 Digital service reports that combine chemical readings, chemicals applied, work performed, and a photo provide customers with visibility into the service they are paying for. Sending these reports after each visit — via email or text — transforms pool service from invisible to transparent. Customers who receive regular reports are dramatically less likely to cancel or complain because they see consistent evidence of the work being done.
 
-## Onboarding New Customers: The First Visit Checklist
+## What Should You Cover When Onboarding a New Pool Customer?
 
 The first visit sets the tone for the entire relationship. Invest the extra time to do it right.
 
@@ -150,7 +150,7 @@ Treat the immediate problem — shock the pool, brush it down, schedule a follow
 
 For detailed strategies on handling specific complaint types, see our guide on [handling pool customer complaints](/blog/handling-pool-customer-complaints/).
 
-## Setting Boundaries
+## How Do You Set Professional Boundaries With Pool Customers?
 
 Professional boundaries protect your time, your mental health, and ultimately your ability to provide good service.
 

@@ -183,7 +183,7 @@ For pools in climates where closing is not necessary, winter maintenance shifts 
 
 Run the pump for fewer hours per day, typically 4 to 6 hours, to save the customer on energy costs while maintaining adequate filtration. Continue to monitor and log all chemistry parameters, as unexpected rain events and temperature swings can disrupt balance quickly.
 
-## Building Your Annual Service Calendar
+## How Do You Build Your Annual Service Calendar?
 
 The most efficient service professionals plan their seasonal transitions weeks in advance. Here is a high-level annual calendar:
 
@@ -198,14 +198,18 @@ Building this structure into your [business operations](/blog/start-pool-service
 
 ## How PoolFlow Helps
 
-PoolFlow transforms seasonal pool maintenance from a mental checklist into a systematic, trackable workflow. The **service logging** feature with photo documentation lets you record the condition of every pool at opening and closing, creating a visual record that protects both you and your customer.
+[PoolFlow's features](/#features) transform seasonal pool maintenance from a mental checklist into a systematic, trackable workflow.
 
-The **dosing engine** automatically adjusts calculations based on current readings and pool volume, whether you are performing a heavy spring startup correction or a light winter maintenance dose. All dosing rates are built in: muriatic acid at 26 oz per 0.2 pH per 10,000 gallons, soda ash at 6 oz per 0.2 pH per 10,000 gallons, sodium bicarbonate at 24 oz per 10 ppm TA per 10,000 gallons, and calcium chloride at 20 oz per 10 ppm CH per 10,000 gallons. The CYA correction (Adjusted Alkalinity = Total Alkalinity - CYA / 3) is applied automatically to every LSI calculation.
+**Service logging.** The photo documentation feature lets you record the condition of every pool at opening and closing, creating a visual record that protects both you and your customer.
 
-**Equipment tracking** in PoolFlow lets you log the condition of pumps, filters, heaters, and other components at each seasonal transition. When you note a worn impeller in fall, that record is waiting for you in spring, ensuring follow-through on recommended repairs.
+**Dosing engine.** Automatically adjusts calculations based on current readings and pool volume, whether you are performing a heavy spring startup correction or a light winter maintenance dose. All dosing rates are built in: muriatic acid at 26 oz per 0.2 pH per 10,000 gallons, soda ash at 6 oz per 0.2 pH per 10,000 gallons, sodium bicarbonate at 24 oz per 10 ppm TA per 10,000 gallons, and calcium chloride at 20 oz per 10 ppm CH per 10,000 gallons. The CYA correction (Adjusted Alkalinity = Total Alkalinity - CYA / 3) is applied automatically to every LSI calculation.
 
-PoolFlow's **route optimization** engine, powered by nearest-neighbor and 2-opt algorithms, adjusts as your route changes between seasons. Whether you are running a full summer route of 80 pools or a reduced winter monitoring schedule, the system minimizes drive time and maximizes productive service hours.
+**Equipment tracking.** Log the condition of pumps, filters, heaters, and other components at each seasonal transition. When you note a worn impeller in fall, that record is waiting for you in spring, ensuring follow-through on recommended repairs.
 
-**Chemical inventory tracking** ensures you have the right supplies on your truck for each seasonal phase, from heavy shock supplies in spring to winterizing chemicals in fall. And **profit analytics** with the 30 percent chemical cost threshold keep your seasonal pricing aligned with your actual costs.
+**Route optimization.** PoolFlow's route optimization engine, powered by nearest-neighbor and 2-opt algorithms, adjusts as your route changes between seasons. Whether you are running a full summer route of 80 pools or a reduced winter monitoring schedule, the system minimizes drive time and maximizes productive service hours.
 
-Start free with up to 5 pools on PoolFlow's free tier, or manage your full seasonal operation with PoolFlow Pro at $29.99 per month or $299.99 per year.
+**Chemical inventory tracking.** Ensures you have the right supplies on your truck for each seasonal phase, from heavy shock supplies in spring to winterizing chemicals in fall.
+
+**Profit analytics.** The 30 percent chemical cost threshold keeps your seasonal pricing aligned with your actual costs.
+
+Start free with up to 5 pools on PoolFlow's free tier, or manage your full seasonal operation with [PoolFlow Pro at $29.99 per month or $299.99 per year](/#pricing).

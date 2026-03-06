@@ -123,7 +123,7 @@ Residential pool service pricing varies significantly by market, but the typical
 
 For a deeper analysis of how to set rates that sustain your business, see our guide on [pool service pricing strategies](/blog/pool-service-pricing-strategies/).
 
-## Building Your Route
+## How Do You Build an Efficient Service Route?
 
 Your route is the engine of your business. An efficient route means more pools per day, less fuel, and more profit. An inefficient route means wasted hours in the truck, higher costs, and fewer accounts.
 
@@ -135,7 +135,7 @@ Your route is the engine of your business. An efficient route means more pools p
 
 **Optimize continuously.** As you add and remove accounts, re-evaluate your route order regularly. What made sense with 20 pools may be inefficient with 50. Dedicated [route optimization tools](/blog/route-optimization-pool-service/) can save significant time as your route grows beyond 40 or 50 stops.
 
-## Marketing: Getting Your First Customers
+## How Do You Get Your First Pool Service Customers?
 
 The most effective marketing for a new pool service business is local, personal, and persistent.
 

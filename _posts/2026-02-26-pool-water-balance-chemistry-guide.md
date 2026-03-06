@@ -124,7 +124,7 @@ Like CYA and calcium hardness, TDS can only be reduced through dilution. Regular
 
 Free chlorine is the active sanitizer in the vast majority of swimming pools. It exists in two forms: hypochlorous acid (HOCl) and the hypochlorite ion (OCl-). Hypochlorous acid is the effective killing form, and the ratio between the two forms is determined by pH, which is why pH management is so critical to sanitation.
 
-### The Ideal Range: 1 to 4 ppm
+### What Is the Ideal Free Chlorine Level?
 
 The recommended free chlorine level for residential pools is 1 to 4 ppm, with 2 to 4 ppm preferred for commercial pools. These levels provide adequate sanitation while minimizing chlorine odor, swimmer irritation, and chemical costs.
 
@@ -204,7 +204,7 @@ Test strips provide quick, convenient readings for multiple parameters simultane
 
 For parameters that are difficult to measure accurately in the field, such as TDS, metals, and phosphates, professional laboratory analysis provides the most reliable results. Many pool service companies submit water samples to a laboratory at the beginning of each season and whenever unusual water conditions are encountered. Laboratory results also serve as a calibration check for field testing equipment.
 
-## Putting It All Together: Holistic Water Management
+## How Do You Achieve Holistic Water Management?
 
 The key insight for service technicians is that water chemistry parameters do not exist in isolation. They form an interconnected system where adjusting one parameter inevitably affects others. pH and alkalinity are directly linked through carbonate chemistry. CYA affects both chlorine efficacy and the effective alkalinity for LSI purposes. Temperature influences sanitizer demand, pH drift, and the saturation index simultaneously.
 

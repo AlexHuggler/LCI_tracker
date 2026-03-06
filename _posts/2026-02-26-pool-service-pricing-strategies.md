@@ -116,7 +116,7 @@ If you use per-visit pricing, calculate the equivalent monthly rate to ensure yo
 
 For most service professionals, monthly billing with chemicals included is the strongest approach. It maximizes perceived value, simplifies accounting, and aligns incentives. When chemicals are included, you are motivated to keep the water balanced efficiently, which reduces waste and callbacks.
 
-## The 30 Percent Chemical Cost Rule
+## What Is the 30 Percent Chemical Cost Rule?
 
 This is the most important profitability metric in pool service: **your chemical costs should not exceed 30 percent of the service fee for any individual account.**
 
@@ -143,7 +143,7 @@ To put this in practical terms, here is what $45 per month in chemicals (the 30%
 
 Total: $16 to $34 per month, well within the $45 ceiling for a well-maintained pool. When costs consistently push above this range, it signals a problem that pricing alone cannot solve. You need to diagnose the underlying chemistry or operational issue.
 
-## The Minimum Viable Fee
+## What Is the Minimum Viable Fee for Pool Service?
 
 Every route has a minimum fee below which no account is worth servicing. This is your walk-away number. Even if a pool takes only 15 minutes and uses minimal chemicals, you still spent time driving to it, testing the water, logging the visit, and carrying the overhead of that customer relationship.
 
@@ -151,7 +151,7 @@ For most solo operators, the minimum viable monthly fee falls between **$80 and 
 
 Know your minimum and honor it. When a potential customer balks at your minimum fee, let them go. Filling your route with accounts below your minimum is the fastest path to burnout and financial stress.
 
-## When and How to Raise Prices
+## When Should You Raise Pool Service Prices?
 
 Price increases are necessary, inevitable, and far less traumatic than most service professionals fear. Chemicals, fuel, insurance, and the general cost of living go up every year. Your prices must follow.
 

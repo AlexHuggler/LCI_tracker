@@ -75,7 +75,7 @@ A day with 12 quick residential pools might take the same total time as a day wi
 
 For insights on tracking per-pool costs and time investments, see our article on [pool service profitability](/blog/pool-service-profitability-guide/).
 
-## Geographic Clustering Techniques
+## What Are the Best Geographic Clustering Techniques for Pool Routes?
 
 Within each day's route, geographic clustering determines how you group nearby stops. Effective clustering goes beyond simple proximity.
 
