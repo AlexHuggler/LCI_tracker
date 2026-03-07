@@ -16,6 +16,8 @@ faq:
     answer: "Raise prices annually, ideally at the start of the service season or at the beginning of the calendar year. Notify customers in writing 30 to 60 days before the increase takes effect. Annual increases of 3 to 5 percent keep pace with inflation and rising chemical costs. If you have not raised prices in more than two years, you are almost certainly undercharging. Additional triggers for price increases include significant chemical cost spikes, fuel price jumps, added services or improved equipment, and any account where your chemical costs exceed 30 percent of the service fee."
 ---
 
+Setting the right price for pool service accounts is the single most important business decision a service professional makes. This guide covers cost-based and market-based pricing frameworks, the critical 30 percent chemical cost threshold, strategies for raising prices without losing customers, and how to use add-on services to increase revenue per account.
+
 ## The Cost of Getting Pricing Wrong
 
 Every pool on your route is either making you money or costing you money. There is no neutral. The difference between a profitable account and a losing one often comes down to five or ten dollars per month, which is why pricing precision matters so much in this industry.
@@ -114,7 +116,7 @@ If you use per-visit pricing, calculate the equivalent monthly rate to ensure yo
 
 For most service professionals, monthly billing with chemicals included is the strongest approach. It maximizes perceived value, simplifies accounting, and aligns incentives. When chemicals are included, you are motivated to keep the water balanced efficiently, which reduces waste and callbacks.
 
-## The 30 Percent Chemical Cost Rule
+## What Is the 30 Percent Chemical Cost Rule?
 
 This is the most important profitability metric in pool service: **your chemical costs should not exceed 30 percent of the service fee for any individual account.**
 
@@ -141,7 +143,7 @@ To put this in practical terms, here is what $45 per month in chemicals (the 30%
 
 Total: $16 to $34 per month, well within the $45 ceiling for a well-maintained pool. When costs consistently push above this range, it signals a problem that pricing alone cannot solve. You need to diagnose the underlying chemistry or operational issue.
 
-## The Minimum Viable Fee
+## What Is the Minimum Viable Fee for Pool Service?
 
 Every route has a minimum fee below which no account is worth servicing. This is your walk-away number. Even if a pool takes only 15 minutes and uses minimal chemicals, you still spent time driving to it, testing the water, logging the visit, and carrying the overhead of that customer relationship.
 
@@ -149,7 +151,7 @@ For most solo operators, the minimum viable monthly fee falls between **$80 and 
 
 Know your minimum and honor it. When a potential customer balks at your minimum fee, let them go. Filling your route with accounts below your minimum is the fastest path to burnout and financial stress.
 
-## When and How to Raise Prices
+## When Should You Raise Pool Service Prices?
 
 Price increases are necessary, inevitable, and far less traumatic than most service professionals fear. Chemicals, fuel, insurance, and the general cost of living go up every year. Your prices must follow.
 
@@ -229,9 +231,16 @@ This review process turns pricing from an emotional decision into a data-driven 
 
 ## How PoolFlow Helps
 
-PoolFlow provides the data infrastructure that makes intelligent pricing possible. The platform's **profit analytics** track chemical costs per pool, per visit, and per month, giving you real-time visibility into the 30 percent chemical cost threshold across your entire route. When an account's chemical spending creeps above the threshold, PoolFlow flags it so you can investigate and adjust before it erodes your margins.
+[PoolFlow](/#features) provides the data infrastructure that makes intelligent pricing possible. The platform's **profit analytics** track chemical costs per pool, per visit, and per month, giving you real-time visibility into the 30 percent chemical cost threshold across your entire route. When an account's chemical spending creeps above the threshold, PoolFlow flags it so you can investigate and adjust before it erodes your margins.
 
-The **dosing engine** with built-in cost tracking records exactly what you apply at each stop. Muriatic acid at 26 oz per 0.2 pH per 10,000 gallons, soda ash at 6 oz per 0.2 pH per 10,000 gallons, sodium bicarbonate at 24 oz per 10 ppm TA per 10,000 gallons, and calcium chloride at 20 oz per 10 ppm CH per 10,000 gallons, each dose is logged with its cost so you always know what each pool is consuming. The CYA correction (Adjusted Alkalinity = Total Alkalinity - CYA / 3) ensures your chemistry is accurate, which in turn keeps chemical waste to a minimum.
+The **dosing engine** with built-in cost tracking records exactly what you apply at each stop:
+
+- Muriatic acid at 26 oz per 0.2 pH per 10,000 gallons
+- Soda ash at 6 oz per 0.2 pH per 10,000 gallons
+- Sodium bicarbonate at 24 oz per 10 ppm TA per 10,000 gallons
+- Calcium chloride at 20 oz per 10 ppm CH per 10,000 gallons
+
+Each dose is logged with its cost so you always know what each pool is consuming. The CYA correction (Adjusted Alkalinity = Total Alkalinity - CYA / 3) ensures your chemistry is accurate, which in turn keeps chemical waste to a minimum.
 
 **Chemical inventory tracking** monitors your supply levels and spending, feeding directly into your cost analysis. When you know exactly how many gallons of muriatic acid or pounds of sodium bicarbonate you consume per month, you can negotiate better pricing with suppliers and forecast expenses accurately.
 
@@ -241,4 +250,4 @@ The **dosing engine** with built-in cost tracking records exactly what you apply
 
 **Equipment tracking** turns routine observations into revenue opportunities. When you log a worn pump bearing or a scaling salt cell, PoolFlow keeps that record so you can proactively recommend and schedule the repair, generating add-on service revenue.
 
-PoolFlow's **free tier** supports up to 5 pools, giving new operators the tools to track profitability from day one. **PoolFlow Pro** at $29.99 per month or $299.99 per year unlocks the full analytics suite for operators managing larger routes who need comprehensive cost and profitability data to make confident pricing decisions.
+PoolFlow's **free tier** supports up to 5 pools, giving new operators the tools to track profitability from day one. **[PoolFlow Pro at $29.99 per month or $299.99 per year](/#pricing)** unlocks the full analytics suite for operators managing larger routes who need comprehensive cost and profitability data to make confident pricing decisions.

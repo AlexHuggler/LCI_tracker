@@ -22,7 +22,7 @@ Most pool service technicians can tell you their total monthly revenue without h
 
 The reality is straightforward: not every pool on your route makes you money. Some pools consume so much in chemicals, drive time, and labor that they actually cost more to service than the monthly fee covers. Identifying and addressing these money-losing accounts is one of the fastest ways to improve your bottom line without adding a single new customer.
 
-## Calculating True Cost Per Pool
+## How Do You Calculate the True Cost Per Pool?
 
 The monthly service fee is revenue, not profit. To determine actual profitability, you need to calculate the true cost of servicing each pool. This calculation has four components.
 
@@ -42,7 +42,7 @@ Allocate drive time between stops proportionally. If it takes 12 minutes to driv
 
 Fixed costs — insurance, vehicle payments, phone, software subscriptions, equipment depreciation, and business licenses — must be spread across all accounts. If your monthly overhead is $2,000 and you service 80 pools, each pool bears $25 in overhead. This number stays relatively constant regardless of the specific pool, but it must be included for an accurate profitability picture.
 
-## The 30 Percent Chemical Cost Rule
+## What Is the 30 Percent Chemical Cost Rule?
 
 A quick diagnostic that works for most residential pool service businesses: if chemical costs for a pool exceed 30 percent of the monthly service fee, that pool is almost certainly unprofitable.
 
@@ -67,7 +67,7 @@ Still profitable, but the margin has been cut nearly in half. Push chemical cost
 
 The 30 percent rule is a screening tool, not a final verdict. Some pools with 35 percent chemical costs are still profitable if they are fast to service and located between other stops. But any pool crossing the 30 percent line deserves closer scrutiny.
 
-## Common Causes of Unprofitable Pools
+## What Causes a Pool Account to Lose Money?
 
 Understanding why a pool loses money is essential for deciding how to fix it. The causes fall into predictable categories.
 
@@ -110,7 +110,7 @@ Analyze profitability over different time windows to capture seasonal variation:
 
 A pool that looks marginally profitable in a mild spring month may become a clear money-loser in the heat of summer when chemical demand spikes.
 
-## Strategies to Fix Unprofitable Accounts
+## How Do You Fix an Unprofitable Pool Account?
 
 Once you have identified money-losing pools, you have four options, listed in order of preference.
 
@@ -139,7 +139,7 @@ When a pool remains unprofitable after price increases and efficiency improvemen
 
 Give the customer adequate notice (30 days is standard), provide a professional explanation, and offer a referral to another technician if possible. This preserves your reputation while freeing up capacity for profitable growth.
 
-## When to Fire a Customer
+## When Should You Fire a Customer?
 
 Beyond pure profitability math, some accounts are unprofitable in ways that numbers do not fully capture:
 
@@ -163,8 +163,12 @@ Documentation of your service history — chemical readings, photos, service log
 
 ## How PoolFlow Helps
 
-PoolFlow includes built-in profit analytics that automatically calculate per-pool profitability using actual chemical usage, service duration, and route data. The money-loser detection feature flags accounts where costs exceed sustainable thresholds, giving you an immediate view of which pools need attention.
+PoolFlow includes built-in [profit analytics](/#features) that automatically calculate per-pool profitability using actual chemical usage, service duration, and route data. The money-loser detection feature flags accounts where costs exceed sustainable thresholds, giving you an immediate view of which pools need attention.
 
-The app tracks chemical inventory at the product level and allocates usage to individual pools based on your service logs, eliminating the guesswork that makes manual cost tracking unreliable. Service duration is captured automatically through timestamped check-in and check-out at each stop. Combined with route data that calculates proportional drive time, PoolFlow builds a complete cost picture for every account on your route.
+The app tracks chemical inventory at the product level and allocates usage to individual pools based on your service logs, eliminating the guesswork that makes manual cost tracking unreliable.
 
-CSV export lets you pull this data into spreadsheets for deeper analysis, while PDF service reports give you the documentation needed to support price conversations with customers. With profit analytics running continuously in the background, you always know which accounts are earning their keep and which are dragging your business down.
+Service duration is captured automatically through timestamped check-in and check-out at each stop. Combined with route data that calculates proportional drive time, PoolFlow builds a complete cost picture for every account on your route.
+
+CSV export lets you pull this data into spreadsheets for deeper analysis, while PDF service reports give you the documentation needed to support price conversations with customers.
+
+With profit analytics running continuously in the background, you always know which accounts are earning their keep and which are dragging your business down. Get started at [$29.99/mo or $299.99/yr](/#pricing).

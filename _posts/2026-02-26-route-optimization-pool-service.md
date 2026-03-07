@@ -20,7 +20,7 @@ Every pool service technician knows the frustration of crisscrossing town betwee
 
 Route optimization is not just about saving gas. It determines how many pools you can service in a day, how much profit each stop generates, and whether you end your day at 3 PM or 6 PM. This guide covers practical strategies for building efficient pool service routes, from basic geographic clustering to advanced algorithmic approaches.
 
-## Why Route Order Matters More Than You Think
+## Why Does Route Order Matter More Than You Think?
 
 The math behind route optimization is straightforward. If you service 20 pools per day and average 8 minutes of drive time between stops, that is 2 hours and 40 minutes behind the wheel. Reduce that average to 5 minutes through better sequencing, and you recover 60 minutes daily. Over a five-day work week, that is five additional hours available for servicing more pools, handling callbacks, or simply getting home earlier.
 
@@ -28,7 +28,7 @@ The real-world impact compounds further when you factor in fuel costs, vehicle w
 
 For a deeper look at how these savings affect your overall business health, see our guide on [pool service profitability](/blog/pool-service-profitability-guide/).
 
-## The Traveling Salesman Problem, Simplified
+## What Is the Traveling Salesman Problem and How Does It Apply to Pool Routes?
 
 Route optimization is a version of what mathematicians call the Traveling Salesman Problem: given a list of locations, what is the shortest possible route that visits each one exactly once and returns to the starting point? For even 20 stops, the number of possible route permutations exceeds 2.4 quintillion. No human can evaluate all options mentally.
 
@@ -49,7 +49,7 @@ Software-based route optimization uses algorithms like nearest-neighbor heuristi
 
 The difference between a manually built route and an algorithmically optimized one is typically 10 to 20 percent in total mileage. For a technician already using good manual practices, that translates to an additional 15 to 30 minutes saved daily.
 
-## Day-of-Week Route Assignment Strategies
+## How Should You Assign Pool Routes by Day of the Week?
 
 The most impactful routing decision most technicians make is not the order of stops within a day but the assignment of customers to specific days of the week. Poor day assignment creates routes that zigzag across the entire service area, while good assignment creates tight geographic clusters for each day.
 
@@ -75,7 +75,7 @@ A day with 12 quick residential pools might take the same total time as a day wi
 
 For insights on tracking per-pool costs and time investments, see our article on [pool service profitability](/blog/pool-service-profitability-guide/).
 
-## Geographic Clustering Techniques
+## What Are the Best Geographic Clustering Techniques for Pool Routes?
 
 Within each day's route, geographic clustering determines how you group nearby stops. Effective clustering goes beyond simple proximity.
 
@@ -109,7 +109,7 @@ Place your extended-duration stops early in the day when you have the most energ
 
 Avoid scheduling multiple extended stops back-to-back. Intersperse them with quick or standard stops to maintain a sustainable pace and prevent cascading delays.
 
-## When to Reorganize Your Routes
+## When Should You Reorganize Your Routes?
 
 Routes are not permanent. Several events should trigger a full route review and potential reorganization.
 
@@ -125,7 +125,7 @@ Pool service demand and service duration shift with seasons. Summer brings more 
 
 As your business grows into new territories, resist the temptation to simply add new pools onto existing days. Periodically rebuild routes from scratch using your current customer list. What made sense when you had 60 customers may be wildly inefficient at 120.
 
-## Calculating Drive Time vs. Service Time Ratios
+## How Do You Calculate Drive Time vs. Service Time Ratios?
 
 The single most important metric for route efficiency is the ratio of service time to total working time. Here is how to calculate it:
 
@@ -154,6 +154,10 @@ For guidance on communicating schedule changes to customers when you reorganize 
 
 ## How PoolFlow Helps
 
-PoolFlow includes built-in route optimization that takes the guesswork out of daily planning. The app automatically sequences your stops to minimize total drive time using algorithmic optimization that accounts for real road distances and traffic patterns. Day-of-week assignment tools let you drag and drop customers between days while seeing the geographic impact in real time on an integrated map view.
+PoolFlow includes built-in route optimization that takes the guesswork out of daily planning. The app automatically sequences your stops to minimize total drive time using algorithmic optimization that accounts for real road distances and traffic patterns.
 
-The app tracks service duration at every stop, giving you the data needed to calculate your service-to-drive-time ratio and identify days that need rebalancing. When you add or lose a customer, PoolFlow suggests route adjustments that maintain geographic clustering across all days. With iCloud sync, your optimized routes stay current across all your devices, ensuring that whether you are planning at home or navigating in the field, you always have the most efficient path forward.
+Day-of-week assignment tools let you drag and drop customers between days while seeing the geographic impact in real time on an integrated map view. Explore all of [PoolFlow's route and service features](/#features) to see how these tools work together.
+
+The app tracks service duration at every stop, giving you the data needed to calculate your service-to-drive-time ratio and identify days that need rebalancing. When you add or lose a customer, PoolFlow suggests route adjustments that maintain geographic clustering across all days.
+
+With iCloud sync, your optimized routes stay current across all your devices, ensuring that whether you are planning at home or navigating in the field, you always have the most efficient path forward. Plans start at [$29.99/mo or $299.99/yr](/#pricing).

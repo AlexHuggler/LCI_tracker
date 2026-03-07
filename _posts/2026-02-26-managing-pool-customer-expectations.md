@@ -22,7 +22,7 @@ The most common source of conflict between pool service technicians and their cu
 
 These conflicts are preventable. Clear, proactive communication about what pool service does and does not include, what affects water quality, and what the customer's own responsibilities are eliminates the vast majority of disputes before they start.
 
-## What Service Includes vs. What It Does Not
+## What Does Pool Service Include and What Does It Not?
 
 The first and most important expectation to set is the scope of your service. Many customers assume that "pool service" means everything related to their pool. It does not, and failing to clarify this upfront guarantees future conflicts.
 
@@ -49,7 +49,7 @@ The first and most important expectation to set is the scope of your service. Ma
 
 Make this distinction explicit during onboarding, ideally in writing. A simple one-page service agreement that lists included and excluded items prevents the "I thought that was part of the service" conversation later.
 
-## Visit Frequency and Timing Expectations
+## What Should Customers Expect for Visit Frequency and Timing?
 
 Customers need to understand when you will visit and what variability to expect.
 
@@ -65,7 +65,7 @@ Explain your policy on holidays and severe weather upfront. If you skip service 
 
 Customers often do not understand that pool chemistry changes continuously between visits. Bather load, rainfall, wind-blown debris, ambient temperature, and sunlight all affect water quality daily. Set the expectation that a pool serviced on Tuesday may not look identical on Saturday after a pool party and a thunderstorm. This is normal, not a service failure.
 
-## Seasonal Communication Strategies
+## What Should You Communicate Each Season?
 
 Proactive seasonal communication prevents complaints by preparing customers for predictable challenges before they occur.
 
@@ -91,7 +91,7 @@ Falling leaves are the primary challenge in autumn. Communicate that leaf loads 
 
 In regions where pools remain open year-round, winter brings reduced chemical demand but continued maintenance needs. Communicate any schedule changes — biweekly instead of weekly, for example — and explain what winter service covers. For pools being winterized, provide a clear closing procedure and timeline for spring reopening.
 
-## Documentation as Expectation Management
+## How Does Documentation Help Manage Customer Expectations?
 
 The most powerful tool for managing expectations is consistent, detailed documentation of every service visit. When a customer questions whether you were there, what you did, or why the pool looks a certain way, objective records resolve the dispute instantly.
 
@@ -107,7 +107,7 @@ A photo of the pool taken at the end of each visit is the single most convincing
 
 Digital service reports that combine chemical readings, chemicals applied, work performed, and a photo provide customers with visibility into the service they are paying for. Sending these reports after each visit — via email or text — transforms pool service from invisible to transparent. Customers who receive regular reports are dramatically less likely to cancel or complain because they see consistent evidence of the work being done.
 
-## Onboarding New Customers: The First Visit Checklist
+## What Should You Cover When Onboarding a New Pool Customer?
 
 The first visit sets the tone for the entire relationship. Invest the extra time to do it right.
 
@@ -150,7 +150,7 @@ Treat the immediate problem — shock the pool, brush it down, schedule a follow
 
 For detailed strategies on handling specific complaint types, see our guide on [handling pool customer complaints](/blog/handling-pool-customer-complaints/).
 
-## Setting Boundaries
+## How Do You Set Professional Boundaries With Pool Customers?
 
 Professional boundaries protect your time, your mental health, and ultimately your ability to provide good service.
 
@@ -170,4 +170,8 @@ If a customer's gate is locked, their dog is loose, or construction blocks acces
 
 PoolFlow streamlines customer expectation management through automated documentation and communication tools. The app generates detailed service reports after every visit — including chemical readings, chemicals applied, work performed, and proof-of-service photos — that can be shared with customers via PDF. This transforms every visit into a transparent record that customers can review.
 
-Customer profiles in PoolFlow store complete service history, equipment records with warranty and service dates, and pool-specific notes that help you remember each customer's particular needs and concerns. The equipment tracking feature alerts you to upcoming warranty expirations and maintenance intervals so you can proactively recommend service before failures occur. iCloud sync ensures your complete customer records are accessible on any device, whether you are at the pool, in the truck, or at home preparing for the next day. With consistent documentation built into your daily workflow in under two minutes per stop, PoolFlow makes professional communication the default rather than an extra effort.
+Customer profiles in PoolFlow store complete service history, equipment records with warranty and service dates, and pool-specific notes that help you remember each customer's particular needs and concerns.
+
+The equipment tracking feature alerts you to upcoming warranty expirations and maintenance intervals so you can proactively recommend service before failures occur. iCloud sync ensures your complete customer records are accessible on any device, whether you are at the pool, in the truck, or at home preparing for the next day.
+
+With consistent documentation built into your daily workflow in under two minutes per stop, PoolFlow makes professional communication the default rather than an extra effort. Explore [PoolFlow's features](/#features) to see how automated service reports and customer profiles work together, or check out [pricing plans](/#pricing) to get started.

@@ -16,6 +16,8 @@ faq:
     answer: "When calcium hardness exceeds 400 ppm, the water becomes oversaturated with calcium and begins depositing calcium carbonate scale on pool surfaces, inside pipes, on heat exchangers, and at the waterline. This scale buildup reduces filtration efficiency, restricts water flow, decreases heater performance and can cause heater failure, creates rough surfaces that harbor algae and bacteria, and produces cloudy water. High calcium hardness also pushes the Langelier Saturation Index into the positive scale-forming range. The only practical ways to reduce calcium hardness are partial drain and refill with lower-hardness source water or reverse osmosis treatment. Prevention through regular testing and proactive water management is far preferable to remediation."
 ---
 
+Pool water balance depends on six interrelated chemical parameters: pH, total alkalinity, calcium hardness, cyanuric acid, total dissolved solids, and free chlorine. This guide explains each parameter's ideal range, how they interact with one another, and the testing methods service technicians need to maintain safe, balanced water across every pool on their route.
+
 ## Introduction: Why Water Chemistry Matters
 
 Water chemistry is the core technical discipline of pool service. Every other aspect of pool maintenance, from equipment performance to surface longevity to swimmer safety, is ultimately governed by the chemical state of the water. A pool with perfectly functioning pumps, filters, and heaters will still develop problems if the water chemistry is out of balance. Conversely, properly balanced water can compensate for many equipment limitations and extend the life of every component it touches.
@@ -28,7 +30,7 @@ This article examines each water chemistry parameter in detail, explains how the
 
 pH measures the concentration of hydrogen ions in the water on a logarithmic scale from 0 to 14. In pool chemistry, pH is the single most frequently tested and adjusted parameter, and for good reason. It influences virtually every other aspect of water chemistry.
 
-### The Ideal Range: 7.2 to 7.8
+### What Is the Ideal pH Range for a Pool?
 
 The acceptable pH range for swimming pools is 7.2 to 7.8, with an ideal target of 7.4 to 7.6. This range is not arbitrary. It represents the intersection of several competing requirements.
 
@@ -48,7 +50,7 @@ To raise pH, add soda ash (sodium carbonate) at a rate of 6 ounces per 10,000 ga
 
 Total alkalinity measures the water's ability to resist changes in pH, a property known as buffering capacity. It represents the concentration of carbonate, bicarbonate, and hydroxide ions in the water, measured in parts per million.
 
-### The Ideal Range: 80 to 120 ppm
+### What Is the Ideal Total Alkalinity Range?
 
 Total alkalinity should be maintained between 80 and 120 ppm for most pool types. Plaster pools generally perform best at the higher end of this range (100 to 120 ppm), while fiberglass and vinyl pools can operate comfortably at the lower end (80 to 100 ppm).
 
@@ -70,7 +72,7 @@ Total alkalinity and pH are inextricably linked. Most pH adjusting chemicals als
 
 Calcium hardness measures the concentration of dissolved calcium ions in the pool water, expressed in parts per million. Calcium is essential for the protection of cementitious pool surfaces, including plaster, marcite, pebble, and quartz finishes.
 
-### The Ideal Range: 200 to 400 ppm
+### What Is the Ideal Calcium Hardness Range?
 
 **Low calcium hardness (below 200 ppm)** means the water is hungry for calcium and will aggressively dissolve it from any available source. In plaster pools, this causes etching, roughening, and discoloration of the pool surface. In all pool types, low calcium contributes to corrosion of metal components. The LSI reflects this risk: low calcium hardness produces a lower Calcium Factor and a lower LSI value, pushing toward the corrosive range.
 
@@ -86,7 +88,7 @@ Lowering calcium hardness cannot be achieved through chemical addition. The only
 
 Cyanuric acid, also known as stabilizer or conditioner, protects free chlorine from degradation by ultraviolet sunlight. Without CYA, sunlight can destroy up to 90% of free chlorine in a pool within two hours. With proper CYA levels, chlorine residual is maintained throughout the day with far less chemical consumption.
 
-### The Ideal Range: 30 to 50 ppm
+### What Is the Ideal CYA Range for a Pool?
 
 **Low CYA (below 30 ppm)** provides insufficient chlorine protection. Pools with low CYA consume chlorine rapidly, requiring frequent additions and creating inconsistent sanitizer levels between service visits.
 
@@ -122,7 +124,7 @@ Like CYA and calcium hardness, TDS can only be reduced through dilution. Regular
 
 Free chlorine is the active sanitizer in the vast majority of swimming pools. It exists in two forms: hypochlorous acid (HOCl) and the hypochlorite ion (OCl-). Hypochlorous acid is the effective killing form, and the ratio between the two forms is determined by pH, which is why pH management is so critical to sanitation.
 
-### The Ideal Range: 1 to 4 ppm
+### What Is the Ideal Free Chlorine Level?
 
 The recommended free chlorine level for residential pools is 1 to 4 ppm, with 2 to 4 ppm preferred for commercial pools. These levels provide adequate sanitation while minimizing chlorine odor, swimmer irritation, and chemical costs.
 
@@ -202,7 +204,7 @@ Test strips provide quick, convenient readings for multiple parameters simultane
 
 For parameters that are difficult to measure accurately in the field, such as TDS, metals, and phosphates, professional laboratory analysis provides the most reliable results. Many pool service companies submit water samples to a laboratory at the beginning of each season and whenever unusual water conditions are encountered. Laboratory results also serve as a calibration check for field testing equipment.
 
-## Putting It All Together: Holistic Water Management
+## How Do You Achieve Holistic Water Management?
 
 The key insight for service technicians is that water chemistry parameters do not exist in isolation. They form an interconnected system where adjusting one parameter inevitably affects others. pH and alkalinity are directly linked through carbonate chemistry. CYA affects both chlorine efficacy and the effective alkalinity for LSI purposes. Temperature influences sanitizer demand, pH drift, and the saturation index simultaneously.
 
@@ -212,4 +214,15 @@ The priority order for adjustments should generally be total alkalinity first (s
 
 ## How PoolFlow Helps
 
-PoolFlow transforms water chemistry management from a manual, error-prone process into a streamlined digital workflow. The platform accepts test results from any testing method, whether entered manually from field test kits or imported from digital photometers, and instantly calculates the complete water balance picture including the Langelier Saturation Index with automatic CYA correction, where adjusted alkalinity equals total alkalinity minus CYA divided by three. When any parameter falls outside its ideal range, PoolFlow calculates exact dosing recommendations based on the pool's volume, using industry-standard rates: muriatic acid at 26 ounces per 10,000 gallons per 0.2 pH drop, soda ash at 6 ounces per 10,000 gallons per 0.2 pH rise, sodium bicarbonate at 24 ounces per 10,000 gallons per 10 ppm alkalinity increase, and calcium chloride at 20 ounces per 10,000 gallons per 10 ppm calcium increase. Historical tracking across service visits reveals trends in every parameter, allowing technicians to anticipate problems and adjust proactively. For commercial accounts requiring [regulatory compliance](/blog/commercial-pool-vs-residential-regulations/), PoolFlow generates the documentation and audit trails that health departments require, while its route management features ensure every pool receives timely, consistent service.
+[PoolFlow](/#features) transforms water chemistry management from a manual, error-prone process into a streamlined digital workflow. The platform accepts test results from any testing method, whether entered manually from field test kits or imported from digital photometers, and instantly calculates the complete water balance picture including the Langelier Saturation Index with automatic CYA correction, where adjusted alkalinity equals total alkalinity minus CYA divided by three.
+
+When any parameter falls outside its ideal range, PoolFlow calculates exact dosing recommendations based on the pool's volume, using industry-standard rates:
+
+- Muriatic acid at 26 ounces per 10,000 gallons per 0.2 pH drop
+- Soda ash at 6 ounces per 10,000 gallons per 0.2 pH rise
+- Sodium bicarbonate at 24 ounces per 10,000 gallons per 10 ppm alkalinity increase
+- Calcium chloride at 20 ounces per 10,000 gallons per 10 ppm calcium increase
+
+Historical tracking across service visits reveals trends in every parameter, allowing technicians to anticipate problems and adjust proactively. For commercial accounts requiring [regulatory compliance](/blog/commercial-pool-vs-residential-regulations/), PoolFlow generates the documentation and audit trails that health departments require, while its route management features ensure every pool receives timely, consistent service.
+
+Start with PoolFlow's free tier for up to 5 pools, or upgrade to [PoolFlow Pro at $29.99/mo ($299.99/yr)](/#pricing) to manage your full route.

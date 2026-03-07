@@ -18,6 +18,8 @@ faq:
     answer: "Pool service professionals should calculate the LSI at every service visit, which is typically weekly for residential pools and at least twice daily for commercial pools. The LSI should also be recalculated whenever any contributing parameter changes significantly, such as after chemical adjustments, fresh water additions, heavy rain events, or temperature swings. Seasonal transitions are particularly important because temperature changes directly affect the LSI through the Temperature Factor, meaning water that was balanced in summer may become corrosive in winter without any change in chemical parameters."
 ---
 
+The Langelier Saturation Index (LSI) is a calculated value that tells pool service professionals whether water is corrosive, balanced, or scale-forming. This guide breaks down the full LSI formula, explains each factor with lookup tables, covers the critical CYA correction, and walks through real-world calculation examples so you can keep every pool in the balanced range of -0.3 to +0.3.
+
 ## Introduction: The Science of Water Balance
 
 Every swimming pool is engaged in an invisible chemical struggle. The water is constantly seeking equilibrium with calcium carbonate, the mineral compound that forms the basis of plaster, marcite, and pebble pool surfaces. When the water is undersaturated with calcium carbonate, it becomes aggressive, dissolving calcium from pool surfaces, etching plaster, corroding metal components, and degrading equipment. When the water is oversaturated, calcium carbonate precipitates out of solution, forming scale deposits on surfaces, inside pipes, and on heat exchangers.
@@ -148,7 +150,7 @@ The TDS Constant is derived from the Total Dissolved Solids concentration in the
 
 Because the TDS Constant changes minimally across the range of TDS values found in swimming pools, many practitioners use a fixed value of 12.1 for standard pools and 12.2 for saltwater pools. This simplification introduces negligible error and is widely accepted in the pool industry.
 
-## Interpreting the LSI Value
+## What Does Your LSI Value Mean?
 
 Once all factors are calculated and the formula is applied, the resulting LSI value falls into one of three ranges:
 
@@ -244,7 +246,7 @@ LSI = 7.4 + 0.6 + 2.0 + 1.8 - 12.1 = **-0.3**
 
 The corrected LSI reveals that this pool is actually at the edge of the corrosive range, not balanced as the uncorrected calculation suggested. A technician relying on the uncorrected value would leave this pool in a condition where surface etching and equipment corrosion are actively occurring.
 
-## Strategies for LSI Correction
+## How Do You Correct an Out-of-Range LSI?
 
 When the LSI falls outside the balanced range, technicians have several adjustment options depending on which direction the correction needs to go.
 
@@ -260,4 +262,12 @@ The choice of which parameter to adjust depends on where each parameter currentl
 
 ## How PoolFlow Helps
 
-PoolFlow automates the entire LSI calculation process, eliminating the manual factor lookups and arithmetic that make hand-calculated LSI prone to error. When a technician enters test results into the platform, PoolFlow instantly computes the LSI using the complete formula: LSI equals pH plus Temperature Factor plus Calcium Factor plus Alkalinity Factor minus TDS Constant. The CYA correction is applied automatically, calculating adjusted alkalinity as total alkalinity minus CYA divided by three, ensuring accurate results even in pools with elevated stabilizer levels. The platform displays the current LSI value with clear visual indicators showing whether the water is corrosive, balanced, or scale-forming. When correction is needed, PoolFlow calculates the precise chemical dosing required based on the pool's volume, telling technicians exactly how much muriatic acid, soda ash, sodium bicarbonate, or calcium chloride to add. Historical LSI tracking across service visits reveals trends before they become problems, and seasonal alerts help technicians anticipate temperature-driven LSI shifts. For a broader perspective on the water chemistry parameters that feed into the LSI, explore our [complete water balance and chemistry guide](/blog/pool-water-balance-chemistry-guide/).
+PoolFlow automates the entire LSI calculation process, eliminating the manual factor lookups and arithmetic that make hand-calculated LSI prone to error. When a technician enters test results into the platform, PoolFlow instantly computes the LSI using the complete formula: LSI equals pH plus Temperature Factor plus Calcium Factor plus Alkalinity Factor minus TDS Constant.
+
+The CYA correction is applied automatically, calculating adjusted alkalinity as total alkalinity minus CYA divided by three, ensuring accurate results even in pools with elevated stabilizer levels. The platform displays the current LSI value with clear visual indicators showing whether the water is corrosive, balanced, or scale-forming.
+
+When correction is needed, PoolFlow calculates the precise chemical dosing required based on the pool's volume, telling technicians exactly how much muriatic acid, soda ash, sodium bicarbonate, or calcium chloride to add.
+
+Historical LSI tracking across service visits reveals trends before they become problems, and seasonal alerts help technicians anticipate temperature-driven LSI shifts.
+
+Explore [PoolFlow's features](/#features) to see how automated LSI calculations, dosing recommendations, and trend tracking work together. View [pricing](/#pricing) to get started, or read our [complete water balance and chemistry guide](/blog/pool-water-balance-chemistry-guide/) for a broader perspective on the water chemistry parameters that feed into the LSI.

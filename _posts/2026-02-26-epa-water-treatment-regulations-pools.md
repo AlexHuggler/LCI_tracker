@@ -70,7 +70,7 @@ Ozone generators and ultraviolet (UV) light systems are used as supplemental dis
 
 Salt chlorine generators produce chlorine on-site by passing saltwater through an electrolytic cell. The chlorine produced by these systems is chemically identical to chlorine added from other sources and provides the same EPA-registered disinfection capability. Pool operators using salt chlorine generators should understand that they are still operating a chlorine-disinfected pool and must maintain appropriate free chlorine residuals.
 
-## Disinfection Byproducts
+## What Are Disinfection Byproducts in Pool Water?
 
 Disinfection byproducts (DBPs) are chemical compounds that form when disinfectants react with organic matter in the water. While the EPA's regulation of disinfection byproducts primarily targets drinking water systems under the Safe Drinking Water Act, the principles and concerns are directly relevant to swimming pool water management.
 
@@ -92,7 +92,7 @@ The EPA's recognition of chloramine as a disinfection byproduct of concern reinf
 
 For pool service professionals managing commercial accounts, understanding the relationship between disinfection byproducts and water management is essential for both regulatory compliance and the health of facility users and staff. Detailed information on health department standards for water chemistry is available in our guide on [health department pool compliance](/blog/health-department-pool-compliance/).
 
-## Cyanuric Acid Limits and Chlorine Effectiveness
+## How Does Cyanuric Acid Affect Chlorine Effectiveness?
 
 Cyanuric acid (CYA), also known as chlorine stabilizer or conditioner, plays an important role in outdoor pool chemistry by protecting free chlorine from rapid degradation by ultraviolet radiation. However, excessive CYA levels significantly reduce the disinfecting effectiveness of free chlorine, creating a public health concern that has drawn attention from regulatory agencies at multiple levels.
 
@@ -130,7 +130,7 @@ As noted earlier, using an EPA-registered product in a manner inconsistent with 
 
 Pool service companies should ensure that all technicians have access to and are trained on the complete label information for every product they use in the field. Relying on experience or general knowledge rather than specific label instructions can lead to both regulatory violations and unsafe conditions.
 
-## Environmental Disposal Regulations
+## What Are the EPA Disposal Regulations for Pool Chemicals?
 
 The EPA's environmental regulations extend to the disposal of pool chemicals and chemically treated pool water. Improper disposal can result in contamination of waterways, harm to aquatic ecosystems, and regulatory penalties under several federal environmental statutes.
 
@@ -156,7 +156,7 @@ Empty chemical containers should be disposed of in accordance with label instruc
 
 Containers that held hazardous materials must never be reused for other purposes, as residual chemicals can contaminate anything subsequently stored in the container and may create dangerous reactions with incompatible materials.
 
-## Staying Current With EPA Regulations
+## How Do You Stay Current With EPA Pool Regulations?
 
 EPA regulations affecting the pool industry evolve over time as new research emerges, environmental concerns are identified, and regulatory priorities shift. Pool service professionals should stay informed about regulatory changes that may affect their operations.
 
@@ -168,10 +168,14 @@ State and local regulations often incorporate or exceed EPA standards, making it
 
 ## How PoolFlow Helps
 
-PoolFlow supports EPA regulatory compliance through integrated chemical management features designed for pool service operations. The platform's chemical tracking system records every product used at each service location, including manufacturer, EPA registration number, and application rate, creating a detailed compliance trail that demonstrates adherence to label directions.
+PoolFlow supports EPA regulatory compliance through integrated chemical management features designed for pool service operations:
 
-PoolFlow's water chemistry monitoring tracks CYA levels alongside other water parameters, providing visual trend analysis that alerts technicians when CYA concentrations approach regulatory limits. The platform calculates the dilution volume needed to reduce CYA to target levels, helping technicians recommend timely partial drains to their clients before compliance thresholds are exceeded.
+- **Chemical tracking:** Records every product used at each service location, including manufacturer, EPA registration number, and application rate, creating a detailed compliance trail that demonstrates adherence to label directions.
 
-The platform's inventory management features track chemical expiration dates and alert service managers when products are approaching the end of their shelf life, preventing the accumulation of expired chemicals that require special disposal procedures. PoolFlow also maintains digital records of chemical purchases and usage that support environmental compliance documentation.
+- **CYA monitoring:** Tracks CYA levels alongside other water parameters with visual trend analysis that alerts technicians when concentrations approach regulatory limits. The platform calculates the dilution volume needed to reduce CYA to target levels, helping technicians recommend timely partial drains before compliance thresholds are exceeded.
 
-For pool service companies committed to environmental responsibility, PoolFlow's discharge documentation features help record dechlorination procedures and water quality testing results when pool water is discharged, creating the documentation that environmental regulators may request. By integrating EPA compliance into everyday service workflows, PoolFlow helps pool professionals maintain the highest standards of regulatory compliance and environmental stewardship.
+- **Inventory management:** Tracks chemical expiration dates and alerts service managers when products are approaching the end of their shelf life, preventing the accumulation of expired chemicals that require special disposal procedures. Digital records of chemical purchases and usage support environmental compliance documentation.
+
+- **Discharge documentation:** Records dechlorination procedures and water quality testing results when pool water is discharged, creating the documentation that environmental regulators may request.
+
+By integrating EPA compliance into everyday service workflows, PoolFlow helps pool professionals maintain the highest standards of regulatory compliance and environmental stewardship. Explore [PoolFlow's features](/#features) to see how chemical tracking and compliance tools work together, or view [pricing](/#pricing) to get started.

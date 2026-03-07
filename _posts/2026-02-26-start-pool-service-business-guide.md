@@ -16,6 +16,8 @@ faq:
     answer: "A well-organized solo technician with efficient routes can manage 80 to 100 weekly service accounts. Most technicians find their comfort zone between 70 and 90 pools, servicing 16 to 20 pools per day across a 5-day work week. The exact number depends on drive times between stops, the complexity of each pool, and whether you offer additional services like equipment repair. Route optimization is the single biggest factor in how many pools you can handle, as reducing drive time between stops directly increases the number of pools you can fit into each day."
 ---
 
+Starting a pool service business requires as little as $2,000 to $5,000 in startup capital and offers a recurring revenue model that compounds over time. This guide covers everything a solo technician needs to launch and grow a pool service operation, from licensing and equipment to route building, pricing, marketing, and scaling beyond 80 accounts.
+
 ## Why Pool Service Is a Strong Business Opportunity
 
 The pool service industry offers a combination of characteristics that few other small businesses can match. The work is recurring, meaning you build a base of monthly revenue that compounds over time rather than chasing one-time jobs. The barrier to entry is low compared to plumbing, electrical, or HVAC trades. The demand is consistent, because pools do not stop needing maintenance regardless of economic conditions. And the work itself is largely outdoors, independent, and physical enough to keep you engaged without destroying your body.
@@ -62,7 +64,7 @@ Do not service a single pool without insurance. This is not optional.
 
 **Bonds.** Some customers, particularly commercial accounts and HOAs, will require you to be bonded. A surety bond is inexpensive and demonstrates professionalism.
 
-## Initial Investment: $2,000 to $5,000
+## How Much Does It Cost to Start a Pool Service Business?
 
 One of the most attractive aspects of pool service is the low barrier to entry. Here is a realistic breakdown of startup costs:
 
@@ -109,7 +111,7 @@ A pickup truck with a utility bed or a cargo van is ideal. The vehicle needs to 
 
 If budget is tight, a used pickup truck in good mechanical condition is the practical choice. Reliability matters more than appearance. A breakdown mid-route costs you time, customer satisfaction, and potentially the chemicals sitting in a hot vehicle.
 
-## Pricing Your Services
+## How Should You Price Your Services?
 
 Residential pool service pricing varies significantly by market, but the typical range is **$80 to $175 per month** for weekly service. The factors that influence where you fall within that range include:
 
@@ -121,7 +123,7 @@ Residential pool service pricing varies significantly by market, but the typical
 
 For a deeper analysis of how to set rates that sustain your business, see our guide on [pool service pricing strategies](/blog/pool-service-pricing-strategies/).
 
-## Building Your Route
+## How Do You Build an Efficient Service Route?
 
 Your route is the engine of your business. An efficient route means more pools per day, less fuel, and more profit. An inefficient route means wasted hours in the truck, higher costs, and fewer accounts.
 
@@ -133,7 +135,7 @@ Your route is the engine of your business. An efficient route means more pools p
 
 **Optimize continuously.** As you add and remove accounts, re-evaluate your route order regularly. What made sense with 20 pools may be inefficient with 50. Dedicated [route optimization tools](/blog/route-optimization-pool-service/) can save significant time as your route grows beyond 40 or 50 stops.
 
-## Marketing: Getting Your First Customers
+## How Do You Get Your First Pool Service Customers?
 
 The most effective marketing for a new pool service business is local, personal, and persistent.
 
@@ -189,7 +191,7 @@ By day 180, you should have:
 
 At this point, you are approaching the solo operator's capacity ceiling. Start thinking about whether you want to stay solo at 70 to 80 pools with maximum personal income, or hire a helper and push toward 120 to 160 pools as a two-person operation.
 
-## Scaling Beyond 80 Pools
+## How Do You Scale Beyond 80 Pools?
 
 The solo technician ceiling is real. At 80 to 100 pools, you are servicing 16 to 20 pools per day, five days a week. Every day is full. There is no slack for illness, vehicle breakdowns, or personal time. Scaling beyond this point requires one of two paths:
 
@@ -213,11 +215,11 @@ Neither path is inherently better. It depends on your goals, your temperament, a
 
 ## How PoolFlow Helps
 
-PoolFlow is designed specifically for the trajectory described in this guide, from first pool to full route.
+[PoolFlow](/#features) is designed specifically for the trajectory described in this guide, from first pool to full route.
 
 The **free tier** supports up to 5 pools with complete water chemistry tracking, the dosing engine, and service logging. This means you can start building professional habits and accurate records from your very first customer without adding any software cost to your startup budget.
 
-As your business grows, **PoolFlow Pro** at $29.99 per month (or $299.99 per year) unlocks the full platform. The **dosing engine** calculates exact chemical quantities using precise rates: muriatic acid at 26 oz per 0.2 pH per 10,000 gallons, soda ash at 6 oz per 0.2 pH per 10,000 gallons, sodium bicarbonate at 24 oz per 10 ppm TA per 10,000 gallons, and calcium chloride at 20 oz per 10 ppm CH per 10,000 gallons. Every dose is tracked with cost data, feeding directly into **profit analytics** that monitor whether each account stays within the 30 percent chemical cost threshold.
+As your business grows, **[PoolFlow Pro at $29.99 per month (or $299.99 per year)](/#pricing)** unlocks the full platform. The **dosing engine** calculates exact chemical quantities using precise rates: muriatic acid at 26 oz per 0.2 pH per 10,000 gallons, soda ash at 6 oz per 0.2 pH per 10,000 gallons, sodium bicarbonate at 24 oz per 10 ppm TA per 10,000 gallons, and calcium chloride at 20 oz per 10 ppm CH per 10,000 gallons. Every dose is tracked with cost data, feeding directly into **profit analytics** that monitor whether each account stays within the 30 percent chemical cost threshold.
 
 **Route optimization** using nearest-neighbor and 2-opt algorithms ensures your growing route stays efficient, saving you time and fuel as you scale from 20 pools to 80. The **chemical inventory** system tracks what is on your truck so you never arrive at a pool without the supplies you need. **Service logging with photo documentation** creates the professional record that builds customer trust and protects your business.
 
