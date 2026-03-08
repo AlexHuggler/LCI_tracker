@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const isOpen = mobileMenu.classList.contains('hidden');
       mobileMenu.classList.toggle('hidden');
       // Toggle hamburger/close icons
-      const openIcon = menuToggle.querySelector('[data-icon="open"]');
-      const closeIcon = menuToggle.querySelector('[data-icon="close"]');
+      const openIcon = menuToggle.querySelector('[data-menu-icon-open]');
+      const closeIcon = menuToggle.querySelector('[data-menu-icon-close]');
       if (openIcon && closeIcon) {
         openIcon.classList.toggle('hidden');
         closeIcon.classList.toggle('hidden');
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Waitlist form submission via Formspree (AJAX)
+  // Waitlist form submission via Formsubmit.co (AJAX)
   document.querySelectorAll('.waitlist-form').forEach(function(form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
@@ -133,7 +133,9 @@ document.addEventListener('DOMContentLoaded', function() {
         body: formData,
         headers: { 'Accept': 'application/json' }
       }).then(function(response) {
-        if (response.ok) {
+        return response.json();
+      }).then(function(data) {
+        if (data.success) {
           form.classList.add('hidden');
           if (successMsg) successMsg.classList.remove('hidden');
         } else {

@@ -5,8 +5,10 @@
     <div class="mb-10 pb-10 border-b border-gray-800 text-center">
       <h3 class="text-lg font-semibold text-white mb-2">Stay in the Loop</h3>
       <p class="text-gray-400 text-sm mb-4">Get notified when PoolFlow launches.</p>
-      <form action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" class="waitlist-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+      <form action="https://formsubmit.co/ajax/{{ site.waitlist_email }}" method="POST" class="waitlist-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
         <input type="email" name="email" required placeholder="you@email.com" class="flex-1 px-4 py-2.5 rounded-full text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-pool-blue">
+        <input type="text" name="_honey" style="display:none">
+        <input type="hidden" name="_subject" value="New PoolFlow Waitlist Signup">
         <button type="submit" class="px-6 py-2.5 rounded-full text-white font-semibold text-sm transition-opacity hover:opacity-90" style="background-color: #53849F;">
           Join Waitlist
         </button>

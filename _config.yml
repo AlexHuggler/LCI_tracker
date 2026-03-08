@@ -21,8 +21,8 @@ author:
 twitter:
   card: "summary_large_image"
 
-# Waitlist form — replace with your Formspree form ID from https://formspree.io
-formspree_id: "YOUR_FORM_ID"
+# Waitlist form — uses Formsubmit.co (free, no account required)
+waitlist_email: "contact@poolflowapp.com"
 
 logo: "/assets/images/poolflow-icon-512.png"
 
