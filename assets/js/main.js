@@ -133,20 +133,27 @@ document.addEventListener('DOMContentLoaded', function() {
         body: formData,
         headers: { 'Accept': 'application/json' }
       }).then(function(response) {
-        return response.json();
-      }).then(function(data) {
-        if (data.success) {
+        var contentType = response.headers.get('content-type') || '';
+        if (contentType.indexOf('application/json') !== -1) {
+          return response.json().then(function(data) {
+            if (data.success) {
+              form.classList.add('hidden');
+              if (successMsg) successMsg.classList.remove('hidden');
+            } else {
+              throw new Error('Submission failed');
+            }
+          });
+        } else if (response.ok || response.status === 200) {
+          // Formsubmit returns HTML during email activation — treat as success
           form.classList.add('hidden');
           if (successMsg) successMsg.classList.remove('hidden');
         } else {
-          button.disabled = false;
-          button.textContent = 'Join Waitlist';
-          alert('Something went wrong. Please try again.');
+          throw new Error('Submission failed');
         }
       }).catch(function() {
         button.disabled = false;
         button.textContent = 'Join Waitlist';
-        alert('Network error. Please try again.');
+        alert('Something went wrong. Please try again.');
       });
     });
   });
