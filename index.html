@@ -8,8 +8,10 @@ image: /assets/images/og-image.png
 <!-- ============================================
      SECTION 1: HERO
      ============================================ -->
-<section id="hero" class="hero-gradient pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pt-36 lg:pb-28">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="hero" class="relative bg-cover bg-center bg-no-repeat pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pt-36 lg:pb-28" style="background-image: url('/assets/images/hero-bg.png'); background-color: #567A8C;">
+  <!-- Dark overlay for text readability -->
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
 
       <!-- Left Column: Copy -->
@@ -96,7 +98,7 @@ image: /assets/images/og-image.png
 <div class="wave-divider bg-white">
   <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
     <path d="M0 60V20C240 50 480 0 720 20C960 40 1200 10 1440 30V60H0Z" fill="white"/>
-    <path d="M0 0V20C240 50 480 0 720 20C960 40 1200 10 1440 30V0H0Z" fill="#6B9AB8"/>
+    <path d="M0 0V20C240 50 480 0 720 20C960 40 1200 10 1440 30V0H0Z" fill="rgba(0,0,0,0.5)"/>
   </svg>
 </div>
 
