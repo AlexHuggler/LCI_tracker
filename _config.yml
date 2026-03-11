@@ -21,8 +21,8 @@ author:
 twitter:
   card: "summary_large_image"
 
-# Waitlist form — uses Formsubmit.co (free, no account required)
-waitlist_email: "contact@poolflowapp.com"
+# App Store link
+app_store_url: "https://apps.apple.com/us/app/poolflow-pool-service-pro/id6759516755"
 
 logo: "/assets/images/poolflow-icon-512.png"
 

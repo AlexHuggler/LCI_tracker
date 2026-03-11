@@ -117,44 +117,4 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.href = 'mailto:contact@poolflowapp.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     });
   }
-
-  // Waitlist form submission via Formsubmit.co (AJAX)
-  document.querySelectorAll('.waitlist-form').forEach(function(form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var formData = new FormData(form);
-      var button = form.querySelector('button[type="submit"]');
-      var successMsg = form.parentElement.querySelector('.waitlist-success');
-      button.disabled = true;
-      button.textContent = 'Joining...';
-
-      fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      }).then(function(response) {
-        var contentType = response.headers.get('content-type') || '';
-        if (contentType.indexOf('application/json') !== -1) {
-          return response.json().then(function(data) {
-            if (data.success) {
-              form.classList.add('hidden');
-              if (successMsg) successMsg.classList.remove('hidden');
-            } else {
-              throw new Error('Submission failed');
-            }
-          });
-        } else if (response.ok || response.status === 200) {
-          // Formsubmit returns HTML during email activation — treat as success
-          form.classList.add('hidden');
-          if (successMsg) successMsg.classList.remove('hidden');
-        } else {
-          throw new Error('Submission failed');
-        }
-      }).catch(function() {
-        button.disabled = false;
-        button.textContent = 'Join Waitlist';
-        alert('Something went wrong. Please try again.');
-      });
-    });
-  });
 });
