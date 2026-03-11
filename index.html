@@ -25,23 +25,13 @@ image: /assets/images/og-image.png
           The all-in-one iOS app for pool service technicians. Real-time LSI calculations, smart chemical dosing, route optimization, and profit analytics — all offline, all in one place.
         </p>
 
-        <!-- Waitlist CTA -->
-        <div id="waitlist" class="mt-8 max-w-lg mx-auto lg:mx-0">
-          <p class="text-sm font-medium text-blue-100 mb-3">Coming soon to the App Store. Join the waitlist to get notified at launch.</p>
-          <form action="https://formsubmit.co/ajax/{{ site.waitlist_email }}" method="POST" class="waitlist-form flex flex-col sm:flex-row gap-3">
-            <input type="email" name="email" required placeholder="you@email.com" class="flex-1 px-5 py-3.5 sm:py-3.5 py-4 rounded-full text-pool-dark text-lg focus:outline-none focus:ring-2 focus:ring-pool-cyan shadow-lg">
-            <input type="text" name="_honey" style="display:none">
-            <input type="hidden" name="_subject" value="New PoolFlow Waitlist Signup">
-            <input type="hidden" name="_next" value="https://poolflowapp.com/#waitlist">
-            <input type="hidden" name="_template" value="table">
-            <button type="submit" class="btn-shimmer relative inline-flex items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 sm:py-3.5 py-4 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-nowrap">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
-              </svg>
-              Join Waitlist
-            </button>
-          </form>
-          <p class="waitlist-success hidden mt-3 text-sm font-medium text-pool-green bg-white/20 rounded-full px-5 py-2.5 text-center">You're on the list! We'll notify you when PoolFlow launches.</p>
+        <!-- App Store CTA -->
+        <div id="download" class="mt-8 max-w-lg mx-auto lg:mx-0">
+          <p class="text-sm font-medium text-blue-100 mb-3">Available now on the App Store.</p>
+          <a href="{{ site.app_store_url }}" class="inline-flex items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-nowrap">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on the App Store
+          </a>
         </div>
 
         <div class="mt-4">
@@ -251,7 +241,7 @@ image: /assets/images/og-image.png
       <div class="mt-4 text-sm font-medium text-pool-blue">— Alex Huggler, Founder</div>
       <div class="mt-6 flex items-center justify-center gap-2 text-sm text-pool-dark/60">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
-        Join pool techs already on the waitlist
+        Join pool techs already using PoolFlow
       </div>
     </div>
   </div>
@@ -409,8 +399,8 @@ image: /assets/images/og-image.png
             <span class="text-gray-700 text-sm">Equipment tracking</span>
           </li>
         </ul>
-        <a href="#waitlist" class="mt-8 block w-full text-center px-6 py-3 rounded-full border-2 border-pool-blue text-pool-blue font-semibold hover:bg-pool-blue hover:text-white transition-colors">
-          Join Waitlist
+        <a href="{{ site.app_store_url }}" class="mt-8 block w-full text-center px-6 py-3 rounded-full border-2 border-pool-blue text-pool-blue font-semibold hover:bg-pool-blue hover:text-white transition-colors">
+          Download Now
         </a>
       </div>
 
@@ -481,8 +471,8 @@ image: /assets/images/og-image.png
             <span class="text-gray-700 text-sm">iCloud sync</span>
           </li>
         </ul>
-        <a href="#waitlist" class="mt-8 block w-full text-center px-6 py-3 rounded-full bg-pool-blue text-white font-semibold hover:opacity-90 transition-opacity shadow-md">
-          Join Waitlist
+        <a href="{{ site.app_store_url }}" class="mt-8 block w-full text-center px-6 py-3 rounded-full bg-pool-blue text-white font-semibold hover:opacity-90 transition-opacity shadow-md">
+          Download Now
         </a>
       </div>
 
@@ -518,8 +508,8 @@ image: /assets/images/og-image.png
             <span class="text-gray-700 text-sm">Best value — 2 months free</span>
           </li>
         </ul>
-        <a href="#waitlist" class="mt-8 block w-full text-center px-6 py-3 rounded-full border-2 border-pool-blue text-pool-blue font-semibold hover:bg-pool-blue hover:text-white transition-colors">
-          Join Waitlist
+        <a href="{{ site.app_store_url }}" class="mt-8 block w-full text-center px-6 py-3 rounded-full border-2 border-pool-blue text-pool-blue font-semibold hover:bg-pool-blue hover:text-white transition-colors">
+          Download Now
         </a>
       </div>
 
@@ -780,31 +770,21 @@ image: /assets/images/og-image.png
       Ready to Run a Smarter Pool Route?
     </h2>
     <p class="mt-6 text-lg sm:text-xl text-blue-100 leading-relaxed">
-      PoolFlow is launching soon. Join the waitlist and be the first to know.
+      PoolFlow is available now. Download the app and start running a smarter route today.
     </p>
-    <div class="mt-8 max-w-lg mx-auto">
-      <form action="https://formsubmit.co/ajax/{{ site.waitlist_email }}" method="POST" class="waitlist-form flex flex-col sm:flex-row gap-3">
-        <input type="email" name="email" required placeholder="you@email.com" class="flex-1 px-5 py-3.5 rounded-full text-pool-dark text-lg focus:outline-none focus:ring-2 focus:ring-pool-cyan shadow-lg">
-        <input type="text" name="_honey" style="display:none">
-        <input type="hidden" name="_subject" value="New PoolFlow Waitlist Signup">
-        <input type="hidden" name="_next" value="https://poolflowapp.com/#waitlist">
-        <input type="hidden" name="_template" value="table">
-        <button type="submit" class="inline-flex items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-nowrap">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
-          </svg>
-          Join Waitlist
-        </button>
-      </form>
-      <p class="waitlist-success hidden mt-3 text-sm font-medium text-pool-green bg-white/20 rounded-full px-5 py-2.5">You're on the list! We'll notify you when PoolFlow launches.</p>
+    <div class="mt-8">
+      <a href="{{ site.app_store_url }}" class="inline-flex items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-nowrap">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Download on the App Store
+      </a>
     </div>
   </div>
 </section>
 
 <!-- Mobile Sticky CTA Bar (appears after scrolling past hero) -->
 <div class="mobile-sticky-cta fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 backdrop-blur border-t border-gray-200 px-4 py-3">
-  <a href="#waitlist" class="block w-full text-center px-5 py-3 text-white font-semibold rounded-full text-sm transition-opacity hover:opacity-90" style="background-color: #53849F;">
-    Join the Waitlist
+  <a href="{{ site.app_store_url }}" class="block w-full text-center px-5 py-3 text-white font-semibold rounded-full text-sm transition-opacity hover:opacity-90" style="background-color: #53849F;">
+    Download PoolFlow
   </a>
 </div>
 
