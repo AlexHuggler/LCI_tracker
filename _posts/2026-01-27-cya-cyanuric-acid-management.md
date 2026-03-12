@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CYA (Cyanuric Acid) Management: When to Drain and How to Adjust"
-date: 2026-02-26
+date: 2026-01-27
 categories: [water-chemistry]
 tags: [cya, cyanuric-acid, stabilizer, water-chemistry, chlorine]
 description: "Learn how to manage CYA levels in pools, understand chlorine lock, the CYA/chlorine ratio, and when partial draining is necessary for stabilizer control."

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Start a Pool Service Business: The Solo Tech's Roadmap"
-date: 2026-02-26
+date: 2026-02-24
 categories: [business]
 tags: [start-business, pool-service, entrepreneur, solo-tech]
 description: "A complete guide to starting a pool service business as a solo technician, from licensing and equipment to route building and scaling."

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Chemical Dosing Calculations for Pool Service: Stop Guessing, Start Measuring"
-date: 2026-02-26
+date: 2026-01-21
 categories: [water-chemistry]
 tags: [chemical-dosing, calculations, pool-chemicals, muriatic-acid]
 description: "Master pool chemical dosing calculations with exact rates per 10,000 gallons. Learn proper sequencing, safety protocols, and volume formulas."

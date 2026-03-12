@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Langelier Saturation Index (LSI) Explained: A Pool Tech's Guide"
-date: 2026-02-26
+date: 2026-02-04
 categories: [water-chemistry]
 tags: [lsi, water-chemistry, langelier, calcium, alkalinity, pool-balance]
 description: "Master the Langelier Saturation Index formula, CYA correction, and practical LSI calculations to keep every pool perfectly balanced."

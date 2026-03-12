@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pool Service Insurance Requirements: What Coverage You Need"
-date: 2026-02-26
+date: 2026-02-12
 categories: [regulatory-guidance]
 tags: [insurance, liability, business, pool-service, compliance]
 description: "Complete guide to pool service insurance requirements including general liability, professional liability, commercial auto, workers comp, and bonding."
@@ -16,7 +16,7 @@ faq:
     answer: "While not every jurisdiction legally requires pool service companies to carry insurance, operating without it is extremely risky and increasingly untenable. Many homeowners and all commercial clients require proof of insurance before allowing service. Some states require pool service contractors to carry minimum liability coverage as a condition of licensure. Even where not legally mandated, a single property damage claim or personal injury lawsuit could bankrupt an uninsured pool service business. Insurance is a fundamental cost of doing business professionally in the pool service industry."
 ---
 
-Pool service insurance protects your business from the financial risks inherent in working with hazardous chemicals, operating around water, and performing services on customer property. This guide covers every type of coverage a pool service company needs — from general liability and professional liability to commercial auto, workers compensation, and surety bonding — along with typical premium ranges and how to structure a comprehensive insurance program.
+Pool service insurance protects your business from the financial risks inherent in working with hazardous chemicals, operating around water, and performing services on customer property. This guide covers every type of coverage a pool service company needs, from general liability and professional liability to commercial auto, workers compensation, and surety bonding, along with typical premium ranges and how to structure a comprehensive insurance program.
 
 ## Introduction: Insurance as a Business Foundation
 

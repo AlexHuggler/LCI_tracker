@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pool Service Profitability: Identifying Money-Losing Accounts"
-date: 2026-02-26
+date: 2026-02-16
 categories: [business]
 tags: [profitability, money-loser, analytics, chemical-costs, business-strategy]
 description: "Learn to identify unprofitable pool accounts using the 30% chemical cost rule. Data-driven strategies to fix or drop money-losing customers."
@@ -13,9 +13,9 @@ faq:
   - question: "How do I know if a pool account is profitable?"
     answer: "Calculate the true cost to service each pool by adding chemical costs, labor time valued at your target hourly rate, proportional drive time, and a share of fixed overhead like insurance and vehicle expenses. Compare this total cost to the monthly service fee. If costs exceed 70 to 75 percent of revenue, the account is marginally profitable at best. If costs exceed the fee, the account is actively losing money. Track these numbers over a 60 to 90 day window to account for seasonal variation. Most technicians find that 10 to 20 percent of their accounts are unprofitable when analyzed this way."
   - question: "What percentage of revenue should chemical costs be?"
-    answer: "Chemical costs should typically represent 15 to 25 percent of the monthly service fee for a healthy, profitable account. The 30 percent threshold serves as a warning line — once chemical costs exceed 30 percent of the fee, the account is likely unprofitable after factoring in labor, drive time, and overhead. Pools with unusually high chemical demand due to large volume, heavy bather loads, environmental contamination, or persistent chemistry issues will naturally have higher chemical cost ratios and require higher service fees to remain profitable."
+    answer: "Chemical costs should typically represent 15 to 25 percent of the monthly service fee for a healthy, profitable account. The 30 percent threshold serves as a warning line; once chemical costs exceed 30 percent of the fee, the account is likely unprofitable after factoring in labor, drive time, and overhead. Pools with unusually high chemical demand due to large volume, heavy bather loads, environmental contamination, or persistent chemistry issues will naturally have higher chemical cost ratios and require higher service fees to remain profitable."
   - question: "When should I drop an unprofitable pool customer?"
-    answer: "Consider dropping a customer after you have exhausted other options: you have raised the price to a level that covers true costs and the customer declined, you have optimized chemical usage and service time without bringing costs in line, and the account continues to lose money over a 90-day analysis window. Also consider dropping accounts where the customer is consistently difficult, requires excessive callbacks, or refuses to approve necessary equipment repairs that would stabilize chemistry. The revenue from an unprofitable account is an illusion — replacing it with a profitable account at the same fee improves your business immediately."
+    answer: "Consider dropping a customer after you have exhausted other options: you have raised the price to a level that covers true costs and the customer declined, you have optimized chemical usage and service time without bringing costs in line, and the account continues to lose money over a 90-day analysis window. Also consider dropping accounts where the customer is consistently difficult, requires excessive callbacks, or refuses to approve necessary equipment repairs that would stabilize chemistry. The revenue from an unprofitable account is an illusion. Replacing it with a profitable account at the same fee improves your business immediately."
 ---
 
 Most pool service technicians can tell you their total monthly revenue without hesitation. Far fewer can tell you which of their individual accounts are profitable and which are quietly draining money from the business. This blind spot is one of the most common and costly mistakes in the pool service industry.
@@ -32,7 +32,7 @@ Track the actual chemicals used at each pool over at least a 30-day period. This
 
 ### Labor Costs
 
-Assign a dollar value to your time. If your target income is $80,000 per year and you work 2,000 hours annually, your labor rate is $40 per hour. A pool that takes 20 minutes to service costs $13.33 in labor. A pool that regularly takes 40 minutes costs $26.67. Include the actual service time, not the scheduled time — if a "15-minute pool" regularly takes 25 minutes due to debris, chemistry problems, or equipment issues, use 25 minutes in your calculation.
+Assign a dollar value to your time. If your target income is $80,000 per year and you work 2,000 hours annually, your labor rate is $40 per hour. A pool that takes 20 minutes to service costs $13.33 in labor. A pool that regularly takes 40 minutes costs $26.67. Include the actual service time, not the scheduled time. If a "15-minute pool" regularly takes 25 minutes due to debris, chemistry problems, or equipment issues, use 25 minutes in your calculation.
 
 ### Drive Time Costs
 
@@ -40,7 +40,7 @@ Allocate drive time between stops proportionally. If it takes 12 minutes to driv
 
 ### Overhead Allocation
 
-Fixed costs — insurance, vehicle payments, phone, software subscriptions, equipment depreciation, and business licenses — must be spread across all accounts. If your monthly overhead is $2,000 and you service 80 pools, each pool bears $25 in overhead. This number stays relatively constant regardless of the specific pool, but it must be included for an accurate profitability picture.
+Fixed costs (insurance, vehicle payments, phone, software subscriptions, equipment depreciation, and business licenses) must be spread across all accounts. If your monthly overhead is $2,000 and you service 80 pools, each pool bears $25 in overhead. This number stays relatively constant regardless of the specific pool, but it must be included for an accurate profitability picture.
 
 ## What Is the 30 Percent Chemical Cost Rule?
 
@@ -63,7 +63,7 @@ That works. Now consider a pool where chemical costs hit 45 percent:
 - Same labor, drive, and overhead: $46.33
 - **Remaining profit:** $36.17
 
-Still profitable, but the margin has been cut nearly in half. Push chemical costs to 60 percent — $90 — and the remaining $60 barely covers the $46.33 in other costs, leaving $13.67 profit for a pool that takes a full month of weekly visits.
+Still profitable, but the margin has been cut nearly in half. Push chemical costs to 60 percent ($90) and the remaining $60 barely covers the $46.33 in other costs, leaving $13.67 profit for a pool that takes a full month of weekly visits.
 
 The 30 percent rule is a screening tool, not a final verdict. Some pools with 35 percent chemical costs are still profitable if they are fast to service and located between other stops. But any pool crossing the 30 percent line deserves closer scrutiny.
 
@@ -81,7 +81,7 @@ Some pools fight you every week. High cyanuric acid levels from tablet overuse r
 
 ### Remote Location
 
-A pool that is 15 minutes out of the way on your route costs you 30 minutes of unproductive drive time per visit — two hours per month of labor generating zero revenue. If that pool is also large or chemically demanding, the compounding losses add up fast. Route optimization can mitigate this, but some pools are simply too far from your other customers to service profitably. For more on minimizing drive time waste, see our guide on [route optimization for pool techs](/blog/route-optimization-pool-service/).
+A pool that is 15 minutes out of the way on your route costs you 30 minutes of unproductive drive time per visit, totaling two hours per month of labor generating zero revenue. If that pool is also large or chemically demanding, the compounding losses add up fast. Route optimization can mitigate this, but some pools are simply too far from your other customers to service profitably. For more on minimizing drive time waste, see our guide on [route optimization for pool techs](/blog/route-optimization-pool-service/).
 
 ### Underpriced Service
 
@@ -95,10 +95,10 @@ Gut feel is unreliable for profitability analysis. Two pools on the same street 
 
 For each pool, record the following over a minimum 30-day period (60 to 90 days is more reliable due to seasonal variation):
 
-1. **Chemical products and quantities used per visit** — not estimates, actual usage
-2. **Arrival and departure times** — the real service duration, not the scheduled duration
-3. **Drive time from the previous stop** — or a proportional allocation if stops are very close
-4. **Any callbacks or extra visits** — these are often excluded from profitability analysis but represent real costs
+1. **Chemical products and quantities used per visit:** not estimates, actual usage
+2. **Arrival and departure times:** the real service duration, not the scheduled duration
+3. **Drive time from the previous stop:** or a proportional allocation if stops are very close
+4. **Any callbacks or extra visits:** these are often excluded from profitability analysis but represent real costs
 
 ### Billing Period Analysis
 
@@ -126,8 +126,8 @@ Sometimes the pool's chemistry can be stabilized to reduce ongoing chemical cons
 
 - **Lowering cyanuric acid** to restore chlorine effectiveness, reducing the amount of chlorine needed
 - **Adding phosphate remover** to eliminate the nutrient source for algae, reducing algaecide and shock usage
-- **Recommending equipment upgrades** — a variable-speed pump running longer at lower speed improves circulation and reduces chemical demand
-- **Adjusting the chemical regimen** — switching from trichlor tablets to liquid chlorine can lower CYA buildup over time
+- **Recommending equipment upgrades:** a variable-speed pump running longer at lower speed improves circulation and reduces chemical demand
+- **Adjusting the chemical regimen:** switching from trichlor tablets to liquid chlorine can lower CYA buildup over time
 
 ### Improve Efficiency
 
@@ -135,7 +135,7 @@ If the pool's unprofitability is driven primarily by long service times rather t
 
 ### Drop the Account
 
-When a pool remains unprofitable after price increases and efficiency improvements — or when the customer refuses a necessary price adjustment — dropping the account is the correct business decision. Servicing a money-losing pool does not just cost you the loss on that account; it occupies a route slot that could hold a profitable customer.
+When a pool remains unprofitable after price increases and efficiency improvements, or when the customer refuses a necessary price adjustment, dropping the account is the correct business decision. Servicing a money-losing pool does not just cost you the loss on that account; it occupies a route slot that could hold a profitable customer.
 
 Give the customer adequate notice (30 days is standard), provide a professional explanation, and offer a referral to another technician if possible. This preserves your reputation while freeing up capacity for profitable growth.
 
@@ -159,7 +159,7 @@ Raising prices is uncomfortable but necessary. A data-driven approach makes it p
 3. **Provide advance notice.** Give customers 30 to 60 days' notice of price changes. This is both professional courtesy and good business practice.
 4. **Offer alternatives.** If the customer balks at the new price, offer options: a reduced service scope, biweekly instead of weekly service, or specific changes they can make (better landscaping, equipment upgrades) that would reduce your costs and allow a lower fee.
 
-Documentation of your service history — chemical readings, photos, service logs — strengthens your position in these conversations. For more on building trust through documentation, see our guide on [building trust with pool service customers](/blog/building-trust-pool-service-customers/).
+Documentation of your service history (chemical readings, photos, service logs) strengthens your position in these conversations. For more on building trust through documentation, see our guide on [building trust with pool service customers](/blog/building-trust-pool-service-customers/).
 
 ## How PoolFlow Helps
 

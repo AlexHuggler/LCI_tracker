@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CPO Certification Guide 2026: What Pool Technicians Need to Know"
-date: 2026-02-26
+date: 2026-01-25
 categories: [regulatory-guidance]
 tags: [cpo, certification, pool-operator, compliance, phta]
 description: "Complete 2026 CPO certification guide covering exam topics, costs, state requirements, and renewal process for pool technicians."

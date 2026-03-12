@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "EPA Water Treatment Chemical Regulations for Swimming Pools"
-date: 2026-02-26
+date: 2026-01-29
 categories: [regulatory-guidance]
 tags: [epa, water-treatment, regulations, disinfection, pool-chemicals]
 description: "EPA regulations for pool water treatment chemicals including registered disinfectants, disinfection byproducts, CYA limits, and disposal."
