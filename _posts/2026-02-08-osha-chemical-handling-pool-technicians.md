@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OSHA Chemical Handling Safety for Pool Technicians"
-date: 2026-02-26
+date: 2026-02-08
 categories: [regulatory-guidance]
 tags: [osha, chemical-safety, pool-chemicals, compliance, ppe]
 description: "OSHA chemical handling requirements for pool technicians covering PPE, SDS sheets, hazard communication, storage, and spill response."

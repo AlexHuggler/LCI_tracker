@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pool Service Pricing Strategies: How to Set Rates and Stay Profitable"
-date: 2026-02-26
+date: 2026-02-14
 categories: [business]
 tags: [pricing, profitability, pool-service, business-strategy]
 description: "Learn how to set pool service rates using cost-based and market-based pricing, the 30% chemical cost rule, and when to raise prices."

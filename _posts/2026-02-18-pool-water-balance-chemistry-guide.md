@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pool Water Balance and Chemistry: The Complete Guide for Service Techs"
-date: 2026-02-26
+date: 2026-02-18
 categories: [water-chemistry]
 tags: [water-chemistry, ph, alkalinity, calcium-hardness, pool-balance, chlorine]
 description: "Complete guide to pool water chemistry covering pH, alkalinity, calcium hardness, CYA, TDS, chlorine, chloramines, and testing methods for service techs."

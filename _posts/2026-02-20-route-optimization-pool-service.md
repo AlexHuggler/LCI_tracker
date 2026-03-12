@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Route Optimization for Pool Techs: Save Time, Serve More Pools"
-date: 2026-02-26
+date: 2026-02-20
 categories: [business]
 tags: [route-optimization, efficiency, time-management, pool-service, route-planning]
 description: "Learn how route optimization saves pool techs 30-60 minutes daily. Covers geographic clustering, day-of-week strategies, and drive time reduction."
@@ -13,7 +13,7 @@ faq:
   - question: "How much time can route optimization save?"
     answer: "Most pool service technicians save 30 to 60 minutes per day through proper route optimization. This translates to roughly 2.5 to 5 hours per week, or 10 to 20 hours per month. The savings come from reduced drive time between stops, fewer instances of backtracking across service areas, and smarter day-of-week assignments that keep daily routes geographically tight. Technicians servicing 20 or more pools per day in spread-out suburban areas tend to see the largest gains."
   - question: "How should I organize my pool route by day?"
-    answer: "Assign each day of the week to a specific geographic zone or cluster of neighborhoods. Monday might cover your northern territory, Tuesday the east side, and so on. Within each day, order stops to minimize backtracking by starting at one end of the zone and working systematically toward the other. Account for service duration — schedule pools with longer service times (larger pools, problem accounts) earlier in the day when you have more energy and a time buffer. Keep one or two flexible slots per day for callbacks and new customer visits."
+    answer: "Assign each day of the week to a specific geographic zone or cluster of neighborhoods. Monday might cover your northern territory, Tuesday the east side, and so on. Within each day, order stops to minimize backtracking by starting at one end of the zone and working systematically toward the other. Account for service duration by scheduling pools with longer service times (larger pools, problem accounts) earlier in the day when you have more energy and a time buffer. Keep one or two flexible slots per day for callbacks and new customer visits."
 ---
 
 Every pool service technician knows the frustration of crisscrossing town between stops, watching fuel costs climb while billable service time shrinks. The difference between a well-optimized route and a haphazard one is not trivial. For a technician servicing 20 pools per day across a suburban metro area, poor routing can add 30 to 60 miles of unnecessary driving and consume over an hour of productive time.
@@ -24,7 +24,7 @@ Route optimization is not just about saving gas. It determines how many pools yo
 
 The math behind route optimization is straightforward. If you service 20 pools per day and average 8 minutes of drive time between stops, that is 2 hours and 40 minutes behind the wheel. Reduce that average to 5 minutes through better sequencing, and you recover 60 minutes daily. Over a five-day work week, that is five additional hours available for servicing more pools, handling callbacks, or simply getting home earlier.
 
-The real-world impact compounds further when you factor in fuel costs, vehicle wear, and the mental fatigue of navigating traffic. A technician driving 150 miles per day at current fuel prices spends roughly $20 to $30 in fuel alone. Cutting that to 100 miles saves $400 to $600 per month — money that flows directly to the bottom line.
+The real-world impact compounds further when you factor in fuel costs, vehicle wear, and the mental fatigue of navigating traffic. A technician driving 150 miles per day at current fuel prices spends roughly $20 to $30 in fuel alone. Cutting that to 100 miles saves $400 to $600 per month, money that flows directly to the bottom line.
 
 For a deeper look at how these savings affect your overall business health, see our guide on [pool service profitability](/blog/pool-service-profitability-guide/).
 
@@ -32,7 +32,7 @@ For a deeper look at how these savings affect your overall business health, see 
 
 Route optimization is a version of what mathematicians call the Traveling Salesman Problem: given a list of locations, what is the shortest possible route that visits each one exactly once and returns to the starting point? For even 20 stops, the number of possible route permutations exceeds 2.4 quintillion. No human can evaluate all options mentally.
 
-The good news is that pool service routes do not require a mathematically perfect solution. Even a reasonably good route — one that avoids obvious backtracking and keeps stops geographically clustered — captures 80 to 90 percent of the possible savings. The remaining optimization requires algorithmic computation, but the diminishing returns mean that practical, common-sense approaches get you most of the way there.
+The good news is that pool service routes do not require a mathematically perfect solution. Even a reasonably good route, one that avoids obvious backtracking and keeps stops geographically clustered, captures 80 to 90 percent of the possible savings. The remaining optimization requires algorithmic computation, but the diminishing returns mean that practical, common-sense approaches get you most of the way there.
 
 ### Manual Route Building Principles
 
@@ -55,7 +55,7 @@ The most impactful routing decision most technicians make is not the order of st
 
 ### Geographic Zoning
 
-Divide your service territory into zones — typically one per working day. If you work Monday through Friday, create five zones that each contain roughly the same number of pools. The zones should be geographically contiguous, meaning each one is a connected area without gaps.
+Divide your service territory into zones, typically one per working day. If you work Monday through Friday, create five zones that each contain roughly the same number of pools. The zones should be geographically contiguous, meaning each one is a connected area without gaps.
 
 For example, a technician covering a 30-mile metro area might assign zones as follows:
 
@@ -85,7 +85,7 @@ The strongest cluster boundary is the neighborhood or subdivision. Pools within 
 
 ### Corridor Routing
 
-For service areas that are elongated rather than circular — common in suburban sprawl along major highways — corridor routing works better than radial zoning. Service all pools along one corridor (a major road and its side streets) before moving to the next parallel corridor.
+For service areas that are elongated rather than circular, common in suburban sprawl along major highways, corridor routing works better than radial zoning. Service all pools along one corridor (a major road and its side streets) before moving to the next parallel corridor.
 
 ### Traffic Pattern Awareness
 
@@ -138,7 +138,7 @@ To measure this, track two numbers each day for one week:
 1. **Total time at pools** (from arrival to departure, summed across all stops)
 2. **Total time driving between pools** (excluding the commute to your first stop and from your last stop)
 
-If you are spending 3 hours driving and 5 hours servicing, your ratio is 62.5 percent — acceptable but improvable. If you are spending 3.5 hours driving and 4.5 hours servicing, your ratio is 56 percent — your routes need restructuring.
+If you are spending 3 hours driving and 5 hours servicing, your ratio is 62.5 percent, which is acceptable but improvable. If you are spending 3.5 hours driving and 4.5 hours servicing, your ratio is 56 percent, and your routes need restructuring.
 
 ## Tips for Building Better Routes Today
 

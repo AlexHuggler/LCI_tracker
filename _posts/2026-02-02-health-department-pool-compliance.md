@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Health Department Pool Compliance: Passing Inspections Every Time"
-date: 2026-02-26
+date: 2026-02-02
 categories: [regulatory-guidance]
 tags: [health-department, inspections, compliance, commercial-pools]
 description: "Guide to health department pool inspections covering water chemistry records, disinfectant levels, VGB Act compliance, and documentation."

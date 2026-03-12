@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pool Chemical Storage Regulations: Safety and Legal Requirements"
-date: 2026-02-26
+date: 2026-02-10
 categories: [regulatory-guidance]
 tags: [chemical-storage, safety, regulations, osha, pool-chemicals]
 description: "Learn pool chemical storage regulations including separation requirements, ventilation, DOT transport rules, and OSHA compliance for service techs."

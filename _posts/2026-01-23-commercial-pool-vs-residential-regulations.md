@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Commercial vs Residential Pool Regulations: Key Differences"
-date: 2026-02-26
+date: 2026-01-23
 categories: [regulatory-guidance]
 tags: [commercial-pools, residential-pools, regulations, compliance]
 description: "Understand the key regulatory differences between commercial and residential pools, including CPO requirements, testing frequency, and compliance."
