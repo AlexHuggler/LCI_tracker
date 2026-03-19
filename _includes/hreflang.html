@@ -1,0 +1,16 @@
+{% comment %}
+  Generates hreflang link tags for multilingual pages.
+  Only outputs on pages that define `hreflang_group` in front matter.
+{% endcomment %}
+{% if page.hreflang_group %}
+  {% for lang in site.data.languages %}
+    {% if lang.path == "" %}
+      {% assign target_url = "/" %}
+    {% else %}
+      {% assign target_url = lang.path | append: "/" %}
+    {% endif %}
+    {% for hreflang_code in lang.hreflangs %}
+  <link rel="alternate" hreflang="{{ hreflang_code }}" href="{{ target_url | absolute_url }}">
+    {% endfor %}
+  {% endfor %}
+{% endif %}

@@ -1,0 +1,226 @@
+---
+layout: default
+---
+{% assign t = site.data.i18n[page.lang] %}
+{% assign lang_data = nil %}
+{% for l in site.data.languages %}
+  {% if l.code == page.lang %}
+    {% assign lang_data = l %}
+  {% endif %}
+{% endfor %}
+
+<!-- ============================================
+     SECTION 1: HERO
+     ============================================ -->
+<section id="hero" class="relative bg-cover bg-center bg-no-repeat pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pt-36 lg:pb-28" style="background-image: url('/assets/images/Hero Image - Truck Pool.png'); background-color: #567A8C;">
+  <!-- Dark overlay for text readability -->
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+      <!-- Left Column: Copy -->
+      <div class="flex-1 text-center lg:text-left">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+          {{ t.hero_headline_1 }}<br>
+          {{ t.hero_headline_2 }}<br>
+          {{ t.hero_headline_3 }}
+        </h1>
+        <p class="mt-6 text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+          {{ t.hero_subtitle }}
+        </p>
+
+        <!-- App Store CTA -->
+        <div id="download" class="mt-8 max-w-lg mx-auto lg:mx-0">
+          <p class="text-sm font-medium text-blue-100 mb-3">{{ t.cta_available }}</p>
+          <a href="{{ lang_data.app_store_url }}" class="inline-flex items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-nowrap">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            {{ t.cta_primary }}
+          </a>
+        </div>
+
+        <div class="mt-4">
+          <a href="#features" class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-3.5 rounded-full hover:bg-white hover:text-pool-dark transition-colors text-lg">
+            {{ t.cta_secondary }}
+          </a>
+        </div>
+
+        <!-- Trust Signals with Icons -->
+        <div class="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 text-sm text-blue-200">
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z"/></svg>
+            {{ t.trust_no_account }}
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12l-3-3m0 0l-3 3m3-3v6.75"/></svg>
+            {{ t.trust_no_server }}
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
+            {{ t.trust_data_local }}
+          </span>
+        </div>
+      </div>
+
+      <!-- Right Column: App Screenshot -->
+      <div class="flex-1 flex items-center justify-center w-full max-w-md lg:max-w-lg">
+        <div class="relative w-72 sm:w-80 phone-float">
+          <div class="rounded-[2.5rem] border-[6px] border-white/30 shadow-2xl overflow-hidden bg-black">
+            <img
+              src="/assets/images/simulator_screenshot.png"
+              alt="PoolFlow app screenshot"
+              class="w-full h-auto block"
+              width="1206"
+              height="2622"
+              loading="eager"
+            >
+          </div>
+          <!-- Platform badge -->
+          <div class="mt-4 flex justify-center">
+            <span class="inline-flex items-center gap-1.5 text-xs font-medium text-white/70 bg-white/10 rounded-full px-3 py-1">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              iOS App
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Wave divider: hero → features -->
+<div class="wave-divider bg-white">
+  <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0 60V20C240 50 480 0 720 20C960 40 1200 10 1440 30V60H0Z" fill="white"/>
+    <path d="M0 0V20C240 50 480 0 720 20C960 40 1200 10 1440 30V0H0Z" fill="rgba(0,0,0,0.5)"/>
+  </svg>
+</div>
+
+<!-- ============================================
+     SECTION 2: FEATURES (4 key features)
+     ============================================ -->
+<section id="features" class="py-20 sm:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pool-dark">
+        {{ t.features_title }}
+      </h2>
+      <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+        {{ t.features_subtitle }}
+      </p>
+    </div>
+
+    <!-- Feature Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {% for feature in t.features %}
+      <article class="feature-card bg-pool-section rounded-2xl p-6 animate-on-scroll" style="animation-delay: {{ forloop.index0 | times: 0.1 }}s">
+        <div class="feature-icon mb-4">
+          {% if feature.icon == "calculator" %}
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25v-.008zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007v-.008zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008v-.008zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008v-.008zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z"/>
+          </svg>
+          {% elsif feature.icon == "beaker" %}
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/>
+          </svg>
+          {% elsif feature.icon == "route" %}
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m0-8.25a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0 8.25a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM15 9a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm0 8.25a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM15 12v5.25"/>
+          </svg>
+          {% elsif feature.icon == "chart" %}
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"/>
+          </svg>
+          {% endif %}
+        </div>
+        <h3 class="text-lg font-semibold text-pool-dark mb-2">{{ feature.title }}</h3>
+        <p class="text-sm text-gray-700 leading-relaxed">{{ feature.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 3: FAQ (with FAQPage schema for AEO)
+     ============================================ -->
+<section id="faq" class="py-20 sm:py-28 bg-pool-section">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-pool-dark">
+        {{ t.faq_title }}
+      </h2>
+    </div>
+
+    <div class="space-y-4">
+      {% for item in t.faq %}
+      <details class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+        <summary class="flex items-center justify-between cursor-pointer px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors">
+          <span>{{ item.question }}</span>
+          <svg class="w-5 h-5 text-gray-400 transition-transform group-open:rotate-180 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </summary>
+        <div class="px-6 pb-4 text-gray-700 leading-relaxed">
+          {{ item.answer }}
+        </div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- FAQPage JSON-LD (AEO / Answer Engine Optimization) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "{{ page.lang }}",
+  "mainEntity": [
+    {% for item in t.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.answer | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+<!-- Enhanced SoftwareApplication schema -->
+{% include schema-software-i18n.html %}
+
+<!-- ============================================
+     SECTION 4: FINAL CTA
+     ============================================ -->
+<section class="hero-gradient py-20 sm:py-28">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+      {{ t.footer_cta_title }}
+    </h2>
+    <p class="mt-4 text-lg text-blue-100 max-w-2xl mx-auto">
+      {{ t.footer_cta_subtitle }}
+    </p>
+    <div class="mt-8">
+      <a href="{{ lang_data.app_store_url }}" class="inline-flex items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        {{ t.footer_cta_button }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Mobile Sticky CTA Bar -->
+<div class="fixed bottom-0 left-0 right-0 md:hidden bg-white/95 backdrop-blur-sm border-t border-gray-200 px-4 py-3 z-40">
+  <a href="{{ lang_data.app_store_url }}" class="flex items-center justify-center gap-2 w-full py-3 rounded-full text-white font-semibold text-sm transition-opacity hover:opacity-90" style="background-color: #53849F;">
+    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+    {{ t.cta_primary }}
+  </a>
+</div>
