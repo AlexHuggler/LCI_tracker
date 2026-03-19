@@ -5,6 +5,9 @@
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 
+<!-- hreflang tags for multilingual SEO -->
+{% include hreflang.html %}
+
 <!-- Preconnect for performance -->
 <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
 
@@ -18,9 +21,30 @@
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
 <meta property="og:site_name" content="PoolFlow">
+<meta property="og:locale" content="{{ page.og_locale | default: 'en_US' }}">
+{% if page.og_locale_alternates %}{% for alt_locale in page.og_locale_alternates %}
+<meta property="og:locale:alternate" content="{{ alt_locale }}">
+{% endfor %}{% endif %}
 
 <!-- Twitter Card Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
 <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
 <meta name="twitter:image" content="{{ page.image | default: '/assets/images/poolflow-icon-512.png' | absolute_url }}">
+
+<!-- WebSite schema for LLMO/AEO (tells LLMs and answer engines about multilingual support) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PoolFlow",
+  "url": "https://poolflowapp.com",
+  "inLanguage": "{{ page.lang | default: 'en' }}",
+  "availableLanguage": ["en", "es", "fr", "de", "pt", "nl"],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Huggler Holdings LLC.",
+    "url": "https://poolflowapp.com"
+  }
+}
+</script>

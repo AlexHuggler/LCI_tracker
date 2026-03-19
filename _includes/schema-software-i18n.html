@@ -5,11 +5,11 @@
   "name": "PoolFlow",
   "operatingSystem": "iOS",
   "applicationCategory": "BusinessApplication",
-  "inLanguage": "en",
+  "inLanguage": "{{ page.lang }}",
   "availableLanguage": ["en", "es", "fr", "de", "pt", "nl"],
+  "description": "{{ page.description | escape }}",
   "url": "https://poolflowapp.com",
   "sameAs": ["https://apps.apple.com/us/app/poolflow-pool-service-pro/id6759516755"],
-  "description": "All-in-one pool service management app with real-time LSI calculator, chemical dosing, route optimization, and profit analytics.",
   "offers": [
     { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free tier — up to 5 pools" },
     { "@type": "Offer", "price": "29.99", "priceCurrency": "USD", "description": "Pro Monthly — unlimited pools, all features" },
@@ -25,7 +25,7 @@
     "CSV import/export and PDF reports",
     "iCloud sync across devices",
     "Offline-first architecture",
-    "6 language support (English, Spanish, French, German, Portuguese, Dutch)"
+    "6 language support"
   ],
   "author": { "@type": "Organization", "name": "Huggler Holdings LLC." }
 }
