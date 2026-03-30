@@ -22,8 +22,7 @@ layout: default
       <div class="flex-1 text-center lg:text-left">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
           {{ t.hero_headline_1 }}<br>
-          {{ t.hero_headline_2 }}<br>
-          {{ t.hero_headline_3 }}
+          {{ t.hero_headline_2 }}
         </h1>
         <p class="mt-6 text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
           {{ t.hero_subtitle }}
@@ -57,6 +56,10 @@ layout: default
           <span class="inline-flex items-center gap-1.5">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
             {{ t.trust_data_local }}
+          </span>
+          <span class="inline-flex items-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.348 14.651a3.75 3.75 0 010-5.303m5.304 0a3.75 3.75 0 010 5.303m-7.425 2.122a6.75 6.75 0 010-9.546m9.546 0a6.75 6.75 0 010 9.546M5.106 18.894c-3.808-3.808-3.808-9.98 0-13.789m13.788 0c3.808 3.808 3.808 9.981 0 13.79M12 12h.008v.007H12V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg>
+            {{ t.trust_offline | default: "Works without cell signal" }}
           </span>
         </div>
       </div>
@@ -97,7 +100,27 @@ layout: default
 </div>
 
 <!-- ============================================
-     SECTION 2: FEATURES (4 key features)
+     SECTION 2: PRICE ANCHOR BAR
+     ============================================ -->
+<section class="price-anchor-bar bg-gray-900 py-10 sm:py-12">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 text-center">
+      <div class="bg-gray-800 rounded-2xl p-6 sm:p-8">
+        <p class="text-sm font-medium uppercase tracking-wider text-gray-400 mb-2">{{ t.anchor_competitor_label | default: "40 pools elsewhere" }}</p>
+        <p class="text-4xl sm:text-5xl font-bold text-red-400">$178<span class="text-lg font-normal text-gray-400">/mo</span></p>
+        <p class="mt-2 text-sm text-gray-500">{{ t.anchor_competitor_detail | default: "Base fee + $2/pool/mo" }}</p>
+      </div>
+      <div class="bg-gray-800 rounded-2xl p-6 sm:p-8 ring-2 ring-emerald-500/50">
+        <p class="text-sm font-medium uppercase tracking-wider text-gray-400 mb-2">{{ t.anchor_poolflow_label | default: "40 pools on PoolFlow" }}</p>
+        <p class="text-4xl sm:text-5xl font-bold text-emerald-400">$29.99<span class="text-lg font-normal text-gray-400">/mo</span></p>
+        <p class="mt-2 text-sm text-emerald-400/80">{{ t.anchor_poolflow_detail | default: "Every feature. Every pool. Flat price." }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 3: FEATURES
      ============================================ -->
 <section id="features" class="py-20 sm:py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -144,7 +167,7 @@ layout: default
 </section>
 
 <!-- ============================================
-     SECTION 3: FAQ (with FAQPage schema for AEO)
+     SECTION 4: FAQ (with FAQPage schema for AEO)
      ============================================ -->
 <section id="faq" class="py-20 sm:py-28 bg-pool-section">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -198,7 +221,7 @@ layout: default
 {% include schema-software-i18n.html %}
 
 <!-- ============================================
-     SECTION 4: FINAL CTA
+     SECTION 5: FINAL CTA
      ============================================ -->
 <section class="hero-gradient py-20 sm:py-28">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
