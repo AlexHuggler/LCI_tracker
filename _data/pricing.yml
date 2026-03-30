@@ -18,7 +18,7 @@
   period: "/month"
   highlighted: true
   badge: "Most Popular"
-  trial: "7-day free trial"
+  trial: "1-month free trial"
   features:
     - "Everything in Free, plus:"
     - "Unlimited pools"
@@ -36,7 +36,7 @@
   period: "/year"
   highlighted: false
   badge: "Save $59.89"
-  trial: "7-day free trial"
+  trial: "1-month free trial"
   features:
     - "Everything in Pro Monthly"
     - "Best value — 2 months free"
