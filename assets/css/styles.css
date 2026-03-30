@@ -117,6 +117,16 @@ body {
   box-shadow: 0 10px 25px rgba(83, 132, 159, 0.1);
 }
 
+/* Value stack cards */
+.value-card {
+  border-top: 3px solid #53849F;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(83, 132, 159, 0.12);
+}
+
 /* Blog card hover */
 .blog-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
