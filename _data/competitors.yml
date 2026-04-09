@@ -1,0 +1,347 @@
+# Competitor data for comparison pages
+# Used by /compare/ and /compare/poolflow-vs-skimmer/
+# Pricing accurate as of April 2026
+
+- slug: "skimmer"
+  name: "Skimmer"
+  type: "pool-specific"
+  tagline: "Pool service management software"
+  pricing:
+    model: "base-plus-per-pool"
+    base: 98
+    per_pool: 2
+    currency: "USD"
+    summary: "$98/mo base + $2/pool/mo"
+    examples:
+      - pools: 40
+        monthly: 178
+      - pools: 60
+        monthly: 218
+      - pools: 80
+        monthly: 258
+  features:
+    lsi_calculator: false
+    cya_correction: false
+    chemical_dosing: false
+    cost_linked_dosing: false
+    route_optimization: true
+    profit_analytics: false
+    money_loser_detection: false
+    chemical_inventory: false
+    offline_first: false
+    wet_hand_ux: false
+    service_logging: true
+    photo_documentation: true
+    csv_import: true
+    icloud_sync: false
+    equipment_tracking: true
+    customer_portal: true
+    invoicing: true
+    multi_language: false
+    unlimited_pools: false
+  highlights:
+    - "Customer portal with email reports"
+    - "QuickBooks integration"
+    - "Work order management"
+    - "Per-pool pricing scales with your business"
+  missing:
+    - "No LSI calculator or water chemistry analysis"
+    - "No chemical dosing recommendations"
+    - "No per-pool profit tracking"
+    - "No offline mode — requires internet"
+    - "Per-pool fees increase cost as you grow"
+
+- slug: "jobber"
+  name: "Jobber"
+  type: "general-fsm"
+  tagline: "Field service management for home service businesses"
+  pricing:
+    model: "tiered"
+    base: 49
+    per_pool: 0
+    currency: "USD"
+    summary: "$49–$169/mo (route optimization at $169/mo only)"
+    examples:
+      - pools: 40
+        monthly: 169
+      - pools: 60
+        monthly: 169
+      - pools: 80
+        monthly: 169
+  features:
+    lsi_calculator: false
+    cya_correction: false
+    chemical_dosing: false
+    cost_linked_dosing: false
+    route_optimization: true
+    profit_analytics: false
+    money_loser_detection: false
+    chemical_inventory: false
+    offline_first: false
+    wet_hand_ux: false
+    service_logging: true
+    photo_documentation: true
+    csv_import: true
+    icloud_sync: false
+    equipment_tracking: false
+    customer_portal: true
+    invoicing: true
+    multi_language: false
+    unlimited_pools: true
+  highlights:
+    - "CRM and client hub for any home service"
+    - "Quoting, invoicing, and payment processing"
+    - "Job scheduling and dispatching"
+    - "Route optimization (Grow plan only, $169/mo)"
+  missing:
+    - "Zero pool-specific features — no LSI, no dosing"
+    - "Route optimization requires $169/mo Grow plan"
+    - "No chemical inventory or cost tracking"
+    - "No per-pool profitability analysis"
+    - "Built for HVAC, plumbing, and cleaning — not pools"
+
+- slug: "housecall-pro"
+  name: "Housecall Pro"
+  type: "general-fsm"
+  tagline: "All-in-one field service management"
+  pricing:
+    model: "tiered"
+    base: 49
+    per_pool: 0
+    currency: "USD"
+    summary: "$49–$149/mo"
+    examples:
+      - pools: 40
+        monthly: 129
+      - pools: 60
+        monthly: 129
+      - pools: 80
+        monthly: 129
+  features:
+    lsi_calculator: false
+    cya_correction: false
+    chemical_dosing: false
+    cost_linked_dosing: false
+    route_optimization: false
+    profit_analytics: false
+    money_loser_detection: false
+    chemical_inventory: false
+    offline_first: false
+    wet_hand_ux: false
+    service_logging: true
+    photo_documentation: true
+    csv_import: true
+    icloud_sync: false
+    equipment_tracking: false
+    customer_portal: true
+    invoicing: true
+    multi_language: false
+    unlimited_pools: true
+  highlights:
+    - "Online booking and dispatch board"
+    - "Automated follow-up marketing emails"
+    - "Payment processing built in"
+    - "Review management and reputation tools"
+  missing:
+    - "No pool chemistry tools whatsoever"
+    - "No route optimization included"
+    - "No chemical inventory or dosing"
+    - "No offline mode for fieldwork"
+    - "Designed for general contractors, not pool techs"
+
+- slug: "servicetitan"
+  name: "ServiceTitan"
+  type: "enterprise"
+  tagline: "Enterprise field service management platform"
+  pricing:
+    model: "enterprise"
+    base: 398
+    per_pool: 0
+    currency: "USD"
+    summary: "$398+/mo (enterprise contracts)"
+    examples:
+      - pools: 40
+        monthly: 398
+      - pools: 60
+        monthly: 398
+      - pools: 80
+        monthly: 398
+  features:
+    lsi_calculator: false
+    cya_correction: false
+    chemical_dosing: false
+    cost_linked_dosing: false
+    route_optimization: true
+    profit_analytics: true
+    money_loser_detection: false
+    chemical_inventory: false
+    offline_first: false
+    wet_hand_ux: false
+    service_logging: true
+    photo_documentation: true
+    csv_import: true
+    icloud_sync: false
+    equipment_tracking: true
+    customer_portal: true
+    invoicing: true
+    multi_language: false
+    unlimited_pools: true
+  highlights:
+    - "Full enterprise platform with dispatch and fleet"
+    - "Advanced reporting and business analytics"
+    - "Marketing automation and call tracking"
+    - "Multi-location and franchise support"
+  missing:
+    - "No pool-specific chemistry or dosing tools"
+    - "Massive overkill for solo techs and small crews"
+    - "$398+/mo minimum — 13x the cost of PoolFlow"
+    - "Long-term contracts typically required"
+    - "Complex onboarding and steep learning curve"
+
+- slug: "pool-brain"
+  name: "Pool Brain"
+  type: "pool-specific"
+  tagline: "Pool service route management"
+  pricing:
+    model: "flat"
+    base: 40
+    per_pool: 0
+    currency: "USD"
+    summary: "$40/mo"
+    examples:
+      - pools: 40
+        monthly: 40
+      - pools: 60
+        monthly: 40
+      - pools: 80
+        monthly: 40
+  features:
+    lsi_calculator: false
+    cya_correction: false
+    chemical_dosing: true
+    cost_linked_dosing: false
+    route_optimization: true
+    profit_analytics: false
+    money_loser_detection: false
+    chemical_inventory: false
+    offline_first: false
+    wet_hand_ux: false
+    service_logging: true
+    photo_documentation: true
+    csv_import: true
+    icloud_sync: false
+    equipment_tracking: true
+    customer_portal: true
+    invoicing: false
+    multi_language: false
+    unlimited_pools: true
+  highlights:
+    - "Pool-specific service management"
+    - "Basic chemical dosing recommendations"
+    - "Route management with GPS"
+    - "Customer portal for service reports"
+  missing:
+    - "No LSI calculator with CYA correction"
+    - "Dosing not linked to your actual chemical costs"
+    - "No per-pool profit analytics"
+    - "No offline mode"
+    - "No money-loser pool detection"
+
+- slug: "pool-office-manager"
+  name: "Pool Office Manager"
+  type: "pool-specific"
+  tagline: "Pool service business software"
+  pricing:
+    model: "per-tech"
+    base: 30
+    per_pool: 0
+    currency: "USD"
+    summary: "$30/mo per technician"
+    examples:
+      - pools: 40
+        monthly: 30
+      - pools: 60
+        monthly: 30
+      - pools: 80
+        monthly: 30
+  features:
+    lsi_calculator: false
+    cya_correction: false
+    chemical_dosing: true
+    cost_linked_dosing: false
+    route_optimization: true
+    profit_analytics: false
+    money_loser_detection: false
+    chemical_inventory: false
+    offline_first: false
+    wet_hand_ux: false
+    service_logging: true
+    photo_documentation: true
+    csv_import: true
+    icloud_sync: false
+    equipment_tracking: true
+    customer_portal: false
+    invoicing: true
+    multi_language: false
+    unlimited_pools: true
+  highlights:
+    - "Pool-focused CRM and scheduling"
+    - "Basic dosing suggestions"
+    - "Invoicing and payment tracking"
+    - "Affordable for solo techs"
+  missing:
+    - "No LSI calculator"
+    - "Dosing not cost-linked to your inventory"
+    - "No per-pool profit tracking"
+    - "No offline capability"
+    - "No customer-facing portal"
+
+- slug: "pooltrac"
+  name: "PoolTrac"
+  type: "pool-specific"
+  tagline: "Pool route and service tracking"
+  pricing:
+    model: "per-pool"
+    base: 0
+    per_pool: 1
+    currency: "USD"
+    summary: "$1/pool/mo"
+    examples:
+      - pools: 40
+        monthly: 40
+      - pools: 60
+        monthly: 60
+      - pools: 80
+        monthly: 80
+  features:
+    lsi_calculator: false
+    cya_correction: false
+    chemical_dosing: false
+    cost_linked_dosing: false
+    route_optimization: true
+    profit_analytics: false
+    money_loser_detection: false
+    chemical_inventory: false
+    offline_first: false
+    wet_hand_ux: false
+    service_logging: true
+    photo_documentation: true
+    csv_import: false
+    icloud_sync: false
+    equipment_tracking: false
+    customer_portal: false
+    invoicing: false
+    multi_language: false
+    unlimited_pools: true
+  highlights:
+    - "Low per-pool pricing for small routes"
+    - "Basic service logging and route tracking"
+    - "Simple interface"
+    - "Photo documentation"
+  missing:
+    - "No water chemistry tools"
+    - "No chemical dosing or inventory"
+    - "No profit analytics"
+    - "No offline mode"
+    - "Per-pool pricing scales up with growth"
+    - "No invoicing or business tools"

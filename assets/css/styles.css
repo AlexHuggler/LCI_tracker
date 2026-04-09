@@ -178,3 +178,108 @@ body {
 .skip-to-content:focus {
   top: 0;
 }
+
+/* Comparison table */
+.comparison-table th,
+.comparison-table td {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+  text-align: left;
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 10;
+  min-width: 180px;
+}
+.comparison-table thead th {
+  background: #F7F9FC;
+  font-weight: 600;
+  color: #567A8C;
+}
+.comparison-table thead th:first-child {
+  background: #F7F9FC;
+}
+.comparison-table .poolflow-col {
+  background: #F7FBFD;
+}
+.comparison-table tbody tr:hover {
+  background: #f9fafb;
+}
+.comparison-table .category-row td {
+  background: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Breadcrumb nav */
+.breadcrumb-nav ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumb-nav a {
+  color: #53849F;
+  text-decoration: none;
+}
+.breadcrumb-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Competitor type badges */
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+.badge-pool-specific {
+  background: #F7FBFD;
+  color: #53849F;
+  border: 1px solid #53849F;
+}
+.badge-general-fsm {
+  background: #f3f4f6;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+}
+.badge-enterprise {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+}
+
+/* Migration steps */
+.migration-step {
+  position: relative;
+  padding-left: 3rem;
+}
+.migration-step::before {
+  content: attr(data-step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background: #53849F;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
