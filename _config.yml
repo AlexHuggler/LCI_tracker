@@ -24,6 +24,15 @@ twitter:
 # App Store link
 app_store_url: "https://apps.apple.com/us/app/poolflow-pool-service-pro/id6759516755"
 
+# Pro Annual temporary sale — set active: false to end the sale
+annual_sale:
+  active: true
+  price: "$199.99"
+  original_price: "$299.99"
+  monthly_equivalent: "$16.67"
+  savings: "$100"
+  badge_text: "Limited Time Sale"
+
 logo: "/assets/images/poolflow-icon-512.png"
 
 defaults:
