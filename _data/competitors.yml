@@ -247,3 +247,102 @@
     - "No offline mode"
     - "Per-pool pricing scales up with growth"
     - "No invoicing or business tools"
+
+- slug: "poolcarepro"
+  name: "PoolCarePRO"
+  type: "pool-specific"
+  tagline: "Pool service and repair management"
+  pricing:
+    model: "tiered"
+    base: 59
+    per_pool: 0
+    currency: "USD"
+    summary: "$59–$149/mo depending on plan"
+    examples:
+      - pools: 40
+        monthly: 99
+      - pools: 60
+        monthly: 99
+      - pools: 80
+        monthly: 149
+  features:
+    lsi_calculator: false
+    cya_correction: false
+    chemical_dosing: true
+    cost_linked_dosing: false
+    route_optimization: true
+    profit_analytics: false
+    money_loser_detection: false
+    chemical_inventory: false
+    offline_first: false
+    wet_hand_ux: false
+    service_logging: true
+    photo_documentation: true
+    csv_import: true
+    icloud_sync: false
+    equipment_tracking: true
+    customer_portal: true
+    invoicing: true
+    multi_language: false
+    unlimited_pools: true
+  highlights:
+    - "Built specifically for pool service companies"
+    - "Repair and maintenance work orders"
+    - "Customer portal with service history"
+    - "Basic chemical dosing recommendations"
+  missing:
+    - "No LSI calculator or CYA correction"
+    - "Dosing not linked to chemical costs"
+    - "No per-pool profit analytics"
+    - "No offline mode — requires connectivity"
+    - "Higher-tier plan needed for larger routes"
+
+- slug: "pooltrakr"
+  name: "Pooltrakr"
+  type: "pool-specific"
+  tagline: "Mobile pool service management"
+  pricing:
+    model: "flat"
+    base: 35
+    per_pool: 0
+    currency: "USD"
+    summary: "$35/mo flat"
+    examples:
+      - pools: 40
+        monthly: 35
+      - pools: 60
+        monthly: 35
+      - pools: 80
+        monthly: 35
+  features:
+    lsi_calculator: false
+    cya_correction: false
+    chemical_dosing: false
+    cost_linked_dosing: false
+    route_optimization: true
+    profit_analytics: false
+    money_loser_detection: false
+    chemical_inventory: false
+    offline_first: false
+    wet_hand_ux: false
+    service_logging: true
+    photo_documentation: true
+    csv_import: false
+    icloud_sync: false
+    equipment_tracking: false
+    customer_portal: true
+    invoicing: false
+    multi_language: false
+    unlimited_pools: true
+  highlights:
+    - "Mobile-first design for field techs"
+    - "GPS route tracking"
+    - "Customer-facing service reports"
+    - "Affordable flat monthly rate"
+  missing:
+    - "No water chemistry analysis or LSI"
+    - "No chemical dosing recommendations"
+    - "No profit or cost analytics"
+    - "No offline mode"
+    - "No invoicing or payment tools"
+    - "No equipment tracking"
