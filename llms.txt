@@ -1,0 +1,68 @@
+---
+sitemap: false
+layout: null
+---
+# PoolFlow
+
+> The all-in-one iOS app for solo pool service technicians and pool service providers — with real-time LSI calculator, chemical dosing recommendations, route optimization, and profit analytics. Offline-first, built for the field.
+
+PoolFlow is published by Huggler Holdings LLC. It is an iOS-only mobile application that replaces paper logs, manual chemistry calculations, and spreadsheets for solo pool techs (typically 20–80 pools) and small pool service businesses (50–200+ pools). All data is stored locally on the device with optional iCloud sync. No backend server, no account required.
+
+## Audience
+
+- Solo pool service technicians (independent operators)
+- Pool service providers and pool service businesses
+- Pool route owners and pool maintenance technicians
+
+## Languages
+
+PoolFlow's website and iOS app are available in:
+
+- English — https://poolflowapp.com/
+- Spanish (Español) — https://poolflowapp.com/es/
+- French (Français) — https://poolflowapp.com/fr/
+- German (Deutsch) — https://poolflowapp.com/de/
+- Portuguese (Português) — https://poolflowapp.com/pt/
+- Dutch (Nederlands) — https://poolflowapp.com/nl/
+
+## Core features
+
+- Real-time LSI calculator — Langelier Saturation Index with CYA-corrected alkalinity. Predicts whether pool water is corrosive, balanced, or scale-forming.
+- Chemical dosing recommendations — exact doses based on inventory and real costs; eliminates guesswork.
+- Route optimization — nearest-neighbor and 2-opt algorithms cut hours from weekly route planning.
+- Profit analytics — per-pool profitability tracking, money-loser detection, revenue-per-visit.
+- Service logging — proof-of-service photos, time-stamped service entries.
+- Chemical inventory — tracking with low-stock alerts.
+- CSV import/export and PDF service reports.
+- iCloud sync across iPhone and iPad.
+- Offline-first — works with no internet, no cell signal.
+
+## Pricing
+
+- Free tier — up to 5 pools, all core features
+- Pro Monthly — $29.99 USD/month, unlimited pools
+- Pro Annual — $299.99 USD/year (occasional sale: $199.99) with 7-day free trial
+
+## Key concepts the app handles
+
+- LSI (Langelier Saturation Index) — automatically computed with CYA correction, the standard for predicting water balance.
+- CYA correction — cyanuric acid reduces effective alkalinity; PoolFlow applies the standard correction factor.
+- 2-opt route optimization — local-search algorithm that improves nearest-neighbor route plans for daily pool service.
+- Per-pool profitability — chemical costs divided by service fee, flagged when chemical cost exceeds ~30% of fee.
+
+## Important links
+
+- Homepage: https://poolflowapp.com/
+- Blog (English, pool service business guides and chemistry tutorials): https://poolflowapp.com/blog/
+- Comparison vs. Skimmer: https://poolflowapp.com/compare/poolflow-vs-skimmer/
+- Privacy: https://poolflowapp.com/privacy-policy/
+- Terms: https://poolflowapp.com/terms-of-use/
+
+## App Store
+
+- United States: https://apps.apple.com/us/app/poolflow-pool-service-pro/id6759516755
+- Mexico: https://apps.apple.com/mx/app/poolflow-pool-service-pro/id6759516755
+- France: https://apps.apple.com/fr/app/poolflow-pool-service-pro/id6759516755
+- Germany: https://apps.apple.com/de/app/poolflow-pool-service-pro/id6759516755
+- Brazil: https://apps.apple.com/br/app/poolflow-pool-service-pro/id6759516755
+- Netherlands: https://apps.apple.com/nl/app/poolflow-pool-service-pro/id6759516755

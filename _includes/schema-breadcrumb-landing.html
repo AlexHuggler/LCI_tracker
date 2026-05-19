@@ -1,0 +1,15 @@
+<script type="application/ld+json">
+{% assign t = site.data.i18n[page.lang] | default: site.data.i18n.en %}
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": {{ t.seo.breadcrumb_home | default: "Home" | jsonify }},
+      "item": {{ page.url | absolute_url | jsonify }}
+    }
+  ]
+}
+</script>

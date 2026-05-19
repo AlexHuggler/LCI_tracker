@@ -1,10 +1,10 @@
-page_title: "PoolFlow \u2014 Zwembad Service Management App"
-meta_description: "De alles-in-\u00E9\u00E9n iOS-app voor zwembadtechnici. Realtime LSI-berekening, chemische dosering, route-optimalisatie en winstanalyse. Offline-first. Gemaakt voor het veld."
+page_title: "PoolFlow \u2014 App voor Zelfstandige Zwembadtechnici"
+meta_description: "De alles-in-\u00E9\u00E9n iOS-app voor de zelfstandige zwembadtechnicus en zwembadservice-aanbieders. Realtime LSI-berekening, chemische dosering, route-optimalisatie en winstanalyse. Offline-first."
 
 hero_headline_1: "Ken Je Water."
 hero_headline_2: "Ken Je Route."
 hero_headline_3: "Ken Je Geld."
-hero_subtitle: "De alles-in-\u00E9\u00E9n iOS-app voor zwembadtechnici. Realtime LSI-berekeningen, slimme chemische dosering, route-optimalisatie en winstanalyse \u2014 alles offline, alles op \u00E9\u00E9n plek."
+hero_subtitle: "De alles-in-\u00E9\u00E9n iOS-app voor de zelfstandige zwembadtechnicus en zwembadservice-aanbieders. Realtime LSI-berekeningen, slimme chemische dosering, route-optimalisatie en winstanalyse \u2014 alles offline, alles op \u00E9\u00E9n plek."
 cta_primary: "Download in de App Store"
 cta_secondary: "Bekijk Hoe Het Werkt"
 cta_available: "Nu beschikbaar in de App Store."
@@ -43,3 +43,38 @@ faq:
 footer_cta_title: "Download PoolFlow"
 footer_cta_subtitle: "Nu beschikbaar in de iOS App Store."
 footer_cta_button: "Download in de App Store"
+
+# SEO / LMO terminology — high-intent keywords used in schema and meta
+seo:
+  solo_tech_label: "zelfstandige zwembadtechnicus"
+  service_provider_label: "zwembadservice-aanbieder"
+  service_business_label: "zwembadservicebedrijf"
+  service_type_label: "Zwembad Service Management Software"
+  audience_label: "Zelfstandige zwembadtechnici en zwembadservice-aanbieders"
+  breadcrumb_home: "Home"
+  og_image_alt: "PoolFlow — iOS-app voor zwembadservicebeheer voor zelfstandige zwembadtechnici"
+  feature_list:
+    - "Realtime LSI-calculator met CYA-correctie"
+    - "Aanbevelingen voor chemische dosering met kostentracking"
+    - "Route-optimalisatie met nearest-neighbor en 2-opt algoritmen"
+    - "Winstanalyse met detectie van onrendabele zwembaden"
+    - "Servicelogboek met servicebewijs-foto's"
+    - "Chemisch voorraadbeheer met meldingen voor lage voorraad"
+    - "CSV-import/export en PDF-rapporten"
+    - "iCloud-synchronisatie tussen apparaten"
+    - "Offline-first architectuur"
+    - "6 talen: Nederlands, Engels, Spaans, Frans, Duits, Portugees"
+
+# HowTo schema — LSI calculation tutorial for LLM/answer-engine optimization
+howto_lsi:
+  name: "Hoe de LSI (Langelier Saturatie Index) van een zwembad berekenen"
+  description: "Stap-voor-stap LSI-berekening met CYA-correctie met behulp van PoolFlow."
+  steps:
+    - name: "Meet de waterparameters"
+      text: "Meet pH, totale alkaliteit, calciumhardheid, temperatuur, TDS en CYA met een testkit."
+    - name: "Voer de metingen in PoolFlow in"
+      text: "Open PoolFlow en voer elke meting in. De app past de CYA-correctie automatisch toe."
+    - name: "Lees het LSI-resultaat af"
+      text: "PoolFlow toont de kleurgecodeerde LSI: corrosief, in balans of kalkvormend."
+    - name: "Pas de aanbevolen doseringen toe"
+      text: "Volg de chemische aanbevelingen om de LSI in het bereik -0,3 tot +0,3 te brengen."

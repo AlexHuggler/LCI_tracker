@@ -1,10 +1,10 @@
-page_title: "PoolFlow \u2014 Pool-Service Management App"
-meta_description: "Die All-in-One iOS-App f\u00FCr Pool-Techniker. Echtzeit-LSI-Berechnung, chemische Dosierung, Routenoptimierung und Gewinnanalyse. Offline-f\u00E4hig. F\u00FCr den Einsatz vor Ort."
+page_title: "PoolFlow \u2014 App f\u00FCr selbstst\u00E4ndige Pool-Techniker"
+meta_description: "Die All-in-One iOS-App f\u00FCr selbstst\u00E4ndige Pool-Techniker und Pool-Service-Anbieter. Echtzeit-LSI-Berechnung, chemische Dosierung, Routenoptimierung und Gewinnanalyse. Offline-f\u00E4hig."
 
 hero_headline_1: "Kenne Dein Wasser."
 hero_headline_2: "Kenne Deine Route."
 hero_headline_3: "Kenne Dein Geld."
-hero_subtitle: "Die All-in-One iOS-App f\u00FCr Pool-Techniker. Echtzeit-LSI-Berechnungen, intelligente chemische Dosierung, Routenoptimierung und Gewinnanalyse \u2014 alles offline, alles an einem Ort."
+hero_subtitle: "Die All-in-One iOS-App f\u00FCr selbstst\u00E4ndige Pool-Techniker und Pool-Service-Anbieter. Echtzeit-LSI-Berechnungen, intelligente chemische Dosierung, Routenoptimierung und Gewinnanalyse \u2014 alles offline, alles an einem Ort."
 cta_primary: "Im App Store laden"
 cta_secondary: "So Funktioniert Es"
 cta_available: "Jetzt im App Store verf\u00FCgbar."
@@ -43,3 +43,38 @@ faq:
 footer_cta_title: "PoolFlow Herunterladen"
 footer_cta_subtitle: "Jetzt im iOS App Store verf\u00FCgbar."
 footer_cta_button: "Im App Store laden"
+
+# SEO / LMO terminology \u2014 high-intent keywords used in schema and meta
+seo:
+  solo_tech_label: "selbstst\u00E4ndiger Pool-Techniker"
+  service_provider_label: "Pool-Service-Anbieter"
+  service_business_label: "Pool-Service-Unternehmen"
+  service_type_label: "Pool-Service Management Software"
+  audience_label: "Selbstst\u00E4ndige Pool-Techniker und Pool-Service-Anbieter"
+  breadcrumb_home: "Startseite"
+  og_image_alt: "PoolFlow \u2014 iOS-App zur Pool-Service-Verwaltung f\u00FCr selbstst\u00E4ndige Pool-Techniker"
+  feature_list:
+    - "Echtzeit-LSI-Rechner mit CYA-Korrektur"
+    - "Chemische Dosierungsempfehlungen mit Kostenverfolgung"
+    - "Routenoptimierung mit Nearest-Neighbor- und 2-opt-Algorithmen"
+    - "Gewinnanalyse mit Erkennung unrentabler Pools"
+    - "Service-Protokoll mit Service-Nachweis-Fotos"
+    - "Chemische Bestandsverwaltung mit Niedrigbestandswarnung"
+    - "CSV-Import/Export und PDF-Berichte"
+    - "iCloud-Synchronisierung \u00FCber Ger\u00E4te hinweg"
+    - "Offline-first Architektur"
+    - "6 Sprachen: Deutsch, Englisch, Spanisch, Franz\u00F6sisch, Portugiesisch, Niederl\u00E4ndisch"
+
+# HowTo schema \u2014 LSI calculation tutorial for LLM/answer-engine optimization
+howto_lsi:
+  name: "Wie man den LSI (Langelier-S\u00E4ttigungsindex) eines Pools berechnet"
+  description: "Schritt-f\u00FCr-Schritt LSI-Berechnung mit CYA-Korrektur mit PoolFlow."
+  steps:
+    - name: "Wasserparameter messen"
+      text: "Messe pH, Gesamtalkalit\u00E4t, Kalziumh\u00E4rte, Temperatur, TDS und CYA mit einem Testkit."
+    - name: "Messwerte in PoolFlow eingeben"
+      text: "\u00D6ffne PoolFlow und gib jeden Messwert ein. Die App wendet die CYA-Korrektur automatisch an."
+    - name: "LSI-Ergebnis ablesen"
+      text: "PoolFlow zeigt den farblich kodierten LSI an: korrosiv, ausgeglichen oder kalkbildend."
+    - name: "Empfohlene Dosierungen anwenden"
+      text: "Folge den chemischen Empfehlungen, um den LSI in den Bereich -0,3 bis +0,3 zu bringen."

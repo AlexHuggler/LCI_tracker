@@ -1,0 +1,38 @@
+# English baseline. The root index.html uses inline content rather than the
+# landing-i18n layout, so this file only provides the SEO/LMO data consumed by
+# shared includes (head.html, schema-service-i18n.html, schema-howto-lsi-i18n.html).
+
+# SEO / LMO terminology — high-intent keywords used in schema and meta
+seo:
+  solo_tech_label: "solo pool tech"
+  service_provider_label: "pool service provider"
+  service_business_label: "pool service business"
+  service_type_label: "Pool Service Management Software"
+  audience_label: "Solo pool service technicians and pool service providers"
+  breadcrumb_home: "Home"
+  og_image_alt: "PoolFlow — pool service management iOS app for solo pool techs"
+  feature_list:
+    - "Real-time LSI calculation with CYA correction"
+    - "Chemical dosing recommendations with cost tracking"
+    - "Route optimization with nearest-neighbor and 2-opt algorithms"
+    - "Profit analytics with money-loser detection"
+    - "Service logging with proof-of-service photos"
+    - "Chemical inventory tracking with low-stock alerts"
+    - "CSV import/export and PDF reports"
+    - "iCloud sync across devices"
+    - "Offline-first architecture"
+    - "6 languages: English, Spanish, French, German, Portuguese, Dutch"
+
+# HowTo schema — LSI calculation tutorial for LLM/answer-engine optimization
+howto_lsi:
+  name: "How to calculate pool LSI (Langelier Saturation Index)"
+  description: "Step-by-step pool LSI calculation with CYA correction using PoolFlow."
+  steps:
+    - name: "Measure water parameters"
+      text: "Measure pH, total alkalinity, calcium hardness, temperature, TDS, and CYA with a test kit."
+    - name: "Enter readings into PoolFlow"
+      text: "Open PoolFlow and enter each reading. The app applies CYA correction automatically."
+    - name: "Read the LSI result"
+      text: "PoolFlow displays the color-coded LSI: corrosive, balanced, or scale-forming."
+    - name: "Apply recommended doses"
+      text: "Follow the chemical recommendations to bring LSI into the -0.3 to +0.3 range."

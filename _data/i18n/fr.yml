@@ -1,10 +1,10 @@
-page_title: "PoolFlow \u2014 App de Gestion de Service Piscine"
-meta_description: "L'application iOS tout-en-un pour les techniciens de piscine. Calcul LSI en temps r\u00E9el, dosage chimique, optimisation d'itin\u00E9raire et analyse de rentabilit\u00E9. Hors ligne. Con\u00E7ue pour le terrain."
+page_title: "PoolFlow \u2014 App pour Techniciens de Piscine Ind\u00E9pendants"
+meta_description: "L'application iOS tout-en-un pour le technicien de piscine ind\u00E9pendant et les prestataires de service piscine. Calcul LSI en temps r\u00E9el, dosage chimique, optimisation d'itin\u00E9raire et analyse de rentabilit\u00E9. Hors ligne."
 
 hero_headline_1: "Conna\u00EEtre Votre Eau."
 hero_headline_2: "Conna\u00EEtre Votre Route."
 hero_headline_3: "Conna\u00EEtre Votre Argent."
-hero_subtitle: "L'application iOS tout-en-un pour les techniciens de piscine. Calculs LSI en temps r\u00E9el, dosage chimique intelligent, optimisation d'itin\u00E9raire et analyse de rentabilit\u00E9 \u2014 tout hors ligne, tout en un seul endroit."
+hero_subtitle: "L'application iOS tout-en-un pour le technicien de piscine ind\u00E9pendant et les prestataires de service piscine. Calculs LSI en temps r\u00E9el, dosage chimique intelligent, optimisation d'itin\u00E9raire et analyse de rentabilit\u00E9 \u2014 tout hors ligne, tout en un seul endroit."
 cta_primary: "T\u00E9l\u00E9charger sur l'App Store"
 cta_secondary: "Voir Comment \u00C7a Marche"
 cta_available: "Disponible maintenant sur l'App Store."
@@ -43,3 +43,38 @@ faq:
 footer_cta_title: "Obtenir PoolFlow"
 footer_cta_subtitle: "Disponible maintenant sur l'App Store iOS."
 footer_cta_button: "T\u00E9l\u00E9charger sur l'App Store"
+
+# SEO / LMO terminology \u2014 high-intent keywords used in schema and meta
+seo:
+  solo_tech_label: "technicien de piscine ind\u00E9pendant"
+  service_provider_label: "prestataire de service piscine"
+  service_business_label: "entreprise de service piscine"
+  service_type_label: "Logiciel de Gestion de Service Piscine"
+  audience_label: "Techniciens de piscine ind\u00E9pendants et prestataires de service piscine"
+  breadcrumb_home: "Accueil"
+  og_image_alt: "PoolFlow \u2014 app iOS de gestion pour techniciens de piscine ind\u00E9pendants"
+  feature_list:
+    - "Calculateur LSI en temps r\u00E9el avec correction CYA"
+    - "Recommandations de dosage chimique avec suivi des co\u00FBts"
+    - "Optimisation d'itin\u00E9raire avec algorithmes nearest-neighbor et 2-opt"
+    - "Analyse de rentabilit\u00E9 avec d\u00E9tection des piscines non rentables"
+    - "Journal de service avec photos preuves"
+    - "Suivi d'inventaire chimique avec alertes de stock bas"
+    - "Import/export CSV et rapports PDF"
+    - "Synchronisation iCloud entre appareils"
+    - "Architecture offline-first"
+    - "6 langues : fran\u00E7ais, anglais, espagnol, allemand, portugais, n\u00E9erlandais"
+
+# HowTo schema \u2014 LSI calculation tutorial for LLM/answer-engine optimization
+howto_lsi:
+  name: "Comment calculer le LSI (Indice de Saturation de Langelier) d'une piscine"
+  description: "Calcul \u00E9tape par \u00E9tape du LSI avec correction CYA en utilisant PoolFlow."
+  steps:
+    - name: "Mesurez les param\u00E8tres de l'eau"
+      text: "Mesurez le pH, l'alcalinit\u00E9 totale, la duret\u00E9 calcique, la temp\u00E9rature, le TDS et le CYA avec un kit de test."
+    - name: "Saisissez les mesures dans PoolFlow"
+      text: "Ouvrez PoolFlow et saisissez chaque mesure. L'application applique automatiquement la correction CYA."
+    - name: "Lisez le r\u00E9sultat du LSI"
+      text: "PoolFlow affiche le LSI avec code couleur : corrosif, \u00E9quilibr\u00E9 ou entartrant."
+    - name: "Appliquez les dosages recommand\u00E9s"
+      text: "Suivez les recommandations chimiques pour ramener le LSI dans la plage -0.3 \u00E0 +0.3."
