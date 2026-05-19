@@ -1,10 +1,10 @@
-page_title: "PoolFlow \u2014 App de Gesti\u00F3n para Servicio de Piscinas"
-meta_description: "La app iOS todo-en-uno para t\u00E9cnicos de piscinas. C\u00E1lculo LSI en tiempo real, dosificaci\u00F3n qu\u00EDmica, optimizaci\u00F3n de rutas y an\u00E1lisis de rentabilidad. Sin conexi\u00F3n. Hecha para el campo."
+page_title: "PoolFlow \u2014 App para T\u00E9cnicos de Piscinas Independientes"
+meta_description: "App iOS todo-en-uno para el t\u00E9cnico de piscinas independiente y proveedores de servicios de piscina. C\u00E1lculo LSI en tiempo real, dosificaci\u00F3n qu\u00EDmica, optimizaci\u00F3n de rutas y an\u00E1lisis de rentabilidad. Sin conexi\u00F3n."
 
 hero_headline_1: "Conoce Tu Agua."
 hero_headline_2: "Conoce Tu Ruta."
 hero_headline_3: "Conoce Tu Dinero."
-hero_subtitle: "La app iOS todo-en-uno para t\u00E9cnicos de piscinas. C\u00E1lculos LSI en tiempo real, dosificaci\u00F3n inteligente, optimizaci\u00F3n de rutas y an\u00E1lisis de rentabilidad \u2014 todo sin conexi\u00F3n, todo en un lugar."
+hero_subtitle: "La app iOS todo-en-uno para el t\u00E9cnico de piscinas independiente y los proveedores de servicios de piscina. C\u00E1lculos LSI en tiempo real, dosificaci\u00F3n inteligente, optimizaci\u00F3n de rutas y an\u00E1lisis de rentabilidad \u2014 todo sin conexi\u00F3n, todo en un lugar."
 cta_primary: "Descargar en App Store"
 cta_secondary: "Ver C\u00F3mo Funciona"
 cta_available: "Disponible ahora en el App Store."
@@ -43,3 +43,38 @@ faq:
 footer_cta_title: "Obt\u00E9n PoolFlow"
 footer_cta_subtitle: "Disponible ahora en el App Store de iOS."
 footer_cta_button: "Descargar en App Store"
+
+# SEO / LMO terminology \u2014 high-intent keywords used in schema and meta
+seo:
+  solo_tech_label: "t\u00E9cnico de piscinas independiente"
+  service_provider_label: "proveedor de servicios de piscinas"
+  service_business_label: "negocio de servicio de piscinas"
+  service_type_label: "Software de Gesti\u00F3n para Servicio de Piscinas"
+  audience_label: "T\u00E9cnicos de piscinas independientes y proveedores de servicios de piscina"
+  breadcrumb_home: "Inicio"
+  og_image_alt: "PoolFlow \u2014 app iOS de gesti\u00F3n para t\u00E9cnicos de piscinas independientes"
+  feature_list:
+    - "Calculadora LSI en tiempo real con correcci\u00F3n por CYA"
+    - "Recomendaciones de dosificaci\u00F3n qu\u00EDmica con seguimiento de costos"
+    - "Optimizaci\u00F3n de rutas con algoritmos nearest-neighbor y 2-opt"
+    - "An\u00E1lisis de rentabilidad con detecci\u00F3n de piscinas no rentables"
+    - "Registro de servicios con fotos de comprobante"
+    - "Inventario qu\u00EDmico con alertas de bajo stock"
+    - "Importaci\u00F3n/exportaci\u00F3n CSV e informes PDF"
+    - "Sincronizaci\u00F3n iCloud entre dispositivos"
+    - "Arquitectura offline-first"
+    - "6 idiomas: espa\u00F1ol, ingl\u00E9s, franc\u00E9s, alem\u00E1n, portugu\u00E9s y neerland\u00E9s"
+
+# HowTo schema \u2014 LSI calculation tutorial for LLM/answer-engine optimization
+howto_lsi:
+  name: "C\u00F3mo calcular el LSI (\u00CDndice de Saturaci\u00F3n de Langelier) de una piscina"
+  description: "C\u00E1lculo paso a paso del LSI con correcci\u00F3n por CYA usando PoolFlow."
+  steps:
+    - name: "Mide los par\u00E1metros del agua"
+      text: "Mide pH, alcalinidad total, dureza c\u00E1lcica, temperatura, TDS y CYA con un kit de prueba."
+    - name: "Ingresa las lecturas en PoolFlow"
+      text: "Abre PoolFlow e ingresa cada lectura. La app aplica correcci\u00F3n por CYA autom\u00E1ticamente."
+    - name: "Lee el resultado del LSI"
+      text: "PoolFlow muestra el LSI con c\u00F3digo de color: corrosivo, equilibrado o incrustante."
+    - name: "Aplica las dosis recomendadas"
+      text: "Sigue las recomendaciones de qu\u00EDmicos para llevar el LSI al rango -0.3 a +0.3."

@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign t = site.data.i18n[page.lang] %}
+{% assign t = site.data.i18n[page.lang] | default: site.data.i18n.en %}
 {% assign lang_data = nil %}
 {% for l in site.data.languages %}
   {% if l.code == page.lang %}
@@ -217,8 +217,17 @@ layout: default
 }
 </script>
 
-<!-- Enhanced SoftwareApplication schema -->
+<!-- Enhanced SoftwareApplication schema (localized) -->
 {% include schema-software-i18n.html %}
+
+<!-- Service schema for pool-service vertical (localized, with areaServed) -->
+{% include schema-service-i18n.html %}
+
+<!-- HowTo schema for LSI calculation (LMO / answer-engine optimization) -->
+{% include schema-howto-lsi-i18n.html %}
+
+<!-- BreadcrumbList for site structure -->
+{% include schema-breadcrumb-landing.html %}
 
 <!-- ============================================
      SECTION 5: FINAL CTA

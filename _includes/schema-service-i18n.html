@@ -1,0 +1,28 @@
+<script type="application/ld+json">
+{% assign t = site.data.i18n[page.lang] | default: site.data.i18n.en %}
+{% case page.lang %}
+  {% when "es" %}{% assign area_codes = "MX,ES,US" %}
+  {% when "fr" %}{% assign area_codes = "FR,CA" %}
+  {% when "de" %}{% assign area_codes = "DE,AT,CH" %}
+  {% when "pt" %}{% assign area_codes = "BR,PT" %}
+  {% when "nl" %}{% assign area_codes = "NL,BE" %}
+  {% else %}{% assign area_codes = "US,CA,AU,GB" %}
+{% endcase %}
+{% assign area_list = area_codes | split: "," %}
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": {{ t.seo.service_type_label | default: "Pool Service Management Software" | jsonify }},
+  "name": {{ t.seo.service_type_label | default: "Pool Service Management Software" | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "inLanguage": {{ page.lang | default: "en" | jsonify }},
+  "availableLanguage": ["en", "es", "fr", "de", "pt", "nl"],
+  "provider": { "@id": "https://poolflowapp.com/#org" },
+  "areaServed": [{% for code in area_list %}{ "@type": "Country", "name": {{ code | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}],
+  "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": {{ t.seo.audience_label | default: "Solo pool service technicians and pool service providers" | jsonify }}
+  },
+  "url": {{ page.url | absolute_url | jsonify }}
+}
+</script>

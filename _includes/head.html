@@ -8,16 +8,22 @@
 <!-- hreflang tags for multilingual SEO -->
 {% include hreflang.html %}
 
+<!-- RSS feed -->
+<link rel="alternate" type="application/rss+xml" title="PoolFlow Blog" href="{{ '/feed.xml' | absolute_url }}">
+
 <!-- Preconnect for performance -->
 <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
 
 <!-- Preload hero image -->
 <link rel="preload" href="/assets/images/simulator_screenshot.png" as="image">
 
+{% assign seo_data = site.data.i18n[page.lang].seo %}
+
 <!-- Open Graph Meta Tags -->
 <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
 <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
 <meta property="og:image" content="{{ page.image | default: '/assets/images/poolflow-icon-512.png' | absolute_url }}">
+<meta property="og:image:alt" content="{{ seo_data.og_image_alt | default: 'PoolFlow — pool service management iOS app for solo pool techs and pool service providers' | escape }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
 <meta property="og:site_name" content="PoolFlow">
@@ -28,23 +34,44 @@
 
 <!-- Twitter Card Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@poolflowapp">
+<meta name="twitter:creator" content="@poolflowapp">
 <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
 <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
 <meta name="twitter:image" content="{{ page.image | default: '/assets/images/poolflow-icon-512.png' | absolute_url }}">
+<meta name="twitter:image:alt" content="{{ seo_data.og_image_alt | default: 'PoolFlow — pool service management iOS app for solo pool techs and pool service providers' | escape }}">
+
+<!-- Organization schema (canonical @id referenced by all other schemas) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://poolflowapp.com/#org",
+  "name": "Huggler Holdings LLC",
+  "legalName": "Huggler Holdings LLC",
+  "url": "https://poolflowapp.com",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://poolflowapp.com/assets/images/poolflow-icon-512.png",
+    "width": 512,
+    "height": 512
+  },
+  "sameAs": [
+    "https://apps.apple.com/us/app/poolflow-pool-service-pro/id6759516755"
+  ]
+}
+</script>
 
 <!-- WebSite schema for LLMO/AEO (tells LLMs and answer engines about multilingual support) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://poolflowapp.com/#website",
   "name": "PoolFlow",
   "url": "https://poolflowapp.com",
   "inLanguage": "{{ page.lang | default: 'en' }}",
   "availableLanguage": ["en", "es", "fr", "de", "pt", "nl"],
-  "publisher": {
-    "@type": "Organization",
-    "name": "Huggler Holdings LLC.",
-    "url": "https://poolflowapp.com"
-  }
+  "publisher": { "@id": "https://poolflowapp.com/#org" }
 }
 </script>

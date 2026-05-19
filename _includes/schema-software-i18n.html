@@ -1,13 +1,15 @@
 <script type="application/ld+json">
+{% assign t = site.data.i18n[page.lang] | default: site.data.i18n.en %}
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "PoolFlow",
   "operatingSystem": "iOS",
   "applicationCategory": "BusinessApplication",
-  "inLanguage": "{{ page.lang }}",
+  "applicationSubCategory": "PoolServiceManagement",
+  "inLanguage": {{ page.lang | default: "en" | jsonify }},
   "availableLanguage": ["en", "es", "fr", "de", "pt", "nl"],
-  "description": "{{ page.description | escape }}",
+  "description": {{ page.description | jsonify }},
   "url": "https://poolflowapp.com",
   "sameAs": ["https://apps.apple.com/us/app/poolflow-pool-service-pro/id6759516755"],
   "offers": [
@@ -15,18 +17,12 @@
     { "@type": "Offer", "price": "29.99", "priceCurrency": "USD", "description": "Pro Monthly — unlimited pools, all features" },
     { "@type": "Offer", "price": "299.99", "priceCurrency": "USD", "description": "Pro Annual — best value" }
   ],
-  "featureList": [
-    "Real-time LSI calculation with CYA correction",
-    "Chemical dosing recommendations with cost tracking",
-    "Route optimization with nearest-neighbor and 2-opt algorithm",
-    "Profit analytics with money-loser detection",
-    "Service logging with proof-of-service photos",
-    "Chemical inventory tracking with low-stock alerts",
-    "CSV import/export and PDF reports",
-    "iCloud sync across devices",
-    "Offline-first architecture",
-    "6 language support"
-  ],
-  "author": { "@type": "Organization", "name": "Huggler Holdings LLC." }
+  "featureList": [{% for feature in t.seo.feature_list %}{{ feature | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}],
+  "audience": {
+    "@type": "BusinessAudience",
+    "audienceType": {{ t.seo.audience_label | default: "Solo pool service technicians and pool service providers" | jsonify }}
+  },
+  "author": { "@id": "https://poolflowapp.com/#org" },
+  "publisher": { "@id": "https://poolflowapp.com/#org" }
 }
 </script>

@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+{% assign t = site.data.i18n[page.lang] | default: site.data.i18n.en %}
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": {{ t.howto_lsi.name | jsonify }},
+  "description": {{ t.howto_lsi.description | jsonify }},
+  "inLanguage": {{ page.lang | default: "en" | jsonify }},
+  "step": [{% for s in t.howto_lsi.steps %}{
+    "@type": "HowToStep",
+    "position": {{ forloop.index }},
+    "name": {{ s.name | jsonify }},
+    "text": {{ s.text | jsonify }}
+  }{% unless forloop.last %},{% endunless %}{% endfor %}]
+}
+</script>
