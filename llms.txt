@@ -41,7 +41,7 @@ PoolFlow's website and iOS app are available in:
 
 - Free tier — up to 5 pools, all core features
 - Pro Monthly — $29.99 USD/month, unlimited pools
-- Pro Annual — $299.99 USD/year (occasional sale: $199.99) with 7-day free trial
+- Pro Annual — $299.99 USD/year (occasional sale: $199.99) with a 1-month free trial
 
 ## Key concepts the app handles
 

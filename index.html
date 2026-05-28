@@ -12,7 +12,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
 <!-- ============================================
      SECTION 1: HERO
      ============================================ -->
-<section id="hero" class="relative bg-cover bg-center bg-no-repeat pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pt-36 lg:pb-28" style="background-image: url('/assets/images/Hero Image - Truck Pool.png'); background-color: #567A8C;">
+<section id="hero" class="hero-photo relative bg-cover bg-center bg-no-repeat pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pt-36 lg:pb-28" style="background-color: #567A8C;">
   <!-- Dark overlay for text readability -->
   <div class="absolute inset-0 bg-black/50"></div>
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,14 +68,18 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
       <div class="flex-1 flex items-center justify-center w-full max-w-md lg:max-w-lg">
         <div class="relative w-72 sm:w-80 phone-float">
           <div class="rounded-[2.5rem] border-[6px] border-white/30 shadow-2xl overflow-hidden bg-black">
-            <img
-              src="/assets/images/simulator_screenshot.png"
-              alt="PoolFlow app screenshot showing the pool service management interface"
-              class="w-full h-auto block"
-              width="1206"
-              height="2622"
-              loading="eager"
-            >
+            <picture>
+              <source srcset="/assets/images/simulator-screenshot.webp" type="image/webp">
+              <img
+                src="/assets/images/simulator-screenshot.png"
+                alt="PoolFlow app screenshot showing the pool service management interface"
+                class="w-full h-auto block"
+                width="900"
+                height="1956"
+                loading="eager"
+                fetchpriority="high"
+              >
+            </picture>
           </div>
           <!-- Platform badge -->
           <div class="mt-4 flex justify-center">
@@ -435,7 +439,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
         {% if site.annual_sale.active %}
           <p class="mt-1 text-sm text-gray-700">{{ site.annual_sale.monthly_equivalent }}/mo billed annually</p>
         {% else %}
-          <p class="mt-1 text-sm text-gray-700">$25.00/mo billed annually</p>
+          <p class="mt-1 text-sm text-gray-700">$24.99/mo billed annually</p>
         {% endif %}
         <p class="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-pool-blue bg-pool-light rounded-full px-3 py-1">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -550,7 +554,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
           <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
-          <p>Yes. No per-pool fees. No per-tech fees. No add-on charges. Unlimited pools, all features, one price. The annual plan is $24.99/mo ($299.99/yr) — less than one pool's monthly service fee.</p>
+          <p>Yes. No per-pool fees. No per-tech fees. No add-on charges. Unlimited pools, all features, one price. {% if site.annual_sale.active %}The annual plan is on sale at {{ site.annual_sale.price }}/yr ({{ site.annual_sale.monthly_equivalent }}/mo) — less than one pool's monthly service fee.{% else %}The annual plan is $24.99/mo ($299.99/yr) — less than one pool's monthly service fee.{% endif %}</p>
         </div>
       </div>
 
@@ -660,7 +664,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
           <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
-          <p>Yes. PoolFlow supports English, Spanish, French, Portuguese, and German. The app detects your device language automatically, or you can override it in Settings.</p>
+          <p>Yes. PoolFlow supports English, Spanish, French, German, Portuguese, and Dutch. The app detects your device language automatically, or you can override it in Settings.</p>
         </div>
       </div>
 
@@ -708,7 +712,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
         "name": "Is $29.99/mo really everything?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. No per-pool fees. No per-tech fees. No add-on charges. Unlimited pools, all features, one price. The annual plan is $24.99/mo ($299.99/yr) — less than one pool's monthly service fee."
+          "text": "Yes. No per-pool fees. No per-tech fees. No add-on charges. Unlimited pools, all features, one price. {% if site.annual_sale.active %}The annual plan is on sale at {{ site.annual_sale.price }}/yr ({{ site.annual_sale.monthly_equivalent }}/mo) — less than one pool's monthly service fee.{% else %}The annual plan is $24.99/mo ($299.99/yr) — less than one pool's monthly service fee.{% endif %}"
         }
       },
       {
@@ -788,7 +792,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
         "name": "Does PoolFlow support multiple languages?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. PoolFlow supports English, Spanish, French, Portuguese, and German. The app detects your device language automatically, or you can override it in Settings."
+          "text": "Yes. PoolFlow supports English, Spanish, French, German, Portuguese, and Dutch. The app detects your device language automatically, or you can override it in Settings."
         }
       }
     ]
@@ -805,7 +809,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
       One Pool Covers a Full Year of PoolFlow.
     </h2>
     <p class="mt-6 text-lg sm:text-xl text-blue-100 leading-relaxed">
-      $24.99/mo on annual. Every feature. Every pool. No per-pool fees. Try free for 30 days.
+      {% if site.annual_sale.active %}{{ site.annual_sale.monthly_equivalent }}/mo on annual — {{ site.annual_sale.price }}/yr, save {{ site.annual_sale.savings }}.{% else %}$24.99/mo on annual.{% endif %} Every feature. Every pool. No per-pool fees. Try free for 30 days.
     </p>
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="{{ site.app_store_url }}" class="inline-flex items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-nowrap">

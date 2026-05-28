@@ -446,7 +446,7 @@
 
 ### 7.2 Three Subscription Tiers
 - **Free:** Default tier; limited to 5 pools; no access to analytics, route optimization, backup/restore, or iCloud sync
-- **Trial:** 7-day free trial of Pro; full access to all premium features; `isPremiumActive = true`, `isTrialActive = true`
+- **Trial:** 1-month free trial of Pro; full access to all premium features; `isPremiumActive = true`, `isTrialActive = true`
 - **Paid (Pro):** Monthly or annual subscription; full access to all premium features; `isPremiumActive = true`, `isTrialActive = false`
 
 ### 7.3 Free Tier Pool Cap
@@ -855,7 +855,7 @@
 
 ## Feature Matrix: Free vs. Pro
 
-| Feature | Free | Trial (7 days) | Pro (Monthly/Annual) |
+| Feature | Free | Trial (1 month) | Pro (Monthly/Annual) |
 |---------|:----:|:--------------:|:-------------------:|
 | Pool management (add/edit/delete) | Up to 5 pools | Unlimited | Unlimited |
 | Water chemistry inputs & LSI calculation | Yes | Yes | Yes |

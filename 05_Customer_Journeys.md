@@ -738,7 +738,7 @@ The paywall is presented as a sheet (`SubscriptionPaywallSheet`) with context-sp
 | `optimizeRoute` | Tap optimize button (free tier) | "Unlock Route Optimization" | "Preview faster stop order and save drive time each route day." |
 | `poolCapReached` | Add 6th pool (free tier, cap = 5) | "Upgrade for Unlimited Pools" | "Free tier includes up to 5 pools. Upgrade to add more customers." |
 | `backupRestore` | Tap backup/restore (free tier) | "Unlock Full Backup & Restore" | "Protect your full account with premium backup and restore." |
-| `settingsUpgrade` | Tap upgrade in Settings | "Upgrade to PoolFlow Pro" | "Start your 7-day free trial, then choose monthly or annual." |
+| `settingsUpgrade` | Tap upgrade in Settings | "Upgrade to PoolFlow Pro" | "Start your 1-month free trial, then choose monthly or annual." |
 | `cloudSync` | Tap "Upgrade to Pro" in iCloud section | "Unlock iCloud Sync" | "Sync your pool data across all your devices with iCloud." |
 
 ### Step-by-Step Flow
@@ -761,7 +761,7 @@ SubscriptionPaywallSheet (presented as .sheet)
         +-- [1] RevenueCat PaywallView (if billing available):
         |     - RevenueCatUI native paywall with product offerings
         |     - Displays plans (poolflow_pro_monthly, poolflow_pro_annual)
-        |     - 7-day free trial offer
+        |     - 1-month free trial offer
         |     - Purchase flow handled by RevenueCat
         |     - On disappear: refreshes customer info + closes
         |
