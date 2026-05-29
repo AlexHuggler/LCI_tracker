@@ -17,6 +17,17 @@ body {
   background: linear-gradient(135deg, #567A8C 0%, #53849F 50%, #6B9AB8 100%);
 }
 
+/* Hero background photo — WebP with JPEG fallback */
+.hero-photo {
+  background-image: url('/assets/images/hero-truck-pool.jpg');
+  background-image: -webkit-image-set(
+    url('/assets/images/hero-truck-pool.webp') type('image/webp'),
+    url('/assets/images/hero-truck-pool.jpg') type('image/jpeg'));
+  background-image: image-set(
+    url('/assets/images/hero-truck-pool.webp') type('image/webp'),
+    url('/assets/images/hero-truck-pool.jpg') type('image/jpeg'));
+}
+
 /* Section wave divider */
 .wave-divider {
   position: relative;

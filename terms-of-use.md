@@ -34,7 +34,7 @@ PoolFlow does not require an account to use. All data is stored locally on your 
 - Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period
 - Your account will be charged for renewal within 24 hours prior to the end of the current period at the same price
 - You can manage and cancel subscriptions in your Apple ID Account Settings
-- A 7-day free trial is available for new subscribers; unused portions of the trial are forfeited upon purchasing a subscription
+- A 1-month free trial is available for new subscribers; unused portions of the trial are forfeited upon purchasing a subscription
 
 ## 5. Acceptable Use
 

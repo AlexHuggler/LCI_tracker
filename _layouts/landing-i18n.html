@@ -12,7 +12,7 @@ layout: default
 <!-- ============================================
      SECTION 1: HERO
      ============================================ -->
-<section id="hero" class="relative bg-cover bg-center bg-no-repeat pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pt-36 lg:pb-28" style="background-image: url('/assets/images/Hero Image - Truck Pool.png'); background-color: #567A8C;">
+<section id="hero" class="hero-photo relative bg-cover bg-center bg-no-repeat pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pt-36 lg:pb-28" style="background-color: #567A8C;">
   <!-- Dark overlay for text readability -->
   <div class="absolute inset-0 bg-black/50"></div>
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,14 +68,18 @@ layout: default
       <div class="flex-1 flex items-center justify-center w-full max-w-md lg:max-w-lg">
         <div class="relative w-72 sm:w-80 phone-float">
           <div class="rounded-[2.5rem] border-[6px] border-white/30 shadow-2xl overflow-hidden bg-black">
-            <img
-              src="/assets/images/simulator_screenshot.png"
-              alt="PoolFlow app screenshot"
-              class="w-full h-auto block"
-              width="1206"
-              height="2622"
-              loading="eager"
-            >
+            <picture>
+              <source srcset="/assets/images/simulator-screenshot.webp" type="image/webp">
+              <img
+                src="/assets/images/simulator-screenshot.png"
+                alt="PoolFlow app screenshot"
+                class="w-full h-auto block"
+                width="900"
+                height="1956"
+                loading="eager"
+                fetchpriority="high"
+              >
+            </picture>
           </div>
           <!-- Platform badge -->
           <div class="mt-4 flex justify-center">

@@ -11,18 +11,17 @@
 <!-- RSS feed -->
 <link rel="alternate" type="application/rss+xml" title="PoolFlow Blog" href="{{ '/feed.xml' | absolute_url }}">
 
-<!-- Preconnect for performance -->
-<link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-
-<!-- Preload hero image -->
-<link rel="preload" href="/assets/images/simulator_screenshot.png" as="image">
+<!-- Preload LCP hero image (homepage only) -->
+{% if page.url == '/' or page.layout == 'landing-i18n' %}<link rel="preload" href="/assets/images/hero-truck-pool.webp" as="image" type="image/webp">{% endif %}
 
 {% assign seo_data = site.data.i18n[page.lang].seo %}
 
 <!-- Open Graph Meta Tags -->
 <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
 <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
-<meta property="og:image" content="{{ page.image | default: '/assets/images/poolflow-icon-512.png' | absolute_url }}">
+<meta property="og:image" content="{{ page.image | default: '/assets/images/og-image.png' | absolute_url }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="{{ seo_data.og_image_alt | default: 'PoolFlow — pool service management iOS app for solo pool techs and pool service providers' | escape }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
@@ -38,7 +37,7 @@
 <meta name="twitter:creator" content="@poolflowapp">
 <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
 <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
-<meta name="twitter:image" content="{{ page.image | default: '/assets/images/poolflow-icon-512.png' | absolute_url }}">
+<meta name="twitter:image" content="{{ page.image | default: '/assets/images/og-image.png' | absolute_url }}">
 <meta name="twitter:image:alt" content="{{ seo_data.og_image_alt | default: 'PoolFlow — pool service management iOS app for solo pool techs and pool service providers' | escape }}">
 
 <!-- Organization schema (canonical @id referenced by all other schemas) -->

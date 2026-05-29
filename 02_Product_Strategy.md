@@ -237,15 +237,15 @@ PoolFlow uses **RevenueCat** for subscription management, with a single `"PoolFl
 | Tier | State | Access |
 |------|-------|--------|
 | **Free** | Default, no purchase | Up to 5 pools, basic route view, LSI calculator, service logging, chemical inventory |
-| **Trial** | 7-day free trial (auto-enrolled on first subscription) | Full Pro access for 7 days |
+| **Trial** | 1-month free trial (auto-enrolled on first subscription) | Full Pro access for 1 month |
 | **Pro (Paid)** | Monthly or Annual subscription | Unlimited pools, analytics, route optimization, full backup/restore, iCloud sync |
 
 ### Pricing (from `PoolFlow.storekit`)
 
 | Product | Product ID | Price | Billing | Trial |
 |---------|------------|-------|---------|-------|
-| **PoolFlow Pro Monthly** | `Pool_01` | $29.99/mo | Monthly recurring | 7-day free trial |
-| **PoolFlow Pro Annual** | `Pool_02` | $299.99/yr | Annual recurring | 7-day free trial |
+| **PoolFlow Pro Monthly** | `Pool_01` | $29.99/mo | Monthly recurring | 1-month free trial |
+| **PoolFlow Pro Annual** | `Pool_02` | $299.99/yr | Annual recurring | 1-month free trial |
 
 Both products are in the `poolflow_pro` subscription group (ID: `POOLFLOW_PRO_GROUP`). The annual plan saves ~$60/year compared to monthly billing ($299.99 vs. $359.88).
 
@@ -284,7 +284,7 @@ The app presents contextual paywalls at six distinct moments:
 | `optimizeRoute` | User taps Optimize Route button | "Unlock Route Optimization" | "Preview faster stop order and save drive time each route day." |
 | `backupRestore` | User taps backup or restore actions | "Unlock Full Backup & Restore" | "Protect your full account with premium backup and restore." |
 | `poolCapReached` | User adds 6th pool or imports beyond cap | "Upgrade for Unlimited Pools" | "Free tier includes up to 5 pools. Upgrade to add more customers." |
-| `settingsUpgrade` | User taps upgrade in Settings | "Upgrade to PoolFlow Pro" | "Start your 7-day free trial, then choose monthly or annual." |
+| `settingsUpgrade` | User taps upgrade in Settings | "Upgrade to PoolFlow Pro" | "Start your 1-month free trial, then choose monthly or annual." |
 | `cloudSync` | User taps iCloud sync upgrade prompt | "Unlock iCloud Sync" | "Sync your pool data across all your devices with iCloud." |
 
 ### Trial Mechanics
