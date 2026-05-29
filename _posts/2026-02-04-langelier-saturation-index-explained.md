@@ -20,6 +20,8 @@ faq:
 
 The Langelier Saturation Index (LSI) is a calculated value that tells pool service professionals whether water is corrosive, balanced, or scale-forming. This guide breaks down the full LSI formula, explains each factor with lookup tables, covers the critical CYA correction, and walks through real-world calculation examples so you can keep every pool in the balanced range of -0.3 to +0.3.
 
+> **Want to skip the math?** Try our free [interactive LSI calculator](/lsi-calculator/) — enter your readings and see the result instantly, with CYA correction applied automatically.
+
 ## Introduction: The Science of Water Balance
 
 Every swimming pool is engaged in an invisible chemical struggle. The water is constantly seeking equilibrium with calcium carbonate, the mineral compound that forms the basis of plaster, marcite, and pebble pool surfaces. When the water is undersaturated with calcium carbonate, it becomes aggressive, dissolving calcium from pool surfaces, etching plaster, corroding metal components, and degrading equipment. When the water is oversaturated, calcium carbonate precipitates out of solution, forming scale deposits on surfaces, inside pipes, and on heat exchangers.

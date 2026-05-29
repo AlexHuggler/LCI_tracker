@@ -1,0 +1,67 @@
+{%- comment -%}
+Renders the 3-column feature comparison table (Feature / PoolFlow / competitor).
+Usage: {% include comparison-feature-table.html competitor=competitor %}
+Reads feature rows from _data/comparison_features.yml and booleans from the
+competitor's `features` map in _data/competitors.yml.
+{%- endcomment -%}
+{%- assign competitor = include.competitor -%}
+<div class="overflow-x-auto rounded-2xl border border-gray-200">
+  <table class="comparison-table w-full">
+    <thead>
+      <tr>
+        <th scope="col" class="text-left">Feature</th>
+        <th scope="col" class="poolflow-col">PoolFlow</th>
+        <th scope="col">{{ competitor.name }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for group in site.data.comparison_features -%}
+      <tr class="category-row"><td colspan="3">{{ group.category }}</td></tr>
+        {%- for row in group.rows -%}
+        <tr>
+          <td class="text-sm text-gray-700">{{ row.label }}</td>
+          <td class="poolflow-col">
+            {%- if row.poolflow == true -%}
+              <svg class="w-5 h-5 text-emerald-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            {%- elsif row.poolflow == false -%}
+              <svg class="w-5 h-5 text-red-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            {%- else -%}
+              <span class="text-sm text-emerald-600 font-medium">{{ row.poolflow }}</span>
+            {%- endif -%}
+          </td>
+          <td>
+            {%- if competitor.features[row.key] -%}
+              <svg class="w-5 h-5 text-emerald-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            {%- else -%}
+              <svg class="w-5 h-5 text-red-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            {%- endif -%}
+          </td>
+        </tr>
+        {%- endfor -%}
+      {%- endfor -%}
+      <!-- Pricing -->
+      <tr class="category-row"><td colspan="3">Pricing</td></tr>
+      <tr>
+        <td class="text-sm text-gray-700">Monthly Price</td>
+        <td class="poolflow-col"><span class="text-sm font-semibold text-emerald-600">$29.99 flat</span></td>
+        <td><span class="text-sm font-semibold text-red-500">{{ competitor.pricing.summary }}</span></td>
+      </tr>
+      <tr>
+        <td class="text-sm text-gray-700">Per-Pool Fees</td>
+        <td class="poolflow-col"><span class="text-sm font-semibold text-emerald-600">None</span></td>
+        <td>
+          {%- if competitor.pricing.per_pool and competitor.pricing.per_pool > 0 -%}
+            <span class="text-sm text-red-500">${{ competitor.pricing.per_pool }}/pool/mo</span>
+          {%- else -%}
+            <span class="text-sm text-gray-600">None</span>
+          {%- endif -%}
+        </td>
+      </tr>
+      <tr>
+        <td class="text-sm text-gray-700">Free Tier</td>
+        <td class="poolflow-col"><span class="text-sm text-emerald-600">5 pools free</span></td>
+        <td><span class="text-sm text-gray-600">—</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

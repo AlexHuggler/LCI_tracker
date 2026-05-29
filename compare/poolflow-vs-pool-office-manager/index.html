@@ -1,0 +1,191 @@
+---
+layout: default
+title: "PoolFlow vs Pool Office Manager — Same Price, More Pool Chemistry"
+description: "Compare PoolFlow and Pool Office Manager for pool service. Pool Office Manager is $30/mo per technician with basic dosing; PoolFlow is $29.99/mo flat and adds a real LSI calculator, cost-linked dosing, and per-pool profit analytics."
+permalink: /compare/poolflow-vs-pool-office-manager/
+image: /assets/images/og-image.png
+competitor_slug: "pool-office-manager"
+breadcrumbs:
+  - name: "Home"
+    url: "/"
+  - name: "Compare"
+    url: "/compare/"
+  - name: "PoolFlow vs Pool Office Manager"
+    url: "/compare/poolflow-vs-pool-office-manager/"
+faq:
+  - question: "Is PoolFlow a good Pool Office Manager alternative?"
+    answer: "Yes, especially for the field side of the business. Pool Office Manager is $30/mo per technician with basic dosing and invoicing; PoolFlow is $29.99/mo flat and adds a real-time LSI calculator with CYA correction, dosing priced from your actual chemical costs, and per-pool profit analytics with money-loser detection."
+  - question: "How does Pool Office Manager's pricing compare to PoolFlow?"
+    answer: "Pool Office Manager charges about $30/mo per technician, so cost grows with each tech you add. PoolFlow is a flat $29.99/mo. For a solo tech the headline price is nearly identical — but PoolFlow includes LSI, cost-linked dosing, and profit analytics that Pool Office Manager doesn't."
+  - question: "Does Pool Office Manager calculate LSI?"
+    answer: "No. Pool Office Manager offers basic chemical dosing suggestions but not a true Langelier Saturation Index calculator with CYA-corrected alkalinity. PoolFlow computes the full LSI in real time and ties dosing to your inventory costs."
+  - question: "Which is better for a solo pool tech?"
+    answer: "For a solo or owner-operator tech, PoolFlow typically delivers more at the same price: real water-chemistry tools, profit tracking per pool, and offline operation at poolside. Pool Office Manager leans toward office administration and invoicing rather than field chemistry."
+  - question: "Can I import my data from Pool Office Manager?"
+    answer: "Yes. Export your customer and pool list as a CSV from Pool Office Manager and import it into PoolFlow. Names, addresses, service days, and fees come over automatically, and the switch usually takes about five minutes."
+---
+
+{% assign competitor = site.data.competitors | where: "slug", page.competitor_slug | first %}
+
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="breadcrumb-nav bg-gray-50 pt-24 pb-3">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <ol class="flex flex-wrap items-center gap-1 text-sm text-gray-500">
+      <li><a href="/">Home</a></li>
+      <li><span class="mx-1">/</span></li>
+      <li><a href="/compare/">Compare</a></li>
+      <li><span class="mx-1">/</span></li>
+      <li class="text-gray-900 font-medium">PoolFlow vs Pool Office Manager</li>
+    </ol>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-gradient py-16 sm:py-24">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">PoolFlow vs Pool Office Manager</h1>
+    <p class="mt-2 text-xl sm:text-2xl font-semibold text-blue-100">Same Price. More Pool Chemistry.</p>
+    <p class="mt-6 text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed">
+      Pool Office Manager charges $30/mo per technician for office-and-invoicing tools. PoolFlow is $29.99/mo flat and adds a real LSI calculator, cost-linked dosing, and per-pool profit analytics for the field.
+    </p>
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="{{ site.app_store_url }}" class="inline-flex items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Try PoolFlow Free
+      </a>
+      <a href="#features" class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-3.5 rounded-full hover:bg-white hover:text-pool-dark transition-colors text-lg">See Full Comparison</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="bg-gray-900 py-12 sm:py-16">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-white">Nearly the Same Price — Very Different Toolset</h2>
+    <p class="mt-2 text-gray-400">Pool Office Manager bills per technician, so it grows with your crew. PoolFlow stays flat.</p>
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="bg-gray-800 rounded-2xl p-8">
+        <p class="text-xs text-gray-500 mb-1">Pool Office Manager</p>
+        <p class="text-4xl sm:text-5xl font-bold text-red-400">$30<span class="text-base font-normal text-gray-400">/mo/tech</span></p>
+        <p class="text-xs text-gray-500 mt-2">No LSI, no cost-linked dosing, no profit analytics</p>
+      </div>
+      <div class="bg-gray-800 rounded-2xl p-8 ring-2 ring-emerald-500/50">
+        <p class="text-xs text-gray-500 mb-1">PoolFlow</p>
+        <p class="text-4xl sm:text-5xl font-bold text-emerald-400">$29.99<span class="text-base font-normal text-gray-400">/mo</span></p>
+        <p class="text-xs text-emerald-400/80 mt-2">LSI, cost-linked dosing & profit analytics included</p>
+      </div>
+    </div>
+    <div class="mt-6 inline-block bg-emerald-500/10 rounded-lg px-4 py-2">
+      <p class="text-sm font-semibold text-emerald-400">Same monthly price — substantially more field chemistry</p>
+    </div>
+    <p class="mt-6 text-xs text-gray-500">Pricing accurate as of May 2026. Visit each provider's website for current pricing.</p>
+  </div>
+</section>
+
+<!-- FEATURE TABLE -->
+<section id="features" class="py-20 sm:py-28 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pool-dark">Feature-by-Feature Comparison</h2>
+      <p class="mt-4 text-lg text-gray-700 leading-relaxed">Office administration vs field-first water chemistry.</p>
+    </div>
+    {% include comparison-feature-table.html competitor=competitor %}
+  </div>
+</section>
+
+<!-- DIFFERENTIATORS -->
+<section class="py-20 sm:py-28 bg-pool-section">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pool-dark">What PoolFlow Adds Over Pool Office Manager</h2>
+      <p class="mt-4 text-lg text-gray-700 leading-relaxed">For the same monthly price, the tools that actually run a route.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+      <article class="value-card bg-white rounded-2xl p-8 border border-gray-200 animate-on-scroll">
+        <h3 class="text-xl font-bold text-pool-dark mb-3">Real-Time LSI Calculator</h3>
+        <p class="text-gray-700 leading-relaxed mb-4">PoolFlow computes the full <a href="/blog/langelier-saturation-index-explained/" class="text-pool-blue hover:underline">Langelier Saturation Index</a> with CYA-corrected alkalinity, so you can balance water with confidence. Pool Office Manager offers basic dose suggestions without a true LSI.</p>
+        <span class="inline-block text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5">Try the free <a href="/lsi-calculator/" class="underline">LSI calculator</a></span>
+      </article>
+
+      <article class="value-card bg-white rounded-2xl p-8 border border-gray-200 animate-on-scroll">
+        <h3 class="text-xl font-bold text-pool-dark mb-3">Dosing Priced From Your Inventory</h3>
+        <p class="text-gray-700 leading-relaxed mb-4">Every PoolFlow dose is calculated from your real chemical costs, so you see the cost of each visit. Pool Office Manager's dosing isn't linked to your inventory prices.</p>
+        <span class="inline-block text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5">Worth: ~$50/mo in precise dosing</span>
+      </article>
+
+      <article class="value-card bg-white rounded-2xl p-8 border border-gray-200 animate-on-scroll">
+        <h3 class="text-xl font-bold text-pool-dark mb-3">Per-Pool Profit Analytics</h3>
+        <p class="text-gray-700 leading-relaxed mb-4">PoolFlow surfaces the pools quietly losing you money by flagging where chemical cost exceeds 30% of the fee. Pool Office Manager handles invoicing but not per-pool chemical profitability.</p>
+        <span class="inline-block text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5">Worth: $100-200/mo in hidden margin</span>
+      </article>
+
+      <article class="value-card bg-white rounded-2xl p-8 border border-gray-200 animate-on-scroll">
+        <h3 class="text-xl font-bold text-pool-dark mb-3">Flat Price &amp; Offline</h3>
+        <p class="text-gray-700 leading-relaxed mb-4">PoolFlow is $29.99/mo no matter how many pools you service, and works with no signal at poolside. Pool Office Manager's per-technician pricing grows with your crew, and needs connectivity.</p>
+        <span class="inline-block text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5">Flat price, works offline</span>
+      </article>
+
+    </div>
+    <p class="mt-10 text-center text-gray-600">Need heavy back-office invoicing and a customer portal? Pool Office Manager leans that way. For field chemistry and per-pool profit, PoolFlow does more at the same price.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-20 sm:py-28 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16"><h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pool-dark">Frequently Asked Questions</h2></div>
+    <div class="space-y-4" id="faq-accordion" role="region" aria-label="Frequently Asked Questions">
+      {% for item in page.faq %}
+      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
+        <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset" aria-expanded="false">
+          <span class="pr-4">{{ item.question }}</span>
+          <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed"><p>{{ item.answer }}</p></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('#faq .faq-toggle').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var c=this.nextElementSibling,i=this.querySelector('.faq-icon'),open=!c.classList.contains('hidden');
+    if(open){c.classList.add('hidden');i.classList.remove('rotate-180');this.setAttribute('aria-expanded','false');}
+    else{c.classList.remove('hidden');i.classList.add('rotate-180');this.setAttribute('aria-expanded','true');}
+  });
+});
+</script>
+
+<!-- FINAL CTA -->
+<section class="hero-gradient py-16 sm:py-20">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-white">More Chemistry for the Same $30</h2>
+    <p class="mt-4 text-lg text-blue-100">Try PoolFlow free for 30 days — LSI, cost-linked dosing, and profit analytics for $29.99/mo flat.</p>
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="{{ site.app_store_url }}" class="inline-flex items-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Start Free Trial
+      </a>
+      <a href="/compare/" class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-3.5 rounded-full hover:bg-white hover:text-pool-dark transition-colors text-lg">Compare All Apps</a>
+    </div>
+  </div>
+</section>
+
+<!-- Structured Data -->
+{% if page.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{% for item in page.faq %}
+    { "@type": "Question", "name": {{ item.question | jsonify }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.answer | jsonify }} } }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+{% include schema-software.html %}
+{% include schema-comparison.html %}

@@ -273,6 +273,70 @@ body {
   border: 1px solid #fcd34d;
 }
 
+/* ============================================
+   LSI Calculator
+   ============================================ */
+.lsi-field input[type="range"] {
+  width: 100%;
+  accent-color: #53849F;
+  height: 6px;
+  cursor: pointer;
+}
+.lsi-field input[type="number"] {
+  width: 5.5rem;
+  text-align: right;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  font-variant-numeric: tabular-nums;
+}
+.lsi-field input[type="number"]:focus {
+  outline: none;
+  border-color: #53849F;
+  box-shadow: 0 0 0 2px rgba(83, 132, 159, 0.2);
+}
+
+/* Result card — color reflects balance state (data-attribute driven, so it
+   survives Tailwind's content purge; classes never appear in markup statically) */
+.lsi-result {
+  border: 2px solid #e5e7eb;
+  background: #ffffff;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+.lsi-result[data-state="balanced"]  { border-color: #10b981; background: #ecfdf5; }
+.lsi-result[data-state="corrosive"] { border-color: #ef4444; background: #fef2f2; }
+.lsi-result[data-state="scaling"]   { border-color: #f59e0b; background: #fffbeb; }
+
+.lsi-value { font-variant-numeric: tabular-nums; line-height: 1; }
+.lsi-result[data-state="balanced"]  .lsi-value { color: #059669; }
+.lsi-result[data-state="corrosive"] .lsi-value { color: #dc2626; }
+.lsi-result[data-state="scaling"]   .lsi-value { color: #d97706; }
+
+.lsi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 9999px;
+}
+.lsi-result[data-state="balanced"]  .lsi-badge { background: #d1fae5; color: #065f46; }
+.lsi-result[data-state="corrosive"] .lsi-badge { background: #fee2e2; color: #991b1b; }
+.lsi-result[data-state="scaling"]   .lsi-badge { background: #fef3c7; color: #92400e; }
+
+.lsi-temp-unit {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.7rem;
+  font-weight: 600;
+  color: #53849F;
+  background: #F7FBFD;
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+}
+.lsi-temp-unit:hover { background: #eef6fb; }
+
 /* Migration steps */
 .migration-step {
   position: relative;

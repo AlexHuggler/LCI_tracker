@@ -1,0 +1,73 @@
+# Feature rows for PoolFlow-vs-competitor comparison tables.
+# Rendered by _includes/comparison-feature-table.html.
+# `key` maps to a boolean in _data/competitors.yml -> features.
+# `poolflow` is PoolFlow's own value: true, false, or a string label.
+
+- category: "Pool Chemistry"
+  rows:
+    - label: "Real-Time LSI Calculator"
+      key: "lsi_calculator"
+      poolflow: true
+    - label: "CYA-Corrected Alkalinity"
+      key: "cya_correction"
+      poolflow: true
+    - label: "Chemical Dosing Recommendations"
+      key: "chemical_dosing"
+      poolflow: true
+    - label: "Cost-Linked Dosing (your actual prices)"
+      key: "cost_linked_dosing"
+      poolflow: true
+
+- category: "Route & Operations"
+  rows:
+    - label: "Route Optimization"
+      key: "route_optimization"
+      poolflow: true
+    - label: "Offline-First (works without cell)"
+      key: "offline_first"
+      poolflow: true
+    - label: "Service Logging"
+      key: "service_logging"
+      poolflow: true
+    - label: "Photo Documentation"
+      key: "photo_documentation"
+      poolflow: true
+    - label: "Wet-Hand UX (56pt touch targets)"
+      key: "wet_hand_ux"
+      poolflow: true
+
+- category: "Business Analytics"
+  rows:
+    - label: "Per-Pool Profit Tracking"
+      key: "profit_analytics"
+      poolflow: true
+    - label: "Money-Loser Pool Detection"
+      key: "money_loser_detection"
+      poolflow: true
+    - label: "Chemical Inventory Tracking"
+      key: "chemical_inventory"
+      poolflow: true
+
+- category: "Platform & Business"
+  rows:
+    - label: "Customer Portal"
+      key: "customer_portal"
+      poolflow: false
+    - label: "Invoicing"
+      key: "invoicing"
+      poolflow: false
+    - label: "CSV Import/Export"
+      key: "csv_import"
+      poolflow: true
+    - label: "iCloud Sync"
+      key: "icloud_sync"
+      poolflow: true
+    - label: "Equipment Tracking"
+      key: "equipment_tracking"
+      poolflow: true
+    - label: "Multi-Language Support"
+      key: "multi_language"
+      poolflow: "6 languages"
+    - label: "Unlimited Pools"
+      key: "unlimited_pools"
+      poolflow: true

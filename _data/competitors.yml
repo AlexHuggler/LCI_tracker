@@ -4,6 +4,7 @@
 
 - slug: "skimmer"
   name: "Skimmer"
+  has_page: true
   type: "pool-specific"
   tagline: "Pool service management software"
   pricing:
@@ -53,6 +54,7 @@
 
 - slug: "jobber"
   name: "Jobber"
+  has_page: true
   type: "general-fsm"
   tagline: "Field service management for home service businesses"
   pricing:
@@ -102,6 +104,7 @@
 
 - slug: "pool-brain"
   name: "Pool Brain"
+  has_page: true
   type: "pool-specific"
   tagline: "Pool service route management"
   pricing:
@@ -151,6 +154,7 @@
 
 - slug: "pool-office-manager"
   name: "Pool Office Manager"
+  has_page: true
   type: "pool-specific"
   tagline: "Pool service business software"
   pricing:
