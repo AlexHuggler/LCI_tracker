@@ -337,6 +337,84 @@ body {
 }
 .lsi-temp-unit:hover { background: #eef6fb; }
 
+/* ============================================
+   Shared pool-tool widgets (volume, dosing, salt, turnover, chlorine)
+   Generic versions of the LSI input/result styles, reused across tools.
+   ============================================ */
+.tool-field input[type="range"] {
+  width: 100%;
+  accent-color: #53849F;
+  height: 6px;
+  cursor: pointer;
+}
+.tool-field input[type="number"] {
+  width: 6rem;
+  text-align: right;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  font-variant-numeric: tabular-nums;
+}
+.tool-field input[type="number"]:focus {
+  outline: none;
+  border-color: #53849F;
+  box-shadow: 0 0 0 2px rgba(83, 132, 159, 0.2);
+}
+
+/* Segmented control (shape pickers, pool-type pickers, unit toggles) */
+.tool-seg {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.tool-seg button {
+  border: 1px solid #d1d5db;
+  border-radius: 0.6rem;
+  padding: 0.45rem 0.85rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #567A8C;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.tool-seg button:hover { background: #F7FBFD; }
+.tool-seg button[aria-pressed="true"] {
+  background: #53849F;
+  border-color: #53849F;
+  color: #ffffff;
+}
+
+.tool-unit {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.7rem;
+  font-weight: 600;
+  color: #53849F;
+  background: #F7FBFD;
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+}
+.tool-unit:hover { background: #eef6fb; }
+
+/* Neutral result card (no balance-state coloring) */
+.tool-result {
+  border: 2px solid #e5e7eb;
+  background: #ffffff;
+}
+.tool-result-primary {
+  border-color: #53849F;
+  background: #F7FBFD;
+}
+.tool-value {
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  color: #567A8C;
+}
+
+/* Hide rows that don't apply to the chosen shape/state */
+[hidden] { display: none !important; }
+
 /* Migration steps */
 .migration-step {
   position: relative;
