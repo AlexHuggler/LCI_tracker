@@ -94,8 +94,8 @@ faq:
         <p class="text-sm font-medium text-red-600">
           {{ competitor.missing | first }}
         </p>
-        {% if competitor.slug == "skimmer" %}
-        <a href="/compare/poolflow-vs-skimmer/" class="mt-4 inline-block text-sm font-semibold text-pool-blue hover:underline">Read full PoolFlow vs Skimmer comparison &rarr;</a>
+        {% if competitor.has_page %}
+        <a href="/compare/poolflow-vs-{{ competitor.slug }}/" class="mt-4 inline-block text-sm font-semibold text-pool-blue hover:underline">Read full PoolFlow vs {{ competitor.name }} comparison &rarr;</a>
         {% endif %}
       </article>
       {% endfor %}

@@ -1,0 +1,326 @@
+---
+layout: default
+title: "Free Pool LSI Calculator — Langelier Saturation Index with CYA Correction"
+description: "Free interactive LSI calculator. Enter pH, temperature, calcium hardness, alkalinity, CYA, and TDS to instantly calculate your pool's Langelier Saturation Index and see whether the water is corrosive, balanced, or scale-forming."
+permalink: /lsi-calculator/
+image: /assets/images/og-image.png
+lang: "en"
+tool_slug: lsi
+breadcrumbs:
+  - name: "Home"
+    url: "/"
+  - name: "Tools"
+    url: "/tools/"
+  - name: "LSI Calculator"
+    url: "/lsi-calculator/"
+faq:
+  - question: "What is a good LSI for a swimming pool?"
+    answer: "A balanced pool has an LSI between −0.3 and +0.3. Below −0.3 the water is corrosive and can etch plaster and corrode metal; above +0.3 it is scale-forming and can deposit calcium on surfaces and equipment. Aim to keep the LSI as close to 0.0 as practical."
+  - question: "How does cyanuric acid (CYA) affect the LSI?"
+    answer: "Cyanuric acid contributes to your total alkalinity reading but not to the carbonate alkalinity that actually buffers the water, so it must be subtracted. This calculator applies the standard correction: adjusted alkalinity = total alkalinity − (CYA ÷ 3). Higher CYA lowers your effective alkalinity and therefore lowers the LSI."
+  - question: "How is the LSI calculated?"
+    answer: "The Langelier Saturation Index is LSI = pH + TF + CF + AF − TDS constant, where TF is a temperature factor, CF a calcium-hardness factor, AF an alkalinity factor (using CYA-corrected alkalinity), and the TDS constant is 12.1 for typical pools (12.2 for high-TDS or saltwater pools). This tool uses the same lookup factors as our LSI explainer guide."
+  - question: "What does a negative LSI mean?"
+    answer: "A negative LSI (below −0.3) means the water is under-saturated with calcium carbonate — corrosive water. It can dissolve plaster and grout, pit concrete, and corrode metal fittings, ladders, and heaters. Raise the LSI by increasing pH, total alkalinity, or calcium hardness."
+  - question: "What does a high LSI mean?"
+    answer: "A high LSI (above +0.3) means the water is over-saturated — scale-forming water. It can deposit calcium scale on tile, plaster, salt cells, and heat exchangers, and make the water cloudy. Lower the LSI by reducing pH, total alkalinity, or calcium hardness."
+  - question: "Is this LSI calculator free?"
+    answer: "Yes — it is completely free and runs entirely in your browser. For automatic LSI on every pool, plus chemical dosing recommendations priced from your own inventory, the PoolFlow iOS app calculates this for you in the field, even offline."
+---
+
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="breadcrumb-nav bg-gray-50 pt-24 pb-3">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <ol class="flex flex-wrap items-center gap-1 text-sm text-gray-500">
+      <li><a href="/">Home</a></li>
+      <li><span class="mx-1">/</span></li>
+      <li><a href="/tools/">Tools</a></li>
+      <li><span class="mx-1">/</span></li>
+      <li class="text-gray-900 font-medium">LSI Calculator</li>
+    </ol>
+  </div>
+</nav>
+
+<!-- ============================================
+     SECTION 1: HERO
+     ============================================ -->
+<section class="hero-gradient py-12 sm:py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
+      Pool LSI Calculator
+    </h1>
+    <p class="mt-4 text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
+      Calculate the Langelier Saturation Index in real time with CYA-corrected alkalinity. Slide your readings and watch the balance update instantly.
+    </p>
+    <p class="mt-3 text-sm text-blue-200">Balanced water sits between −0.3 and +0.3 LSI.</p>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 2: CALCULATOR
+     ============================================ -->
+<section class="py-12 sm:py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12" data-lsi-calculator>
+
+      <!-- Inputs -->
+      <div class="lg:col-span-3">
+        <h2 class="text-2xl font-bold text-pool-dark mb-6">Your Water Readings</h2>
+        <div class="space-y-6">
+
+          <!-- pH -->
+          <div class="lsi-field">
+            <div class="flex items-center justify-between mb-2">
+              <label for="lsi-ph" class="font-medium text-pool-dark">pH</label>
+              <input id="lsi-ph" type="number" data-lsi-number="pH" value="7.5" min="6.8" max="8.4" step="0.1" inputmode="decimal" aria-label="pH value">
+            </div>
+            <input type="range" data-lsi-range="pH" value="7.5" min="6.8" max="8.4" step="0.1" aria-label="pH slider">
+          </div>
+
+          <!-- Temperature (with unit toggle) -->
+          <div class="lsi-field">
+            <div class="flex items-center justify-between mb-2">
+              <label for="lsi-temp" class="font-medium text-pool-dark">Water Temperature</label>
+              <div class="flex items-center gap-2">
+                <input id="lsi-temp" type="number" data-lsi-number="temp" value="80" min="32" max="105" step="1" inputmode="numeric" aria-label="Water temperature value">
+                <button type="button" class="lsi-temp-unit" data-lsi-temp-unit aria-label="Temperature unit: Fahrenheit. Tap to switch.">°F</button>
+              </div>
+            </div>
+            <input type="range" data-lsi-range="temp" value="80" min="32" max="105" step="1" aria-label="Water temperature slider">
+          </div>
+
+          <!-- Calcium Hardness -->
+          <div class="lsi-field">
+            <div class="flex items-center justify-between mb-2">
+              <label for="lsi-ch" class="font-medium text-pool-dark">Calcium Hardness <span class="text-gray-400 font-normal text-sm">ppm</span></label>
+              <input id="lsi-ch" type="number" data-lsi-number="ch" value="300" min="0" max="1000" step="10" inputmode="numeric" aria-label="Calcium hardness value">
+            </div>
+            <input type="range" data-lsi-range="ch" value="300" min="0" max="1000" step="10" aria-label="Calcium hardness slider">
+          </div>
+
+          <!-- Total Alkalinity -->
+          <div class="lsi-field">
+            <div class="flex items-center justify-between mb-2">
+              <label for="lsi-ta" class="font-medium text-pool-dark">Total Alkalinity <span class="text-gray-400 font-normal text-sm">ppm</span></label>
+              <input id="lsi-ta" type="number" data-lsi-number="ta" value="100" min="0" max="400" step="5" inputmode="numeric" aria-label="Total alkalinity value">
+            </div>
+            <input type="range" data-lsi-range="ta" value="100" min="0" max="400" step="5" aria-label="Total alkalinity slider">
+          </div>
+
+          <!-- Cyanuric Acid (CYA) -->
+          <div class="lsi-field">
+            <div class="flex items-center justify-between mb-2">
+              <label for="lsi-cya" class="font-medium text-pool-dark">Cyanuric Acid (CYA) <span class="text-gray-400 font-normal text-sm">ppm</span></label>
+              <input id="lsi-cya" type="number" data-lsi-number="cya" value="50" min="0" max="150" step="5" inputmode="numeric" aria-label="Cyanuric acid value">
+            </div>
+            <input type="range" data-lsi-range="cya" value="50" min="0" max="150" step="5" aria-label="Cyanuric acid slider">
+          </div>
+
+          <!-- TDS -->
+          <div class="lsi-field">
+            <div class="flex items-center justify-between mb-2">
+              <label for="lsi-tds" class="font-medium text-pool-dark">Total Dissolved Solids <span class="text-gray-400 font-normal text-sm">ppm</span></label>
+              <input id="lsi-tds" type="number" data-lsi-number="tds" value="1000" min="0" max="6000" step="100" inputmode="numeric" aria-label="Total dissolved solids value">
+            </div>
+            <input type="range" data-lsi-range="tds" value="1000" min="0" max="6000" step="100" aria-label="Total dissolved solids slider">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="lg:col-span-2">
+        <div class="lsi-result rounded-2xl p-6 sm:p-8 lg:sticky lg:top-24" data-lsi-status data-state="balanced">
+          <p class="text-sm font-medium uppercase tracking-wider text-gray-500 text-center">Your LSI</p>
+          <p class="lsi-value text-6xl font-bold text-center my-3" data-lsi-value>+0.00</p>
+          <div class="text-center">
+            <span class="lsi-badge"><span data-lsi-status-text>Balanced</span></span>
+          </div>
+          <p class="mt-4 text-sm text-gray-700 leading-relaxed text-center" data-lsi-guidance></p>
+
+          <!-- Factor breakdown -->
+          <div class="mt-6 pt-6 border-t border-gray-200/70">
+            <p class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">How it adds up</p>
+            <dl class="space-y-1.5 text-sm">
+              <div class="flex justify-between"><dt class="text-gray-600">Temperature factor (TF)</dt><dd class="font-medium text-pool-dark tabular-nums" data-lsi-tf>+0.00</dd></div>
+              <div class="flex justify-between"><dt class="text-gray-600">Calcium factor (CF)</dt><dd class="font-medium text-pool-dark tabular-nums" data-lsi-cf>+0.00</dd></div>
+              <div class="flex justify-between"><dt class="text-gray-600">Alkalinity factor (AF)</dt><dd class="font-medium text-pool-dark tabular-nums" data-lsi-af>+0.00</dd></div>
+              <div class="flex justify-between"><dt class="text-gray-600">CYA-corrected alkalinity</dt><dd class="font-medium text-pool-dark tabular-nums" data-lsi-adj>0 ppm</dd></div>
+              <div class="flex justify-between"><dt class="text-gray-600">TDS constant</dt><dd class="font-medium text-pool-dark tabular-nums" data-lsi-k>−12.1</dd></div>
+            </dl>
+            <p class="mt-3 text-xs text-gray-500 leading-relaxed" data-lsi-formula></p>
+          </div>
+
+          <!-- CTA -->
+          <a href="{{ site.app_store_url }}" class="mt-6 flex items-center justify-center gap-2 bg-pool-blue text-white font-semibold px-5 py-3 rounded-full hover:opacity-90 transition-opacity text-sm text-center">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Get exact dosing in the app
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="mt-8 text-center text-xs text-gray-400 max-w-2xl mx-auto">
+      For guidance only. Results use industry-standard lookup factors with linear interpolation and may differ slightly from other calculators. Always confirm with a reliable test kit before adding chemicals.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 3: HOW IT WORKS (SEO content)
+     ============================================ -->
+<section class="py-16 sm:py-20 bg-pool-section">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-pool-dark text-center mb-10">How the LSI Calculation Works</h2>
+
+    <div class="prose prose-lg max-w-none prose-headings:text-pool-dark prose-a:text-pool-blue prose-a:no-underline hover:prose-a:underline">
+      <p>The <strong>Langelier Saturation Index (LSI)</strong> predicts whether your pool water will corrode surfaces, stay balanced, or form scale. It is the standard pool-industry measure of calcium carbonate saturation, and it is calculated from six readings:</p>
+
+      <p class="text-center font-semibold text-pool-dark">LSI = pH + TF + CF + AF − TDS&nbsp;constant</p>
+
+      <ul>
+        <li><strong>pH</strong> — entered directly.</li>
+        <li><strong>TF (temperature factor)</strong> — warmer water raises the LSI.</li>
+        <li><strong>CF (calcium factor)</strong> — from calcium hardness.</li>
+        <li><strong>AF (alkalinity factor)</strong> — from <em>CYA-corrected</em> alkalinity.</li>
+        <li><strong>TDS constant</strong> — 12.1 for typical pools, 12.2 for high-TDS or saltwater pools.</li>
+      </ul>
+
+      <h3>The CYA correction</h3>
+      <p>Cyanuric acid inflates your total alkalinity reading without buffering the water, so it has to be removed first:</p>
+      <p class="text-center font-semibold text-pool-dark">Adjusted alkalinity = Total alkalinity − (CYA ÷ 3)</p>
+      <p>For example, 100&nbsp;ppm total alkalinity with 60&nbsp;ppm CYA gives an adjusted alkalinity of 100&nbsp;−&nbsp;20&nbsp;=&nbsp;80&nbsp;ppm, which is what feeds the alkalinity factor above.</p>
+
+      <h3>Reading your result</h3>
+      <ul>
+        <li><strong>Below −0.3:</strong> corrosive — raise pH, alkalinity, or calcium.</li>
+        <li><strong>−0.3 to +0.3:</strong> balanced — maintain.</li>
+        <li><strong>Above +0.3:</strong> scale-forming — lower pH, alkalinity, or calcium.</li>
+      </ul>
+
+      <p>Want the full breakdown, the factor tables, and worked examples? Read <a href="/blog/langelier-saturation-index-explained/">The Langelier Saturation Index, explained</a>, or see our <a href="/blog/pool-water-balance-chemistry-guide/">pool water balance guide</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 4: FAQ
+     ============================================ -->
+<section id="faq" class="py-20 sm:py-28 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pool-dark">
+        LSI Calculator FAQ
+      </h2>
+    </div>
+
+    <div class="space-y-4" id="faq-accordion" role="region" aria-label="Frequently Asked Questions">
+      {% for item in page.faq %}
+      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
+        <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset" aria-expanded="false">
+          <span class="pr-4">{{ item.question }}</span>
+          <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
+          <p>{{ item.answer }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Toggle Script -->
+<script>
+document.querySelectorAll('#faq .faq-toggle').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var content = this.nextElementSibling;
+    var icon = this.querySelector('.faq-icon');
+    var isOpen = !content.classList.contains('hidden');
+    if (isOpen) {
+      content.classList.add('hidden');
+      icon.classList.remove('rotate-180');
+      this.setAttribute('aria-expanded', 'false');
+    } else {
+      content.classList.remove('hidden');
+      icon.classList.add('rotate-180');
+      this.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+</script>
+
+{% include more-tools.html %}
+
+<!-- ============================================
+     SECTION 5: FINAL CTA
+     ============================================ -->
+<section class="hero-gradient py-16 sm:py-20">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-white">Stop Calculating LSI by Hand</h2>
+    <p class="mt-4 text-lg text-blue-100">PoolFlow computes LSI for every pool automatically and recommends exact chemical doses from your own costs — offline, at poolside. Free for up to 5 pools.</p>
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="{{ site.app_store_url }}" class="inline-flex items-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Try PoolFlow Free
+      </a>
+      <a href="/blog/langelier-saturation-index-explained/" class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-3.5 rounded-full hover:bg-white hover:text-pool-dark transition-colors text-lg">
+        Read the LSI Guide
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Calculator logic -->
+<script src="/assets/js/lsi-calculator.js" defer></script>
+
+<!-- ============================================
+     Structured data
+     ============================================ -->
+{% if page.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{% for item in page.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.answer | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PoolFlow LSI Calculator",
+  "url": "https://poolflowapp.com/lsi-calculator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (web browser)",
+  "browserRequirements": "Requires JavaScript",
+  "description": "Free interactive Langelier Saturation Index (LSI) calculator with CYA-corrected alkalinity for swimming pools.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@id": "https://poolflowapp.com/#org" }
+}
+</script>
+
+{% include schema-comparison.html %}
+{% include schema-howto-lsi-i18n.html %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{% for crumb in page.breadcrumbs %}
+    { "@type": "ListItem", "position": {{ forloop.index }}, "name": {{ crumb.name | jsonify }}, "item": {{ crumb.url | absolute_url | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>
