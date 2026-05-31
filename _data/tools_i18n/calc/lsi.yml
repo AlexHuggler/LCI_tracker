@@ -1,0 +1,82 @@
+# LSI calculator strings, per language. Accessed as
+# site.data.tools_i18n.calc.lsi[lang]. `js` holds the runtime strings injected
+# into assets/js/lsi-calculator.js via window.PF_LSI_I18N (%LSI% = signed value).
+en:
+  title: "Free Pool LSI Calculator — Langelier Saturation Index with CYA Correction"
+  description: "Free interactive LSI calculator. Enter pH, temperature, calcium hardness, alkalinity, CYA, and TDS to instantly calculate your pool's Langelier Saturation Index and see whether the water is corrosive, balanced, or scale-forming."
+  h1: "Pool LSI Calculator"
+  subtitle: "Calculate the Langelier Saturation Index in real time with CYA-corrected alkalinity. Slide your readings and watch the balance update instantly."
+  balanced_note: "Balanced water sits between −0.3 and +0.3 LSI."
+  readings_heading: "Your Water Readings"
+  label_ph: "pH"
+  label_temp: "Water Temperature"
+  label_ch: "Calcium Hardness"
+  label_ta: "Total Alkalinity"
+  label_cya: "Cyanuric Acid (CYA)"
+  label_tds: "Total Dissolved Solids"
+  result_label: "Your LSI"
+  breakdown_heading: "How it adds up"
+  bd_tf: "Temperature factor (TF)"
+  bd_cf: "Calcium factor (CF)"
+  bd_af: "Alkalinity factor (AF)"
+  bd_adj: "CYA-corrected alkalinity"
+  bd_k: "TDS constant"
+  cta_app: "Get exact dosing in the app"
+  disclaimer: "For guidance only. Results use industry-standard lookup factors with linear interpolation and may differ slightly from other calculators. Always confirm with a reliable test kit before adding chemicals."
+  how_heading: "How the LSI Calculation Works"
+  how_body: >-
+    <p>The <strong>Langelier Saturation Index (LSI)</strong> predicts whether your pool water
+    will corrode surfaces, stay balanced, or form scale. It is the standard pool-industry
+    measure of calcium carbonate saturation, and it is calculated from six readings:</p>
+    <p class="text-center font-semibold text-pool-dark">LSI = pH + TF + CF + AF − TDS&nbsp;constant</p>
+    <ul>
+    <li><strong>pH</strong> — entered directly.</li>
+    <li><strong>TF (temperature factor)</strong> — warmer water raises the LSI.</li>
+    <li><strong>CF (calcium factor)</strong> — from calcium hardness.</li>
+    <li><strong>AF (alkalinity factor)</strong> — from <em>CYA-corrected</em> alkalinity.</li>
+    <li><strong>TDS constant</strong> — 12.1 for typical pools, 12.2 for high-TDS or saltwater pools.</li>
+    </ul>
+    <h3>The CYA correction</h3>
+    <p>Cyanuric acid inflates your total alkalinity reading without buffering the water, so it
+    has to be removed first:</p>
+    <p class="text-center font-semibold text-pool-dark">Adjusted alkalinity = Total alkalinity − (CYA ÷ 3)</p>
+    <p>For example, 100&nbsp;ppm total alkalinity with 60&nbsp;ppm CYA gives an adjusted alkalinity
+    of 100&nbsp;−&nbsp;20&nbsp;=&nbsp;80&nbsp;ppm, which is what feeds the alkalinity factor above.</p>
+    <h3>Reading your result</h3>
+    <ul>
+    <li><strong>Below −0.3:</strong> corrosive — raise pH, alkalinity, or calcium.</li>
+    <li><strong>−0.3 to +0.3:</strong> balanced — maintain.</li>
+    <li><strong>Above +0.3:</strong> scale-forming — lower pH, alkalinity, or calcium.</li>
+    </ul>
+    <p>Want the full breakdown, the factor tables, and worked examples? Read
+    <a href="/blog/langelier-saturation-index-explained/">The Langelier Saturation Index, explained</a>,
+    or see our <a href="/blog/pool-water-balance-chemistry-guide/">pool water balance guide</a>.</p>
+  faq_heading: "LSI Calculator FAQ"
+  final_title: "Stop Calculating LSI by Hand"
+  final_body: "PoolFlow computes LSI for every pool automatically and recommends exact chemical doses from your own costs — offline, at poolside. Free for up to 5 pools."
+  final_guide: "Read the LSI Guide"
+  faq:
+    - question: "What is a good LSI for a swimming pool?"
+      answer: "A balanced pool has an LSI between −0.3 and +0.3. Below −0.3 the water is corrosive and can etch plaster and corrode metal; above +0.3 it is scale-forming and can deposit calcium on surfaces and equipment. Aim to keep the LSI as close to 0.0 as practical."
+    - question: "How does cyanuric acid (CYA) affect the LSI?"
+      answer: "Cyanuric acid contributes to your total alkalinity reading but not to the carbonate alkalinity that actually buffers the water, so it must be subtracted. This calculator applies the standard correction: adjusted alkalinity = total alkalinity − (CYA ÷ 3). Higher CYA lowers your effective alkalinity and therefore lowers the LSI."
+    - question: "How is the LSI calculated?"
+      answer: "The Langelier Saturation Index is LSI = pH + TF + CF + AF − TDS constant, where TF is a temperature factor, CF a calcium-hardness factor, AF an alkalinity factor (using CYA-corrected alkalinity), and the TDS constant is 12.1 for typical pools (12.2 for high-TDS or saltwater pools). This tool uses the same lookup factors as our LSI explainer guide."
+    - question: "What does a negative LSI mean?"
+      answer: "A negative LSI (below −0.3) means the water is under-saturated with calcium carbonate — corrosive water. It can dissolve plaster and grout, pit concrete, and corrode metal fittings, ladders, and heaters. Raise the LSI by increasing pH, total alkalinity, or calcium hardness."
+    - question: "What does a high LSI mean?"
+      answer: "A high LSI (above +0.3) means the water is over-saturated — scale-forming water. It can deposit calcium scale on tile, plaster, salt cells, and heat exchangers, and make the water cloudy. Lower the LSI by reducing pH, total alkalinity, or calcium hardness."
+    - question: "Is this LSI calculator free?"
+      answer: "Yes — it is completely free and runs entirely in your browser. For automatic LSI on every pool, plus chemical dosing recommendations priced from your own inventory, the PoolFlow iOS app calculates this for you in the field, even offline."
+  js:
+    status_balanced: "Balanced"
+    status_corrosive: "Corrosive"
+    status_scaling: "Scaling"
+    guidance_balanced: "Your water is balanced (LSI between −0.3 and +0.3). It won’t corrode surfaces or form scale — maintain these levels."
+    guidance_corrosive: "Water is corrosive (LSI %LSI%). Low LSI water can etch plaster, dissolve grout, and corrode metal fittings and heaters. To raise LSI, increase pH, total alkalinity, or calcium hardness."
+    guidance_scaling: "Water is scale-forming (LSI %LSI%). High LSI water can deposit calcium scale on surfaces, salt cells, and heat exchangers, and cloud the water. To lower LSI, reduce pH, total alkalinity, or calcium hardness."
+    f_ph: "pH"
+    f_temp: "temp"
+    f_calcium: "calcium"
+    f_alkalinity: "alkalinity"
+    ppm: "ppm"
