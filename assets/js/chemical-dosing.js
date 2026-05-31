@@ -15,6 +15,9 @@
   var root = document.querySelector('[data-dosing-calculator]');
   if (!root) return;
 
+  // Localized runtime strings injected by the page (window.PF_DOSING_I18N); English fallbacks below.
+  var I = (typeof window !== 'undefined' && window.PF_DOSING_I18N) || {};
+
   var L_PER_GAL = 3.785411784;
 
   // Per-ounce cost estimates (USD), typical retail for a service tech
@@ -54,32 +57,35 @@
     var doses = [];
     var notes = [];
 
+    var unitFloz = I.unit_floz || 'fl oz';
+    var unitOz = I.unit_oz || 'oz';
+
     // pH
     var dPh = state.ph.cur - state.ph.tgt;
     if (dPh > 0.001) {
       var floz = ceil(26 * (dPh / 0.2) * vf);
-      doses.push({ name: 'Muriatic acid', sub: 'to lower pH', amount: floz, unit: 'fl oz', extra: liquidNote(floz), cost: floz * COST.acid });
+      doses.push({ name: I.name_acid || 'Muriatic acid', sub: I.sub_acid || 'to lower pH', amount: floz, unit: unitFloz, extra: liquidNote(floz), cost: floz * COST.acid });
     } else if (dPh < -0.001) {
       var ozS = ceil(6 * (-dPh / 0.2) * vf);
-      doses.push({ name: 'Soda ash', sub: 'to raise pH', amount: ozS, unit: 'oz', extra: dryNote(ozS), cost: ozS * COST.sodaAsh });
+      doses.push({ name: I.name_soda_ash || 'Soda ash', sub: I.sub_soda_ash || 'to raise pH', amount: ozS, unit: unitOz, extra: dryNote(ozS), cost: ozS * COST.sodaAsh });
     }
 
     // Total alkalinity
     var dTa = state.ta.tgt - state.ta.cur;
     if (dTa > 0.001) {
       var ozB = ceil(24 * (dTa / 10) * vf);
-      doses.push({ name: 'Baking soda', sub: 'sodium bicarbonate, to raise alkalinity', amount: ozB, unit: 'oz', extra: dryNote(ozB), cost: ozB * COST.bicarb });
+      doses.push({ name: I.name_bicarb || 'Baking soda', sub: I.sub_bicarb || 'sodium bicarbonate, to raise alkalinity', amount: ozB, unit: unitOz, extra: dryNote(ozB), cost: ozB * COST.bicarb });
     } else if (dTa < -0.001) {
-      notes.push('Lower alkalinity with muriatic acid + aeration (a repeated cycle, not a single dose).');
+      notes.push(I.note_alkalinity || 'Lower alkalinity with muriatic acid + aeration (a repeated cycle, not a single dose).');
     }
 
     // Calcium hardness
     var dCh = state.ch.tgt - state.ch.cur;
     if (dCh > 0.001) {
       var ozC = ceil(20 * (dCh / 10) * vf);
-      doses.push({ name: 'Calcium chloride', sub: '77%, to raise hardness', amount: ozC, unit: 'oz', extra: dryNote(ozC), cost: ozC * COST.calcium });
+      doses.push({ name: I.name_calcium || 'Calcium chloride', sub: I.sub_calcium || '77%, to raise hardness', amount: ozC, unit: unitOz, extra: dryNote(ozC), cost: ozC * COST.calcium });
     } else if (dCh < -0.001) {
-      notes.push('Calcium hardness can only be lowered by partial draining and refilling with softer water.');
+      notes.push(I.note_calcium || 'Calcium hardness can only be lowered by partial draining and refilling with softer water.');
     }
 
     return { doses: doses, notes: notes };

@@ -1,0 +1,435 @@
+# Chemical Dosing calculator strings, per language. Accessed as
+# site.data.tools_i18n.calc.dosing[lang]. `js` holds the runtime strings injected
+# into assets/js/chemical-dosing.js via window.PF_DOSING_I18N. Tokens: %AMT% (amount),
+# %UNIT% (unit word). Universal symbols (pH, ppm, %, $) are kept as-is; /blog/ links
+# stay English.
+en:
+  title: "Pool Chemical Dosing Calculator — Acid, Soda Ash, Alkalinity & Calcium"
+  description: "Free pool chemical dosing calculator. Enter your pool volume and current vs. target pH, alkalinity, and calcium hardness to get exact doses of muriatic acid, soda ash, baking soda, and calcium chloride — plus an estimated cost."
+  h1: "Pool Chemical Dosing Calculator"
+  subtitle: "Enter your pool volume and your current vs. target readings. Get exact doses of muriatic acid, soda ash, baking soda, and calcium chloride — with an estimated cost per visit."
+  readings_heading: "Your Pool & Readings"
+  label_vol: "Pool volume"
+  vol_unit_gal: "gal"
+  vol_aria_gal: "Volume unit: gallons. Tap to switch to liters."
+  vol_hint_pre: "Not sure?"
+  vol_hint_link: "Use the volume calculator →"
+  label_ph: "pH"
+  label_ta: "Total Alkalinity"
+  label_ch: "Calcium Hardness"
+  col_current: "Current"
+  col_target: "Target"
+  order_note: "Add chemicals in order — pH, then alkalinity, then calcium — circulating and retesting between each."
+  result_label: "Recommended Doses"
+  empty_note: "Your water is already at target — no additions needed."
+  cost_label: "Estimated chemical cost"
+  cta_app: "Price doses from your own costs"
+  disclaimer: "Cost estimates use typical chemical prices and assume standard concentrations (31.45% muriatic acid, 77% calcium chloride). For guidance only — never mix chemicals, wear appropriate PPE, and always retest after a full turnover before adding more."
+  how_heading: "The Dosing Rates Behind the Numbers"
+  how_body: >-
+    <p>This calculator scales four standard professional dosing rates by your pool volume
+    (in 10,000-gallon increments) and the size of each correction:</p>
+    <ul>
+    <li><strong>Lower pH</strong> — muriatic acid (31.45%): <strong>26 fl oz</strong> per 0.2 pH drop per 10,000 gal</li>
+    <li><strong>Raise pH</strong> — soda ash: <strong>6 oz</strong> per 0.2 pH rise per 10,000 gal</li>
+    <li><strong>Raise alkalinity</strong> — sodium bicarbonate (baking soda): <strong>24 oz</strong> per 10 ppm per 10,000 gal</li>
+    <li><strong>Raise calcium hardness</strong> — calcium chloride (77%): <strong>20 oz</strong> per 10 ppm per 10,000 gal</li>
+    </ul>
+    <p>For example, a 20,000-gallon pool dropping pH from 7.8 to 7.4 (a 0.4 reduction, two 0.2 increments)
+    needs 26 × 2 × 2.0 = <strong>104 fl oz</strong> of muriatic acid, about 0.8 gallons.</p>
+    <h3>Why order matters</h3>
+    <p>Always correct pH first, then alkalinity, then calcium — alkalinity and calcium adjustments both
+    nudge pH, so setting pH first means fewer re-corrections. Lowering alkalinity or calcium isn't a
+    simple dose: alkalinity comes down via acid plus aeration, and calcium only via partial draining.</p>
+    <p>Need your pool volume first? Use the <a href="/pool-volume-calculator/">pool volume calculator</a>.
+    For the full method, safety protocols, and worked examples, read our
+    <a href="/blog/chemical-dosing-calculations-pool-service/">chemical dosing guide</a>, and check water
+    balance with the <a href="/lsi-calculator/">LSI calculator</a>.</p>
+  faq_heading: "Chemical Dosing FAQ"
+  final_title: "Stop Doing Dosing Math by Hand"
+  final_body: "PoolFlow reads your test results, calculates exact doses using these rates, and prices each one from your real chemical inventory — automatically, offline, at poolside. Free for up to 5 pools."
+  final_guide: "Read the Dosing Guide"
+  faq:
+    - question: "How much muriatic acid do I need to lower pH?"
+      answer: "For standard 31.45% muriatic acid, use about 26 fluid ounces per 0.2 pH reduction per 10,000 gallons. This calculator scales that rate by your pool volume and the size of your pH drop automatically. For a 15,000-gallon pool dropping pH from 8.0 to 7.4 (a 0.6 reduction), that works out to roughly 117 fl oz, or about 0.9 gallons. Always add acid to water, never water to acid, and distribute it with the pump running."
+    - question: "How much baking soda raises pool alkalinity?"
+      answer: "Sodium bicarbonate (baking soda) raises total alkalinity at about 24 ounces per 10 ppm increase per 10,000 gallons. For a 15,000-gallon pool going from 60 to 90 ppm (a 30 ppm increase), that's roughly 108 ounces, or about 6.75 pounds. Baking soda is preferred over soda ash for alkalinity because it has minimal effect on pH."
+    - question: "In what order should I add pool chemicals?"
+      answer: "Adjust pH first, then total alkalinity, then calcium hardness. Both alkalinity and calcium corrections can shift pH, so setting pH first reduces the number of re-corrections. Circulate the water and wait between additions — about 15–20 minutes after muriatic acid, 20–30 after soda ash, and 15 after calcium chloride — then retest before layering the next correction."
+    - question: "Can I lower total alkalinity or calcium hardness with a chemical?"
+      answer: "Not directly. Lowering total alkalinity requires adding muriatic acid to drop both pH and TA, then aerating to bring pH back up without raising alkalinity — often a repeated cycle, not a single dose. Calcium hardness can only be lowered by partial draining and refilling with lower-hardness water. This calculator flags both cases instead of giving you a dose."
+    - question: "How accurate is this dosing calculator?"
+      answer: "It uses the same industry-standard rates a professional dosing engine uses, scaled to your volume. Real-world results vary with chemical concentration, water temperature, and test accuracy, so always retest after a turnover cycle before adding more. Treat the doses as a strong starting point, not a substitute for a reliable test kit."
+  js:
+    name_acid: "Muriatic acid"
+    name_soda_ash: "Soda ash"
+    name_bicarb: "Baking soda"
+    name_calcium: "Calcium chloride"
+    sub_acid: "to lower pH"
+    sub_soda_ash: "to raise pH"
+    sub_bicarb: "sodium bicarbonate, to raise alkalinity"
+    sub_calcium: "77%, to raise hardness"
+    unit_floz: "fl oz"
+    unit_oz: "oz"
+    note_alkalinity: "Lower alkalinity with muriatic acid + aeration (a repeated cycle, not a single dose)."
+    note_calcium: "Calcium hardness can only be lowered by partial draining and refilling with softer water."
+
+es:
+  title: "Calculadora de dosificación química para piscinas — ácido, carbonato de sodio, alcalinidad y calcio"
+  description: "Calculadora gratuita de dosificación química para piscinas. Introduce el volumen de tu piscina y los valores actuales frente a los objetivos de pH, alcalinidad y dureza cálcica para obtener dosis exactas de ácido muriático, carbonato de sodio, bicarbonato y cloruro de calcio — además de un costo estimado."
+  h1: "Calculadora de dosificación química para piscinas"
+  subtitle: "Introduce el volumen de tu piscina y tus lecturas actuales frente a las objetivo. Obtén dosis exactas de ácido muriático, carbonato de sodio, bicarbonato y cloruro de calcio — con un costo estimado por visita."
+  readings_heading: "Tu piscina y tus lecturas"
+  label_vol: "Volumen de la piscina"
+  vol_unit_gal: "gal"
+  vol_aria_gal: "Unidad de volumen: galones. Toca para cambiar a litros."
+  vol_hint_pre: "¿No estás seguro?"
+  vol_hint_link: "Usa la calculadora de volumen →"
+  label_ph: "pH"
+  label_ta: "Alcalinidad total"
+  label_ch: "Dureza cálcica"
+  col_current: "Actual"
+  col_target: "Objetivo"
+  order_note: "Añade los productos en orden — pH, luego alcalinidad y después calcio — haciendo circular el agua y volviendo a medir entre cada uno."
+  result_label: "Dosis recomendadas"
+  empty_note: "Tu agua ya está en el objetivo — no hace falta añadir nada."
+  cost_label: "Costo químico estimado"
+  cta_app: "Calcula dosis con tus propios costos"
+  disclaimer: "Las estimaciones de costo usan precios químicos típicos y suponen concentraciones estándar (ácido muriático al 31.45%, cloruro de calcio al 77%). Solo a título orientativo — nunca mezcles productos químicos, usa el EPP adecuado y vuelve a medir siempre tras un ciclo de recirculación completo antes de añadir más."
+  how_heading: "Las tasas de dosificación detrás de los números"
+  how_body: >-
+    <p>Esta calculadora escala cuatro tasas de dosificación profesionales estándar según el volumen de
+    tu piscina (en incrementos de 10,000 galones) y el tamaño de cada corrección:</p>
+    <ul>
+    <li><strong>Bajar el pH</strong> — ácido muriático (31.45%): <strong>26 fl oz</strong> por cada bajada de 0.2 de pH por 10,000 gal</li>
+    <li><strong>Subir el pH</strong> — carbonato de sodio: <strong>6 oz</strong> por cada subida de 0.2 de pH por 10,000 gal</li>
+    <li><strong>Subir la alcalinidad</strong> — bicarbonato de sodio: <strong>24 oz</strong> por cada 10 ppm por 10,000 gal</li>
+    <li><strong>Subir la dureza cálcica</strong> — cloruro de calcio (77%): <strong>20 oz</strong> por cada 10 ppm por 10,000 gal</li>
+    </ul>
+    <p>Por ejemplo, una piscina de 20,000 galones que baja el pH de 7.8 a 7.4 (una reducción de 0.4, dos
+    incrementos de 0.2) necesita 26 × 2 × 2.0 = <strong>104 fl oz</strong> de ácido muriático, unos 0.8 galones.</p>
+    <h3>Por qué importa el orden</h3>
+    <p>Corrige siempre primero el pH, luego la alcalinidad y después el calcio — los ajustes de alcalinidad
+    y calcio empujan ambos el pH, así que fijar primero el pH significa menos recorrecciones. Bajar la
+    alcalinidad o el calcio no es una dosis sencilla: la alcalinidad baja con ácido más aireación, y el
+    calcio solo mediante vaciado parcial.</p>
+    <p>¿Necesitas primero el volumen de tu piscina? Usa la <a href="/pool-volume-calculator/">calculadora de
+    volumen de piscina</a>. Para el método completo, los protocolos de seguridad y ejemplos resueltos, lee
+    nuestra <a href="/blog/chemical-dosing-calculations-pool-service/">guía de dosificación química</a>, y
+    comprueba el equilibrio del agua con la <a href="/lsi-calculator/">calculadora LSI</a>.</p>
+  faq_heading: "Preguntas frecuentes sobre dosificación química"
+  final_title: "Deja de hacer los cálculos de dosificación a mano"
+  final_body: "PoolFlow lee tus resultados de análisis, calcula dosis exactas con estas tasas y pone precio a cada una con tu inventario químico real — automáticamente, sin conexión, junto a la piscina. Gratis hasta para 5 piscinas."
+  final_guide: "Lee la guía de dosificación"
+  faq:
+    - question: "¿Cuánto ácido muriático necesito para bajar el pH?"
+      answer: "Con ácido muriático estándar al 31.45%, usa unas 26 onzas líquidas por cada reducción de 0.2 de pH por 10,000 galones. Esta calculadora escala esa tasa automáticamente según el volumen de tu piscina y el tamaño de la bajada de pH. Para una piscina de 15,000 galones que baja el pH de 8.0 a 7.4 (una reducción de 0.6), resulta en unas 117 fl oz, o cerca de 0.9 galones. Añade siempre el ácido al agua, nunca el agua al ácido, y repártelo con la bomba en marcha."
+    - question: "¿Cuánto bicarbonato sube la alcalinidad de la piscina?"
+      answer: "El bicarbonato de sodio sube la alcalinidad total a razón de unas 24 onzas por cada aumento de 10 ppm por 10,000 galones. Para una piscina de 15,000 galones que pasa de 60 a 90 ppm (un aumento de 30 ppm), son unas 108 onzas, o cerca de 6.75 libras. El bicarbonato es preferible al carbonato de sodio para la alcalinidad porque apenas afecta al pH."
+    - question: "¿En qué orden debo añadir los productos químicos de la piscina?"
+      answer: "Ajusta primero el pH, luego la alcalinidad total y después la dureza cálcica. Tanto las correcciones de alcalinidad como las de calcio pueden mover el pH, así que fijar primero el pH reduce el número de recorrecciones. Haz circular el agua y espera entre adiciones — unos 15–20 minutos tras el ácido muriático, 20–30 tras el carbonato de sodio y 15 tras el cloruro de calcio — y vuelve a medir antes de aplicar la siguiente corrección."
+    - question: "¿Puedo bajar la alcalinidad total o la dureza cálcica con un producto químico?"
+      answer: "No directamente. Bajar la alcalinidad total requiere añadir ácido muriático para reducir el pH y la TA a la vez, y luego airear para que el pH suba sin elevar la alcalinidad — a menudo un ciclo repetido, no una sola dosis. La dureza cálcica solo puede bajarse vaciando parcialmente y rellenando con agua de menor dureza. Esta calculadora marca ambos casos en lugar de darte una dosis."
+    - question: "¿Qué precisión tiene esta calculadora de dosificación?"
+      answer: "Usa las mismas tasas estándar del sector que emplea un motor de dosificación profesional, escaladas a tu volumen. Los resultados reales varían según la concentración del producto, la temperatura del agua y la precisión del análisis, así que vuelve a medir siempre tras un ciclo de recirculación antes de añadir más. Trata las dosis como un buen punto de partida, no como sustituto de un kit de análisis fiable."
+  js:
+    name_acid: "Ácido muriático"
+    name_soda_ash: "Carbonato de sodio"
+    name_bicarb: "Bicarbonato"
+    name_calcium: "Cloruro de calcio"
+    sub_acid: "para bajar el pH"
+    sub_soda_ash: "para subir el pH"
+    sub_bicarb: "bicarbonato de sodio, para subir la alcalinidad"
+    sub_calcium: "77%, para subir la dureza"
+    unit_floz: "fl oz"
+    unit_oz: "oz"
+    note_alkalinity: "Baja la alcalinidad con ácido muriático + aireación (un ciclo repetido, no una sola dosis)."
+    note_calcium: "La dureza cálcica solo puede bajarse vaciando parcialmente y rellenando con agua más blanda."
+
+fr:
+  title: "Calculateur de dosage chimique pour piscine — acide, carbonate de soude, alcalinité et calcium"
+  description: "Calculateur gratuit de dosage chimique pour piscine. Saisissez le volume de votre piscine et vos valeurs actuelles par rapport aux cibles de pH, d'alcalinité et de dureté calcique pour obtenir des doses exactes d'acide chlorhydrique, de carbonate de soude, de bicarbonate et de chlorure de calcium — avec un coût estimé."
+  h1: "Calculateur de dosage chimique pour piscine"
+  subtitle: "Saisissez le volume de votre piscine et vos mesures actuelles par rapport aux cibles. Obtenez des doses exactes d'acide chlorhydrique, de carbonate de soude, de bicarbonate et de chlorure de calcium — avec un coût estimé par visite."
+  readings_heading: "Votre piscine et vos mesures"
+  label_vol: "Volume de la piscine"
+  vol_unit_gal: "gal"
+  vol_aria_gal: "Unité de volume : gallons. Touchez pour passer aux litres."
+  vol_hint_pre: "Pas sûr ?"
+  vol_hint_link: "Utilisez le calculateur de volume →"
+  label_ph: "pH"
+  label_ta: "Alcalinité totale"
+  label_ch: "Dureté calcique"
+  col_current: "Actuel"
+  col_target: "Cible"
+  order_note: "Ajoutez les produits dans l'ordre — pH, puis alcalinité, puis calcium — en faisant circuler l'eau et en remesurant entre chaque."
+  result_label: "Doses recommandées"
+  empty_note: "Votre eau est déjà à la cible — aucun ajout nécessaire."
+  cost_label: "Coût chimique estimé"
+  cta_app: "Calculez les doses selon vos propres coûts"
+  disclaimer: "Les estimations de coût utilisent des prix chimiques typiques et supposent des concentrations standard (acide chlorhydrique à 31,45 %, chlorure de calcium à 77 %). À titre indicatif seulement — ne mélangez jamais les produits chimiques, portez un EPI adapté et remesurez toujours après un cycle de circulation complet avant d'en ajouter."
+  how_heading: "Les taux de dosage derrière les chiffres"
+  how_body: >-
+    <p>Ce calculateur applique quatre taux de dosage professionnels standard selon le volume de votre
+    piscine (par tranches de 10 000 gallons) et l'ampleur de chaque correction :</p>
+    <ul>
+    <li><strong>Baisser le pH</strong> — acide chlorhydrique (31,45 %) : <strong>26 fl oz</strong> par baisse de 0,2 de pH par 10 000 gal</li>
+    <li><strong>Augmenter le pH</strong> — carbonate de soude : <strong>6 oz</strong> par hausse de 0,2 de pH par 10 000 gal</li>
+    <li><strong>Augmenter l'alcalinité</strong> — bicarbonate de soude : <strong>24 oz</strong> par 10 ppm par 10 000 gal</li>
+    <li><strong>Augmenter la dureté calcique</strong> — chlorure de calcium (77 %) : <strong>20 oz</strong> par 10 ppm par 10 000 gal</li>
+    </ul>
+    <p>Par exemple, une piscine de 20 000 gallons baissant le pH de 7,8 à 7,4 (une réduction de 0,4, deux
+    incréments de 0,2) nécessite 26 × 2 × 2,0 = <strong>104 fl oz</strong> d'acide chlorhydrique, environ 0,8 gallon.</p>
+    <h3>Pourquoi l'ordre compte</h3>
+    <p>Corrigez toujours le pH d'abord, puis l'alcalinité, puis le calcium — les ajustements d'alcalinité
+    et de calcium modifient tous deux le pH, donc régler le pH en premier réduit le nombre de
+    recorrections. Baisser l'alcalinité ou le calcium n'est pas une simple dose : l'alcalinité baisse avec
+    de l'acide plus de l'aération, et le calcium uniquement par vidange partielle.</p>
+    <p>Besoin du volume de votre piscine d'abord ? Utilisez le <a href="/pool-volume-calculator/">calculateur
+    de volume de piscine</a>. Pour la méthode complète, les protocoles de sécurité et des exemples
+    résolus, lisez notre <a href="/blog/chemical-dosing-calculations-pool-service/">guide de dosage
+    chimique</a>, et vérifiez l'équilibre de l'eau avec le <a href="/lsi-calculator/">calculateur LSI</a>.</p>
+  faq_heading: "FAQ sur le dosage chimique"
+  final_title: "Arrêtez de calculer les doses à la main"
+  final_body: "PoolFlow lit vos résultats d'analyse, calcule les doses exactes avec ces taux et chiffre chacune d'après votre véritable inventaire de produits — automatiquement, hors ligne, au bord de la piscine. Gratuit jusqu'à 5 piscines."
+  final_guide: "Lire le guide de dosage"
+  faq:
+    - question: "Quelle quantité d'acide chlorhydrique faut-il pour baisser le pH ?"
+      answer: "Avec de l'acide chlorhydrique standard à 31,45 %, utilisez environ 26 onces liquides par réduction de 0,2 de pH par 10 000 gallons. Ce calculateur applique ce taux automatiquement selon le volume de votre piscine et l'ampleur de la baisse de pH. Pour une piscine de 15 000 gallons baissant le pH de 8,0 à 7,4 (une réduction de 0,6), cela représente environ 117 fl oz, soit à peu près 0,9 gallon. Ajoutez toujours l'acide à l'eau, jamais l'eau à l'acide, et répartissez-le avec la pompe en marche."
+    - question: "Quelle quantité de bicarbonate augmente l'alcalinité de la piscine ?"
+      answer: "Le bicarbonate de soude augmente l'alcalinité totale d'environ 24 onces par hausse de 10 ppm par 10 000 gallons. Pour une piscine de 15 000 gallons passant de 60 à 90 ppm (une hausse de 30 ppm), cela fait environ 108 onces, soit à peu près 6,75 livres. Le bicarbonate est préféré au carbonate de soude pour l'alcalinité car il a un effet minime sur le pH."
+    - question: "Dans quel ordre faut-il ajouter les produits chimiques de la piscine ?"
+      answer: "Ajustez d'abord le pH, puis l'alcalinité totale, puis la dureté calcique. Les corrections d'alcalinité et de calcium peuvent toutes deux déplacer le pH, donc régler le pH en premier réduit le nombre de recorrections. Faites circuler l'eau et attendez entre les ajouts — environ 15 à 20 minutes après l'acide chlorhydrique, 20 à 30 après le carbonate de soude et 15 après le chlorure de calcium — puis remesurez avant d'appliquer la correction suivante."
+    - question: "Puis-je baisser l'alcalinité totale ou la dureté calcique avec un produit chimique ?"
+      answer: "Pas directement. Baisser l'alcalinité totale nécessite d'ajouter de l'acide chlorhydrique pour faire baisser à la fois le pH et le TA, puis d'aérer pour faire remonter le pH sans augmenter l'alcalinité — souvent un cycle répété, pas une seule dose. La dureté calcique ne peut être baissée que par vidange partielle et remplissage avec une eau moins dure. Ce calculateur signale les deux cas au lieu de donner une dose."
+    - question: "Quelle est la précision de ce calculateur de dosage ?"
+      answer: "Il utilise les mêmes taux standard du secteur qu'un moteur de dosage professionnel, mis à l'échelle de votre volume. Les résultats réels varient selon la concentration du produit, la température de l'eau et la précision de l'analyse, alors remesurez toujours après un cycle de circulation avant d'en ajouter. Considérez les doses comme un bon point de départ, pas comme un substitut à un kit d'analyse fiable."
+  js:
+    name_acid: "Acide chlorhydrique"
+    name_soda_ash: "Carbonate de soude"
+    name_bicarb: "Bicarbonate"
+    name_calcium: "Chlorure de calcium"
+    sub_acid: "pour baisser le pH"
+    sub_soda_ash: "pour augmenter le pH"
+    sub_bicarb: "bicarbonate de soude, pour augmenter l'alcalinité"
+    sub_calcium: "77 %, pour augmenter la dureté"
+    unit_floz: "fl oz"
+    unit_oz: "oz"
+    note_alkalinity: "Baissez l'alcalinité avec de l'acide chlorhydrique + aération (un cycle répété, pas une seule dose)."
+    note_calcium: "La dureté calcique ne peut être baissée que par vidange partielle et remplissage avec une eau plus douce."
+
+de:
+  title: "Chemikalien-Dosierrechner für den Pool — Säure, Soda, Alkalinität & Calcium"
+  description: "Kostenloser Chemikalien-Dosierrechner für den Pool. Geben Sie Ihr Poolvolumen sowie Ist- und Zielwerte für pH, Alkalinität und Calciumhärte ein, um exakte Dosen an Salzsäure, Soda, Natron und Calciumchlorid zu erhalten — samt geschätzten Kosten."
+  h1: "Chemikalien-Dosierrechner für den Pool"
+  subtitle: "Geben Sie Ihr Poolvolumen und Ihre Ist- gegenüber den Zielwerten ein. Erhalten Sie exakte Dosen an Salzsäure, Soda, Natron und Calciumchlorid — mit geschätzten Kosten pro Besuch."
+  readings_heading: "Ihr Pool & Ihre Messwerte"
+  label_vol: "Poolvolumen"
+  vol_unit_gal: "gal"
+  vol_aria_gal: "Volumeneinheit: Gallonen. Tippen, um zu Litern zu wechseln."
+  vol_hint_pre: "Nicht sicher?"
+  vol_hint_link: "Volumenrechner verwenden →"
+  label_ph: "pH"
+  label_ta: "Gesamtalkalinität"
+  label_ch: "Calciumhärte"
+  col_current: "Aktuell"
+  col_target: "Ziel"
+  order_note: "Geben Sie die Chemikalien der Reihe nach zu — pH, dann Alkalinität, dann Calcium — dazwischen umwälzen und neu messen."
+  result_label: "Empfohlene Dosen"
+  empty_note: "Ihr Wasser ist bereits auf dem Zielwert — keine Zugabe nötig."
+  cost_label: "Geschätzte Chemikalienkosten"
+  cta_app: "Dosen mit Ihren eigenen Kosten berechnen"
+  disclaimer: "Die Kostenschätzungen verwenden typische Chemikalienpreise und gehen von Standardkonzentrationen aus (Salzsäure 31,45 %, Calciumchlorid 77 %). Nur als Orientierung — Chemikalien niemals mischen, geeignete PSA tragen und vor weiterer Zugabe immer nach einem vollständigen Umwälzzyklus erneut messen."
+  how_heading: "Die Dosierraten hinter den Zahlen"
+  how_body: >-
+    <p>Dieser Rechner skaliert vier professionelle Standard-Dosierraten nach Ihrem Poolvolumen
+    (in 10.000-Gallonen-Schritten) und der Größe jeder Korrektur:</p>
+    <ul>
+    <li><strong>pH senken</strong> — Salzsäure (31,45 %): <strong>26 fl oz</strong> je 0,2 pH-Absenkung je 10.000 gal</li>
+    <li><strong>pH anheben</strong> — Soda: <strong>6 oz</strong> je 0,2 pH-Anhebung je 10.000 gal</li>
+    <li><strong>Alkalinität anheben</strong> — Natriumbicarbonat (Natron): <strong>24 oz</strong> je 10 ppm je 10.000 gal</li>
+    <li><strong>Calciumhärte anheben</strong> — Calciumchlorid (77 %): <strong>20 oz</strong> je 10 ppm je 10.000 gal</li>
+    </ul>
+    <p>Beispiel: Ein Pool mit 20.000 Gallonen, der den pH von 7,8 auf 7,4 senkt (eine Reduktion von 0,4,
+    zwei 0,2-Schritte), benötigt 26 × 2 × 2,0 = <strong>104 fl oz</strong> Salzsäure, etwa 0,8 Gallonen.</p>
+    <h3>Warum die Reihenfolge zählt</h3>
+    <p>Korrigieren Sie immer zuerst den pH, dann die Alkalinität, dann das Calcium — Alkalinitäts- und
+    Calciumkorrekturen verschieben beide den pH, daher bedeutet ein zuerst eingestellter pH weniger
+    Nachkorrekturen. Alkalinität oder Calcium zu senken ist keine einfache Dosis: Alkalinität sinkt
+    durch Säure plus Belüftung, Calcium nur durch teilweises Ablassen.</p>
+    <p>Brauchen Sie zuerst Ihr Poolvolumen? Verwenden Sie den <a href="/pool-volume-calculator/">Poolvolumen-Rechner</a>.
+    Für die vollständige Methode, Sicherheitsprotokolle und gelöste Beispiele lesen Sie unseren
+    <a href="/blog/chemical-dosing-calculations-pool-service/">Leitfaden zur Chemikaliendosierung</a> und
+    prüfen Sie das Wassergleichgewicht mit dem <a href="/lsi-calculator/">LSI-Rechner</a>.</p>
+  faq_heading: "FAQ zur Chemikaliendosierung"
+  final_title: "Schluss mit der Dosierrechnung von Hand"
+  final_body: "PoolFlow liest Ihre Testergebnisse, berechnet exakte Dosen mit diesen Raten und bepreist jede aus Ihrem echten Chemikalienbestand — automatisch, offline, direkt am Pool. Kostenlos für bis zu 5 Pools."
+  final_guide: "Dosierleitfaden lesen"
+  faq:
+    - question: "Wie viel Salzsäure brauche ich, um den pH zu senken?"
+      answer: "Bei Standard-Salzsäure mit 31,45 % verwenden Sie etwa 26 Flüssigunzen je 0,2 pH-Absenkung je 10.000 Gallonen. Dieser Rechner skaliert diese Rate automatisch nach Ihrem Poolvolumen und der Größe der pH-Absenkung. Für einen Pool mit 15.000 Gallonen, der den pH von 8,0 auf 7,4 senkt (eine Reduktion von 0,6), ergibt das rund 117 fl oz, also etwa 0,9 Gallonen. Geben Sie Säure immer ins Wasser, niemals Wasser in die Säure, und verteilen Sie sie bei laufender Pumpe."
+    - question: "Wie viel Natron hebt die Pool-Alkalinität an?"
+      answer: "Natriumbicarbonat (Natron) hebt die Gesamtalkalinität um etwa 24 Unzen je 10 ppm Anstieg je 10.000 Gallonen. Für einen Pool mit 15.000 Gallonen, der von 60 auf 90 ppm geht (ein Anstieg von 30 ppm), sind das rund 108 Unzen, also etwa 6,75 Pfund. Natron wird für die Alkalinität dem Soda vorgezogen, da es den pH kaum beeinflusst."
+    - question: "In welcher Reihenfolge sollte ich Pool-Chemikalien zugeben?"
+      answer: "Stellen Sie zuerst den pH ein, dann die Gesamtalkalinität, dann die Calciumhärte. Sowohl Alkalinitäts- als auch Calciumkorrekturen können den pH verschieben, daher reduziert ein zuerst eingestellter pH die Zahl der Nachkorrekturen. Wälzen Sie das Wasser um und warten Sie zwischen den Zugaben — etwa 15–20 Minuten nach Salzsäure, 20–30 nach Soda und 15 nach Calciumchlorid — und messen Sie erneut, bevor Sie die nächste Korrektur vornehmen."
+    - question: "Kann ich Gesamtalkalinität oder Calciumhärte mit einer Chemikalie senken?"
+      answer: "Nicht direkt. Die Gesamtalkalinität zu senken erfordert die Zugabe von Salzsäure, um pH und TA gemeinsam zu senken, und anschließendes Belüften, um den pH wieder anzuheben, ohne die Alkalinität zu erhöhen — oft ein wiederholter Zyklus, keine einzelne Dosis. Calciumhärte lässt sich nur durch teilweises Ablassen und Auffüllen mit weicherem Wasser senken. Dieser Rechner kennzeichnet beide Fälle, statt eine Dosis zu nennen."
+    - question: "Wie genau ist dieser Dosierrechner?"
+      answer: "Er verwendet dieselben branchenüblichen Raten wie ein professioneller Dosiermotor, skaliert auf Ihr Volumen. Reale Ergebnisse schwanken je nach Chemikalienkonzentration, Wassertemperatur und Messgenauigkeit, messen Sie daher nach einem Umwälzzyklus immer erneut, bevor Sie mehr zugeben. Behandeln Sie die Dosen als guten Ausgangspunkt, nicht als Ersatz für ein zuverlässiges Testkit."
+  js:
+    name_acid: "Salzsäure"
+    name_soda_ash: "Soda"
+    name_bicarb: "Natron"
+    name_calcium: "Calciumchlorid"
+    sub_acid: "zum pH senken"
+    sub_soda_ash: "zum pH anheben"
+    sub_bicarb: "Natriumbicarbonat, zum Alkalinität anheben"
+    sub_calcium: "77 %, zum Härte anheben"
+    unit_floz: "fl oz"
+    unit_oz: "oz"
+    note_alkalinity: "Alkalinität mit Salzsäure + Belüftung senken (ein wiederholter Zyklus, keine einzelne Dosis)."
+    note_calcium: "Calciumhärte lässt sich nur durch teilweises Ablassen und Auffüllen mit weicherem Wasser senken."
+
+pt:
+  title: "Calculadora de dosagem química para piscina — ácido, barrilha, alcalinidade e cálcio"
+  description: "Calculadora gratuita de dosagem química para piscina. Insira o volume da sua piscina e os valores atuais frente aos alvos de pH, alcalinidade e dureza cálcica para obter doses exatas de ácido muriático, barrilha, bicarbonato e cloreto de cálcio — além de um custo estimado."
+  h1: "Calculadora de dosagem química para piscina"
+  subtitle: "Insira o volume da sua piscina e as suas leituras atuais frente às alvo. Obtenha doses exatas de ácido muriático, barrilha, bicarbonato e cloreto de cálcio — com um custo estimado por visita."
+  readings_heading: "Sua piscina e suas leituras"
+  label_vol: "Volume da piscina"
+  vol_unit_gal: "gal"
+  vol_aria_gal: "Unidade de volume: galões. Toque para mudar para litros."
+  vol_hint_pre: "Não tem certeza?"
+  vol_hint_link: "Use a calculadora de volume →"
+  label_ph: "pH"
+  label_ta: "Alcalinidade total"
+  label_ch: "Dureza cálcica"
+  col_current: "Atual"
+  col_target: "Alvo"
+  order_note: "Adicione os produtos na ordem — pH, depois alcalinidade e por fim cálcio — circulando a água e medindo de novo entre cada um."
+  result_label: "Doses recomendadas"
+  empty_note: "Sua água já está no alvo — nenhuma adição necessária."
+  cost_label: "Custo químico estimado"
+  cta_app: "Calcule doses com seus próprios custos"
+  disclaimer: "As estimativas de custo usam preços químicos típicos e pressupõem concentrações padrão (ácido muriático a 31,45%, cloreto de cálcio a 77%). Apenas para orientação — nunca misture produtos químicos, use EPI adequado e meça sempre de novo após um ciclo de circulação completo antes de adicionar mais."
+  how_heading: "As taxas de dosagem por trás dos números"
+  how_body: >-
+    <p>Esta calculadora aplica quatro taxas de dosagem profissionais padrão conforme o volume da sua
+    piscina (em incrementos de 10.000 galões) e o tamanho de cada correção:</p>
+    <ul>
+    <li><strong>Baixar o pH</strong> — ácido muriático (31,45%): <strong>26 fl oz</strong> por queda de 0,2 de pH por 10.000 gal</li>
+    <li><strong>Subir o pH</strong> — barrilha: <strong>6 oz</strong> por subida de 0,2 de pH por 10.000 gal</li>
+    <li><strong>Subir a alcalinidade</strong> — bicarbonato de sódio: <strong>24 oz</strong> por 10 ppm por 10.000 gal</li>
+    <li><strong>Subir a dureza cálcica</strong> — cloreto de cálcio (77%): <strong>20 oz</strong> por 10 ppm por 10.000 gal</li>
+    </ul>
+    <p>Por exemplo, uma piscina de 20.000 galões baixando o pH de 7,8 para 7,4 (uma redução de 0,4, dois
+    incrementos de 0,2) precisa de 26 × 2 × 2,0 = <strong>104 fl oz</strong> de ácido muriático, cerca de 0,8 galão.</p>
+    <h3>Por que a ordem importa</h3>
+    <p>Corrija sempre o pH primeiro, depois a alcalinidade e por fim o cálcio — os ajustes de alcalinidade
+    e de cálcio empurram ambos o pH, então acertar o pH primeiro significa menos recorreções. Baixar a
+    alcalinidade ou o cálcio não é uma dose simples: a alcalinidade desce com ácido mais aeração, e o
+    cálcio só por esvaziamento parcial.</p>
+    <p>Precisa primeiro do volume da sua piscina? Use a <a href="/pool-volume-calculator/">calculadora de
+    volume de piscina</a>. Para o método completo, protocolos de segurança e exemplos resolvidos, leia o
+    nosso <a href="/blog/chemical-dosing-calculations-pool-service/">guia de dosagem química</a>, e
+    verifique o equilíbrio da água com a <a href="/lsi-calculator/">calculadora LSI</a>.</p>
+  faq_heading: "Perguntas frequentes sobre dosagem química"
+  final_title: "Pare de fazer as contas de dosagem à mão"
+  final_body: "O PoolFlow lê os seus resultados de análise, calcula doses exatas com estas taxas e precifica cada uma com o seu estoque químico real — automaticamente, offline, à beira da piscina. Grátis para até 5 piscinas."
+  final_guide: "Leia o guia de dosagem"
+  faq:
+    - question: "Quanto ácido muriático preciso para baixar o pH?"
+      answer: "Com ácido muriático padrão a 31,45%, use cerca de 26 onças líquidas por redução de 0,2 de pH por 10.000 galões. Esta calculadora aplica essa taxa automaticamente conforme o volume da sua piscina e o tamanho da queda de pH. Para uma piscina de 15.000 galões baixando o pH de 8,0 para 7,4 (uma redução de 0,6), dá cerca de 117 fl oz, ou aproximadamente 0,9 galão. Adicione sempre o ácido à água, nunca a água ao ácido, e distribua-o com a bomba ligada."
+    - question: "Quanto bicarbonato sobe a alcalinidade da piscina?"
+      answer: "O bicarbonato de sódio sobe a alcalinidade total a cerca de 24 onças por aumento de 10 ppm por 10.000 galões. Para uma piscina de 15.000 galões passando de 60 para 90 ppm (um aumento de 30 ppm), são cerca de 108 onças, ou aproximadamente 6,75 libras. O bicarbonato é preferido à barrilha para a alcalinidade porque tem efeito mínimo sobre o pH."
+    - question: "Em que ordem devo adicionar os produtos químicos da piscina?"
+      answer: "Ajuste o pH primeiro, depois a alcalinidade total e por fim a dureza cálcica. Tanto as correções de alcalinidade quanto as de cálcio podem deslocar o pH, então acertar o pH primeiro reduz o número de recorreções. Circule a água e espere entre as adições — cerca de 15–20 minutos após o ácido muriático, 20–30 após a barrilha e 15 após o cloreto de cálcio — e meça de novo antes de aplicar a próxima correção."
+    - question: "Posso baixar a alcalinidade total ou a dureza cálcica com um produto químico?"
+      answer: "Não diretamente. Baixar a alcalinidade total exige adicionar ácido muriático para reduzir o pH e a TA juntos e depois arejar para o pH subir sem elevar a alcalinidade — muitas vezes um ciclo repetido, não uma única dose. A dureza cálcica só pode ser baixada esvaziando parcialmente e reabastecendo com água de menor dureza. Esta calculadora sinaliza ambos os casos em vez de dar uma dose."
+    - question: "Qual a precisão desta calculadora de dosagem?"
+      answer: "Ela usa as mesmas taxas padrão do setor que um motor de dosagem profissional usa, escaladas ao seu volume. Os resultados reais variam conforme a concentração do produto, a temperatura da água e a precisão da análise, então meça sempre de novo após um ciclo de circulação antes de adicionar mais. Trate as doses como um bom ponto de partida, não como substituto de um kit de análise confiável."
+  js:
+    name_acid: "Ácido muriático"
+    name_soda_ash: "Barrilha"
+    name_bicarb: "Bicarbonato"
+    name_calcium: "Cloreto de cálcio"
+    sub_acid: "para baixar o pH"
+    sub_soda_ash: "para subir o pH"
+    sub_bicarb: "bicarbonato de sódio, para subir a alcalinidade"
+    sub_calcium: "77%, para subir a dureza"
+    unit_floz: "fl oz"
+    unit_oz: "oz"
+    note_alkalinity: "Baixe a alcalinidade com ácido muriático + aeração (um ciclo repetido, não uma única dose)."
+    note_calcium: "A dureza cálcica só pode ser baixada esvaziando parcialmente e reabastecendo com água mais macia."
+
+nl:
+  title: "Chemische doseringscalculator voor zwembad — zuur, soda, alkaliniteit & calcium"
+  description: "Gratis chemische doseringscalculator voor het zwembad. Voer je zwembadvolume en huidige versus streefwaarden voor pH, alkaliniteit en calciumhardheid in om exacte doses zoutzuur, soda, natriumbicarbonaat en calciumchloride te krijgen — plus een geschatte kostprijs."
+  h1: "Chemische doseringscalculator voor zwembad"
+  subtitle: "Voer je zwembadvolume en je huidige versus streefwaarden in. Krijg exacte doses zoutzuur, soda, natriumbicarbonaat en calciumchloride — met een geschatte kostprijs per bezoek."
+  readings_heading: "Je zwembad & metingen"
+  label_vol: "Zwembadvolume"
+  vol_unit_gal: "gal"
+  vol_aria_gal: "Volume-eenheid: gallons. Tik om naar liters te wisselen."
+  vol_hint_pre: "Niet zeker?"
+  vol_hint_link: "Gebruik de volumecalculator →"
+  label_ph: "pH"
+  label_ta: "Totale alkaliniteit"
+  label_ch: "Calciumhardheid"
+  col_current: "Huidig"
+  col_target: "Streef"
+  order_note: "Voeg de middelen op volgorde toe — pH, dan alkaliniteit, dan calcium — circuleer het water en meet tussendoor opnieuw."
+  result_label: "Aanbevolen doses"
+  empty_note: "Je water zit al op de streefwaarde — niets toe te voegen."
+  cost_label: "Geschatte chemiekosten"
+  cta_app: "Bereken doses met je eigen kosten"
+  disclaimer: "Kostenramingen gebruiken typische chemieprijzen en gaan uit van standaardconcentraties (zoutzuur 31,45%, calciumchloride 77%). Alleen ter richtlijn — meng nooit chemicaliën, draag geschikte PBM en meet altijd opnieuw na een volledige circulatiecyclus voordat je meer toevoegt."
+  how_heading: "De doseringspercentages achter de cijfers"
+  how_body: >-
+    <p>Deze calculator schaalt vier standaard professionele doseringspercentages naar je zwembadvolume
+    (in stappen van 10.000 gallon) en de grootte van elke correctie:</p>
+    <ul>
+    <li><strong>pH verlagen</strong> — zoutzuur (31,45%): <strong>26 fl oz</strong> per 0,2 pH-daling per 10.000 gal</li>
+    <li><strong>pH verhogen</strong> — soda: <strong>6 oz</strong> per 0,2 pH-stijging per 10.000 gal</li>
+    <li><strong>Alkaliniteit verhogen</strong> — natriumbicarbonaat: <strong>24 oz</strong> per 10 ppm per 10.000 gal</li>
+    <li><strong>Calciumhardheid verhogen</strong> — calciumchloride (77%): <strong>20 oz</strong> per 10 ppm per 10.000 gal</li>
+    </ul>
+    <p>Bijvoorbeeld: een zwembad van 20.000 gallon dat de pH van 7,8 naar 7,4 verlaagt (een daling van 0,4,
+    twee stappen van 0,2) heeft 26 × 2 × 2,0 = <strong>104 fl oz</strong> zoutzuur nodig, ongeveer 0,8 gallon.</p>
+    <h3>Waarom de volgorde telt</h3>
+    <p>Corrigeer altijd eerst de pH, dan de alkaliniteit, dan het calcium — alkaliniteits- en
+    calciumcorrecties verschuiven beide de pH, dus de pH eerst instellen betekent minder hercorrecties.
+    Alkaliniteit of calcium verlagen is geen eenvoudige dosis: alkaliniteit daalt via zuur plus beluchting,
+    en calcium alleen via gedeeltelijk aftappen.</p>
+    <p>Eerst je zwembadvolume nodig? Gebruik de <a href="/pool-volume-calculator/">zwembadvolumecalculator</a>.
+    Voor de volledige methode, veiligheidsprotocollen en uitgewerkte voorbeelden lees je onze
+    <a href="/blog/chemical-dosing-calculations-pool-service/">gids voor chemische dosering</a>, en
+    controleer de waterbalans met de <a href="/lsi-calculator/">LSI-calculator</a>.</p>
+  faq_heading: "Veelgestelde vragen over chemische dosering"
+  final_title: "Stop met dosering uit het hoofd berekenen"
+  final_body: "PoolFlow leest je testresultaten, berekent exacte doses met deze percentages en prijst elke dosis op basis van je echte chemievoorraad — automatisch, offline, aan de rand van het zwembad. Gratis voor maximaal 5 zwembaden."
+  final_guide: "Lees de doseringsgids"
+  faq:
+    - question: "Hoeveel zoutzuur heb ik nodig om de pH te verlagen?"
+      answer: "Voor standaard zoutzuur van 31,45% gebruik je ongeveer 26 vloeibare ounces per 0,2 pH-verlaging per 10.000 gallon. Deze calculator schaalt dat percentage automatisch naar je zwembadvolume en de grootte van de pH-daling. Voor een zwembad van 15.000 gallon dat de pH van 8,0 naar 7,4 verlaagt (een daling van 0,6) komt dat neer op ongeveer 117 fl oz, of ongeveer 0,9 gallon. Voeg zuur altijd toe aan water, nooit water aan zuur, en verdeel het met de pomp aan."
+    - question: "Hoeveel natriumbicarbonaat verhoogt de alkaliniteit van het zwembad?"
+      answer: "Natriumbicarbonaat verhoogt de totale alkaliniteit met ongeveer 24 ounces per 10 ppm stijging per 10.000 gallon. Voor een zwembad van 15.000 gallon dat van 60 naar 90 ppm gaat (een stijging van 30 ppm) is dat ongeveer 108 ounces, of ongeveer 6,75 pond. Natriumbicarbonaat heeft de voorkeur boven soda voor de alkaliniteit omdat het de pH nauwelijks beïnvloedt."
+    - question: "In welke volgorde moet ik zwembadchemicaliën toevoegen?"
+      answer: "Stel eerst de pH in, dan de totale alkaliniteit, dan de calciumhardheid. Zowel alkaliniteits- als calciumcorrecties kunnen de pH verschuiven, dus de pH eerst instellen vermindert het aantal hercorrecties. Circuleer het water en wacht tussen toevoegingen — ongeveer 15–20 minuten na zoutzuur, 20–30 na soda en 15 na calciumchloride — en meet opnieuw voordat je de volgende correctie toepast."
+    - question: "Kan ik de totale alkaliniteit of calciumhardheid met een chemisch middel verlagen?"
+      answer: "Niet rechtstreeks. De totale alkaliniteit verlagen vereist het toevoegen van zoutzuur om zowel de pH als de TA te laten dalen, en daarna beluchten om de pH weer te laten stijgen zonder de alkaliniteit te verhogen — vaak een herhaalde cyclus, geen enkele dosis. Calciumhardheid kan alleen worden verlaagd door gedeeltelijk af te tappen en bij te vullen met water met een lagere hardheid. Deze calculator markeert beide gevallen in plaats van een dosis te geven."
+    - question: "Hoe nauwkeurig is deze doseringscalculator?"
+      answer: "Hij gebruikt dezelfde brancheconforme percentages als een professionele doseermotor, geschaald naar je volume. Werkelijke resultaten variëren met de chemieconcentratie, watertemperatuur en testnauwkeurigheid, dus meet altijd opnieuw na een circulatiecyclus voordat je meer toevoegt. Beschouw de doses als een sterk startpunt, niet als vervanging van een betrouwbare testset."
+  js:
+    name_acid: "Zoutzuur"
+    name_soda_ash: "Soda"
+    name_bicarb: "Natriumbicarbonaat"
+    name_calcium: "Calciumchloride"
+    sub_acid: "om de pH te verlagen"
+    sub_soda_ash: "om de pH te verhogen"
+    sub_bicarb: "natriumbicarbonaat, om de alkaliniteit te verhogen"
+    sub_calcium: "77%, om de hardheid te verhogen"
+    unit_floz: "fl oz"
+    unit_oz: "oz"
+    note_alkalinity: "Verlaag de alkaliniteit met zoutzuur + beluchting (een herhaalde cyclus, geen enkele dosis)."
+    note_calcium: "Calciumhardheid kan alleen worden verlaagd door gedeeltelijk af te tappen en bij te vullen met zachter water."

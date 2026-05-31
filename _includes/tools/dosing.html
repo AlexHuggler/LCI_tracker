@@ -1,0 +1,222 @@
+{%- comment -%}
+Chemical Dosing calculator body, shared by /chemical-dosing-calculator/ and
+/<lang>/chemical-dosing-calculator/. Static strings come from
+site.data.tools_i18n.calc.dosing[lang]; the interactive result strings are
+injected into the JS via window.PF_DOSING_I18N.
+{%- endcomment -%}
+{%- assign cur_lang = page.lang | default: "en" -%}
+{%- assign tt = site.data.tools_i18n[cur_lang] | default: site.data.tools_i18n.en -%}
+{%- assign L = site.data.tools_i18n.calc.dosing[cur_lang] | default: site.data.tools_i18n.calc.dosing.en -%}
+{%- assign lp = "" -%}
+{%- assign store_url = site.app_store_url -%}
+{%- for l in site.data.languages -%}{%- if l.code == cur_lang -%}{%- assign lp = l.path -%}{%- assign store_url = l.app_store_url -%}{%- endif -%}{%- endfor -%}
+
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="breadcrumb-nav bg-gray-50 pt-24 pb-3">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <ol class="flex flex-wrap items-center gap-1 text-sm text-gray-500">
+      <li><a href="{{ lp }}/">{{ tt.common.breadcrumb_home }}</a></li>
+      <li><span class="mx-1">/</span></li>
+      <li><a href="{{ lp }}/tools/">{{ tt.common.breadcrumb_tools }}</a></li>
+      <li><span class="mx-1">/</span></li>
+      <li class="text-gray-900 font-medium">{{ tt.names.dosing }}</li>
+    </ol>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-gradient py-12 sm:py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight">{{ L.h1 }}</h1>
+    <p class="mt-4 text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">{{ L.subtitle }}</p>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="py-12 sm:py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12" data-dosing-calculator>
+
+      <!-- Inputs -->
+      <div class="lg:col-span-3">
+        <h2 class="text-2xl font-bold text-pool-dark mb-6">{{ L.readings_heading }}</h2>
+
+        <!-- Volume -->
+        <div class="tool-field mb-6">
+          <div class="flex items-center justify-between mb-2">
+            <label for="dose-vol" class="font-medium text-pool-dark">{{ L.label_vol }}</label>
+            <div class="flex items-center gap-2">
+              <input id="dose-vol" type="number" data-dose-vol-number value="20000" min="1000" max="100000" step="500" inputmode="numeric" aria-label="{{ L.label_vol }}">
+              <button type="button" class="tool-unit" data-dose-vol-unit aria-label="{{ L.vol_aria_gal }}">{{ L.vol_unit_gal }}</button>
+            </div>
+          </div>
+          <input type="range" data-dose-vol-range value="20000" min="1000" max="50000" step="500" aria-label="{{ L.label_vol }}">
+          <p class="mt-1 text-xs text-gray-400">{{ L.vol_hint_pre }} <a href="{{ lp }}/pool-volume-calculator/" class="text-pool-blue hover:underline">{{ L.vol_hint_link }}</a></p>
+        </div>
+
+        <div class="space-y-5">
+          <!-- pH -->
+          <div class="grid grid-cols-[1fr_auto_auto] items-center gap-3 bg-pool-section rounded-xl p-4">
+            <span class="font-medium text-pool-dark">{{ L.label_ph }}</span>
+            <label class="text-sm text-gray-500">{{ L.col_current }}
+              <input type="number" data-dose-current="ph" value="7.8" min="6.8" max="8.6" step="0.1" inputmode="decimal" class="ml-1 w-20 text-right border border-gray-300 rounded-lg px-2 py-1 tabular-nums" aria-label="{{ L.col_current }} {{ L.label_ph }}">
+            </label>
+            <label class="text-sm text-gray-500">{{ L.col_target }}
+              <input type="number" data-dose-target="ph" value="7.5" min="6.8" max="8.6" step="0.1" inputmode="decimal" class="ml-1 w-20 text-right border border-gray-300 rounded-lg px-2 py-1 tabular-nums" aria-label="{{ L.col_target }} {{ L.label_ph }}">
+            </label>
+          </div>
+          <!-- Total Alkalinity -->
+          <div class="grid grid-cols-[1fr_auto_auto] items-center gap-3 bg-pool-section rounded-xl p-4">
+            <span class="font-medium text-pool-dark">{{ L.label_ta }} <span class="text-gray-400 font-normal text-sm">ppm</span></span>
+            <label class="text-sm text-gray-500">{{ L.col_current }}
+              <input type="number" data-dose-current="ta" value="70" min="0" max="300" step="5" inputmode="numeric" class="ml-1 w-20 text-right border border-gray-300 rounded-lg px-2 py-1 tabular-nums" aria-label="{{ L.col_current }} {{ L.label_ta }}">
+            </label>
+            <label class="text-sm text-gray-500">{{ L.col_target }}
+              <input type="number" data-dose-target="ta" value="100" min="0" max="300" step="5" inputmode="numeric" class="ml-1 w-20 text-right border border-gray-300 rounded-lg px-2 py-1 tabular-nums" aria-label="{{ L.col_target }} {{ L.label_ta }}">
+            </label>
+          </div>
+          <!-- Calcium Hardness -->
+          <div class="grid grid-cols-[1fr_auto_auto] items-center gap-3 bg-pool-section rounded-xl p-4">
+            <span class="font-medium text-pool-dark">{{ L.label_ch }} <span class="text-gray-400 font-normal text-sm">ppm</span></span>
+            <label class="text-sm text-gray-500">{{ L.col_current }}
+              <input type="number" data-dose-current="ch" value="200" min="0" max="800" step="10" inputmode="numeric" class="ml-1 w-20 text-right border border-gray-300 rounded-lg px-2 py-1 tabular-nums" aria-label="{{ L.col_current }} {{ L.label_ch }}">
+            </label>
+            <label class="text-sm text-gray-500">{{ L.col_target }}
+              <input type="number" data-dose-target="ch" value="300" min="0" max="800" step="10" inputmode="numeric" class="ml-1 w-20 text-right border border-gray-300 rounded-lg px-2 py-1 tabular-nums" aria-label="{{ L.col_target }} {{ L.label_ch }}">
+            </label>
+          </div>
+        </div>
+
+        <p class="mt-4 text-xs text-gray-400">{{ L.order_note }}</p>
+      </div>
+
+      <!-- Result -->
+      <div class="lg:col-span-2">
+        <div class="tool-result tool-result-primary rounded-2xl p-6 sm:p-8 lg:sticky lg:top-24">
+          <p class="text-sm font-medium uppercase tracking-wider text-gray-500 text-center mb-4">{{ L.result_label }}</p>
+          <div class="space-y-3" data-dose-results></div>
+          <p class="text-center text-gray-600 py-4" data-dose-empty hidden>{{ L.empty_note }}</p>
+
+          <div class="mt-4 pt-4 border-t border-gray-200/70 flex items-center justify-between">
+            <span class="text-sm font-semibold text-pool-dark">{{ L.cost_label }}</span>
+            <span class="text-xl font-bold text-pool-dark tabular-nums" data-dose-total>$0.00</span>
+          </div>
+
+          <a href="{{ store_url }}" class="mt-6 flex items-center justify-center gap-2 bg-pool-blue text-white font-semibold px-5 py-3 rounded-full hover:opacity-90 transition-opacity text-sm text-center">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            {{ L.cta_app }}
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="mt-8 text-center text-xs text-gray-400 max-w-2xl mx-auto">{{ L.disclaimer }}</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="py-16 sm:py-20 bg-pool-section">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-pool-dark text-center mb-10">{{ L.how_heading }}</h2>
+    <div class="prose prose-lg max-w-none prose-headings:text-pool-dark prose-a:text-pool-blue prose-a:no-underline hover:prose-a:underline">
+      {{ L.how_body }}
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-20 sm:py-28 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pool-dark">{{ L.faq_heading }}</h2>
+    </div>
+    <div class="space-y-4" id="faq-accordion" role="region" aria-label="Frequently Asked Questions">
+      {% for item in L.faq %}
+      <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
+        <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset" aria-expanded="false">
+          <span class="pr-4">{{ item.question }}</span>
+          <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
+          <p>{{ item.answer }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('#faq .faq-toggle').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var content=this.nextElementSibling, icon=this.querySelector('.faq-icon');
+    var isOpen=!content.classList.contains('hidden');
+    if(isOpen){content.classList.add('hidden');icon.classList.remove('rotate-180');this.setAttribute('aria-expanded','false');}
+    else{content.classList.remove('hidden');icon.classList.add('rotate-180');this.setAttribute('aria-expanded','true');}
+  });
+});
+</script>
+
+{% include more-tools.html %}
+
+<!-- FINAL CTA -->
+<section class="hero-gradient py-16 sm:py-20">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold text-white">{{ L.final_title }}</h2>
+    <p class="mt-4 text-lg text-blue-100">{{ L.final_body }}</p>
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="{{ store_url }}" class="inline-flex items-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        {{ tt.common.try_free }}
+      </a>
+      <a href="/blog/chemical-dosing-calculations-pool-service/" class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-3.5 rounded-full hover:bg-white hover:text-pool-dark transition-colors text-lg">
+        {{ L.final_guide }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Localized runtime strings for the calculator JS -->
+<script>window.PF_DOSING_I18N = {{ L.js | jsonify }};</script>
+<script src="/assets/js/chemical-dosing.js" defer></script>
+
+<!-- Structured data -->
+{% if L.faq %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{% for item in L.faq %}
+    { "@type": "Question", "name": {{ item.question | jsonify }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.answer | jsonify }} } }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PoolFlow Chemical Dosing Calculator",
+  "url": {{ page.url | absolute_url | jsonify }},
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any (web browser)",
+  "browserRequirements": "Requires JavaScript",
+  "description": {{ L.description | jsonify }},
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@id": "https://poolflowapp.com/#org" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": {{ tt.common.breadcrumb_home | jsonify }}, "item": {{ lp | append: "/" | absolute_url | jsonify }} },
+    { "@type": "ListItem", "position": 2, "name": {{ tt.common.breadcrumb_tools | jsonify }}, "item": {{ lp | append: "/tools/" | absolute_url | jsonify }} },
+    { "@type": "ListItem", "position": 3, "name": {{ tt.names.dosing | jsonify }}, "item": {{ page.url | absolute_url | jsonify }} }
+  ]
+}
+</script>
