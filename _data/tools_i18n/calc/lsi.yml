@@ -80,3 +80,398 @@ en:
     f_calcium: "calcium"
     f_alkalinity: "alkalinity"
     ppm: "ppm"
+es:
+  title: "Calculadora gratuita de LSI para piscinas — Índice de saturación de Langelier con corrección de CYA"
+  description: "Calculadora de LSI interactiva y gratuita. Introduce el pH, la temperatura, la dureza cálcica, la alcalinidad, el CYA y los TDS para calcular al instante el Índice de saturación de Langelier de tu piscina y ver si el agua es corrosiva, equilibrada o incrustante."
+  h1: "Calculadora de LSI para piscinas"
+  subtitle: "Calcula el Índice de saturación de Langelier en tiempo real con alcalinidad corregida por CYA. Desliza tus lecturas y observa cómo se actualiza el equilibrio al instante."
+  balanced_note: "El agua equilibrada se sitúa entre −0,3 y +0,3 de LSI."
+  readings_heading: "Las lecturas de tu agua"
+  label_ph: "pH"
+  label_temp: "Temperatura del agua"
+  label_ch: "Dureza cálcica"
+  label_ta: "Alcalinidad total"
+  label_cya: "Ácido cianúrico (CYA)"
+  label_tds: "Sólidos disueltos totales"
+  result_label: "Tu LSI"
+  breakdown_heading: "Cómo se calcula"
+  bd_tf: "Factor de temperatura (TF)"
+  bd_cf: "Factor de calcio (CF)"
+  bd_af: "Factor de alcalinidad (AF)"
+  bd_adj: "Alcalinidad corregida por CYA"
+  bd_k: "Constante de TDS"
+  cta_app: "Obtén la dosificación exacta en la app"
+  disclaimer: "Solo a título orientativo. Los resultados usan factores de consulta estándar del sector con interpolación lineal y pueden diferir ligeramente de otras calculadoras. Confirma siempre con un kit de análisis fiable antes de añadir productos químicos."
+  how_heading: "Cómo funciona el cálculo del LSI"
+  how_body: >-
+    <p>El <strong>Índice de saturación de Langelier (LSI)</strong> predice si el agua de tu piscina
+    corroerá las superficies, se mantendrá equilibrada o formará incrustaciones. Es la medida estándar
+    del sector de la saturación de carbonato cálcico y se calcula a partir de seis lecturas:</p>
+    <p class="text-center font-semibold text-pool-dark">LSI = pH + TF + CF + AF − constante&nbsp;de&nbsp;TDS</p>
+    <ul>
+    <li><strong>pH</strong> — se introduce directamente.</li>
+    <li><strong>TF (factor de temperatura)</strong> — el agua más cálida aumenta el LSI.</li>
+    <li><strong>CF (factor de calcio)</strong> — a partir de la dureza cálcica.</li>
+    <li><strong>AF (factor de alcalinidad)</strong> — a partir de la alcalinidad <em>corregida por CYA</em>.</li>
+    <li><strong>Constante de TDS</strong> — 12,1 para piscinas típicas, 12,2 para piscinas con TDS altos o de agua salada.</li>
+    </ul>
+    <h3>La corrección de CYA</h3>
+    <p>El ácido cianúrico infla la lectura de tu alcalinidad total sin amortiguar el agua, por lo que
+    debe eliminarse primero:</p>
+    <p class="text-center font-semibold text-pool-dark">Alcalinidad ajustada = Alcalinidad total − (CYA ÷ 3)</p>
+    <p>Por ejemplo, 100&nbsp;ppm de alcalinidad total con 60&nbsp;ppm de CYA dan una alcalinidad ajustada
+    de 100&nbsp;−&nbsp;20&nbsp;=&nbsp;80&nbsp;ppm, que es lo que alimenta el factor de alcalinidad anterior.</p>
+    <h3>Cómo interpretar tu resultado</h3>
+    <ul>
+    <li><strong>Por debajo de −0,3:</strong> corrosiva — sube el pH, la alcalinidad o el calcio.</li>
+    <li><strong>De −0,3 a +0,3:</strong> equilibrada — mantén los niveles.</li>
+    <li><strong>Por encima de +0,3:</strong> incrustante — baja el pH, la alcalinidad o el calcio.</li>
+    </ul>
+    <p>¿Quieres el desglose completo, las tablas de factores y ejemplos resueltos? Lee
+    <a href="/blog/langelier-saturation-index-explained/">El Índice de saturación de Langelier, explicado</a>,
+    o consulta nuestra <a href="/blog/pool-water-balance-chemistry-guide/">guía de equilibrio del agua de la piscina</a>.</p>
+  faq_heading: "Preguntas frecuentes sobre la calculadora de LSI"
+  final_title: "Deja de calcular el LSI a mano"
+  final_body: "PoolFlow calcula el LSI de cada piscina automáticamente y recomienda dosis químicas exactas a partir de tus propios costes, sin conexión y a pie de piscina. Gratis para hasta 5 piscinas."
+  final_guide: "Lee la guía del LSI"
+  faq:
+    - question: "¿Cuál es un buen LSI para una piscina?"
+      answer: "Una piscina equilibrada tiene un LSI entre −0,3 y +0,3. Por debajo de −0,3 el agua es corrosiva y puede atacar el revoque y corroer el metal; por encima de +0,3 es incrustante y puede depositar calcio en superficies y equipos. Intenta mantener el LSI lo más cerca posible de 0,0."
+    - question: "¿Cómo afecta el ácido cianúrico (CYA) al LSI?"
+      answer: "El ácido cianúrico contribuye a la lectura de tu alcalinidad total, pero no a la alcalinidad de carbonatos que realmente amortigua el agua, por lo que debe restarse. Esta calculadora aplica la corrección estándar: alcalinidad ajustada = alcalinidad total − (CYA ÷ 3). Un CYA más alto reduce tu alcalinidad efectiva y, por tanto, baja el LSI."
+    - question: "¿Cómo se calcula el LSI?"
+      answer: "El Índice de saturación de Langelier es LSI = pH + TF + CF + AF − constante de TDS, donde TF es un factor de temperatura, CF un factor de dureza cálcica, AF un factor de alcalinidad (usando la alcalinidad corregida por CYA) y la constante de TDS es 12,1 para piscinas típicas (12,2 para piscinas con TDS altos o de agua salada). Esta herramienta usa los mismos factores de consulta que nuestra guía explicativa del LSI."
+    - question: "¿Qué significa un LSI negativo?"
+      answer: "Un LSI negativo (por debajo de −0,3) significa que el agua está subsaturada de carbonato cálcico, es decir, agua corrosiva. Puede disolver el revoque y la lechada, picar el hormigón y corroer accesorios metálicos, escaleras y calentadores. Sube el LSI aumentando el pH, la alcalinidad total o la dureza cálcica."
+    - question: "¿Qué significa un LSI alto?"
+      answer: "Un LSI alto (por encima de +0,3) significa que el agua está sobresaturada, es decir, agua incrustante. Puede depositar incrustaciones de calcio en azulejos, revoque, celdas de sal e intercambiadores de calor, y enturbiar el agua. Baja el LSI reduciendo el pH, la alcalinidad total o la dureza cálcica."
+    - question: "¿Es gratuita esta calculadora de LSI?"
+      answer: "Sí, es totalmente gratuita y se ejecuta por completo en tu navegador. Para obtener el LSI automático de cada piscina, además de recomendaciones de dosificación química con precios de tu propio inventario, la app de PoolFlow para iOS lo calcula por ti sobre el terreno, incluso sin conexión."
+  js:
+    status_balanced: "Equilibrada"
+    status_corrosive: "Corrosiva"
+    status_scaling: "Incrustante"
+    guidance_balanced: "Tu agua está equilibrada (LSI entre −0,3 y +0,3). No corroerá las superficies ni formará incrustaciones; mantén estos niveles."
+    guidance_corrosive: "El agua es corrosiva (LSI %LSI%). El agua con LSI bajo puede atacar el revoque, disolver la lechada y corroer accesorios metálicos y calentadores. Para subir el LSI, aumenta el pH, la alcalinidad total o la dureza cálcica."
+    guidance_scaling: "El agua es incrustante (LSI %LSI%). El agua con LSI alto puede depositar incrustaciones de calcio en superficies, celdas de sal e intercambiadores de calor, y enturbiar el agua. Para bajar el LSI, reduce el pH, la alcalinidad total o la dureza cálcica."
+    f_ph: "pH"
+    f_temp: "temp"
+    f_calcium: "calcio"
+    f_alkalinity: "alcalinidad"
+    ppm: "ppm"
+fr:
+  title: "Calculateur LSI gratuit pour piscine — Indice de saturation de Langelier avec correction du CYA"
+  description: "Calculateur LSI interactif et gratuit. Saisissez le pH, la température, la dureté calcique, l’alcalinité, le CYA et les TDS pour calculer instantanément l’indice de saturation de Langelier de votre piscine et voir si l’eau est corrosive, équilibrée ou entartrante."
+  h1: "Calculateur LSI pour piscine"
+  subtitle: "Calculez l’indice de saturation de Langelier en temps réel avec une alcalinité corrigée du CYA. Faites glisser vos relevés et observez l’équilibre se mettre à jour instantanément."
+  balanced_note: "Une eau équilibrée se situe entre −0,3 et +0,3 de LSI."
+  readings_heading: "Vos relevés d’eau"
+  label_ph: "pH"
+  label_temp: "Température de l’eau"
+  label_ch: "Dureté calcique"
+  label_ta: "Alcalinité totale"
+  label_cya: "Acide cyanurique (CYA)"
+  label_tds: "Solides dissous totaux"
+  result_label: "Votre LSI"
+  breakdown_heading: "Le détail du calcul"
+  bd_tf: "Facteur de température (TF)"
+  bd_cf: "Facteur de calcium (CF)"
+  bd_af: "Facteur d’alcalinité (AF)"
+  bd_adj: "Alcalinité corrigée du CYA"
+  bd_k: "Constante de TDS"
+  cta_app: "Obtenez le dosage exact dans l’application"
+  disclaimer: "À titre indicatif uniquement. Les résultats utilisent des facteurs de référence standard du secteur avec interpolation linéaire et peuvent différer légèrement d’autres calculateurs. Vérifiez toujours avec un kit d’analyse fiable avant d’ajouter des produits chimiques."
+  how_heading: "Comment fonctionne le calcul du LSI"
+  how_body: >-
+    <p>L’<strong>indice de saturation de Langelier (LSI)</strong> prédit si l’eau de votre piscine
+    va corroder les surfaces, rester équilibrée ou former du tartre. C’est la mesure standard du secteur
+    de la saturation en carbonate de calcium, et elle se calcule à partir de six relevés :</p>
+    <p class="text-center font-semibold text-pool-dark">LSI = pH + TF + CF + AF − constante&nbsp;de&nbsp;TDS</p>
+    <ul>
+    <li><strong>pH</strong> — saisi directement.</li>
+    <li><strong>TF (facteur de température)</strong> — une eau plus chaude augmente le LSI.</li>
+    <li><strong>CF (facteur de calcium)</strong> — à partir de la dureté calcique.</li>
+    <li><strong>AF (facteur d’alcalinité)</strong> — à partir de l’alcalinité <em>corrigée du CYA</em>.</li>
+    <li><strong>Constante de TDS</strong> — 12,1 pour les piscines typiques, 12,2 pour les piscines à TDS élevé ou au sel.</li>
+    </ul>
+    <h3>La correction du CYA</h3>
+    <p>L’acide cyanurique gonfle votre relevé d’alcalinité totale sans tamponner l’eau, il doit donc
+    être retiré en premier :</p>
+    <p class="text-center font-semibold text-pool-dark">Alcalinité ajustée = Alcalinité totale − (CYA ÷ 3)</p>
+    <p>Par exemple, 100&nbsp;ppm d’alcalinité totale avec 60&nbsp;ppm de CYA donnent une alcalinité ajustée
+    de 100&nbsp;−&nbsp;20&nbsp;=&nbsp;80&nbsp;ppm, qui alimente le facteur d’alcalinité ci-dessus.</p>
+    <h3>Comment lire votre résultat</h3>
+    <ul>
+    <li><strong>En dessous de −0,3 :</strong> corrosive — augmentez le pH, l’alcalinité ou le calcium.</li>
+    <li><strong>De −0,3 à +0,3 :</strong> équilibrée — maintenez.</li>
+    <li><strong>Au-dessus de +0,3 :</strong> entartrante — baissez le pH, l’alcalinité ou le calcium.</li>
+    </ul>
+    <p>Vous voulez le détail complet, les tableaux de facteurs et des exemples résolus ? Lisez
+    <a href="/blog/langelier-saturation-index-explained/">L’indice de saturation de Langelier, expliqué</a>,
+    ou consultez notre <a href="/blog/pool-water-balance-chemistry-guide/">guide d’équilibre de l’eau de piscine</a>.</p>
+  faq_heading: "FAQ du calculateur LSI"
+  final_title: "Arrêtez de calculer le LSI à la main"
+  final_body: "PoolFlow calcule le LSI de chaque piscine automatiquement et recommande des doses chimiques exactes à partir de vos propres coûts — hors ligne, au bord du bassin. Gratuit jusqu’à 5 piscines."
+  final_guide: "Lire le guide LSI"
+  faq:
+    - question: "Quel est un bon LSI pour une piscine ?"
+      answer: "Une piscine équilibrée a un LSI compris entre −0,3 et +0,3. En dessous de −0,3, l’eau est corrosive et peut attaquer le plâtre et corroder le métal ; au-dessus de +0,3, elle est entartrante et peut déposer du calcium sur les surfaces et les équipements. Essayez de maintenir le LSI aussi proche de 0,0 que possible."
+    - question: "Comment l’acide cyanurique (CYA) affecte-t-il le LSI ?"
+      answer: "L’acide cyanurique contribue à votre relevé d’alcalinité totale, mais pas à l’alcalinité carbonatée qui tamponne réellement l’eau ; il doit donc être soustrait. Ce calculateur applique la correction standard : alcalinité ajustée = alcalinité totale − (CYA ÷ 3). Un CYA plus élevé réduit votre alcalinité effective et abaisse donc le LSI."
+    - question: "Comment le LSI est-il calculé ?"
+      answer: "L’indice de saturation de Langelier est LSI = pH + TF + CF + AF − constante de TDS, où TF est un facteur de température, CF un facteur de dureté calcique, AF un facteur d’alcalinité (utilisant l’alcalinité corrigée du CYA) et la constante de TDS vaut 12,1 pour les piscines typiques (12,2 pour les piscines à TDS élevé ou au sel). Cet outil utilise les mêmes facteurs de référence que notre guide explicatif du LSI."
+    - question: "Que signifie un LSI négatif ?"
+      answer: "Un LSI négatif (en dessous de −0,3) signifie que l’eau est sous-saturée en carbonate de calcium — une eau corrosive. Elle peut dissoudre le plâtre et le joint, piquer le béton et corroder les raccords métalliques, les échelles et les chauffages. Augmentez le LSI en relevant le pH, l’alcalinité totale ou la dureté calcique."
+    - question: "Que signifie un LSI élevé ?"
+      answer: "Un LSI élevé (au-dessus de +0,3) signifie que l’eau est sursaturée — une eau entartrante. Elle peut déposer du tartre calcaire sur le carrelage, le plâtre, les cellules de sel et les échangeurs de chaleur, et rendre l’eau trouble. Abaissez le LSI en réduisant le pH, l’alcalinité totale ou la dureté calcique."
+    - question: "Ce calculateur LSI est-il gratuit ?"
+      answer: "Oui — il est entièrement gratuit et fonctionne intégralement dans votre navigateur. Pour un LSI automatique sur chaque piscine, ainsi que des recommandations de dosage chimique chiffrées à partir de votre propre inventaire, l’application iOS PoolFlow le calcule pour vous sur le terrain, même hors ligne."
+  js:
+    status_balanced: "Équilibrée"
+    status_corrosive: "Corrosive"
+    status_scaling: "Entartrante"
+    guidance_balanced: "Votre eau est équilibrée (LSI entre −0,3 et +0,3). Elle ne corrodera pas les surfaces et ne formera pas de tartre — maintenez ces niveaux."
+    guidance_corrosive: "L’eau est corrosive (LSI %LSI%). Une eau à faible LSI peut attaquer le plâtre, dissoudre les joints et corroder les raccords métalliques et les chauffages. Pour augmenter le LSI, relevez le pH, l’alcalinité totale ou la dureté calcique."
+    guidance_scaling: "L’eau est entartrante (LSI %LSI%). Une eau à LSI élevé peut déposer du tartre calcaire sur les surfaces, les cellules de sel et les échangeurs de chaleur, et troubler l’eau. Pour abaisser le LSI, réduisez le pH, l’alcalinité totale ou la dureté calcique."
+    f_ph: "pH"
+    f_temp: "temp"
+    f_calcium: "calcium"
+    f_alkalinity: "alcalinité"
+    ppm: "ppm"
+de:
+  title: "Kostenloser Pool-LSI-Rechner — Langelier-Sättigungsindex mit CYA-Korrektur"
+  description: "Kostenloser interaktiver LSI-Rechner. Geben Sie pH-Wert, Temperatur, Calciumhärte, Alkalinität, CYA und TDS ein, um sofort den Langelier-Sättigungsindex Ihres Pools zu berechnen und zu sehen, ob das Wasser korrosiv, ausgeglichen oder kalkbildend ist."
+  h1: "Pool-LSI-Rechner"
+  subtitle: "Berechnen Sie den Langelier-Sättigungsindex in Echtzeit mit CYA-korrigierter Alkalinität. Verschieben Sie Ihre Messwerte und beobachten Sie, wie sich das Gleichgewicht sofort aktualisiert."
+  balanced_note: "Ausgeglichenes Wasser liegt zwischen −0,3 und +0,3 LSI."
+  readings_heading: "Ihre Wasserwerte"
+  label_ph: "pH-Wert"
+  label_temp: "Wassertemperatur"
+  label_ch: "Calciumhärte"
+  label_ta: "Gesamtalkalinität"
+  label_cya: "Cyanursäure (CYA)"
+  label_tds: "Gesamtgelöste Feststoffe"
+  result_label: "Ihr LSI"
+  breakdown_heading: "So setzt es sich zusammen"
+  bd_tf: "Temperaturfaktor (TF)"
+  bd_cf: "Calciumfaktor (CF)"
+  bd_af: "Alkalinitätsfaktor (AF)"
+  bd_adj: "CYA-korrigierte Alkalinität"
+  bd_k: "TDS-Konstante"
+  cta_app: "Exakte Dosierung in der App erhalten"
+  disclaimer: "Nur als Orientierung. Die Ergebnisse verwenden branchenübliche Nachschlagefaktoren mit linearer Interpolation und können geringfügig von anderen Rechnern abweichen. Bestätigen Sie immer mit einem zuverlässigen Testkit, bevor Sie Chemikalien hinzufügen."
+  how_heading: "So funktioniert die LSI-Berechnung"
+  how_body: >-
+    <p>Der <strong>Langelier-Sättigungsindex (LSI)</strong> sagt voraus, ob Ihr Poolwasser
+    Oberflächen korrodiert, ausgeglichen bleibt oder Kalk bildet. Er ist das branchenübliche Maß
+    für die Calciumcarbonat-Sättigung und wird aus sechs Messwerten berechnet:</p>
+    <p class="text-center font-semibold text-pool-dark">LSI = pH + TF + CF + AF − TDS-Konstante</p>
+    <ul>
+    <li><strong>pH-Wert</strong> — direkt eingegeben.</li>
+    <li><strong>TF (Temperaturfaktor)</strong> — wärmeres Wasser erhöht den LSI.</li>
+    <li><strong>CF (Calciumfaktor)</strong> — aus der Calciumhärte.</li>
+    <li><strong>AF (Alkalinitätsfaktor)</strong> — aus der <em>CYA-korrigierten</em> Alkalinität.</li>
+    <li><strong>TDS-Konstante</strong> — 12,1 für typische Pools, 12,2 für Pools mit hohem TDS oder Salzwasser.</li>
+    </ul>
+    <h3>Die CYA-Korrektur</h3>
+    <p>Cyanursäure bläht Ihren Messwert der Gesamtalkalinität auf, ohne das Wasser zu puffern, daher
+    muss sie zuerst entfernt werden:</p>
+    <p class="text-center font-semibold text-pool-dark">Korrigierte Alkalinität = Gesamtalkalinität − (CYA ÷ 3)</p>
+    <p>Zum Beispiel ergeben 100&nbsp;ppm Gesamtalkalinität mit 60&nbsp;ppm CYA eine korrigierte Alkalinität
+    von 100&nbsp;−&nbsp;20&nbsp;=&nbsp;80&nbsp;ppm, die in den obigen Alkalinitätsfaktor einfließt.</p>
+    <h3>So lesen Sie Ihr Ergebnis</h3>
+    <ul>
+    <li><strong>Unter −0,3:</strong> korrosiv — pH-Wert, Alkalinität oder Calcium erhöhen.</li>
+    <li><strong>−0,3 bis +0,3:</strong> ausgeglichen — beibehalten.</li>
+    <li><strong>Über +0,3:</strong> kalkbildend — pH-Wert, Alkalinität oder Calcium senken.</li>
+    </ul>
+    <p>Möchten Sie die vollständige Aufschlüsselung, die Faktortabellen und durchgerechnete Beispiele? Lesen Sie
+    <a href="/blog/langelier-saturation-index-explained/">Der Langelier-Sättigungsindex, erklärt</a>,
+    oder sehen Sie sich unseren <a href="/blog/pool-water-balance-chemistry-guide/">Leitfaden zum Wassergleichgewicht im Pool</a> an.</p>
+  faq_heading: "FAQ zum LSI-Rechner"
+  final_title: "Schluss mit der LSI-Berechnung von Hand"
+  final_body: "PoolFlow berechnet den LSI für jeden Pool automatisch und empfiehlt exakte Chemikaliendosen auf Basis Ihrer eigenen Kosten — offline, direkt am Pool. Kostenlos für bis zu 5 Pools."
+  final_guide: "LSI-Leitfaden lesen"
+  faq:
+    - question: "Was ist ein guter LSI für einen Swimmingpool?"
+      answer: "Ein ausgeglichener Pool hat einen LSI zwischen −0,3 und +0,3. Unter −0,3 ist das Wasser korrosiv und kann Putz angreifen und Metall korrodieren; über +0,3 ist es kalkbildend und kann Calcium auf Oberflächen und Geräten ablagern. Halten Sie den LSI möglichst nahe bei 0,0."
+    - question: "Wie wirkt sich Cyanursäure (CYA) auf den LSI aus?"
+      answer: "Cyanursäure trägt zu Ihrem Messwert der Gesamtalkalinität bei, aber nicht zur Carbonatalkalinität, die das Wasser tatsächlich puffert, daher muss sie abgezogen werden. Dieser Rechner wendet die Standardkorrektur an: korrigierte Alkalinität = Gesamtalkalinität − (CYA ÷ 3). Höheres CYA senkt Ihre effektive Alkalinität und damit den LSI."
+    - question: "Wie wird der LSI berechnet?"
+      answer: "Der Langelier-Sättigungsindex lautet LSI = pH + TF + CF + AF − TDS-Konstante, wobei TF ein Temperaturfaktor, CF ein Calciumhärtefaktor, AF ein Alkalinitätsfaktor (mit CYA-korrigierter Alkalinität) ist und die TDS-Konstante 12,1 für typische Pools beträgt (12,2 für Pools mit hohem TDS oder Salzwasser). Dieses Tool verwendet dieselben Nachschlagefaktoren wie unser LSI-Erklärleitfaden."
+    - question: "Was bedeutet ein negativer LSI?"
+      answer: "Ein negativer LSI (unter −0,3) bedeutet, dass das Wasser mit Calciumcarbonat untersättigt ist — korrosives Wasser. Es kann Putz und Fugen auflösen, Beton anlöchern und Metallarmaturen, Leitern und Heizungen korrodieren. Erhöhen Sie den LSI, indem Sie den pH-Wert, die Gesamtalkalinität oder die Calciumhärte anheben."
+    - question: "Was bedeutet ein hoher LSI?"
+      answer: "Ein hoher LSI (über +0,3) bedeutet, dass das Wasser übersättigt ist — kalkbildendes Wasser. Es kann Kalkablagerungen auf Fliesen, Putz, Salzzellen und Wärmetauschern bilden und das Wasser trüben. Senken Sie den LSI, indem Sie den pH-Wert, die Gesamtalkalinität oder die Calciumhärte reduzieren."
+    - question: "Ist dieser LSI-Rechner kostenlos?"
+      answer: "Ja — er ist völlig kostenlos und läuft vollständig in Ihrem Browser. Für einen automatischen LSI bei jedem Pool sowie Chemikaliendosier-Empfehlungen mit Preisen aus Ihrem eigenen Bestand berechnet die PoolFlow-iOS-App dies für Sie vor Ort, sogar offline."
+  js:
+    status_balanced: "Ausgeglichen"
+    status_corrosive: "Korrosiv"
+    status_scaling: "Kalkbildend"
+    guidance_balanced: "Ihr Wasser ist ausgeglichen (LSI zwischen −0,3 und +0,3). Es korrodiert keine Oberflächen und bildet keinen Kalk — halten Sie diese Werte."
+    guidance_corrosive: "Das Wasser ist korrosiv (LSI %LSI%). Wasser mit niedrigem LSI kann Putz angreifen, Fugen auflösen sowie Metallarmaturen und Heizungen korrodieren. Um den LSI zu erhöhen, heben Sie den pH-Wert, die Gesamtalkalinität oder die Calciumhärte an."
+    guidance_scaling: "Das Wasser ist kalkbildend (LSI %LSI%). Wasser mit hohem LSI kann Kalkablagerungen auf Oberflächen, Salzzellen und Wärmetauschern bilden und das Wasser trüben. Um den LSI zu senken, reduzieren Sie den pH-Wert, die Gesamtalkalinität oder die Calciumhärte."
+    f_ph: "pH"
+    f_temp: "Temp."
+    f_calcium: "Calcium"
+    f_alkalinity: "Alkalinität"
+    ppm: "ppm"
+pt:
+  title: "Calculadora de LSI gratuita para piscinas — Índice de Saturação de Langelier com correção de CYA"
+  description: "Calculadora de LSI interativa e gratuita. Insira o pH, a temperatura, a dureza cálcica, a alcalinidade, o CYA e os TDS para calcular instantaneamente o Índice de Saturação de Langelier da sua piscina e ver se a água está corrosiva, equilibrada ou incrustante."
+  h1: "Calculadora de LSI para piscinas"
+  subtitle: "Calcule o Índice de Saturação de Langelier em tempo real com alcalinidade corrigida por CYA. Arraste suas leituras e veja o equilíbrio atualizar instantaneamente."
+  balanced_note: "A água equilibrada fica entre −0,3 e +0,3 de LSI."
+  readings_heading: "As leituras da sua água"
+  label_ph: "pH"
+  label_temp: "Temperatura da água"
+  label_ch: "Dureza cálcica"
+  label_ta: "Alcalinidade total"
+  label_cya: "Ácido cianúrico (CYA)"
+  label_tds: "Sólidos dissolvidos totais"
+  result_label: "Seu LSI"
+  breakdown_heading: "Como o cálculo é feito"
+  bd_tf: "Fator de temperatura (TF)"
+  bd_cf: "Fator de cálcio (CF)"
+  bd_af: "Fator de alcalinidade (AF)"
+  bd_adj: "Alcalinidade corrigida por CYA"
+  bd_k: "Constante de TDS"
+  cta_app: "Obtenha a dosagem exata no aplicativo"
+  disclaimer: "Apenas para orientação. Os resultados usam fatores de consulta padrão do setor com interpolação linear e podem diferir ligeiramente de outras calculadoras. Confirme sempre com um kit de teste confiável antes de adicionar produtos químicos."
+  how_heading: "Como funciona o cálculo do LSI"
+  how_body: >-
+    <p>O <strong>Índice de Saturação de Langelier (LSI)</strong> prevê se a água da sua piscina
+    vai corroer superfícies, permanecer equilibrada ou formar incrustações. É a medida padrão do setor
+    para a saturação de carbonato de cálcio e é calculada a partir de seis leituras:</p>
+    <p class="text-center font-semibold text-pool-dark">LSI = pH + TF + CF + AF − constante&nbsp;de&nbsp;TDS</p>
+    <ul>
+    <li><strong>pH</strong> — inserido diretamente.</li>
+    <li><strong>TF (fator de temperatura)</strong> — água mais quente aumenta o LSI.</li>
+    <li><strong>CF (fator de cálcio)</strong> — a partir da dureza cálcica.</li>
+    <li><strong>AF (fator de alcalinidade)</strong> — a partir da alcalinidade <em>corrigida por CYA</em>.</li>
+    <li><strong>Constante de TDS</strong> — 12,1 para piscinas típicas, 12,2 para piscinas com TDS alto ou de água salgada.</li>
+    </ul>
+    <h3>A correção de CYA</h3>
+    <p>O ácido cianúrico infla a leitura da sua alcalinidade total sem tamponar a água, por isso
+    precisa ser removido primeiro:</p>
+    <p class="text-center font-semibold text-pool-dark">Alcalinidade ajustada = Alcalinidade total − (CYA ÷ 3)</p>
+    <p>Por exemplo, 100&nbsp;ppm de alcalinidade total com 60&nbsp;ppm de CYA resultam em uma alcalinidade ajustada
+    de 100&nbsp;−&nbsp;20&nbsp;=&nbsp;80&nbsp;ppm, que é o que alimenta o fator de alcalinidade acima.</p>
+    <h3>Como interpretar seu resultado</h3>
+    <ul>
+    <li><strong>Abaixo de −0,3:</strong> corrosiva — aumente o pH, a alcalinidade ou o cálcio.</li>
+    <li><strong>De −0,3 a +0,3:</strong> equilibrada — mantenha.</li>
+    <li><strong>Acima de +0,3:</strong> incrustante — reduza o pH, a alcalinidade ou o cálcio.</li>
+    </ul>
+    <p>Quer o detalhamento completo, as tabelas de fatores e exemplos resolvidos? Leia
+    <a href="/blog/langelier-saturation-index-explained/">O Índice de Saturação de Langelier, explicado</a>,
+    ou veja nosso <a href="/blog/pool-water-balance-chemistry-guide/">guia de equilíbrio da água da piscina</a>.</p>
+  faq_heading: "Perguntas frequentes sobre a calculadora de LSI"
+  final_title: "Pare de calcular o LSI à mão"
+  final_body: "O PoolFlow calcula o LSI de cada piscina automaticamente e recomenda doses químicas exatas a partir dos seus próprios custos — offline, à beira da piscina. Gratuito para até 5 piscinas."
+  final_guide: "Leia o guia do LSI"
+  faq:
+    - question: "Qual é um bom LSI para uma piscina?"
+      answer: "Uma piscina equilibrada tem um LSI entre −0,3 e +0,3. Abaixo de −0,3 a água é corrosiva e pode atacar o revestimento e corroer o metal; acima de +0,3 é incrustante e pode depositar cálcio em superfícies e equipamentos. Procure manter o LSI o mais próximo possível de 0,0."
+    - question: "Como o ácido cianúrico (CYA) afeta o LSI?"
+      answer: "O ácido cianúrico contribui para a leitura da sua alcalinidade total, mas não para a alcalinidade de carbonatos que realmente tampona a água, por isso deve ser subtraído. Esta calculadora aplica a correção padrão: alcalinidade ajustada = alcalinidade total − (CYA ÷ 3). Um CYA mais alto reduz a sua alcalinidade efetiva e, portanto, diminui o LSI."
+    - question: "Como o LSI é calculado?"
+      answer: "O Índice de Saturação de Langelier é LSI = pH + TF + CF + AF − constante de TDS, onde TF é um fator de temperatura, CF um fator de dureza cálcica, AF um fator de alcalinidade (usando a alcalinidade corrigida por CYA) e a constante de TDS é 12,1 para piscinas típicas (12,2 para piscinas com TDS alto ou de água salgada). Esta ferramenta usa os mesmos fatores de consulta do nosso guia explicativo do LSI."
+    - question: "O que significa um LSI negativo?"
+      answer: "Um LSI negativo (abaixo de −0,3) significa que a água está subsaturada de carbonato de cálcio — água corrosiva. Pode dissolver o revestimento e o rejunte, corroer o concreto e corroer conexões metálicas, escadas e aquecedores. Aumente o LSI elevando o pH, a alcalinidade total ou a dureza cálcica."
+    - question: "O que significa um LSI alto?"
+      answer: "Um LSI alto (acima de +0,3) significa que a água está supersaturada — água incrustante. Pode depositar incrustações de cálcio em azulejos, revestimento, células de sal e trocadores de calor, e deixar a água turva. Reduza o LSI diminuindo o pH, a alcalinidade total ou a dureza cálcica."
+    - question: "Esta calculadora de LSI é gratuita?"
+      answer: "Sim — é totalmente gratuita e roda inteiramente no seu navegador. Para o LSI automático em cada piscina, além de recomendações de dosagem química com preços do seu próprio estoque, o aplicativo PoolFlow para iOS calcula isso para você em campo, mesmo offline."
+  js:
+    status_balanced: "Equilibrada"
+    status_corrosive: "Corrosiva"
+    status_scaling: "Incrustante"
+    guidance_balanced: "Sua água está equilibrada (LSI entre −0,3 e +0,3). Ela não corrói superfícies nem forma incrustações — mantenha esses níveis."
+    guidance_corrosive: "A água está corrosiva (LSI %LSI%). Água com LSI baixo pode atacar o revestimento, dissolver o rejunte e corroer conexões metálicas e aquecedores. Para aumentar o LSI, eleve o pH, a alcalinidade total ou a dureza cálcica."
+    guidance_scaling: "A água está incrustante (LSI %LSI%). Água com LSI alto pode depositar incrustações de cálcio em superfícies, células de sal e trocadores de calor, e deixar a água turva. Para reduzir o LSI, diminua o pH, a alcalinidade total ou a dureza cálcica."
+    f_ph: "pH"
+    f_temp: "temp"
+    f_calcium: "cálcio"
+    f_alkalinity: "alcalinidade"
+    ppm: "ppm"
+nl:
+  title: "Gratis zwembad-LSI-calculator — Langelier-verzadigingsindex met CYA-correctie"
+  description: "Gratis interactieve LSI-calculator. Voer pH, temperatuur, calciumhardheid, alkaliniteit, CYA en TDS in om direct de Langelier-verzadigingsindex van uw zwembad te berekenen en te zien of het water corrosief, in balans of kalkvormend is."
+  h1: "Zwembad-LSI-calculator"
+  subtitle: "Bereken de Langelier-verzadigingsindex in realtime met CYA-gecorrigeerde alkaliniteit. Schuif uw waarden en zie de balans direct bijwerken."
+  balanced_note: "Water in balans ligt tussen −0,3 en +0,3 LSI."
+  readings_heading: "Uw waterwaarden"
+  label_ph: "pH"
+  label_temp: "Watertemperatuur"
+  label_ch: "Calciumhardheid"
+  label_ta: "Totale alkaliniteit"
+  label_cya: "Cyanuurzuur (CYA)"
+  label_tds: "Totaal opgeloste stoffen"
+  result_label: "Uw LSI"
+  breakdown_heading: "Hoe het wordt opgebouwd"
+  bd_tf: "Temperatuurfactor (TF)"
+  bd_cf: "Calciumfactor (CF)"
+  bd_af: "Alkaliniteitsfactor (AF)"
+  bd_adj: "CYA-gecorrigeerde alkaliniteit"
+  bd_k: "TDS-constante"
+  cta_app: "Krijg de exacte dosering in de app"
+  disclaimer: "Alleen ter indicatie. De resultaten gebruiken in de branche gangbare opzoekfactoren met lineaire interpolatie en kunnen licht afwijken van andere calculators. Bevestig altijd met een betrouwbare testset voordat u chemicaliën toevoegt."
+  how_heading: "Hoe de LSI-berekening werkt"
+  how_body: >-
+    <p>De <strong>Langelier-verzadigingsindex (LSI)</strong> voorspelt of uw zwembadwater
+    oppervlakken aantast, in balans blijft of kalk vormt. Het is de standaardmaat in de zwembadbranche
+    voor calciumcarbonaatverzadiging en wordt berekend uit zes waarden:</p>
+    <p class="text-center font-semibold text-pool-dark">LSI = pH + TF + CF + AF − TDS-constante</p>
+    <ul>
+    <li><strong>pH</strong> — rechtstreeks ingevoerd.</li>
+    <li><strong>TF (temperatuurfactor)</strong> — warmer water verhoogt de LSI.</li>
+    <li><strong>CF (calciumfactor)</strong> — uit de calciumhardheid.</li>
+    <li><strong>AF (alkaliniteitsfactor)</strong> — uit de <em>CYA-gecorrigeerde</em> alkaliniteit.</li>
+    <li><strong>TDS-constante</strong> — 12,1 voor typische zwembaden, 12,2 voor zwembaden met hoge TDS of zout water.</li>
+    </ul>
+    <h3>De CYA-correctie</h3>
+    <p>Cyanuurzuur verhoogt uw meetwaarde van de totale alkaliniteit zonder het water te bufferen, dus
+    het moet eerst worden verwijderd:</p>
+    <p class="text-center font-semibold text-pool-dark">Aangepaste alkaliniteit = Totale alkaliniteit − (CYA ÷ 3)</p>
+    <p>Bijvoorbeeld: 100&nbsp;ppm totale alkaliniteit met 60&nbsp;ppm CYA geeft een aangepaste alkaliniteit
+    van 100&nbsp;−&nbsp;20&nbsp;=&nbsp;80&nbsp;ppm, wat de alkaliniteitsfactor hierboven voedt.</p>
+    <h3>Uw resultaat aflezen</h3>
+    <ul>
+    <li><strong>Onder −0,3:</strong> corrosief — verhoog de pH, alkaliniteit of calcium.</li>
+    <li><strong>−0,3 tot +0,3:</strong> in balans — handhaven.</li>
+    <li><strong>Boven +0,3:</strong> kalkvormend — verlaag de pH, alkaliniteit of calcium.</li>
+    </ul>
+    <p>Wilt u de volledige uitsplitsing, de factortabellen en uitgewerkte voorbeelden? Lees
+    <a href="/blog/langelier-saturation-index-explained/">De Langelier-verzadigingsindex, uitgelegd</a>,
+    of bekijk onze <a href="/blog/pool-water-balance-chemistry-guide/">gids voor de waterbalans van zwembaden</a>.</p>
+  faq_heading: "Veelgestelde vragen over de LSI-calculator"
+  final_title: "Stop met het handmatig berekenen van de LSI"
+  final_body: "PoolFlow berekent de LSI voor elk zwembad automatisch en beveelt exacte chemische doseringen aan op basis van uw eigen kosten — offline, aan de rand van het zwembad. Gratis voor maximaal 5 zwembaden."
+  final_guide: "Lees de LSI-gids"
+  faq:
+    - question: "Wat is een goede LSI voor een zwembad?"
+      answer: "Een zwembad in balans heeft een LSI tussen −0,3 en +0,3. Onder −0,3 is het water corrosief en kan het pleisterwerk aantasten en metaal corroderen; boven +0,3 is het kalkvormend en kan het calcium afzetten op oppervlakken en apparatuur. Houd de LSI zo dicht mogelijk bij 0,0."
+    - question: "Hoe beïnvloedt cyanuurzuur (CYA) de LSI?"
+      answer: "Cyanuurzuur draagt bij aan uw meetwaarde van de totale alkaliniteit, maar niet aan de carbonaatalkaliniteit die het water daadwerkelijk buffert, dus het moet worden afgetrokken. Deze calculator past de standaardcorrectie toe: aangepaste alkaliniteit = totale alkaliniteit − (CYA ÷ 3). Een hogere CYA verlaagt uw effectieve alkaliniteit en daarmee de LSI."
+    - question: "Hoe wordt de LSI berekend?"
+      answer: "De Langelier-verzadigingsindex is LSI = pH + TF + CF + AF − TDS-constante, waarbij TF een temperatuurfactor is, CF een calciumhardheidsfactor, AF een alkaliniteitsfactor (met CYA-gecorrigeerde alkaliniteit) en de TDS-constante 12,1 is voor typische zwembaden (12,2 voor zwembaden met hoge TDS of zout water). Deze tool gebruikt dezelfde opzoekfactoren als onze LSI-uitlegg ids."
+    - question: "Wat betekent een negatieve LSI?"
+      answer: "Een negatieve LSI (onder −0,3) betekent dat het water onderverzadigd is met calciumcarbonaat — corrosief water. Het kan pleisterwerk en voegen oplossen, beton aantasten en metalen fittingen, ladders en verwarmers corroderen. Verhoog de LSI door de pH, totale alkaliniteit of calciumhardheid te verhogen."
+    - question: "Wat betekent een hoge LSI?"
+      answer: "Een hoge LSI (boven +0,3) betekent dat het water oververzadigd is — kalkvormend water. Het kan kalkaanslag afzetten op tegels, pleisterwerk, zoutcellen en warmtewisselaars, en het water troebel maken. Verlaag de LSI door de pH, totale alkaliniteit of calciumhardheid te verlagen."
+    - question: "Is deze LSI-calculator gratis?"
+      answer: "Ja — hij is volledig gratis en draait volledig in uw browser. Voor een automatische LSI voor elk zwembad, plus aanbevelingen voor chemische dosering geprijsd op basis van uw eigen voorraad, berekent de PoolFlow-iOS-app dit voor u in het veld, zelfs offline."
+  js:
+    status_balanced: "In balans"
+    status_corrosive: "Corrosief"
+    status_scaling: "Kalkvormend"
+    guidance_balanced: "Uw water is in balans (LSI tussen −0,3 en +0,3). Het tast geen oppervlakken aan en vormt geen kalk — handhaaf deze waarden."
+    guidance_corrosive: "Het water is corrosief (LSI %LSI%). Water met een lage LSI kan pleisterwerk aantasten, voegen oplossen en metalen fittingen en verwarmers corroderen. Verhoog de LSI door de pH, totale alkaliniteit of calciumhardheid te verhogen."
+    guidance_scaling: "Het water is kalkvormend (LSI %LSI%). Water met een hoge LSI kan kalkaanslag afzetten op oppervlakken, zoutcellen en warmtewisselaars, en het water troebel maken. Verlaag de LSI door de pH, totale alkaliniteit of calciumhardheid te verlagen."
+    f_ph: "pH"
+    f_temp: "temp"
+    f_calcium: "calcium"
+    f_alkalinity: "alkaliniteit"
+    ppm: "ppm"
