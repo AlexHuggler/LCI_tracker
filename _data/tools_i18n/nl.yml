@@ -1,0 +1,51 @@
+# Vertalingen voor de tools-sectie. Toegang: site.data.tools_i18n["nl"].
+
+common:
+  breadcrumb_home: "Home"
+  breadcrumb_tools: "Tools"
+  open_calculator: "Calculator openen"
+  more_tools_heading: "Meer gratis pooltools"
+  more_tools_sub: "Gratis, direct en in de browser — zonder aanmelden."
+  see_all_tools: "Alle pooltools bekijken"
+  try_free: "Probeer PoolFlow gratis"
+  compare_apps: "Pool-apps vergelijken"
+
+names:
+  lsi: "LSI-calculator"
+  volume: "Poolvolume-calculator"
+  dosing: "Chemische doseringscalculator"
+  salt: "Zoutcalculator voor zoutwaterpools"
+  turnover: "Pomplooptijd-calculator"
+  chlorine: "Vrijchloor-calculator"
+
+blurbs:
+  lsi: "Langelier-verzadigingsindex in realtime, met CYA-gecorrigeerde alkaliniteit — is je water corrosief, in balans of kalkafzettend?"
+  volume: "Schat de gallons (of liters) voor rechthoekige, ronde, ovale en vrije vormen — het startpunt voor elke dosis."
+  dosing: "Hoeveel zuur, soda, natriumbicarbonaat of calciumchloride toevoegen — op volume, met geschatte kosten per dosis."
+  salt: "Ponden zout (en zakken van 40 lb) om het doel van je zoutelektrolyse te halen — geen giswerk meer bij de SWG."
+  turnover: "Omwentelingstijd en dagelijkse looptijd op basis van poolvolume en pompdebiet — circuleer de hele pool zonder te overdrijven."
+  chlorine: "Het juiste vrijchloor-doel voor je CYA-niveau, met de FC/CYA-verhouding uit de sector — voor handmatige en zoutwaterpools."
+
+hub:
+  title: "Gratis poolservice-tools & calculators — LSI, volume, dosering & meer"
+  description: "Gratis, directe poolcalculators voor technici en eigenaren: LSI-waterbalans, poolvolume, chemische dosering, zout, pomplooptijd en vrijchloor-doelen. Zonder aanmelden."
+  h1: "Gratis poolservice-tools"
+  subtitle: "Directe calculators voor de getallen die er bij het zwembad toe doen — waterbalans, volume, dosering, zout, circulatie en chloor. Gratis, zonder aanmelden, gemaakt voor natte handen."
+  why_heading: "Gemaakt door poolmensen"
+  why_body: >-
+    Deze calculators gebruiken dezelfde sectorstandaardformules die ook de
+    <a href="%STORE%" class="text-pool-blue hover:underline">PoolFlow iOS-app</a> aandrijven —
+    de volumeformules, doseringsverhoudingen en FC/CYA-verhoudingen waarop profs vertrouwen.
+    Een handige manier om snel een getal te controleren. Bij het beheren van een hele route
+    doet PoolFlow alles automatisch: realtime waterbalans, dosering geprijsd op je eigen
+    voorraad en winstvolging per pool, zelfs offline.
+  faq_heading: "Veelgestelde vragen over tools"
+  final_cta_title: "Zet deze berekeningen op de automatische piloot"
+  final_cta_body: "PoolFlow voert elk van deze berekeningen automatisch uit voor elke pool op je route — offline, bij het zwembad. Gratis voor maximaal 5 pools."
+  faq:
+    - question: "Zijn deze poolcalculators gratis?"
+      answer: "Ja. Elke tool draait volledig in je browser, is helemaal gratis en vereist geen aanmelding of download. Voor automatische chemie, dosering en tracking per pool over een hele route bouwt de PoolFlow iOS-app in het veld voort op dezelfde berekeningen, zelfs offline."
+    - question: "Met welke poolcalculator moet ik beginnen?"
+      answer: "Begin met de volumecalculator — bijna alle andere berekeningen hangen af van je aantal gallons. Zodra je je volume hebt, gebruiken de dosering-, zout- en pomplooptijdcalculators het. De LSI- en vrijchloorcalculators werken rechtstreeks met je watertestwaarden."
+    - question: "Werken deze tools op mobiel?"
+      answer: "Ja. Elke calculator is mobile-first ontworpen, met grote, aanraakvriendelijke velden om ze bij het zwembad op een telefoon te gebruiken. Voor offline gebruik, routebeheer en automatische dosering geprijsd op je eigen kosten installeer je de PoolFlow iOS-app."

@@ -1,0 +1,51 @@
+# Übersetzungen für den Tools-Bereich. Zugriff: site.data.tools_i18n["de"].
+
+common:
+  breadcrumb_home: "Startseite"
+  breadcrumb_tools: "Tools"
+  open_calculator: "Rechner öffnen"
+  more_tools_heading: "Weitere kostenlose Pool-Tools"
+  more_tools_sub: "Kostenlos, sofort und im Browser — ohne Anmeldung."
+  see_all_tools: "Alle Pool-Tools ansehen"
+  try_free: "PoolFlow kostenlos testen"
+  compare_apps: "Pool-Apps vergleichen"
+
+names:
+  lsi: "LSI-Rechner"
+  volume: "Poolvolumen-Rechner"
+  dosing: "Chemikalien-Dosierrechner"
+  salt: "Salzrechner für Salzwasserpools"
+  turnover: "Pumpenlaufzeit-Rechner"
+  chlorine: "Freichlor-Rechner"
+
+blurbs:
+  lsi: "Langelier-Sättigungsindex in Echtzeit, mit CYA-korrigierter Alkalinität — ist Ihr Wasser korrosiv, ausgeglichen oder kalkbildend?"
+  volume: "Schätzen Sie Gallonen (oder Liter) für rechteckige, runde, ovale und freigeformte Pools — der Ausgangspunkt für jede Dosis."
+  dosing: "Wie viel Säure, Soda, Natron oder Calciumchlorid zugeben — nach Volumen, mit geschätzten Kosten pro Dosis."
+  salt: "Pfund Salz (und 40-lb-Säcke), um das Ziel Ihrer Salzelektrolyse zu erreichen — kein Rätselraten mehr an der SWG."
+  turnover: "Umwälzzeit und tägliche Laufstunden aus Poolvolumen und Pumpendurchfluss — den ganzen Pool umwälzen, ohne zu übertreiben."
+  chlorine: "Das richtige Freichlor-Ziel für Ihren CYA-Wert mit dem FC/CYA-Verhältnis der Branche — für manuelle und Salzwasserpools."
+
+hub:
+  title: "Kostenlose Pool-Service-Tools & Rechner — LSI, Volumen, Dosierung & mehr"
+  description: "Kostenlose, sofortige Pool-Rechner für Techniker und Besitzer: LSI-Wasserbalance, Poolvolumen, Chemikaliendosierung, Salz, Pumpenlaufzeit und Freichlor-Ziele. Ohne Anmeldung."
+  h1: "Kostenlose Pool-Service-Tools"
+  subtitle: "Sofort-Rechner für die Zahlen, die am Pool zählen — Wasserbalance, Volumen, Dosierung, Salz, Umwälzung und Chlor. Kostenlos, ohne Anmeldung, für nasse Hände gemacht."
+  why_heading: "Von Pool-Profis entwickelt"
+  why_body: >-
+    Diese Rechner verwenden dieselben branchenüblichen Formeln, die auch die
+    <a href="%STORE%" class="text-pool-blue hover:underline">PoolFlow iOS-App</a> antreiben —
+    die Volumenformeln, Dosierraten und FC/CYA-Verhältnisse, auf die sich Profis verlassen.
+    Eine schnelle Möglichkeit, eine Zahl zu prüfen. Wenn Sie eine ganze Tour verwalten,
+    erledigt PoolFlow alles automatisch: Wasserbalance in Echtzeit, Dosierung berechnet aus
+    Ihrem eigenen Lagerbestand und Gewinnverfolgung pro Pool, sogar offline.
+  faq_heading: "Tools-FAQ"
+  final_cta_title: "Setzen Sie diese Berechnungen auf Autopilot"
+  final_cta_body: "PoolFlow führt jede dieser Berechnungen automatisch für jeden Pool Ihrer Tour aus — offline, am Pool. Kostenlos für bis zu 5 Pools."
+  faq:
+    - question: "Sind diese Pool-Rechner kostenlos?"
+      answer: "Ja. Jedes Tool läuft vollständig in Ihrem Browser, ist völlig kostenlos und erfordert keine Anmeldung oder Installation. Für automatische Chemie, Dosierung und Verfolgung pro Pool über eine ganze Tour baut die PoolFlow iOS-App im Feld auf denselben Berechnungen auf, sogar offline."
+    - question: "Mit welchem Pool-Rechner sollte ich beginnen?"
+      answer: "Beginnen Sie mit dem Volumenrechner — fast alle anderen Berechnungen hängen davon ab, Ihre Gallonen zu kennen. Sobald Sie Ihr Volumen haben, nutzen es die Rechner für Dosierung, Salz und Pumpenlaufzeit. Die LSI- und Freichlor-Rechner arbeiten direkt mit Ihren Wassertestwerten."
+    - question: "Funktionieren diese Tools auf dem Handy?"
+      answer: "Ja. Jeder Rechner ist mobil-first gestaltet, mit großen, fingerfreundlichen Feldern für den Einsatz am Pool auf dem Handy. Für Offline-Nutzung, Tourenverwaltung und automatische Dosierung berechnet aus Ihren eigenen Kosten installieren Sie die PoolFlow iOS-App."

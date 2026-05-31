@@ -1,0 +1,51 @@
+# Traduções da seção de ferramentas. Acesso: site.data.tools_i18n["pt"].
+
+common:
+  breadcrumb_home: "Início"
+  breadcrumb_tools: "Ferramentas"
+  open_calculator: "Abrir calculadora"
+  more_tools_heading: "Mais ferramentas gratuitas"
+  more_tools_sub: "Grátis, instantâneo e no navegador — sem cadastro."
+  see_all_tools: "Ver todas as ferramentas"
+  try_free: "Experimente o PoolFlow grátis"
+  compare_apps: "Comparar apps de piscina"
+
+names:
+  lsi: "Calculadora LSI"
+  volume: "Calculadora de volume de piscina"
+  dosing: "Calculadora de dosagem química"
+  salt: "Calculadora de sal para piscinas de sal"
+  turnover: "Calculadora de tempo de bomba"
+  chlorine: "Calculadora de cloro livre"
+
+blurbs:
+  lsi: "Índice de Saturação de Langelier em tempo real, com alcalinidade corrigida por CYA — sua água está corrosiva, equilibrada ou incrustante?"
+  volume: "Estime os galões (ou litros) de piscinas retangulares, redondas, ovais e de forma livre — o ponto de partida de cada dose."
+  dosing: "Quanto de ácido, barrilha, bicarbonato ou cloreto de cálcio adicionar — por volume, com custo estimado por dose."
+  salt: "Libras de sal (e sacos de 40 lb) para atingir a meta do seu gerador de cloro salino — sem mais adivinhação no SWG."
+  turnover: "Tempo de renovação e horas diárias de bomba a partir do volume e da vazão — circule a piscina inteira sem exagerar."
+  chlorine: "A meta certa de cloro livre para o seu nível de CYA, usando a proporção FC/CYA do setor — para piscinas manuais e de sal."
+
+hub:
+  title: "Ferramentas e calculadoras gratuitas para serviço de piscinas — LSI, volume, dosagem e mais"
+  description: "Calculadoras de piscina gratuitas e instantâneas para técnicos e proprietários: equilíbrio da água LSI, volume, dosagem química, sal, tempo de bomba e metas de cloro livre. Sem cadastro."
+  h1: "Ferramentas gratuitas para serviço de piscinas"
+  subtitle: "Calculadoras instantâneas para os números que importam à beira da piscina — equilíbrio da água, volume, dosagem, sal, circulação e cloro. Grátis, sem cadastro, feitas para mãos molhadas."
+  why_heading: "Feito por gente de piscina"
+  why_body: >-
+    Estas calculadoras usam as mesmas fórmulas padrão do setor que alimentam o
+    <a href="%STORE%" class="text-pool-blue hover:underline">app iOS do PoolFlow</a> —
+    as fórmulas de volume, as taxas de dosagem e as proporções FC/CYA em que os profissionais
+    confiam. É uma ótima forma de conferir um número rápido. Ao gerenciar uma rota inteira, o
+    PoolFlow faz tudo automaticamente: equilíbrio da água em tempo real, dosagem precificada
+    pelo seu próprio estoque e acompanhamento de lucro por piscina, mesmo offline.
+  faq_heading: "Perguntas frequentes sobre as ferramentas"
+  final_cta_title: "Coloque estes cálculos no piloto automático"
+  final_cta_body: "O PoolFlow executa cada um destes cálculos automaticamente para cada piscina da sua rota — offline, à beira da piscina. Grátis para até 5 piscinas."
+  faq:
+    - question: "Estas calculadoras de piscina são gratuitas?"
+      answer: "Sim. Cada ferramenta funciona inteiramente no seu navegador, é totalmente gratuita e não exige cadastro nem download. Para química, dosagem e acompanhamento por piscina automáticos em toda uma rota, o app iOS do PoolFlow se baseia nesses mesmos cálculos em campo, mesmo offline."
+    - question: "Com qual calculadora de piscina devo começar?"
+      answer: "Comece pela calculadora de volume — quase todos os outros cálculos dependem de saber seus galões. Com o volume em mãos, as calculadoras de dosagem, sal e tempo de bomba o utilizam. As calculadoras de LSI e cloro livre funcionam diretamente com as leituras do seu teste de água."
+    - question: "Estas ferramentas funcionam no celular?"
+      answer: "Sim. Cada calculadora é feita mobile-first, com campos grandes e fáceis de tocar para usar à beira da piscina no celular. Para uso offline, gestão de rotas e dosagem automática precificada pelos seus próprios custos, instale o app iOS do PoolFlow."

@@ -1,0 +1,51 @@
+# Traductions de la section outils. Accès : site.data.tools_i18n["fr"].
+
+common:
+  breadcrumb_home: "Accueil"
+  breadcrumb_tools: "Outils"
+  open_calculator: "Ouvrir le calculateur"
+  more_tools_heading: "Plus d'outils gratuits"
+  more_tools_sub: "Gratuit, instantané et dans le navigateur — sans inscription."
+  see_all_tools: "Voir tous les outils"
+  try_free: "Essayer PoolFlow gratuitement"
+  compare_apps: "Comparer les apps de piscine"
+
+names:
+  lsi: "Calculateur LSI"
+  volume: "Calculateur de volume de piscine"
+  dosing: "Calculateur de dosage chimique"
+  salt: "Calculateur de sel pour piscine au sel"
+  turnover: "Calculateur de temps de pompe"
+  chlorine: "Calculateur de chlore libre"
+
+blurbs:
+  lsi: "Indice de saturation de Langelier en temps réel, avec alcalinité corrigée du CYA — votre eau est-elle corrosive, équilibrée ou entartrante ?"
+  volume: "Estimez les gallons (ou litres) des piscines rectangulaires, rondes, ovales et de forme libre — le point de départ de chaque dose."
+  dosing: "Quelle quantité d'acide, de carbonate de soude, de bicarbonate ou de chlorure de calcium ajouter — par volume, avec un coût estimé par dose."
+  salt: "Livres de sel (et sacs de 40 lb) pour atteindre la cible de votre électrolyseur — fini les approximations au SWG."
+  turnover: "Temps de renouvellement et heures de fonctionnement quotidiennes à partir du volume et du débit — faites circuler toute la piscine sans excès."
+  chlorine: "La bonne cible de chlore libre selon votre taux de CYA, avec le ratio FC/CYA du secteur — pour piscines manuelles et au sel."
+
+hub:
+  title: "Outils et calculateurs gratuits pour le service de piscine — LSI, volume, dosage et plus"
+  description: "Calculateurs de piscine gratuits et instantanés pour techniciens et propriétaires : équilibre de l'eau LSI, volume, dosage chimique, sel, temps de pompe et cibles de chlore libre. Sans inscription."
+  h1: "Outils gratuits pour le service de piscine"
+  subtitle: "Des calculateurs instantanés pour les chiffres qui comptent au bord de la piscine — équilibre de l'eau, volume, dosage, sel, circulation et chlore. Gratuit, sans inscription, conçu pour les mains mouillées."
+  why_heading: "Conçu par des pros de la piscine"
+  why_body: >-
+    Ces calculateurs utilisent les mêmes formules standard du secteur qui font fonctionner l'
+    <a href="%STORE%" class="text-pool-blue hover:underline">app iOS PoolFlow</a> —
+    les formules de volume, les taux de dosage et les ratios FC/CYA auxquels les pros se fient.
+    C'est un excellent moyen de vérifier un chiffre rapidement. Pour gérer toute une tournée,
+    PoolFlow fait tout automatiquement : équilibre de l'eau en temps réel, dosage chiffré selon
+    votre propre inventaire et suivi de rentabilité par piscine, même hors ligne.
+  faq_heading: "FAQ sur les outils"
+  final_cta_title: "Mettez ces calculs en pilote automatique"
+  final_cta_body: "PoolFlow effectue chacun de ces calculs automatiquement pour chaque piscine de votre tournée — hors ligne, au bord de la piscine. Gratuit jusqu'à 5 piscines."
+  faq:
+    - question: "Ces calculateurs de piscine sont-ils gratuits ?"
+      answer: "Oui. Chaque outil fonctionne entièrement dans votre navigateur, est totalement gratuit et ne nécessite ni inscription ni téléchargement. Pour la chimie, le dosage et le suivi par piscine automatiques sur toute une tournée, l'app iOS PoolFlow s'appuie sur ces mêmes calculs sur le terrain, même hors ligne."
+    - question: "Par quel calculateur de piscine commencer ?"
+      answer: "Commencez par le calculateur de volume — presque tous les autres calculs dépendent de vos gallons. Une fois le volume connu, les calculateurs de dosage, de sel et de temps de pompe l'utilisent. Les calculateurs LSI et de chlore libre fonctionnent directement à partir de vos analyses d'eau."
+    - question: "Ces outils fonctionnent-ils sur mobile ?"
+      answer: "Oui. Chaque calculateur est conçu d'abord pour mobile, avec de grands champs tactiles pour une utilisation au bord de la piscine sur téléphone. Pour une utilisation hors ligne, la gestion de tournées et le dosage automatique chiffré selon vos propres coûts, installez l'app iOS PoolFlow."

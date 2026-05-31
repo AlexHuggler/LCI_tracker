@@ -1,26 +1,33 @@
 <!-- More free tools — cross-links every pool tool except the current page.
-     Set `tool_slug` in a tool page's front matter to exclude it from this list. -->
+     Set `tool_slug` in a tool page's front matter to exclude it from this list.
+     Localized via site.data.tools_i18n[lang]; links carry the language prefix. -->
+{%- assign cur_lang = page.lang | default: "en" -%}
+{%- assign tt = site.data.tools_i18n[cur_lang] | default: site.data.tools_i18n.en -%}
+{%- assign lp = "" -%}
+{%- for l in site.data.languages -%}
+  {%- if l.code == cur_lang -%}{%- assign lp = l.path -%}{%- endif -%}
+{%- endfor -%}
 <section class="py-16 sm:py-20 bg-pool-section">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-10">
-      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-pool-dark">More Free Pool Tools</h2>
-      <p class="mt-3 text-gray-600">Free, instant, and browser-based — no sign-up required.</p>
+      <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-pool-dark">{{ tt.common.more_tools_heading }}</h2>
+      <p class="mt-3 text-gray-600">{{ tt.common.more_tools_sub }}</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
       {% for tool in site.data.tools %}{% unless tool.slug == page.tool_slug %}
-      <a href="{{ tool.url }}" class="group flex items-start gap-4 bg-white rounded-xl p-5 border border-gray-200 hover:border-pool-blue hover:shadow-md transition-all">
+      <a href="{{ lp }}{{ tool.url }}" class="group flex items-start gap-4 bg-white rounded-xl p-5 border border-gray-200 hover:border-pool-blue hover:shadow-md transition-all">
         <span class="flex-shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-lg bg-pool-light text-pool-blue">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="{{ tool.icon }}"/></svg>
         </span>
         <span class="min-w-0">
-          <span class="block font-semibold text-pool-dark group-hover:text-pool-blue transition-colors">{{ tool.name }}</span>
-          <span class="block mt-1 text-sm text-gray-600 leading-snug">{{ tool.blurb }}</span>
+          <span class="block font-semibold text-pool-dark group-hover:text-pool-blue transition-colors">{{ tt.names[tool.slug] | default: tool.name }}</span>
+          <span class="block mt-1 text-sm text-gray-600 leading-snug">{{ tt.blurbs[tool.slug] | default: tool.blurb }}</span>
         </span>
       </a>
       {% endunless %}{% endfor %}
     </div>
     <p class="mt-8 text-center">
-      <a href="/tools/" class="inline-flex items-center gap-1 text-sm font-semibold text-pool-blue hover:underline">See all pool tools &rarr;</a>
+      <a href="{{ lp }}/tools/" class="inline-flex items-center gap-1 text-sm font-semibold text-pool-blue hover:underline">{{ tt.common.see_all_tools }} &rarr;</a>
     </p>
   </div>
 </section>
