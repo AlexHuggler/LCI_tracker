@@ -11,6 +11,9 @@
   var root = document.querySelector('[data-pump-calculator]');
   if (!root) return;
 
+  // Localized runtime strings injected by the page (window.PF_TURNOVER_I18N); English fallbacks below.
+  var I = (typeof window !== 'undefined' && window.PF_TURNOVER_I18N) || {};
+
   var L_PER_GAL = 3.785411784;
 
   var state = { gallons: 15000, flow: 60, turnovers: 2 };
@@ -40,12 +43,13 @@
     var movedGal = state.turnovers * state.gallons;
     var movedL = movedGal * L_PER_GAL;
 
+    var hrs = I.hrs || 'hrs';
     if (out.primary) out.primary.textContent = round(daily, 1);
-    if (out.turnover) out.turnover.textContent = round(turnoverHrs, 1) + ' hrs';
+    if (out.turnover) out.turnover.textContent = round(turnoverHrs, 1) + ' ' + hrs;
     if (out.perday) out.perday.textContent = volUnit === 'L' ? fmt(movedL) + ' L' : fmt(movedGal) + ' gal';
     if (out.formula) {
       out.formula.textContent = fmt(state.gallons) + ' gal ÷ (' + state.flow + ' GPM × 60) = ' +
-        round(turnoverHrs, 1) + ' hrs/turnover × ' + state.turnovers + ' = ' + round(daily, 1) + ' hrs/day';
+        round(turnoverHrs, 1) + ' ' + (I.per_turnover || 'hrs/turnover') + ' × ' + state.turnovers + ' = ' + round(daily, 1) + ' ' + (I.per_day || 'hrs/day');
     }
   }
 
@@ -69,7 +73,9 @@
         volNumber.value = gal; volRange.value = gal;
         this.textContent = 'gal';
       }
-      this.setAttribute('aria-label', 'Volume unit: ' + (volUnit === 'L' ? 'liters' : 'gallons') + '. Tap to switch.');
+      this.setAttribute('aria-label', volUnit === 'L'
+        ? (I.vol_unit_l_aria || 'Volume unit: liters. Tap to switch.')
+        : (I.vol_unit_gal_aria || 'Volume unit: gallons. Tap to switch.'));
       render();
     });
   }
