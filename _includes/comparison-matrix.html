@@ -1,0 +1,69 @@
+{%- comment -%}
+Full feature-comparison matrix for /compare/ — Feature + PoolFlow + every
+competitor in _data/competitors.yml. Rows come from _data/comparison_features.yml
+(same source the per-competitor 3-col include uses), followed by a Pricing
+(40 Pools) group. This keeps the matrix in sync with the data so rows can't drift.
+
+Competitor cell precedence: feature_notes[key] text > features[key] check > X.
+PoolFlow cell: row.poolflow true=check, false=X, string=text label.
+{%- endcomment -%}
+{%- assign competitors = site.data.competitors -%}
+{%- assign colcount = competitors.size | plus: 2 -%}
+{%- capture check_svg -%}<svg class="w-5 h-5 text-emerald-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>{%- endcapture -%}
+{%- capture x_svg -%}<svg class="w-5 h-5 text-red-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>{%- endcapture -%}
+<div class="overflow-x-auto -mx-4 px-4 rounded-2xl border border-gray-200">
+  <table class="comparison-table w-full" style="min-width: 1200px;">
+    <thead>
+      <tr>
+        <th scope="col" class="text-left">Feature</th>
+        <th scope="col" class="poolflow-col">PoolFlow</th>
+        {%- for c in competitors %}
+        <th scope="col">{{ c.short_name | default: c.name }}</th>
+        {%- endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {%- for group in site.data.comparison_features %}
+      <tr class="category-row"><td colspan="{{ colcount }}">{{ group.category }}</td></tr>
+        {%- for row in group.rows %}
+        <tr>
+          <td class="text-sm text-gray-700">{{ row.label }}</td>
+          <td class="poolflow-col">
+            {%- if row.poolflow == true -%}{{ check_svg }}
+            {%- elsif row.poolflow == false -%}{{ x_svg }}
+            {%- else -%}<span class="text-xs text-emerald-600 font-medium">{{ row.poolflow }}</span>
+            {%- endif -%}
+          </td>
+          {%- for c in competitors -%}
+          {%- assign note = c.feature_notes[row.key] -%}
+          <td>
+            {%- if note -%}<span class="text-xs text-gray-500">{{ note }}</span>
+            {%- elsif c.features[row.key] -%}{{ check_svg }}
+            {%- else -%}{{ x_svg }}
+            {%- endif -%}
+          </td>
+          {%- endfor %}
+        </tr>
+        {%- endfor %}
+      {%- endfor %}
+
+      <!-- Pricing (40 Pools) -->
+      <tr class="category-row"><td colspan="{{ colcount }}">Pricing (40 Pools)</td></tr>
+      <tr>
+        <td class="text-sm text-gray-700">Monthly Cost</td>
+        <td class="poolflow-col"><span class="text-sm font-semibold text-emerald-600">$29.99</span></td>
+        {%- for c in competitors -%}
+        {%- assign monthly = nil -%}
+        {%- for ex in c.pricing.examples -%}{%- if ex.pools == 40 -%}{%- assign monthly = ex.monthly -%}{%- endif -%}{%- endfor -%}
+        {%- if monthly >= 150 -%}{%- assign price_color = "text-red-500" -%}{%- else -%}{%- assign price_color = "text-amber-500" -%}{%- endif -%}
+        <td><span class="text-sm font-semibold {{ price_color }}">${{ monthly }}</span></td>
+        {%- endfor %}
+      </tr>
+      <tr>
+        <td class="text-sm text-gray-700">Free Tier</td>
+        <td class="poolflow-col"><span class="text-xs text-emerald-600">5 pools free</span></td>
+        {%- for c in competitors -%}<td>{{ x_svg }}</td>{%- endfor %}
+      </tr>
+    </tbody>
+  </table>
+</div>
