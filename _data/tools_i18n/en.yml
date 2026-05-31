@@ -1,0 +1,53 @@
+# Tools-section translations. Accessed as site.data.tools_i18n[lang].
+# `names` / `blurbs` are keyed by the tool slug in _data/tools.yml.
+# why_body uses a %STORE% placeholder replaced with the per-language App Store URL.
+
+common:
+  breadcrumb_home: "Home"
+  breadcrumb_tools: "Tools"
+  open_calculator: "Open calculator"
+  more_tools_heading: "More Free Pool Tools"
+  more_tools_sub: "Free, instant, and browser-based — no sign-up required."
+  see_all_tools: "See all pool tools"
+  try_free: "Try PoolFlow Free"
+  compare_apps: "Compare Pool Apps"
+
+names:
+  lsi: "LSI Calculator"
+  volume: "Pool Volume Calculator"
+  dosing: "Chemical Dosing Calculator"
+  salt: "Saltwater Salt Calculator"
+  turnover: "Pump Run-Time Calculator"
+  chlorine: "Free Chlorine Calculator"
+
+blurbs:
+  lsi: "Langelier Saturation Index in real time, with CYA-corrected alkalinity — is your water corrosive, balanced, or scaling?"
+  volume: "Estimate gallons (or liters) for rectangular, round, oval, and freeform pools — the starting point for every dose."
+  dosing: "How much acid, soda ash, baking soda, or calcium chloride to add — by volume, with an estimated cost per dose."
+  salt: "Pounds of salt (and 40-lb bags) to reach your salt chlorine generator's target — no more guesswork at the SWG."
+  turnover: "Turnover time and daily run hours from pool volume and pump flow rate — circulate the whole pool without overrunning."
+  chlorine: "The right free-chlorine target for your CYA level, using the industry FC/CYA ratio — for manual and saltwater pools."
+
+hub:
+  title: "Free Pool Service Tools & Calculators — LSI, Volume, Dosing & More"
+  description: "Free, instant pool calculators for technicians and owners: LSI water balance, pool volume, chemical dosing, saltwater salt, pump run-time, and free-chlorine targets. No sign-up required."
+  h1: "Free Pool Service Tools"
+  subtitle: "Instant calculators for the numbers that matter at poolside — water balance, volume, dosing, salt, circulation, and chlorine. Free, no sign-up, built for wet hands."
+  why_heading: "Built by Pool People"
+  why_body: >-
+    These calculators use the same industry-standard formulas that power the
+    <a href="%STORE%" class="text-pool-blue hover:underline">PoolFlow iOS app</a> —
+    the volume formulas, dosing rates, and FC/CYA ratios pros rely on. They're a
+    great way to check a number fast. When you're managing a whole route, PoolFlow
+    does it all automatically: real-time water balance, dosing priced from your own
+    inventory, and per-pool profit tracking, even offline.
+  faq_heading: "Tools FAQ"
+  final_cta_title: "Put These Calculations on Autopilot"
+  final_cta_body: "PoolFlow runs every one of these calculations automatically for each pool on your route — offline, at poolside. Free for up to 5 pools."
+  faq:
+    - question: "Are these pool calculators free?"
+      answer: "Yes. Every tool here runs entirely in your browser, is completely free, and requires no sign-up or download. For automatic chemistry, dosing, and per-pool tracking across a whole route, the PoolFlow iOS app builds on these same calculations in the field, even offline."
+    - question: "Which pool calculator should I start with?"
+      answer: "Start with the pool volume calculator — almost every other calculation depends on knowing your gallons. Once you have your volume, the chemical dosing, salt, and pump run-time calculators all use it. The LSI and free-chlorine calculators work from your water test readings directly."
+    - question: "Do these tools work on mobile?"
+      answer: "Yes. Every calculator is built mobile-first with large, touch-friendly inputs so they work at poolside on a phone. For offline use, route management, and automatic dosing priced from your own chemical costs, install the PoolFlow iOS app."

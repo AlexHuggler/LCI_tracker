@@ -1,0 +1,357 @@
+# Saltwater Salt calculator strings, per language. Accessed as
+# site.data.tools_i18n.calc.salt[lang]. `js` holds the runtime strings injected
+# into assets/js/salt-calculator.js via window.PF_SALT_I18N. Placeholders such as
+# %PPM%, %BAGS%, %KG%, %TARGET%, %CURRENT%, %GAL%, %LBS%, %UNIT% are filled in JS.
+en:
+  title: "Saltwater Pool Salt Calculator — Pounds of Salt to Add for Your SWG"
+  description: "Free saltwater pool salt calculator. Enter your pool volume, current salinity, and target salinity to find exactly how many pounds of salt (and 40-lb bags) to add for your salt chlorine generator."
+  h1: "Saltwater Pool Salt Calculator"
+  subtitle: "Find exactly how much salt to add to hit your salt chlorine generator's target. Enter your volume and salinity readings — get pounds and 40-lb bags."
+  readings_heading: "Your Pool & Salinity"
+  label_vol: "Pool volume"
+  label_current: "Current salinity"
+  label_target: "Target salinity"
+  vol_hint_pre: "Not sure?"
+  vol_hint_link: "Use the volume calculator →"
+  target_hint: "Most SWGs target 2,700–3,400 ppm. Follow your cell's manual."
+  result_label: "Salt to Add"
+  formula_heading: ""
+  cta_app: "Track salt & chemistry per pool"
+  disclaimer: "For guidance only. Add salt in stages with the pump running, then wait ~24 hours before re-testing. It's easier to add more than to dilute — don't overshoot your target."
+  how_heading: "How the Salt Calculation Works"
+  how_body: >-
+    <p>Salt is measured in parts per million (ppm). To raise salinity by a known amount, you
+    add salt in proportion to your pool's water weight:</p>
+    <p class="text-center font-semibold text-pool-dark">Pounds of salt = (Target − Current) × Gallons × 8.34 ÷ 1,000,000</p>
+    <p>The 8.34 is the weight of one gallon of water in pounds. For a 15,000-gallon pool starting
+    at 0 ppm and targeting 3,200 ppm: (3,200 − 0) × 15,000 × 8.34 ÷ 1,000,000 ≈ <strong>400 pounds</strong>,
+    or about ten 40-lb bags.</p>
+    <h3>A few field notes</h3>
+    <ul>
+    <li><strong>Add in stages.</strong> Pour salt across the pool with the pump running and brush it toward the drain to dissolve.</li>
+    <li><strong>Wait before testing.</strong> Give it ~24 hours of circulation before reading salinity — undissolved salt won't register.</li>
+    <li><strong>You can't remove salt.</strong> If you're over target, the only fix is to drain partially and refill with fresh water.</li>
+    </ul>
+    <p>Get your volume from the <a href="/pool-volume-calculator/">pool volume calculator</a>, check overall
+    balance with the <a href="/lsi-calculator/">LSI calculator</a>, and remember that salt cells nudge pH up
+    over time — keep the <a href="/chemical-dosing-calculator/">dosing calculator</a> handy.</p>
+  faq_heading: "Salt Calculator FAQ"
+  final_title: "Manage Every Saltwater Pool in One App"
+  final_body: "PoolFlow tracks salinity, chemistry, and dosing for each pool on your route — offline, at poolside. Free for up to 5 pools."
+  final_guide: "Check Water Balance (LSI)"
+  faq:
+    - question: "How much salt do I add to my saltwater pool?"
+      answer: "Pounds of salt = (target ppm − current ppm) × gallons × 8.34 ÷ 1,000,000. For a 15,000-gallon pool going from 0 to 3,200 ppm, that's about 400 pounds, or roughly ten 40-lb bags. This calculator does the math once you enter your volume and salinity readings."
+    - question: "What salt level should a saltwater pool be?"
+      answer: "Most salt chlorine generators run best between 2,700 and 3,400 ppm, with 3,200 ppm a common target — but always follow your specific SWG manufacturer's recommendation. Too low and the cell won't produce chlorine; too high and you risk corrosion and a high-salt fault. This tool defaults to 3,200 ppm and lets you change it."
+    - question: "How do I lower the salt level in my pool?"
+      answer: "There's no chemical that removes salt. The only way to lower salinity is to drain part of the pool and refill with fresh water, which dilutes the salt concentration. If your reading is already at or above target, this calculator will tell you no salt is needed and recommend dilution if you're over."
+    - question: "How long after adding salt can I test?"
+      answer: "Add salt with the pump running and brush it around to help it dissolve. Wait roughly 24 hours with the pump circulating before taking a salinity reading, since undissolved salt won't register accurately. Add in stages toward your target rather than overshooting — it's far easier to add more than to dilute."
+    - question: "Does adding salt affect other pool chemistry?"
+      answer: "Salt itself is fairly neutral, but salt chlorine generators tend to raise pH over time as they produce chlorine, so watch pH and total alkalinity after switching on the cell. Check overall water balance with the LSI calculator and correct pH with the dosing calculator as needed."
+  js:
+    secondary_none: "lb — no salt needed"
+    guidance_at_target: "You’re right at target. No salt needed."
+    guidance_over: "You’re above target by %PPM% ppm. Salt can’t be removed chemically — partially drain and refill with fresh water to dilute."
+    secondary: "lb &nbsp;·&nbsp; ≈ %BAGS% bags (40 lb) &nbsp;·&nbsp; %KG% kg"
+    guidance_add: "Raise salinity by %PPM% ppm. Add in stages with the pump running, then re-test after ~24 hours."
+    formula: "(%TARGET% − %CURRENT%) ppm × %GAL% gal × 8.34 ÷ 1,000,000 = %LBS% lb"
+    unit_gal: "gallons"
+    unit_l: "liters"
+    unit_aria: "Volume unit: %UNIT%. Tap to switch."
+
+es:
+  title: "Calculadora de sal para piscinas de agua salada — libras de sal para tu clorador salino"
+  description: "Calculadora gratuita de sal para piscinas de agua salada. Introduce el volumen de tu piscina, la salinidad actual y la salinidad objetivo para saber exactamente cuántas libras de sal (y bolsas de 40 lb) añadir para tu clorador salino."
+  h1: "Calculadora de sal para piscinas de agua salada"
+  subtitle: "Calcula exactamente cuánta sal añadir para alcanzar el objetivo de tu clorador salino. Introduce el volumen y las lecturas de salinidad — obtén libras y bolsas de 40 lb."
+  readings_heading: "Tu piscina y salinidad"
+  label_vol: "Volumen de la piscina"
+  label_current: "Salinidad actual"
+  label_target: "Salinidad objetivo"
+  vol_hint_pre: "¿No estás seguro?"
+  vol_hint_link: "Usa la calculadora de volumen →"
+  target_hint: "La mayoría de los cloradores salinos apuntan a 2.700–3.400 ppm. Sigue el manual de tu célula."
+  result_label: "Sal a añadir"
+  formula_heading: ""
+  cta_app: "Controla la sal y la química por piscina"
+  disclaimer: "Solo a título orientativo. Añade la sal por etapas con la bomba en marcha y espera ~24 horas antes de volver a medir. Es más fácil añadir más que diluir — no te pases del objetivo."
+  how_heading: "Cómo funciona el cálculo de sal"
+  how_body: >-
+    <p>La sal se mide en partes por millón (ppm). Para aumentar la salinidad en una cantidad
+    conocida, añades sal en proporción al peso del agua de tu piscina:</p>
+    <p class="text-center font-semibold text-pool-dark">Libras de sal = (Objetivo − Actual) × Galones × 8,34 ÷ 1.000.000</p>
+    <p>El 8,34 es el peso de un galón de agua en libras. Para una piscina de 15.000 galones que
+    parte de 0 ppm y apunta a 3.200 ppm: (3.200 − 0) × 15.000 × 8,34 ÷ 1.000.000 ≈ <strong>400 libras</strong>,
+    o unas diez bolsas de 40 lb.</p>
+    <h3>Algunas notas de campo</h3>
+    <ul>
+    <li><strong>Añade por etapas.</strong> Esparce la sal por toda la piscina con la bomba en marcha y cepíllala hacia el desagüe para que se disuelva.</li>
+    <li><strong>Espera antes de medir.</strong> Deja ~24 horas de circulación antes de leer la salinidad — la sal sin disolver no se registra.</li>
+    <li><strong>No se puede quitar la sal.</strong> Si te has pasado del objetivo, la única solución es vaciar parcialmente y rellenar con agua dulce.</li>
+    </ul>
+    <p>Obtén tu volumen con la <a href="/pool-volume-calculator/">calculadora de volumen de piscina</a>, comprueba
+    el equilibrio general con la <a href="/lsi-calculator/">calculadora LSI</a> y recuerda que las células salinas
+    suben el pH con el tiempo — ten a mano la <a href="/chemical-dosing-calculator/">calculadora de dosificación</a>.</p>
+  faq_heading: "Preguntas frecuentes sobre la calculadora de sal"
+  final_title: "Gestiona cada piscina de agua salada en una sola app"
+  final_body: "PoolFlow registra la salinidad, la química y la dosificación de cada piscina de tu ruta — sin conexión, a pie de piscina. Gratis hasta 5 piscinas."
+  final_guide: "Comprueba el equilibrio del agua (LSI)"
+  faq:
+    - question: "¿Cuánta sal añado a mi piscina de agua salada?"
+      answer: "Libras de sal = (ppm objetivo − ppm actual) × galones × 8,34 ÷ 1.000.000. Para una piscina de 15.000 galones que pasa de 0 a 3.200 ppm, son unas 400 libras, o aproximadamente diez bolsas de 40 lb. Esta calculadora hace el cálculo en cuanto introduces el volumen y las lecturas de salinidad."
+    - question: "¿Qué nivel de sal debe tener una piscina de agua salada?"
+      answer: "La mayoría de los cloradores salinos funcionan mejor entre 2.700 y 3.400 ppm, siendo 3.200 ppm un objetivo habitual — pero sigue siempre la recomendación del fabricante de tu clorador. Demasiado baja y la célula no producirá cloro; demasiado alta y arriesgas corrosión y un fallo por exceso de sal. Esta herramienta usa 3.200 ppm por defecto y te permite cambiarlo."
+    - question: "¿Cómo bajo el nivel de sal de mi piscina?"
+      answer: "No existe ningún producto químico que elimine la sal. La única forma de bajar la salinidad es vaciar parte de la piscina y rellenarla con agua dulce, lo que diluye la concentración de sal. Si tu lectura ya está en el objetivo o por encima, esta calculadora te dirá que no hace falta sal y recomendará diluir si te has pasado."
+    - question: "¿Cuánto tiempo después de añadir sal puedo medir?"
+      answer: "Añade la sal con la bomba en marcha y cepíllala para ayudarla a disolverse. Espera aproximadamente 24 horas con la bomba circulando antes de tomar una lectura de salinidad, ya que la sal sin disolver no se registra con precisión. Añade por etapas hacia tu objetivo en lugar de pasarte — es mucho más fácil añadir más que diluir."
+    - question: "¿Añadir sal afecta a la demás química de la piscina?"
+      answer: "La sal en sí es bastante neutra, pero los cloradores salinos tienden a subir el pH con el tiempo a medida que producen cloro, así que vigila el pH y la alcalinidad total tras encender la célula. Comprueba el equilibrio general del agua con la calculadora LSI y corrige el pH con la calculadora de dosificación según sea necesario."
+  js:
+    secondary_none: "lb — no se necesita sal"
+    guidance_at_target: "Estás justo en el objetivo. No se necesita sal."
+    guidance_over: "Estás por encima del objetivo por %PPM% ppm. La sal no se puede eliminar químicamente — vacía parcialmente y rellena con agua dulce para diluir."
+    secondary: "lb &nbsp;·&nbsp; ≈ %BAGS% bolsas (40 lb) &nbsp;·&nbsp; %KG% kg"
+    guidance_add: "Aumenta la salinidad en %PPM% ppm. Añade por etapas con la bomba en marcha y vuelve a medir tras ~24 horas."
+    formula: "(%TARGET% − %CURRENT%) ppm × %GAL% gal × 8,34 ÷ 1.000.000 = %LBS% lb"
+    unit_gal: "galones"
+    unit_l: "litros"
+    unit_aria: "Unidad de volumen: %UNIT%. Toca para cambiar."
+
+fr:
+  title: "Calculateur de sel pour piscine au sel — livres de sel à ajouter pour votre électrolyseur"
+  description: "Calculateur gratuit de sel pour piscine au sel. Saisissez le volume de votre piscine, la salinité actuelle et la salinité cible pour savoir exactement combien de livres de sel (et de sacs de 40 lb) ajouter pour votre électrolyseur au sel."
+  h1: "Calculateur de sel pour piscine au sel"
+  subtitle: "Calculez exactement la quantité de sel à ajouter pour atteindre la cible de votre électrolyseur au sel. Saisissez votre volume et vos relevés de salinité — obtenez les livres et les sacs de 40 lb."
+  readings_heading: "Votre piscine et salinité"
+  label_vol: "Volume de la piscine"
+  label_current: "Salinité actuelle"
+  label_target: "Salinité cible"
+  vol_hint_pre: "Pas sûr ?"
+  vol_hint_link: "Utilisez le calculateur de volume →"
+  target_hint: "La plupart des électrolyseurs visent 2 700–3 400 ppm. Suivez le manuel de votre cellule."
+  result_label: "Sel à ajouter"
+  formula_heading: ""
+  cta_app: "Suivez le sel et la chimie par piscine"
+  disclaimer: "À titre indicatif uniquement. Ajoutez le sel par étapes avec la pompe en marche, puis attendez ~24 heures avant de mesurer à nouveau. Il est plus facile d'en ajouter que de diluer — ne dépassez pas votre cible."
+  how_heading: "Comment fonctionne le calcul du sel"
+  how_body: >-
+    <p>Le sel se mesure en parties par million (ppm). Pour augmenter la salinité d'une quantité
+    connue, vous ajoutez du sel proportionnellement au poids de l'eau de votre piscine :</p>
+    <p class="text-center font-semibold text-pool-dark">Livres de sel = (Cible − Actuelle) × Gallons × 8,34 ÷ 1 000 000</p>
+    <p>Le 8,34 est le poids d'un gallon d'eau en livres. Pour une piscine de 15 000 gallons partant
+    de 0 ppm et visant 3 200 ppm : (3 200 − 0) × 15 000 × 8,34 ÷ 1 000 000 ≈ <strong>400 livres</strong>,
+    soit environ dix sacs de 40 lb.</p>
+    <h3>Quelques notes de terrain</h3>
+    <ul>
+    <li><strong>Ajoutez par étapes.</strong> Répartissez le sel dans toute la piscine avec la pompe en marche et brossez-le vers la bonde pour le dissoudre.</li>
+    <li><strong>Attendez avant de mesurer.</strong> Laissez ~24 heures de circulation avant de lire la salinité — le sel non dissous ne se mesure pas.</li>
+    <li><strong>Le sel ne s'enlève pas.</strong> Si vous dépassez la cible, la seule solution est de vidanger partiellement et de remplir d'eau douce.</li>
+    </ul>
+    <p>Obtenez votre volume avec le <a href="/pool-volume-calculator/">calculateur de volume de piscine</a>, vérifiez
+    l'équilibre global avec le <a href="/lsi-calculator/">calculateur LSI</a>, et rappelez-vous que les cellules au sel
+    font monter le pH avec le temps — gardez le <a href="/chemical-dosing-calculator/">calculateur de dosage</a> sous la main.</p>
+  faq_heading: "FAQ du calculateur de sel"
+  final_title: "Gérez chaque piscine au sel dans une seule application"
+  final_body: "PoolFlow suit la salinité, la chimie et le dosage de chaque piscine de votre tournée — hors ligne, au bord du bassin. Gratuit jusqu'à 5 piscines."
+  final_guide: "Vérifiez l'équilibre de l'eau (LSI)"
+  faq:
+    - question: "Combien de sel dois-je ajouter à ma piscine au sel ?"
+      answer: "Livres de sel = (ppm cible − ppm actuelle) × gallons × 8,34 ÷ 1 000 000. Pour une piscine de 15 000 gallons passant de 0 à 3 200 ppm, cela représente environ 400 livres, soit à peu près dix sacs de 40 lb. Ce calculateur fait le calcul dès que vous saisissez votre volume et vos relevés de salinité."
+    - question: "Quel niveau de sel pour une piscine au sel ?"
+      answer: "La plupart des électrolyseurs au sel fonctionnent le mieux entre 2 700 et 3 400 ppm, 3 200 ppm étant une cible courante — mais suivez toujours la recommandation du fabricant de votre électrolyseur. Trop bas, la cellule ne produira pas de chlore ; trop haut, vous risquez la corrosion et un défaut de salinité élevée. Cet outil utilise 3 200 ppm par défaut et vous permet de le modifier."
+    - question: "Comment baisser le niveau de sel de ma piscine ?"
+      answer: "Aucun produit chimique n'élimine le sel. La seule façon de baisser la salinité est de vidanger une partie de la piscine et de la remplir d'eau douce, ce qui dilue la concentration de sel. Si votre relevé est déjà à la cible ou au-dessus, ce calculateur vous indiquera qu'aucun sel n'est nécessaire et recommandera une dilution si vous dépassez."
+    - question: "Combien de temps après l'ajout de sel puis-je mesurer ?"
+      answer: "Ajoutez le sel avec la pompe en marche et brossez-le pour l'aider à se dissoudre. Attendez environ 24 heures avec la pompe en circulation avant de prendre un relevé de salinité, car le sel non dissous ne se mesure pas avec précision. Ajoutez par étapes vers votre cible plutôt que de la dépasser — il est bien plus facile d'en ajouter que de diluer."
+    - question: "L'ajout de sel affecte-t-il les autres paramètres chimiques de la piscine ?"
+      answer: "Le sel en lui-même est assez neutre, mais les électrolyseurs au sel ont tendance à faire monter le pH avec le temps à mesure qu'ils produisent du chlore, alors surveillez le pH et l'alcalinité totale après avoir mis la cellule en marche. Vérifiez l'équilibre global de l'eau avec le calculateur LSI et corrigez le pH avec le calculateur de dosage si nécessaire."
+  js:
+    secondary_none: "lb — aucun sel nécessaire"
+    guidance_at_target: "Vous êtes pile sur la cible. Aucun sel nécessaire."
+    guidance_over: "Vous dépassez la cible de %PPM% ppm. Le sel ne peut pas être retiré chimiquement — vidangez partiellement et remplissez d'eau douce pour diluer."
+    secondary: "lb &nbsp;·&nbsp; ≈ %BAGS% sacs (40 lb) &nbsp;·&nbsp; %KG% kg"
+    guidance_add: "Augmentez la salinité de %PPM% ppm. Ajoutez par étapes avec la pompe en marche, puis remesurez après ~24 heures."
+    formula: "(%TARGET% − %CURRENT%) ppm × %GAL% gal × 8,34 ÷ 1 000 000 = %LBS% lb"
+    unit_gal: "gallons"
+    unit_l: "litres"
+    unit_aria: "Unité de volume : %UNIT%. Touchez pour changer."
+
+de:
+  title: "Salzrechner für Salzwasserpools — Pfund Salz für Ihre Salzelektrolyse"
+  description: "Kostenloser Salzrechner für Salzwasserpools. Geben Sie Poolvolumen, aktuellen Salzgehalt und Zielsalzgehalt ein, um genau zu erfahren, wie viel Pfund Salz (und 40-lb-Säcke) Sie für Ihre Salzelektrolyse zugeben müssen."
+  h1: "Salzrechner für Salzwasserpools"
+  subtitle: "Berechnen Sie genau, wie viel Salz Sie zugeben müssen, um den Zielwert Ihrer Salzelektrolyse zu erreichen. Geben Sie Volumen und Salzgehalt ein — erhalten Sie Pfund und 40-lb-Säcke."
+  readings_heading: "Ihr Pool & Salzgehalt"
+  label_vol: "Poolvolumen"
+  label_current: "Aktueller Salzgehalt"
+  label_target: "Ziel-Salzgehalt"
+  vol_hint_pre: "Nicht sicher?"
+  vol_hint_link: "Volumenrechner verwenden →"
+  target_hint: "Die meisten Salzelektrolysen zielen auf 2.700–3.400 ppm. Folgen Sie dem Handbuch Ihrer Zelle."
+  result_label: "Zuzugebendes Salz"
+  formula_heading: ""
+  cta_app: "Salz & Chemie pro Pool verfolgen"
+  disclaimer: "Nur als Richtwert. Geben Sie das Salz in Stufen bei laufender Pumpe zu und warten Sie dann ~24 Stunden, bevor Sie erneut messen. Nachgeben ist leichter als Verdünnen — überschreiten Sie den Zielwert nicht."
+  how_heading: "So funktioniert die Salzberechnung"
+  how_body: >-
+    <p>Salz wird in Teilen pro Million (ppm) gemessen. Um den Salzgehalt um einen bekannten Wert
+    zu erhöhen, geben Sie Salz im Verhältnis zum Wassergewicht Ihres Pools zu:</p>
+    <p class="text-center font-semibold text-pool-dark">Pfund Salz = (Ziel − Aktuell) × Gallonen × 8,34 ÷ 1.000.000</p>
+    <p>Die 8,34 ist das Gewicht einer Gallone Wasser in Pfund. Für einen Pool mit 15.000 Gallonen,
+    der bei 0 ppm startet und 3.200 ppm anstrebt: (3.200 − 0) × 15.000 × 8,34 ÷ 1.000.000 ≈ <strong>400 Pfund</strong>,
+    also etwa zehn 40-lb-Säcke.</p>
+    <h3>Ein paar Praxistipps</h3>
+    <ul>
+    <li><strong>In Stufen zugeben.</strong> Verteilen Sie das Salz bei laufender Pumpe über den ganzen Pool und bürsten Sie es zum Ablauf, damit es sich löst.</li>
+    <li><strong>Vor dem Messen warten.</strong> Lassen Sie ~24 Stunden zirkulieren, bevor Sie den Salzgehalt ablesen — ungelöstes Salz wird nicht erfasst.</li>
+    <li><strong>Salz lässt sich nicht entfernen.</strong> Wenn Sie über dem Zielwert liegen, hilft nur teilweises Ablassen und Auffüllen mit Frischwasser.</li>
+    </ul>
+    <p>Ermitteln Sie Ihr Volumen mit dem <a href="/pool-volume-calculator/">Poolvolumen-Rechner</a>, prüfen Sie das
+    Gesamtgleichgewicht mit dem <a href="/lsi-calculator/">LSI-Rechner</a>, und denken Sie daran, dass Salzzellen den
+    pH-Wert mit der Zeit anheben — halten Sie den <a href="/chemical-dosing-calculator/">Dosierrechner</a> bereit.</p>
+  faq_heading: "FAQ zum Salzrechner"
+  final_title: "Verwalten Sie jeden Salzwasserpool in einer App"
+  final_body: "PoolFlow verfolgt Salzgehalt, Chemie und Dosierung für jeden Pool auf Ihrer Route — offline, am Beckenrand. Kostenlos für bis zu 5 Pools."
+  final_guide: "Wasserbalance prüfen (LSI)"
+  faq:
+    - question: "Wie viel Salz gebe ich in meinen Salzwasserpool?"
+      answer: "Pfund Salz = (Ziel-ppm − Aktuell-ppm) × Gallonen × 8,34 ÷ 1.000.000. Für einen Pool mit 15.000 Gallonen, der von 0 auf 3.200 ppm geht, sind das etwa 400 Pfund oder rund zehn 40-lb-Säcke. Dieser Rechner erledigt die Mathematik, sobald Sie Volumen und Salzgehalt eingeben."
+    - question: "Welchen Salzgehalt sollte ein Salzwasserpool haben?"
+      answer: "Die meisten Salzelektrolysen laufen am besten zwischen 2.700 und 3.400 ppm, wobei 3.200 ppm ein üblicher Zielwert ist — folgen Sie aber immer der Empfehlung Ihres SWG-Herstellers. Zu niedrig, und die Zelle produziert kein Chlor; zu hoch, und Sie riskieren Korrosion und einen Hochsalz-Fehler. Dieses Tool verwendet standardmäßig 3.200 ppm und lässt Sie das ändern."
+    - question: "Wie senke ich den Salzgehalt in meinem Pool?"
+      answer: "Es gibt keine Chemikalie, die Salz entfernt. Die einzige Möglichkeit, den Salzgehalt zu senken, ist, einen Teil des Pools abzulassen und mit Frischwasser aufzufüllen, was die Salzkonzentration verdünnt. Wenn Ihr Messwert bereits beim Zielwert oder darüber liegt, sagt Ihnen dieser Rechner, dass kein Salz nötig ist, und empfiehlt Verdünnung, falls Sie darüber liegen."
+    - question: "Wie lange nach dem Salzzugeben kann ich messen?"
+      answer: "Geben Sie das Salz bei laufender Pumpe zu und bürsten Sie es, damit es sich besser löst. Warten Sie etwa 24 Stunden mit zirkulierender Pumpe, bevor Sie den Salzgehalt messen, da ungelöstes Salz nicht genau erfasst wird. Geben Sie in Stufen zum Zielwert hin zu, anstatt zu überschreiten — Nachgeben ist viel einfacher als Verdünnen."
+    - question: "Beeinflusst das Salzzugeben die übrige Poolchemie?"
+      answer: "Salz selbst ist ziemlich neutral, aber Salzelektrolysen neigen dazu, den pH-Wert mit der Zeit anzuheben, während sie Chlor produzieren, also behalten Sie pH und Gesamtalkalität im Auge, nachdem Sie die Zelle eingeschaltet haben. Prüfen Sie die Gesamtwasserbalance mit dem LSI-Rechner und korrigieren Sie den pH-Wert bei Bedarf mit dem Dosierrechner."
+  js:
+    secondary_none: "lb — kein Salz nötig"
+    guidance_at_target: "Sie sind genau am Zielwert. Kein Salz nötig."
+    guidance_over: "Sie liegen %PPM% ppm über dem Zielwert. Salz kann nicht chemisch entfernt werden — teilweise ablassen und mit Frischwasser auffüllen, um zu verdünnen."
+    secondary: "lb &nbsp;·&nbsp; ≈ %BAGS% Säcke (40 lb) &nbsp;·&nbsp; %KG% kg"
+    guidance_add: "Erhöhen Sie den Salzgehalt um %PPM% ppm. Geben Sie in Stufen bei laufender Pumpe zu und messen Sie nach ~24 Stunden erneut."
+    formula: "(%TARGET% − %CURRENT%) ppm × %GAL% gal × 8,34 ÷ 1.000.000 = %LBS% lb"
+    unit_gal: "Gallonen"
+    unit_l: "Liter"
+    unit_aria: "Volumeneinheit: %UNIT%. Zum Wechseln tippen."
+
+pt:
+  title: "Calculadora de sal para piscina de água salgada — libras de sal para o seu gerador de cloro salino"
+  description: "Calculadora gratuita de sal para piscina de água salgada. Insira o volume da piscina, a salinidade atual e a salinidade-alvo para saber exatamente quantas libras de sal (e sacos de 40 lb) adicionar para o seu gerador de cloro salino."
+  h1: "Calculadora de sal para piscina de água salgada"
+  subtitle: "Calcule exatamente quanto sal adicionar para atingir o alvo do seu gerador de cloro salino. Insira o volume e as leituras de salinidade — obtenha libras e sacos de 40 lb."
+  readings_heading: "Sua piscina e salinidade"
+  label_vol: "Volume da piscina"
+  label_current: "Salinidade atual"
+  label_target: "Salinidade-alvo"
+  vol_hint_pre: "Não tem certeza?"
+  vol_hint_link: "Use a calculadora de volume →"
+  target_hint: "A maioria dos geradores de cloro salino tem como alvo 2.700–3.400 ppm. Siga o manual da sua célula."
+  result_label: "Sal a adicionar"
+  formula_heading: ""
+  cta_app: "Acompanhe o sal e a química por piscina"
+  disclaimer: "Apenas como orientação. Adicione o sal em etapas com a bomba ligada e aguarde ~24 horas antes de medir novamente. É mais fácil adicionar mais do que diluir — não ultrapasse o seu alvo."
+  how_heading: "Como funciona o cálculo do sal"
+  how_body: >-
+    <p>O sal é medido em partes por milhão (ppm). Para aumentar a salinidade em uma quantidade
+    conhecida, você adiciona sal em proporção ao peso da água da piscina:</p>
+    <p class="text-center font-semibold text-pool-dark">Libras de sal = (Alvo − Atual) × Galões × 8,34 ÷ 1.000.000</p>
+    <p>O 8,34 é o peso de um galão de água em libras. Para uma piscina de 15.000 galões partindo
+    de 0 ppm e visando 3.200 ppm: (3.200 − 0) × 15.000 × 8,34 ÷ 1.000.000 ≈ <strong>400 libras</strong>,
+    ou cerca de dez sacos de 40 lb.</p>
+    <h3>Algumas notas de campo</h3>
+    <ul>
+    <li><strong>Adicione em etapas.</strong> Espalhe o sal por toda a piscina com a bomba ligada e escove-o em direção ao ralo para dissolver.</li>
+    <li><strong>Aguarde antes de medir.</strong> Deixe ~24 horas de circulação antes de ler a salinidade — o sal não dissolvido não registra.</li>
+    <li><strong>Não dá para remover o sal.</strong> Se você ultrapassou o alvo, a única solução é drenar parcialmente e reabastecer com água doce.</li>
+    </ul>
+    <p>Obtenha o seu volume com a <a href="/pool-volume-calculator/">calculadora de volume de piscina</a>, verifique o
+    equilíbrio geral com a <a href="/lsi-calculator/">calculadora LSI</a> e lembre-se de que as células salinas elevam o
+    pH com o tempo — mantenha a <a href="/chemical-dosing-calculator/">calculadora de dosagem</a> à mão.</p>
+  faq_heading: "Perguntas frequentes sobre a calculadora de sal"
+  final_title: "Gerencie cada piscina de água salgada em um só app"
+  final_body: "O PoolFlow acompanha a salinidade, a química e a dosagem de cada piscina da sua rota — offline, à beira da piscina. Grátis para até 5 piscinas."
+  final_guide: "Verifique o equilíbrio da água (LSI)"
+  faq:
+    - question: "Quanto sal eu adiciono à minha piscina de água salgada?"
+      answer: "Libras de sal = (ppm-alvo − ppm atual) × galões × 8,34 ÷ 1.000.000. Para uma piscina de 15.000 galões indo de 0 a 3.200 ppm, são cerca de 400 libras, ou aproximadamente dez sacos de 40 lb. Esta calculadora faz a conta assim que você insere o volume e as leituras de salinidade."
+    - question: "Qual nível de sal uma piscina de água salgada deve ter?"
+      answer: "A maioria dos geradores de cloro salino funciona melhor entre 2.700 e 3.400 ppm, sendo 3.200 ppm um alvo comum — mas siga sempre a recomendação do fabricante do seu gerador. Baixo demais e a célula não produzirá cloro; alto demais e você arrisca corrosão e uma falha por excesso de sal. Esta ferramenta usa 3.200 ppm por padrão e permite que você altere."
+    - question: "Como faço para baixar o nível de sal da minha piscina?"
+      answer: "Não existe produto químico que remova o sal. A única forma de baixar a salinidade é drenar parte da piscina e reabastecer com água doce, o que dilui a concentração de sal. Se a sua leitura já estiver no alvo ou acima, esta calculadora dirá que nenhum sal é necessário e recomendará diluição caso você esteja acima."
+    - question: "Quanto tempo depois de adicionar sal posso medir?"
+      answer: "Adicione o sal com a bomba ligada e escove-o para ajudar a dissolver. Aguarde cerca de 24 horas com a bomba circulando antes de tomar uma leitura de salinidade, pois o sal não dissolvido não registra com precisão. Adicione em etapas em direção ao alvo em vez de ultrapassar — é muito mais fácil adicionar mais do que diluir."
+    - question: "Adicionar sal afeta a demais química da piscina?"
+      answer: "O sal em si é bastante neutro, mas os geradores de cloro salino tendem a elevar o pH com o tempo à medida que produzem cloro, então fique de olho no pH e na alcalinidade total depois de ligar a célula. Verifique o equilíbrio geral da água com a calculadora LSI e corrija o pH com a calculadora de dosagem conforme necessário."
+  js:
+    secondary_none: "lb — não é preciso sal"
+    guidance_at_target: "Você está exatamente no alvo. Não é preciso sal."
+    guidance_over: "Você está acima do alvo em %PPM% ppm. O sal não pode ser removido quimicamente — drene parcialmente e reabasteça com água doce para diluir."
+    secondary: "lb &nbsp;·&nbsp; ≈ %BAGS% sacos (40 lb) &nbsp;·&nbsp; %KG% kg"
+    guidance_add: "Aumente a salinidade em %PPM% ppm. Adicione em etapas com a bomba ligada e meça novamente após ~24 horas."
+    formula: "(%TARGET% − %CURRENT%) ppm × %GAL% gal × 8,34 ÷ 1.000.000 = %LBS% lb"
+    unit_gal: "galões"
+    unit_l: "litros"
+    unit_aria: "Unidade de volume: %UNIT%. Toque para alternar."
+
+nl:
+  title: "Zoutrekenmachine voor zoutwaterzwembad — ponden zout voor je zoutelektrolyse"
+  description: "Gratis zoutrekenmachine voor zoutwaterzwembaden. Voer je zwembadvolume, huidige zoutgehalte en streefzoutgehalte in om precies te weten hoeveel ponden zout (en zakken van 40 lb) je voor je zoutelektrolyse moet toevoegen."
+  h1: "Zoutrekenmachine voor zoutwaterzwembad"
+  subtitle: "Bereken precies hoeveel zout je moet toevoegen om het doel van je zoutelektrolyse te bereiken. Voer je volume en zoutmetingen in — krijg ponden en zakken van 40 lb."
+  readings_heading: "Je zwembad en zoutgehalte"
+  label_vol: "Zwembadvolume"
+  label_current: "Huidig zoutgehalte"
+  label_target: "Streefzoutgehalte"
+  vol_hint_pre: "Niet zeker?"
+  vol_hint_link: "Gebruik de volumerekenmachine →"
+  target_hint: "De meeste zoutelektrolyses mikken op 2.700–3.400 ppm. Volg de handleiding van je cel."
+  result_label: "Toe te voegen zout"
+  formula_heading: ""
+  cta_app: "Houd zout en chemie per zwembad bij"
+  disclaimer: "Alleen ter indicatie. Voeg het zout in fasen toe met de pomp aan en wacht daarna ~24 uur voordat je opnieuw meet. Het is makkelijker om bij te voegen dan te verdunnen — schiet niet door je doel heen."
+  how_heading: "Hoe de zoutberekening werkt"
+  how_body: >-
+    <p>Zout wordt gemeten in delen per miljoen (ppm). Om het zoutgehalte met een bekende hoeveelheid
+    te verhogen, voeg je zout toe in verhouding tot het watergewicht van je zwembad:</p>
+    <p class="text-center font-semibold text-pool-dark">Ponden zout = (Doel − Huidig) × Gallons × 8,34 ÷ 1.000.000</p>
+    <p>De 8,34 is het gewicht van één gallon water in ponden. Voor een zwembad van 15.000 gallons dat
+    start op 0 ppm en mikt op 3.200 ppm: (3.200 − 0) × 15.000 × 8,34 ÷ 1.000.000 ≈ <strong>400 ponden</strong>,
+    oftewel ongeveer tien zakken van 40 lb.</p>
+    <h3>Een paar tips uit de praktijk</h3>
+    <ul>
+    <li><strong>Voeg in fasen toe.</strong> Strooi het zout over het hele zwembad met de pomp aan en borstel het richting de afvoer om het op te lossen.</li>
+    <li><strong>Wacht met meten.</strong> Laat het ~24 uur circuleren voordat je het zoutgehalte afleest — onopgelost zout wordt niet geregistreerd.</li>
+    <li><strong>Zout kun je niet verwijderen.</strong> Als je boven het doel zit, is de enige oplossing gedeeltelijk aftappen en bijvullen met vers water.</li>
+    </ul>
+    <p>Bepaal je volume met de <a href="/pool-volume-calculator/">zwembadvolume-rekenmachine</a>, controleer de algehele
+    balans met de <a href="/lsi-calculator/">LSI-rekenmachine</a>, en onthoud dat zoutcellen de pH na verloop van tijd
+    verhogen — houd de <a href="/chemical-dosing-calculator/">doseerrekenmachine</a> bij de hand.</p>
+  faq_heading: "Veelgestelde vragen over de zoutrekenmachine"
+  final_title: "Beheer elk zoutwaterzwembad in één app"
+  final_body: "PoolFlow houdt zoutgehalte, chemie en dosering bij voor elk zwembad op je route — offline, aan de rand van het bad. Gratis voor maximaal 5 zwembaden."
+  final_guide: "Controleer de waterbalans (LSI)"
+  faq:
+    - question: "Hoeveel zout voeg ik toe aan mijn zoutwaterzwembad?"
+      answer: "Ponden zout = (streef-ppm − huidige ppm) × gallons × 8,34 ÷ 1.000.000. Voor een zwembad van 15.000 gallons dat van 0 naar 3.200 ppm gaat, is dat ongeveer 400 ponden, oftewel ruwweg tien zakken van 40 lb. Deze rekenmachine doet de berekening zodra je je volume en zoutmetingen invoert."
+    - question: "Welk zoutgehalte moet een zoutwaterzwembad hebben?"
+      answer: "De meeste zoutelektrolyses werken het best tussen 2.700 en 3.400 ppm, waarbij 3.200 ppm een gangbaar doel is — maar volg altijd de aanbeveling van de fabrikant van je zoutelektrolyse. Te laag en de cel produceert geen chloor; te hoog en je riskeert corrosie en een hoog-zoutstoring. Deze tool gebruikt standaard 3.200 ppm en laat je dit aanpassen."
+    - question: "Hoe verlaag ik het zoutgehalte in mijn zwembad?"
+      answer: "Er bestaat geen chemisch middel dat zout verwijdert. De enige manier om het zoutgehalte te verlagen is een deel van het zwembad af te tappen en bij te vullen met vers water, wat de zoutconcentratie verdunt. Als je meting al op of boven het doel zit, vertelt deze rekenmachine je dat er geen zout nodig is en raadt ze verdunnen aan als je erboven zit."
+    - question: "Hoe lang na het toevoegen van zout kan ik meten?"
+      answer: "Voeg het zout toe met de pomp aan en borstel het rond om het te helpen oplossen. Wacht ongeveer 24 uur met de pomp aan voordat je een zoutmeting doet, want onopgelost zout wordt niet nauwkeurig geregistreerd. Voeg in fasen toe richting je doel in plaats van eroverheen te schieten — het is veel makkelijker om bij te voegen dan te verdunnen."
+    - question: "Beïnvloedt het toevoegen van zout de overige zwembadchemie?"
+      answer: "Zout zelf is vrij neutraal, maar zoutelektrolyses hebben de neiging de pH na verloop van tijd te verhogen terwijl ze chloor produceren, dus let op de pH en de totale alkaliteit nadat je de cel hebt ingeschakeld. Controleer de algehele waterbalans met de LSI-rekenmachine en corrigeer de pH zo nodig met de doseerrekenmachine."
+  js:
+    secondary_none: "lb — geen zout nodig"
+    guidance_at_target: "Je zit precies op het doel. Geen zout nodig."
+    guidance_over: "Je zit %PPM% ppm boven het doel. Zout kan niet chemisch worden verwijderd — tap gedeeltelijk af en vul bij met vers water om te verdunnen."
+    secondary: "lb &nbsp;·&nbsp; ≈ %BAGS% zakken (40 lb) &nbsp;·&nbsp; %KG% kg"
+    guidance_add: "Verhoog het zoutgehalte met %PPM% ppm. Voeg in fasen toe met de pomp aan en meet opnieuw na ~24 uur."
+    formula: "(%TARGET% − %CURRENT%) ppm × %GAL% gal × 8,34 ÷ 1.000.000 = %LBS% lb"
+    unit_gal: "gallons"
+    unit_l: "liters"
+    unit_aria: "Volume-eenheid: %UNIT%. Tik om te wisselen."

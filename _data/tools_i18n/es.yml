@@ -1,0 +1,52 @@
+# Traducciones de la sección de herramientas. Acceso: site.data.tools_i18n["es"].
+
+common:
+  breadcrumb_home: "Inicio"
+  breadcrumb_tools: "Herramientas"
+  open_calculator: "Abrir calculadora"
+  more_tools_heading: "Más herramientas gratuitas"
+  more_tools_sub: "Gratis, al instante y en el navegador — sin registro."
+  see_all_tools: "Ver todas las herramientas"
+  try_free: "Prueba PoolFlow gratis"
+  compare_apps: "Comparar apps de piscinas"
+
+names:
+  lsi: "Calculadora LSI"
+  volume: "Calculadora de volumen de piscina"
+  dosing: "Calculadora de dosificación química"
+  salt: "Calculadora de sal para piscinas salinas"
+  turnover: "Calculadora de tiempo de bomba"
+  chlorine: "Calculadora de cloro libre"
+
+blurbs:
+  lsi: "Índice de Saturación de Langelier en tiempo real, con alcalinidad corregida por CYA — ¿tu agua es corrosiva, equilibrada o incrustante?"
+  volume: "Estima los galones (o litros) de piscinas rectangulares, redondas, ovaladas y de forma libre — el punto de partida de cada dosis."
+  dosing: "Cuánto ácido, carbonato de sodio, bicarbonato o cloruro de calcio añadir — por volumen, con un costo estimado por dosis."
+  salt: "Libras de sal (y sacos de 40 lb) para alcanzar el objetivo de tu clorador salino — sin más adivinanzas en el SWG."
+  turnover: "Tiempo de recirculación y horas diarias de bomba a partir del volumen y el caudal — circula toda la piscina sin excederte."
+  chlorine: "El objetivo correcto de cloro libre para tu nivel de CYA, usando la proporción FC/CYA del sector — para piscinas manuales y salinas."
+
+hub:
+  title: "Herramientas y calculadoras gratuitas para servicio de piscinas — LSI, volumen, dosificación y más"
+  description: "Calculadoras de piscina gratuitas e instantáneas para técnicos y propietarios: equilibrio del agua LSI, volumen, dosificación química, sal, tiempo de bomba y objetivos de cloro libre. Sin registro."
+  h1: "Herramientas gratuitas para servicio de piscinas"
+  subtitle: "Calculadoras instantáneas para los números que importan al lado de la piscina — equilibrio del agua, volumen, dosificación, sal, circulación y cloro. Gratis, sin registro, hechas para manos mojadas."
+  why_heading: "Hecho por gente de piscinas"
+  why_body: >-
+    Estas calculadoras usan las mismas fórmulas estándar del sector que impulsan la
+    <a href="%STORE%" class="text-pool-blue hover:underline">app iOS de PoolFlow</a> —
+    las fórmulas de volumen, las tasas de dosificación y las proporciones FC/CYA en las que
+    confían los profesionales. Son una gran manera de verificar un número rápido. Cuando
+    gestionas una ruta completa, PoolFlow lo hace todo automáticamente: equilibrio del agua
+    en tiempo real, dosificación con el precio de tu propio inventario y seguimiento de
+    rentabilidad por piscina, incluso sin conexión.
+  faq_heading: "Preguntas frecuentes sobre las herramientas"
+  final_cta_title: "Pon estos cálculos en piloto automático"
+  final_cta_body: "PoolFlow ejecuta cada uno de estos cálculos automáticamente para cada piscina de tu ruta — sin conexión, al lado de la piscina. Gratis hasta 5 piscinas."
+  faq:
+    - question: "¿Estas calculadoras de piscina son gratuitas?"
+      answer: "Sí. Cada herramienta funciona completamente en tu navegador, es totalmente gratis y no requiere registro ni descarga. Para química, dosificación y seguimiento por piscina automáticos en toda una ruta, la app iOS de PoolFlow se basa en estos mismos cálculos en el campo, incluso sin conexión."
+    - question: "¿Con qué calculadora de piscina debo empezar?"
+      answer: "Empieza con la calculadora de volumen — casi todos los demás cálculos dependen de conocer tus galones. Una vez que tienes tu volumen, las calculadoras de dosificación, sal y tiempo de bomba lo usan. Las calculadoras de LSI y cloro libre funcionan directamente con tus lecturas de análisis."
+    - question: "¿Funcionan estas herramientas en el móvil?"
+      answer: "Sí. Cada calculadora está diseñada para móvil primero, con campos grandes y táctiles para usarlas al lado de la piscina en el teléfono. Para uso sin conexión, gestión de rutas y dosificación automática con el precio de tus propios productos, instala la app iOS de PoolFlow."

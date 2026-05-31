@@ -11,8 +11,9 @@
     model: "base-plus-per-pool"
     base: 98
     per_pool: 2
+    card_note: "$98 + $2/pool"
     currency: "USD"
-    summary: "$98/mo base + $2/pool/mo"
+    summary: "$98/mo base + $2/pool"
     examples:
       - pools: 40
         monthly: 178
@@ -61,6 +62,7 @@
     model: "tiered"
     base: 49
     per_pool: 0
+    card_note: "Grow plan for routing"
     currency: "USD"
     summary: "$49–$169/mo (route optimization at $169/mo only)"
     examples:
@@ -70,6 +72,8 @@
         monthly: 169
       - pools: 80
         monthly: 169
+  feature_notes:
+    route_optimization: "$169/mo plan"
   features:
     lsi_calculator: false
     cya_correction: false
@@ -111,6 +115,7 @@
     model: "flat"
     base: 40
     per_pool: 0
+    card_note: "Flat / no LSI"
     currency: "USD"
     summary: "$40/mo"
     examples:
@@ -154,6 +159,7 @@
 
 - slug: "pool-office-manager"
   name: "Pool Office Manager"
+  short_name: "Pool Office Mgr"
   has_page: true
   type: "pool-specific"
   tagline: "Pool service business software"
@@ -161,6 +167,7 @@
     model: "per-tech"
     base: 30
     per_pool: 0
+    card_note: "Per technician"
     currency: "USD"
     summary: "$30/mo per technician"
     examples:
@@ -204,12 +211,14 @@
 
 - slug: "pooltrac"
   name: "PoolTrac"
+  has_page: false
   type: "pool-specific"
   tagline: "Pool route and service tracking"
   pricing:
     model: "per-pool"
     base: 0
     per_pool: 1
+    card_note: "$1/pool/mo"
     currency: "USD"
     summary: "$1/pool/mo"
     examples:
@@ -254,12 +263,14 @@
 
 - slug: "poolcarepro"
   name: "PoolCarePRO"
+  has_page: false
   type: "pool-specific"
   tagline: "Pool service and repair management"
   pricing:
     model: "tiered"
     base: 59
     per_pool: 0
+    card_note: "Standard plan"
     currency: "USD"
     summary: "$59–$149/mo depending on plan"
     examples:
@@ -303,12 +314,14 @@
 
 - slug: "pooltrakr"
   name: "Pooltrakr"
+  has_page: false
   type: "pool-specific"
   tagline: "Mobile pool service management"
   pricing:
     model: "flat"
     base: 35
     per_pool: 0
+    card_note: "Flat price"
     currency: "USD"
     summary: "$35/mo flat"
     examples:

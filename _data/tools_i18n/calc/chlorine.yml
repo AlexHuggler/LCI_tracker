@@ -1,0 +1,374 @@
+# Free Chlorine calculator strings, per language. Accessed as
+# site.data.tools_i18n.calc.chlorine[lang]. `js` holds the runtime strings
+# injected into assets/js/free-chlorine.js via window.PF_CHLORINE_I18N.
+# Placeholders: %PCT% (target %), %CYA% (CYA ppm), %FC% (target FC ppm),
+# %SALT% (saltwater note), %SHOCK% (shock note). "ppm", "FC", "CYA" stay universal.
+en:
+  title: "Free Chlorine Calculator — FC Target by CYA Level (FC/CYA Ratio)"
+  description: "Free chlorine target calculator. Enter your cyanuric acid (CYA) level to get the right free-chlorine range using the industry FC/CYA ratio — for manual and saltwater pools, plus the shock level."
+  h1: "Free Chlorine Target Calculator"
+  subtitle: "The right free-chlorine range for your pool depends on your CYA. Enter your stabilizer level and get a target using the industry FC/CYA ratio."
+  readings_heading: "Your Stabilizer Level"
+  pool_type_label: "Pool type"
+  type_manual: "Manually chlorinated"
+  type_swg: "Saltwater (SWG)"
+  label_cya: "Cyanuric Acid (CYA)"
+  cya_hint: "Ideal CYA is 30–50 ppm for manual pools, often 60–80 for saltwater."
+  result_label: "Target Free Chlorine"
+  unit_ppm: "ppm"
+  bd_min: "Minimum FC"
+  bd_target: "Target FC"
+  bd_shock: "Shock level (SLAM)"
+  cta_app: "Track FC & CYA per pool"
+  disclaimer: "Guidance based on the widely used FC/CYA ratio. It does not replace a reliable test kit or local health-code requirements for commercial pools. Always confirm with a current CYA and FC test."
+  how_heading: "Why Free Chlorine Tracks Your CYA"
+  how_body: >-
+    <p>Cyanuric acid protects chlorine from sunlight by binding most of it into a slow-release
+    reserve. The catch: the more CYA you have, the more <strong>total</strong> free chlorine you
+    must carry to keep enough <em>active</em> sanitizer in the water. That's why a single fixed
+    "1–3 ppm" target is misleading once stabilizer is present.</p>
+    <p>Experienced technicians manage the <strong>FC/CYA ratio</strong> instead. The widely
+    referenced guideline keeps free chlorine at about <strong>7.5% of the CYA level</strong>:</p>
+    <ul>
+    <li>At 30 ppm CYA → target 2–3 ppm free chlorine</li>
+    <li>At 50 ppm CYA → about 4 ppm</li>
+    <li>At 80 ppm CYA → about 6 ppm</li>
+    <li>At 100 ppm CYA → 7–8 ppm</li>
+    </ul>
+    <p>Saltwater pools can run a slightly lower maintenance target (~5% of CYA) because the cell
+    produces chlorine continuously. To <strong>shock</strong> a pool, raise free chlorine to
+    roughly 40% of CYA using an unstabilized source so you don't add more stabilizer.</p>
+    <p>If your CYA keeps climbing or chlorine stops working despite a normal reading, read our full
+    guide on <a href="/blog/cya-cyanuric-acid-management/">managing CYA and chlorine lock</a>, and
+    check overall balance with the <a href="/lsi-calculator/">LSI calculator</a>.</p>
+  faq_heading: "Free Chlorine FAQ"
+  final_title: "Never Guess Free Chlorine Again"
+  final_body: "PoolFlow tracks CYA and free chlorine for every pool and flags water that's drifting out of balance — offline, at poolside. Free for up to 5 pools."
+  final_guide: "Read the CYA Guide"
+  faq:
+    - question: "What is the FC/CYA ratio?"
+      answer: "The FC/CYA ratio is the relationship between free chlorine (FC) and cyanuric acid (CYA) that keeps chlorine effective. Because CYA binds chlorine, the right free-chlorine target scales with your CYA level. The widely referenced guideline is to keep free chlorine at roughly 7.5% of your CYA — for example, about 4 ppm FC at 50 ppm CYA."
+    - question: "How much free chlorine should my pool have?"
+      answer: "It depends on your CYA. At 30 ppm CYA, target 2–3 ppm free chlorine; at 50 ppm, about 4 ppm; at 80 ppm, around 6 ppm. A single fixed number like '1–3 ppm' is misleading once CYA is present. Enter your CYA above to get a target range for a manual or saltwater pool."
+    - question: "Why does cyanuric acid change the chlorine I need?"
+      answer: "CYA shields chlorine from UV sunlight by binding most of it into a reserve, releasing it slowly. The trade-off is that the higher your CYA, the more total free chlorine you must carry for the same amount of active sanitizer. That's why a pool at 100 ppm CYA needs far more free chlorine than one at 30 ppm to stay algae-free."
+    - question: "What is the shock level for my pool?"
+      answer: "Shocking (or a SLAM) raises free chlorine to roughly 40% of the CYA level to break down chloramines and kill algae — for example, about 20 ppm FC at 50 ppm CYA. The calculator shows the shock target alongside your normal range. Always shock with an unstabilized chlorine source so you don't add more CYA."
+    - question: "Do saltwater pools need less chlorine?"
+      answer: "Saltwater pools follow the same FC/CYA principle, but because the generator produces chlorine continuously, many operators run a slightly lower target — around 5% of CYA — and sometimes keep CYA a bit higher (60–80 ppm) for UV protection. The calculator's saltwater mode reflects this lower maintenance target."
+  js:
+    ppm: "ppm"
+    saltwater: " (saltwater)"
+    formula: "Target ≈ %PCT%% of %CYA% ppm CYA%SALT% = %FC% ppm. %SHOCK%"
+    shock_note: "Shock at ~40% of CYA."
+
+es:
+  title: "Calculadora de cloro libre — Objetivo de FC según el nivel de CYA (relación FC/CYA)"
+  description: "Calculadora de objetivo de cloro libre. Ingresa tu nivel de ácido cianúrico (CYA) para obtener el rango correcto de cloro libre usando la relación FC/CYA del sector — para piscinas manuales y de agua salada, además del nivel de choque."
+  h1: "Calculadora de objetivo de cloro libre"
+  subtitle: "El rango correcto de cloro libre para tu piscina depende de tu CYA. Ingresa tu nivel de estabilizador y obtén un objetivo usando la relación FC/CYA del sector."
+  readings_heading: "Tu nivel de estabilizador"
+  pool_type_label: "Tipo de piscina"
+  type_manual: "Cloración manual"
+  type_swg: "Agua salada (SWG)"
+  label_cya: "Ácido cianúrico (CYA)"
+  cya_hint: "El CYA ideal es de 30–50 ppm para piscinas manuales, a menudo 60–80 para agua salada."
+  result_label: "Objetivo de cloro libre"
+  unit_ppm: "ppm"
+  bd_min: "FC mínimo"
+  bd_target: "FC objetivo"
+  bd_shock: "Nivel de choque (SLAM)"
+  cta_app: "Controla FC y CYA por piscina"
+  disclaimer: "Orientación basada en la relación FC/CYA de uso generalizado. No sustituye un kit de prueba fiable ni los requisitos del código sanitario local para piscinas comerciales. Confirma siempre con una prueba actual de CYA y FC."
+  how_heading: "Por qué el cloro libre depende de tu CYA"
+  how_body: >-
+    <p>El ácido cianúrico protege el cloro de la luz solar fijando la mayor parte en una reserva
+    de liberación lenta. El inconveniente: cuanto más CYA tengas, más cloro libre
+    <strong>total</strong> debes mantener para conservar suficiente desinfectante <em>activo</em>
+    en el agua. Por eso un único objetivo fijo de "1–3 ppm" es engañoso cuando hay estabilizador
+    presente.</p>
+    <p>Los técnicos con experiencia gestionan en cambio la <strong>relación FC/CYA</strong>. La
+    pauta más referenciada mantiene el cloro libre en torno al <strong>7,5 % del nivel de
+    CYA</strong>:</p>
+    <ul>
+    <li>Con 30 ppm de CYA → objetivo de 2–3 ppm de cloro libre</li>
+    <li>Con 50 ppm de CYA → unas 4 ppm</li>
+    <li>Con 80 ppm de CYA → unas 6 ppm</li>
+    <li>Con 100 ppm de CYA → 7–8 ppm</li>
+    </ul>
+    <p>Las piscinas de agua salada pueden mantener un objetivo de mantenimiento algo más bajo
+    (~5 % del CYA) porque la celda produce cloro de forma continua. Para <strong>aplicar
+    choque</strong> a una piscina, eleva el cloro libre hasta aproximadamente el 40 % del CYA
+    usando una fuente no estabilizada para no añadir más estabilizador.</p>
+    <p>Si tu CYA sigue subiendo o el cloro deja de funcionar pese a una lectura normal, lee
+    nuestra guía completa sobre <a href="/blog/cya-cyanuric-acid-management/">cómo gestionar el CYA
+    y el bloqueo de cloro</a>, y comprueba el equilibrio general con la
+    <a href="/lsi-calculator/">calculadora LSI</a>.</p>
+  faq_heading: "Preguntas frecuentes sobre el cloro libre"
+  final_title: "Nunca vuelvas a adivinar el cloro libre"
+  final_body: "PoolFlow controla el CYA y el cloro libre de cada piscina y avisa cuando el agua se desequilibra — sin conexión, junto a la piscina. Gratis hasta para 5 piscinas."
+  final_guide: "Leer la guía de CYA"
+  faq:
+    - question: "¿Qué es la relación FC/CYA?"
+      answer: "La relación FC/CYA es la relación entre el cloro libre (FC) y el ácido cianúrico (CYA) que mantiene el cloro eficaz. Como el CYA fija el cloro, el objetivo correcto de cloro libre se escala con tu nivel de CYA. La pauta más referenciada es mantener el cloro libre en torno al 7,5 % de tu CYA — por ejemplo, unas 4 ppm de FC con 50 ppm de CYA."
+    - question: "¿Cuánto cloro libre debe tener mi piscina?"
+      answer: "Depende de tu CYA. Con 30 ppm de CYA, apunta a 2–3 ppm de cloro libre; con 50 ppm, unas 4 ppm; con 80 ppm, alrededor de 6 ppm. Un número fijo único como '1–3 ppm' resulta engañoso cuando hay CYA presente. Ingresa tu CYA arriba para obtener un rango objetivo para una piscina manual o de agua salada."
+    - question: "¿Por qué el ácido cianúrico cambia el cloro que necesito?"
+      answer: "El CYA protege el cloro de la luz UV del sol fijando la mayor parte en una reserva, liberándolo lentamente. El compromiso es que cuanto mayor sea tu CYA, más cloro libre total debes mantener para la misma cantidad de desinfectante activo. Por eso una piscina con 100 ppm de CYA necesita mucho más cloro libre que una con 30 ppm para mantenerse libre de algas."
+    - question: "¿Cuál es el nivel de choque para mi piscina?"
+      answer: "Aplicar choque (o un SLAM) eleva el cloro libre hasta aproximadamente el 40 % del nivel de CYA para descomponer las cloraminas y eliminar algas — por ejemplo, unas 20 ppm de FC con 50 ppm de CYA. La calculadora muestra el objetivo de choque junto a tu rango normal. Aplica siempre el choque con una fuente de cloro no estabilizada para no añadir más CYA."
+    - question: "¿Las piscinas de agua salada necesitan menos cloro?"
+      answer: "Las piscinas de agua salada siguen el mismo principio FC/CYA, pero como el generador produce cloro de forma continua, muchos operadores mantienen un objetivo algo más bajo — alrededor del 5 % del CYA — y a veces mantienen el CYA un poco más alto (60–80 ppm) para protección UV. El modo de agua salada de la calculadora refleja este objetivo de mantenimiento más bajo."
+  js:
+    ppm: "ppm"
+    saltwater: " (agua salada)"
+    formula: "Objetivo ≈ %PCT% % de %CYA% ppm de CYA%SALT% = %FC% ppm. %SHOCK%"
+    shock_note: "Choque al ~40 % del CYA."
+
+fr:
+  title: "Calculateur de chlore libre — Cible de FC selon le niveau de CYA (ratio FC/CYA)"
+  description: "Calculateur de cible de chlore libre. Saisissez votre niveau d'acide cyanurique (CYA) pour obtenir la bonne plage de chlore libre à l'aide du ratio FC/CYA du secteur — pour les piscines manuelles et au sel, ainsi que le niveau de choc."
+  h1: "Calculateur de cible de chlore libre"
+  subtitle: "La bonne plage de chlore libre pour votre piscine dépend de votre CYA. Saisissez votre niveau de stabilisant et obtenez une cible à l'aide du ratio FC/CYA du secteur."
+  readings_heading: "Votre niveau de stabilisant"
+  pool_type_label: "Type de piscine"
+  type_manual: "Chloration manuelle"
+  type_swg: "Eau salée (SWG)"
+  label_cya: "Acide cyanurique (CYA)"
+  cya_hint: "Le CYA idéal est de 30 à 50 ppm pour les piscines manuelles, souvent 60 à 80 pour l'eau salée."
+  result_label: "Cible de chlore libre"
+  unit_ppm: "ppm"
+  bd_min: "FC minimum"
+  bd_target: "FC cible"
+  bd_shock: "Niveau de choc (SLAM)"
+  cta_app: "Suivez le FC et le CYA par piscine"
+  disclaimer: "Conseils basés sur le ratio FC/CYA largement utilisé. Ils ne remplacent pas un kit de test fiable ni les exigences du code sanitaire local pour les piscines commerciales. Confirmez toujours avec un test récent de CYA et de FC."
+  how_heading: "Pourquoi le chlore libre suit votre CYA"
+  how_body: >-
+    <p>L'acide cyanurique protège le chlore de la lumière du soleil en en fixant la majeure partie
+    dans une réserve à libération lente. L'inconvénient : plus vous avez de CYA, plus vous devez
+    maintenir de chlore libre <strong>total</strong> pour conserver assez de désinfectant
+    <em>actif</em> dans l'eau. C'est pourquoi une seule cible fixe de « 1–3 ppm » est trompeuse dès
+    qu'un stabilisant est présent.</p>
+    <p>Les techniciens expérimentés gèrent plutôt le <strong>ratio FC/CYA</strong>. La règle la
+    plus citée maintient le chlore libre à environ <strong>7,5 % du niveau de CYA</strong> :</p>
+    <ul>
+    <li>À 30 ppm de CYA → cible de 2–3 ppm de chlore libre</li>
+    <li>À 50 ppm de CYA → environ 4 ppm</li>
+    <li>À 80 ppm de CYA → environ 6 ppm</li>
+    <li>À 100 ppm de CYA → 7–8 ppm</li>
+    </ul>
+    <p>Les piscines au sel peuvent maintenir une cible d'entretien un peu plus basse (~5 % du CYA)
+    car la cellule produit du chlore en continu. Pour <strong>choquer</strong> une piscine, montez
+    le chlore libre à environ 40 % du CYA en utilisant une source non stabilisée afin de ne pas
+    ajouter de stabilisant.</p>
+    <p>Si votre CYA ne cesse de grimper ou que le chlore cesse d'agir malgré une lecture normale,
+    lisez notre guide complet sur <a href="/blog/cya-cyanuric-acid-management/">la gestion du CYA
+    et du blocage du chlore</a>, et vérifiez l'équilibre global avec le
+    <a href="/lsi-calculator/">calculateur LSI</a>.</p>
+  faq_heading: "FAQ sur le chlore libre"
+  final_title: "Ne devinez plus jamais le chlore libre"
+  final_body: "PoolFlow suit le CYA et le chlore libre de chaque piscine et signale l'eau qui se déséquilibre — hors ligne, au bord du bassin. Gratuit jusqu'à 5 piscines."
+  final_guide: "Lire le guide du CYA"
+  faq:
+    - question: "Qu'est-ce que le ratio FC/CYA ?"
+      answer: "Le ratio FC/CYA est la relation entre le chlore libre (FC) et l'acide cyanurique (CYA) qui maintient le chlore efficace. Comme le CYA fixe le chlore, la bonne cible de chlore libre évolue avec votre niveau de CYA. La règle la plus citée consiste à maintenir le chlore libre à environ 7,5 % de votre CYA — par exemple, environ 4 ppm de FC à 50 ppm de CYA."
+    - question: "Combien de chlore libre ma piscine doit-elle avoir ?"
+      answer: "Cela dépend de votre CYA. À 30 ppm de CYA, visez 2–3 ppm de chlore libre ; à 50 ppm, environ 4 ppm ; à 80 ppm, environ 6 ppm. Un chiffre fixe unique comme « 1–3 ppm » est trompeur dès que le CYA est présent. Saisissez votre CYA ci-dessus pour obtenir une plage cible pour une piscine manuelle ou au sel."
+    - question: "Pourquoi l'acide cyanurique change-t-il le chlore dont j'ai besoin ?"
+      answer: "Le CYA protège le chlore de la lumière UV du soleil en en fixant la majeure partie dans une réserve, qu'il libère lentement. La contrepartie est que plus votre CYA est élevé, plus vous devez maintenir de chlore libre total pour la même quantité de désinfectant actif. C'est pourquoi une piscine à 100 ppm de CYA a besoin de bien plus de chlore libre qu'une à 30 ppm pour rester sans algues."
+    - question: "Quel est le niveau de choc pour ma piscine ?"
+      answer: "Le choc (ou un SLAM) monte le chlore libre à environ 40 % du niveau de CYA pour décomposer les chloramines et tuer les algues — par exemple, environ 20 ppm de FC à 50 ppm de CYA. Le calculateur affiche la cible de choc à côté de votre plage normale. Choquez toujours avec une source de chlore non stabilisée afin de ne pas ajouter de CYA."
+    - question: "Les piscines au sel ont-elles besoin de moins de chlore ?"
+      answer: "Les piscines au sel suivent le même principe FC/CYA, mais comme le générateur produit du chlore en continu, beaucoup d'opérateurs maintiennent une cible un peu plus basse — autour de 5 % du CYA — et gardent parfois le CYA un peu plus élevé (60–80 ppm) pour la protection UV. Le mode eau salée du calculateur reflète cette cible d'entretien plus basse."
+  js:
+    ppm: "ppm"
+    saltwater: " (eau salée)"
+    formula: "Cible ≈ %PCT% % de %CYA% ppm de CYA%SALT% = %FC% ppm. %SHOCK%"
+    shock_note: "Choc à ~40 % du CYA."
+
+de:
+  title: "Freichlor-Rechner — FC-Zielwert nach CYA-Niveau (FC/CYA-Verhältnis)"
+  description: "Rechner für den Freichlor-Zielwert. Gib deinen Cyanursäure-Wert (CYA) ein, um mit dem branchenüblichen FC/CYA-Verhältnis den richtigen Freichlor-Bereich zu erhalten — für manuell chlorierte und Salzwasserpools, samt Schockwert."
+  h1: "Freichlor-Zielwert-Rechner"
+  subtitle: "Der richtige Freichlor-Bereich für deinen Pool hängt von deinem CYA ab. Gib deinen Stabilisatorwert ein und erhalte mit dem branchenüblichen FC/CYA-Verhältnis einen Zielwert."
+  readings_heading: "Dein Stabilisatorwert"
+  pool_type_label: "Pooltyp"
+  type_manual: "Manuell chloriert"
+  type_swg: "Salzwasser (SWG)"
+  label_cya: "Cyanursäure (CYA)"
+  cya_hint: "Ideal sind 30–50 ppm CYA für manuelle Pools, oft 60–80 für Salzwasser."
+  result_label: "Freichlor-Zielwert"
+  unit_ppm: "ppm"
+  bd_min: "Mindest-FC"
+  bd_target: "Ziel-FC"
+  bd_shock: "Schockwert (SLAM)"
+  cta_app: "FC & CYA pro Pool verfolgen"
+  disclaimer: "Hinweise basieren auf dem weit verbreiteten FC/CYA-Verhältnis. Sie ersetzen weder ein zuverlässiges Testkit noch die Vorgaben örtlicher Hygienevorschriften für öffentliche Pools. Bestätige immer mit einem aktuellen CYA- und FC-Test."
+  how_heading: "Warum Freichlor deinem CYA folgt"
+  how_body: >-
+    <p>Cyanursäure schützt das Chlor vor Sonnenlicht, indem sie den Großteil in einer langsam
+    freisetzenden Reserve bindet. Der Haken: Je mehr CYA du hast, desto mehr
+    <strong>gesamtes</strong> Freichlor musst du vorhalten, um genügend <em>aktives</em>
+    Desinfektionsmittel im Wasser zu halten. Deshalb ist ein einzelner fester Zielwert von
+    „1–3 ppm“ irreführend, sobald Stabilisator vorhanden ist.</p>
+    <p>Erfahrene Techniker steuern stattdessen das <strong>FC/CYA-Verhältnis</strong>. Die am
+    häufigsten zitierte Richtlinie hält Freichlor bei etwa <strong>7,5 % des CYA-Werts</strong>:</p>
+    <ul>
+    <li>Bei 30 ppm CYA → Zielwert 2–3 ppm Freichlor</li>
+    <li>Bei 50 ppm CYA → etwa 4 ppm</li>
+    <li>Bei 80 ppm CYA → etwa 6 ppm</li>
+    <li>Bei 100 ppm CYA → 7–8 ppm</li>
+    </ul>
+    <p>Salzwasserpools können einen etwas niedrigeren Wartungs-Zielwert (~5 % des CYA) fahren, da
+    die Zelle laufend Chlor erzeugt. Zum <strong>Schocken</strong> eines Pools erhöhst du das
+    Freichlor auf rund 40 % des CYA mit einer unstabilisierten Quelle, damit du nicht noch mehr
+    Stabilisator hinzufügst.</p>
+    <p>Wenn dein CYA immer weiter steigt oder das Chlor trotz normalem Messwert nicht mehr wirkt,
+    lies unseren ausführlichen Leitfaden zum <a href="/blog/cya-cyanuric-acid-management/">Umgang
+    mit CYA und Chlorblockade</a> und prüfe die Gesamtbalance mit dem
+    <a href="/lsi-calculator/">LSI-Rechner</a>.</p>
+  faq_heading: "Freichlor-FAQ"
+  final_title: "Rate nie wieder beim Freichlor"
+  final_body: "PoolFlow verfolgt CYA und Freichlor für jeden Pool und meldet Wasser, das aus dem Gleichgewicht gerät — offline, direkt am Pool. Kostenlos für bis zu 5 Pools."
+  final_guide: "Den CYA-Leitfaden lesen"
+  faq:
+    - question: "Was ist das FC/CYA-Verhältnis?"
+      answer: "Das FC/CYA-Verhältnis ist die Beziehung zwischen Freichlor (FC) und Cyanursäure (CYA), die das Chlor wirksam hält. Da CYA das Chlor bindet, skaliert der richtige Freichlor-Zielwert mit deinem CYA-Wert. Die am häufigsten zitierte Richtlinie hält Freichlor bei rund 7,5 % deines CYA — zum Beispiel etwa 4 ppm FC bei 50 ppm CYA."
+    - question: "Wie viel Freichlor sollte mein Pool haben?"
+      answer: "Das hängt von deinem CYA ab. Bei 30 ppm CYA peile 2–3 ppm Freichlor an; bei 50 ppm etwa 4 ppm; bei 80 ppm rund 6 ppm. Eine einzelne feste Zahl wie „1–3 ppm“ ist irreführend, sobald CYA vorhanden ist. Gib oben dein CYA ein, um einen Zielbereich für einen manuellen oder Salzwasserpool zu erhalten."
+    - question: "Warum verändert Cyanursäure das benötigte Chlor?"
+      answer: "CYA schirmt das Chlor vor der UV-Sonne ab, indem es den Großteil in einer Reserve bindet und langsam freisetzt. Der Kompromiss ist: Je höher dein CYA, desto mehr gesamtes Freichlor musst du für dieselbe Menge aktiven Desinfektionsmittels vorhalten. Deshalb braucht ein Pool mit 100 ppm CYA weit mehr Freichlor als einer mit 30 ppm, um algenfrei zu bleiben."
+    - question: "Was ist der Schockwert für meinen Pool?"
+      answer: "Schocken (oder ein SLAM) erhöht das Freichlor auf rund 40 % des CYA-Werts, um Chloramine abzubauen und Algen abzutöten — zum Beispiel etwa 20 ppm FC bei 50 ppm CYA. Der Rechner zeigt den Schock-Zielwert neben deinem Normalbereich. Schocke immer mit einer unstabilisierten Chlorquelle, damit du nicht noch mehr CYA hinzufügst."
+    - question: "Brauchen Salzwasserpools weniger Chlor?"
+      answer: "Salzwasserpools folgen demselben FC/CYA-Prinzip, aber da der Generator laufend Chlor erzeugt, fahren viele Betreiber einen etwas niedrigeren Zielwert — etwa 5 % des CYA — und halten das CYA manchmal etwas höher (60–80 ppm) für den UV-Schutz. Der Salzwasser-Modus des Rechners spiegelt diesen niedrigeren Wartungs-Zielwert wider."
+  js:
+    ppm: "ppm"
+    saltwater: " (Salzwasser)"
+    formula: "Zielwert ≈ %PCT% % von %CYA% ppm CYA%SALT% = %FC% ppm. %SHOCK%"
+    shock_note: "Schock bei ~40 % des CYA."
+
+pt:
+  title: "Calculadora de cloro livre — Alvo de FC pelo nível de CYA (relação FC/CYA)"
+  description: "Calculadora de alvo de cloro livre. Insira seu nível de ácido cianúrico (CYA) para obter a faixa certa de cloro livre usando a relação FC/CYA do setor — para piscinas manuais e de água salgada, além do nível de choque."
+  h1: "Calculadora de alvo de cloro livre"
+  subtitle: "A faixa certa de cloro livre para sua piscina depende do seu CYA. Insira seu nível de estabilizador e obtenha um alvo usando a relação FC/CYA do setor."
+  readings_heading: "Seu nível de estabilizador"
+  pool_type_label: "Tipo de piscina"
+  type_manual: "Cloração manual"
+  type_swg: "Água salgada (SWG)"
+  label_cya: "Ácido cianúrico (CYA)"
+  cya_hint: "O CYA ideal é de 30–50 ppm para piscinas manuais, muitas vezes 60–80 para água salgada."
+  result_label: "Alvo de cloro livre"
+  unit_ppm: "ppm"
+  bd_min: "FC mínimo"
+  bd_target: "FC alvo"
+  bd_shock: "Nível de choque (SLAM)"
+  cta_app: "Acompanhe FC e CYA por piscina"
+  disclaimer: "Orientação baseada na relação FC/CYA amplamente usada. Não substitui um kit de teste confiável nem as exigências do código sanitário local para piscinas comerciais. Confirme sempre com um teste atual de CYA e FC."
+  how_heading: "Por que o cloro livre acompanha o seu CYA"
+  how_body: >-
+    <p>O ácido cianúrico protege o cloro da luz solar fixando a maior parte dele em uma reserva de
+    liberação lenta. O problema: quanto mais CYA você tem, mais cloro livre <strong>total</strong>
+    precisa manter para conservar desinfetante <em>ativo</em> suficiente na água. Por isso um único
+    alvo fixo de "1–3 ppm" é enganoso quando há estabilizador presente.</p>
+    <p>Técnicos experientes gerenciam, em vez disso, a <strong>relação FC/CYA</strong>. A diretriz
+    mais citada mantém o cloro livre em cerca de <strong>7,5% do nível de CYA</strong>:</p>
+    <ul>
+    <li>Com 30 ppm de CYA → alvo de 2–3 ppm de cloro livre</li>
+    <li>Com 50 ppm de CYA → cerca de 4 ppm</li>
+    <li>Com 80 ppm de CYA → cerca de 6 ppm</li>
+    <li>Com 100 ppm de CYA → 7–8 ppm</li>
+    </ul>
+    <p>Piscinas de água salgada podem manter um alvo de manutenção um pouco mais baixo (~5% do CYA)
+    porque a célula produz cloro continuamente. Para <strong>aplicar choque</strong> em uma
+    piscina, eleve o cloro livre para cerca de 40% do CYA usando uma fonte não estabilizada para
+    não adicionar mais estabilizador.</p>
+    <p>Se o seu CYA continua subindo ou o cloro para de funcionar apesar de uma leitura normal,
+    leia nosso guia completo sobre <a href="/blog/cya-cyanuric-acid-management/">como gerenciar o
+    CYA e o bloqueio de cloro</a>, e verifique o equilíbrio geral com a
+    <a href="/lsi-calculator/">calculadora LSI</a>.</p>
+  faq_heading: "Perguntas frequentes sobre cloro livre"
+  final_title: "Nunca mais adivinhe o cloro livre"
+  final_body: "O PoolFlow acompanha o CYA e o cloro livre de cada piscina e sinaliza a água que está saindo do equilíbrio — offline, à beira da piscina. Grátis para até 5 piscinas."
+  final_guide: "Ler o guia de CYA"
+  faq:
+    - question: "O que é a relação FC/CYA?"
+      answer: "A relação FC/CYA é a relação entre o cloro livre (FC) e o ácido cianúrico (CYA) que mantém o cloro eficaz. Como o CYA fixa o cloro, o alvo certo de cloro livre escala com o seu nível de CYA. A diretriz mais citada é manter o cloro livre em cerca de 7,5% do seu CYA — por exemplo, cerca de 4 ppm de FC com 50 ppm de CYA."
+    - question: "Quanto cloro livre minha piscina deve ter?"
+      answer: "Depende do seu CYA. Com 30 ppm de CYA, mire 2–3 ppm de cloro livre; com 50 ppm, cerca de 4 ppm; com 80 ppm, cerca de 6 ppm. Um número fixo único como '1–3 ppm' é enganoso quando há CYA presente. Insira seu CYA acima para obter uma faixa-alvo para uma piscina manual ou de água salgada."
+    - question: "Por que o ácido cianúrico muda o cloro de que preciso?"
+      answer: "O CYA protege o cloro da luz UV do sol fixando a maior parte dele em uma reserva, liberando-o lentamente. A contrapartida é que quanto maior o seu CYA, mais cloro livre total você deve manter para a mesma quantidade de desinfetante ativo. Por isso uma piscina com 100 ppm de CYA precisa de muito mais cloro livre do que uma com 30 ppm para ficar livre de algas."
+    - question: "Qual é o nível de choque para minha piscina?"
+      answer: "Aplicar choque (ou um SLAM) eleva o cloro livre para cerca de 40% do nível de CYA para decompor as cloraminas e matar algas — por exemplo, cerca de 20 ppm de FC com 50 ppm de CYA. A calculadora mostra o alvo de choque ao lado da sua faixa normal. Aplique sempre o choque com uma fonte de cloro não estabilizada para não adicionar mais CYA."
+    - question: "Piscinas de água salgada precisam de menos cloro?"
+      answer: "Piscinas de água salgada seguem o mesmo princípio FC/CYA, mas como o gerador produz cloro continuamente, muitos operadores mantêm um alvo um pouco mais baixo — em torno de 5% do CYA — e às vezes mantêm o CYA um pouco mais alto (60–80 ppm) para proteção UV. O modo de água salgada da calculadora reflete esse alvo de manutenção mais baixo."
+  js:
+    ppm: "ppm"
+    saltwater: " (água salgada)"
+    formula: "Alvo ≈ %PCT%% de %CYA% ppm de CYA%SALT% = %FC% ppm. %SHOCK%"
+    shock_note: "Choque a ~40% do CYA."
+
+nl:
+  title: "Vrijchloor-calculator — FC-doel op basis van CYA-niveau (FC/CYA-verhouding)"
+  description: "Calculator voor het vrijchloordoel. Voer je cyanuurzuurniveau (CYA) in om met de gangbare FC/CYA-verhouding het juiste vrijchloorbereik te krijgen — voor handmatig gechloreerde en zoutwaterzwembaden, plus het shockniveau."
+  h1: "Vrijchloor-doelcalculator"
+  subtitle: "Het juiste vrijchloorbereik voor je zwembad hangt af van je CYA. Voer je stabilisatorniveau in en krijg een doel met de gangbare FC/CYA-verhouding."
+  readings_heading: "Je stabilisatorniveau"
+  pool_type_label: "Type zwembad"
+  type_manual: "Handmatig gechloreerd"
+  type_swg: "Zoutwater (SWG)"
+  label_cya: "Cyanuurzuur (CYA)"
+  cya_hint: "Ideaal CYA is 30–50 ppm voor handmatige zwembaden, vaak 60–80 voor zoutwater."
+  result_label: "Vrijchloordoel"
+  unit_ppm: "ppm"
+  bd_min: "Minimaal FC"
+  bd_target: "Doel-FC"
+  bd_shock: "Shockniveau (SLAM)"
+  cta_app: "Volg FC & CYA per zwembad"
+  disclaimer: "Advies op basis van de breed gebruikte FC/CYA-verhouding. Het vervangt geen betrouwbare testkit of de eisen van lokale gezondheidsvoorschriften voor openbare zwembaden. Bevestig altijd met een actuele CYA- en FC-test."
+  how_heading: "Waarom vrij chloor je CYA volgt"
+  how_body: >-
+    <p>Cyanuurzuur beschermt chloor tegen zonlicht door het grootste deel ervan vast te leggen in
+    een langzaam vrijkomende reserve. Het nadeel: hoe meer CYA je hebt, hoe meer
+    <strong>totaal</strong> vrij chloor je moet aanhouden om genoeg <em>actief</em>
+    ontsmettingsmiddel in het water te houden. Daarom is één vast doel van "1–3 ppm" misleidend
+    zodra er stabilisator aanwezig is.</p>
+    <p>Ervaren technici sturen in plaats daarvan op de <strong>FC/CYA-verhouding</strong>. De
+    meest aangehaalde richtlijn houdt vrij chloor op ongeveer <strong>7,5% van het
+    CYA-niveau</strong>:</p>
+    <ul>
+    <li>Bij 30 ppm CYA → doel van 2–3 ppm vrij chloor</li>
+    <li>Bij 50 ppm CYA → ongeveer 4 ppm</li>
+    <li>Bij 80 ppm CYA → ongeveer 6 ppm</li>
+    <li>Bij 100 ppm CYA → 7–8 ppm</li>
+    </ul>
+    <p>Zoutwaterzwembaden kunnen een iets lager onderhoudsdoel (~5% van het CYA) aanhouden omdat de
+    cel continu chloor produceert. Om een zwembad te <strong>shocken</strong>, verhoog je het vrij
+    chloor tot ongeveer 40% van het CYA met een niet-gestabiliseerde bron, zodat je niet nog meer
+    stabilisator toevoegt.</p>
+    <p>Als je CYA blijft stijgen of het chloor stopt met werken ondanks een normale meting, lees
+    dan onze volledige gids over <a href="/blog/cya-cyanuric-acid-management/">het beheren van CYA
+    en chloorslot</a>, en controleer de algehele balans met de
+    <a href="/lsi-calculator/">LSI-calculator</a>.</p>
+  faq_heading: "Vrijchloor-FAQ"
+  final_title: "Gok nooit meer naar vrij chloor"
+  final_body: "PoolFlow volgt CYA en vrij chloor voor elk zwembad en markeert water dat uit balans raakt — offline, aan de rand van het bad. Gratis voor maximaal 5 zwembaden."
+  final_guide: "Lees de CYA-gids"
+  faq:
+    - question: "Wat is de FC/CYA-verhouding?"
+      answer: "De FC/CYA-verhouding is de verhouding tussen vrij chloor (FC) en cyanuurzuur (CYA) die het chloor effectief houdt. Omdat CYA chloor vastlegt, schaalt het juiste vrijchloordoel mee met je CYA-niveau. De meest aangehaalde richtlijn is om vrij chloor op ongeveer 7,5% van je CYA te houden — bijvoorbeeld ongeveer 4 ppm FC bij 50 ppm CYA."
+    - question: "Hoeveel vrij chloor moet mijn zwembad hebben?"
+      answer: "Dat hangt af van je CYA. Bij 30 ppm CYA mik je op 2–3 ppm vrij chloor; bij 50 ppm ongeveer 4 ppm; bij 80 ppm rond 6 ppm. Eén vast getal zoals '1–3 ppm' is misleidend zodra er CYA aanwezig is. Voer hierboven je CYA in om een doelbereik te krijgen voor een handmatig of zoutwaterzwembad."
+    - question: "Waarom verandert cyanuurzuur het chloor dat ik nodig heb?"
+      answer: "CYA schermt chloor af van de UV-zon door het grootste deel ervan in een reserve vast te leggen en het langzaam vrij te geven. De afweging is dat hoe hoger je CYA, hoe meer totaal vrij chloor je moet aanhouden voor dezelfde hoeveelheid actief ontsmettingsmiddel. Daarom heeft een zwembad met 100 ppm CYA veel meer vrij chloor nodig dan een met 30 ppm om algvrij te blijven."
+    - question: "Wat is het shockniveau voor mijn zwembad?"
+      answer: "Shocken (of een SLAM) verhoogt het vrij chloor tot ongeveer 40% van het CYA-niveau om chlooraminen af te breken en algen te doden — bijvoorbeeld ongeveer 20 ppm FC bij 50 ppm CYA. De calculator toont het shockdoel naast je normale bereik. Shock altijd met een niet-gestabiliseerde chloorbron, zodat je niet nog meer CYA toevoegt."
+    - question: "Hebben zoutwaterzwembaden minder chloor nodig?"
+      answer: "Zoutwaterzwembaden volgen hetzelfde FC/CYA-principe, maar omdat de generator continu chloor produceert, houden veel beheerders een iets lager doel aan — rond 5% van het CYA — en houden ze het CYA soms wat hoger (60–80 ppm) voor UV-bescherming. De zoutwatermodus van de calculator weerspiegelt dit lagere onderhoudsdoel."
+  js:
+    ppm: "ppm"
+    saltwater: " (zoutwater)"
+    formula: "Doel ≈ %PCT% % van %CYA% ppm CYA%SALT% = %FC% ppm. %SHOCK%"
+    shock_note: "Shock op ~40% van het CYA."

@@ -4,7 +4,9 @@
 {% endcomment %}
 {% if page.hreflang_group %}
   {% for lang in site.data.languages %}
-    {% if lang.path == "" %}
+    {% if page.page_path %}
+      {% assign target_url = lang.path | append: "/" | append: page.page_path | append: "/" %}
+    {% elsif lang.path == "" %}
       {% assign target_url = "/" %}
     {% else %}
       {% assign target_url = lang.path | append: "/" %}

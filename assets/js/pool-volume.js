@@ -15,6 +15,9 @@
   var root = document.querySelector('[data-volume-calculator]');
   if (!root) return;
 
+  // Localized runtime strings injected by the page (window.PF_VOLUME_I18N); English fallbacks below.
+  var I = (typeof window !== 'undefined' && window.PF_VOLUME_I18N) || {};
+
   var FT_PER_M = 3.280839895;
   var L_PER_GAL = 3.785411784;
 
@@ -63,7 +66,7 @@
   };
 
   function round(n, d) { var f = Math.pow(10, d || 0); return Math.round(n * f) / f; }
-  function fmt(n) { return Math.round(n).toLocaleString('en-US'); }
+  function fmt(n) { return Math.round(n).toLocaleString(I.locale || 'en-US'); }
   function toDisp(valFt) { return unit === 'm' ? valFt / FT_PER_M : valFt; }      // ft -> displayed
   function fromDisp(v) { return unit === 'm' ? v * FT_PER_M : v; }                // displayed -> ft
 
@@ -82,14 +85,16 @@
     var r = compute();
     var liters = r.gallons * L_PER_GAL;
     var avgDisp = toDisp(r.avgFt);
-    var depthUnit = unit === 'm' ? 'm' : 'ft';
+    var depthUnit = unit === 'm' ? (I.unit_m || 'm') : (I.unit_ft || 'ft');
+    var gallonsWord = I.gallons || 'gallons';
+    var litersWord = I.liters || 'liters';
 
     if (unit === 'm') {
       if (out.primary) out.primary.textContent = fmt(liters);
-      if (out.secondary) out.secondary.textContent = '≈ ' + fmt(r.gallons) + ' gallons';
+      if (out.secondary) out.secondary.textContent = '≈ ' + fmt(r.gallons) + ' ' + gallonsWord;
     } else {
       if (out.primary) out.primary.textContent = fmt(r.gallons);
-      if (out.secondary) out.secondary.textContent = '≈ ' + fmt(liters) + ' liters';
+      if (out.secondary) out.secondary.textContent = '≈ ' + fmt(liters) + ' ' + litersWord;
     }
     if (out.avgdepth) out.avgdepth.textContent = round(avgDisp, 2) + ' ' + depthUnit;
     if (out.constant) out.constant.textContent = '× ' + r.k + (shape === 'free' ? ' × ' + ft.factor.toFixed(2) : '');
@@ -100,9 +105,9 @@
       else if (shape === 'round') dims = round(toDisp(ft.diameter), 1) + ' × ' + round(toDisp(ft.diameter), 1);
       else if (shape === 'oval') dims = round(toDisp(ft.longD), 1) + ' × ' + round(toDisp(ft.shortD), 1);
       else dims = round(toDisp(ft.length), 1) + ' × ' + round(toDisp(ft.width), 1);
-      var primaryUnit = unit === 'm' ? ' liters' : ' gallons';
+      var primaryUnit = unit === 'm' ? (' ' + litersWord) : (' ' + gallonsWord);
       var primaryVal = unit === 'm' ? fmt(liters) : fmt(r.gallons);
-      out.formula.textContent = dims + ' × ' + round(avgDisp, 2) + ' (avg depth) → ' + primaryVal + primaryUnit;
+      out.formula.textContent = dims + ' × ' + round(avgDisp, 2) + ' (' + (I.avg_depth || 'avg depth') + ') → ' + primaryVal + primaryUnit;
     }
   }
 
@@ -158,10 +163,12 @@
     out.unitBtn.addEventListener('click', function () {
       unit = unit === 'us' ? 'm' : 'us';
       DIM_KEYS.forEach(syncFieldDisplay);
-      var label = unit === 'm' ? 'm' : 'ft';
+      var label = unit === 'm' ? (I.unit_m || 'm') : (I.unit_ft || 'ft');
       root.querySelectorAll('[data-unit-label]').forEach(function (el) { el.textContent = label; });
-      this.textContent = unit === 'm' ? 'm / L' : 'ft / gal';
-      this.setAttribute('aria-label', 'Unit system: ' + (unit === 'm' ? 'metric (meters & liters)' : 'US (feet & gallons)') + '. Tap to switch.');
+      this.textContent = unit === 'm' ? (I.toggle_metric || 'm / L') : (I.toggle_us || 'ft / gal');
+      this.setAttribute('aria-label', unit === 'm'
+        ? (I.aria_metric || 'Unit system: metric (meters & liters). Tap to switch to US.')
+        : (I.aria_us || 'Unit system: US (feet & gallons). Tap to switch to metric.'));
       render();
     });
   }

@@ -1,0 +1,358 @@
+# Pump run-time / turnover calculator strings, per language. Accessed as
+# site.data.tools_i18n.calc.turnover[lang]. `js` holds the runtime strings
+# injected into assets/js/pump-run-time.js via window.PF_TURNOVER_I18N
+# (%GAL% / %FLOW% / %TO% / %TURN% / %DAILY% are filled in by the script;
+# "gal", "L" and "GPM" are kept universal and are not translated).
+en:
+  title: "Pool Pump Run-Time & Turnover Calculator — Daily Hours and Turnover Time"
+  description: "Free pool pump run-time calculator. Enter your pool volume and pump flow rate to find your turnover time and how many hours a day to run the pump for proper circulation."
+  h1: "Pool Pump Run-Time Calculator"
+  subtitle: "Work out your turnover time and how many hours a day to run the pump for proper circulation — from your pool volume and pump flow rate."
+  inputs_heading: "Your Pool & Pump"
+  label_volume: "Pool volume"
+  volume_unit_aria: "Volume unit: gallons. Tap to switch to liters."
+  volume_help_prefix: "Not sure?"
+  volume_help_link: "Use the volume calculator &rarr;"
+  label_flow: "Pump flow rate"
+  flow_help: "Typical residential pumps run 40–80 GPM."
+  label_turnovers: "Turnovers per day"
+  turnovers_help: "One turnover/day is the common minimum; two is a typical target."
+  result_label: "Daily Run Time"
+  result_unit: "hours / day"
+  bd_turnover: "One full turnover"
+  bd_perday: "Water moved per day"
+  cta_app: "Log equipment per pool in the app"
+  disclaimer: "For guidance only. Real flow rate drops as filters load and varies with plumbing and head pressure — read a flow meter when you can. Variable-speed pumps move the same water over longer, cheaper hours."
+  how_heading: "How Turnover & Run Time Work"
+  how_body: >-
+    <p><strong>Turnover time</strong> is how long the pump takes to push one pool's worth of water
+    through the filter:</p>
+    <p class="text-center font-semibold text-pool-dark">Turnover (hours) = Volume ÷ (Flow rate GPM × 60)</p>
+    <p>To turn the water over more than once a day, multiply by your target number of turnovers:</p>
+    <p class="text-center font-semibold text-pool-dark">Daily run time = Turnovers × Turnover time</p>
+    <p>For a 15,000-gallon pool with a 60 GPM pump, one turnover takes 15,000 ÷ (60 × 60) ≈ <strong>4.2 hours</strong>.
+    Targeting two turnovers a day means running about <strong>8.3 hours</strong>.</p>
+    <h3>Practical tips</h3>
+    <ul>
+    <li><strong>Run during daylight.</strong> Sunlight drives chlorine demand, so circulate when the pool needs sanitizer distributed.</li>
+    <li><strong>Account for dirty filters.</strong> Flow drops as the filter loads — build in margin or measure flow directly.</li>
+    <li><strong>Variable-speed pumps</strong> hit the same daily turnover at lower speed over more hours, using far less electricity.</li>
+    </ul>
+    <p>Need your volume first? Use the <a href="/pool-volume-calculator/">pool volume calculator</a>.
+    Good circulation also helps the chemicals from the <a href="/chemical-dosing-calculator/">dosing calculator</a> distribute evenly.</p>
+  faq_heading: "Pump Run-Time FAQ"
+  final_title: "Run a Tighter Route"
+  final_body: "PoolFlow keeps each pool's equipment, volume, and chemistry in one place — so every visit is dialed in. Offline, at poolside. Free for up to 5 pools."
+  final_guide: "Calculate Pool Volume"
+  faq:
+    - question: "How long should I run my pool pump each day?"
+      answer: "Run the pump long enough to turn the water over at least once a day — many techs aim for one to two turnovers. Turnover time = pool volume ÷ (flow rate in GPM × 60). For a 15,000-gallon pool with a 60 GPM pump, one turnover takes about 4.2 hours, so two turnovers means roughly 8.3 hours of run time. This calculator works it out from your volume and flow rate."
+    - question: "What is pool turnover time?"
+      answer: "Turnover time is how long the pump takes to circulate a volume of water equal to the entire pool through the filter. It's calculated as volume ÷ (flow rate × 60 minutes). A shorter turnover means faster filtration and better chemical distribution. Most residential pools are designed for an 8-hour or shorter turnover."
+    - question: "How do I find my pump's flow rate?"
+      answer: "Flow rate (in gallons per minute) depends on the pump's horsepower, the plumbing size, and the system's resistance. The most accurate way is to read it from a flow meter on the return line, or estimate it from the pump curve in your pump's manual at your system's total dynamic head. Typical residential flow rates fall between 40 and 80 GPM."
+    - question: "Is it better to run a pool pump during the day or at night?"
+      answer: "Run at least part of the cycle during daylight, when sunlight drives chlorine demand and algae growth — circulating then keeps sanitizer distributed when the pool needs it most. Many techs split the run time or use a variable-speed pump running longer at low speed, which moves the same water more efficiently and cheaply. The total daily turnover target stays the same."
+    - question: "Does running the pump longer use more chemicals?"
+      answer: "No — circulation itself doesn't consume sanitizer, and good turnover actually helps chemicals work efficiently by distributing them evenly and pushing water through the filter. The main cost of longer run time is electricity, which is where variable-speed pumps save money by moving water slowly over more hours."
+  js:
+    hrs: "hrs"
+    per_turnover: "hrs/turnover"
+    per_day: "hrs/day"
+    vol_unit_gal_aria: "Volume unit: gallons. Tap to switch."
+    vol_unit_l_aria: "Volume unit: liters. Tap to switch."
+
+es:
+  title: "Calculadora de tiempo de bomba y recambio de agua — horas diarias y tiempo de recambio"
+  description: "Calculadora gratuita de tiempo de bomba para piscinas. Introduce el volumen de tu piscina y el caudal de la bomba para conocer el tiempo de recambio y cuántas horas al día debes hacer funcionar la bomba para una circulación adecuada."
+  h1: "Calculadora de tiempo de bomba"
+  subtitle: "Calcula el tiempo de recambio y cuántas horas al día debes hacer funcionar la bomba para una circulación adecuada — a partir del volumen de tu piscina y el caudal de la bomba."
+  inputs_heading: "Tu piscina y bomba"
+  label_volume: "Volumen de la piscina"
+  volume_unit_aria: "Unidad de volumen: galones. Toca para cambiar a litros."
+  volume_help_prefix: "¿No estás seguro?"
+  volume_help_link: "Usa la calculadora de volumen &rarr;"
+  label_flow: "Caudal de la bomba"
+  flow_help: "Las bombas residenciales típicas funcionan a 40–80 GPM."
+  label_turnovers: "Recambios por día"
+  turnovers_help: "Un recambio al día es el mínimo habitual; dos es un objetivo típico."
+  result_label: "Tiempo de funcionamiento diario"
+  result_unit: "horas / día"
+  bd_turnover: "Un recambio completo"
+  bd_perday: "Agua movida por día"
+  cta_app: "Registra el equipo por piscina en la app"
+  disclaimer: "Solo orientativo. El caudal real disminuye a medida que los filtros se cargan y varía según la fontanería y la presión — lee un caudalímetro cuando puedas. Las bombas de velocidad variable mueven la misma agua durante más horas y de forma más económica."
+  how_heading: "Cómo funcionan el recambio y el tiempo de bomba"
+  how_body: >-
+    <p>El <strong>tiempo de recambio</strong> es lo que tarda la bomba en hacer pasar por el filtro
+    un volumen de agua equivalente a toda la piscina:</p>
+    <p class="text-center font-semibold text-pool-dark">Recambio (horas) = Volumen ÷ (Caudal GPM × 60)</p>
+    <p>Para recambiar el agua más de una vez al día, multiplica por tu número objetivo de recambios:</p>
+    <p class="text-center font-semibold text-pool-dark">Tiempo diario = Recambios × Tiempo de recambio</p>
+    <p>Para una piscina de 15&nbsp;000 galones con una bomba de 60 GPM, un recambio tarda 15&nbsp;000 ÷ (60 × 60) ≈ <strong>4,2 horas</strong>.
+    Apuntar a dos recambios al día significa hacerla funcionar unas <strong>8,3 horas</strong>.</p>
+    <h3>Consejos prácticos</h3>
+    <ul>
+    <li><strong>Hazla funcionar de día.</strong> La luz solar aumenta la demanda de cloro, así que haz circular el agua cuando la piscina necesita distribuir el desinfectante.</li>
+    <li><strong>Ten en cuenta los filtros sucios.</strong> El caudal baja a medida que el filtro se carga — añade margen o mide el caudal directamente.</li>
+    <li><strong>Las bombas de velocidad variable</strong> logran el mismo recambio diario a menor velocidad durante más horas, usando mucha menos electricidad.</li>
+    </ul>
+    <p>¿Necesitas primero tu volumen? Usa la <a href="/pool-volume-calculator/">calculadora de volumen</a>.
+    Una buena circulación también ayuda a que los productos de la <a href="/chemical-dosing-calculator/">calculadora de dosificación</a> se distribuyan de manera uniforme.</p>
+  faq_heading: "Preguntas frecuentes sobre el tiempo de bomba"
+  final_title: "Optimiza tu ruta"
+  final_body: "PoolFlow mantiene el equipo, el volumen y la química de cada piscina en un solo lugar — para que cada visita esté ajustada. Sin conexión, junto a la piscina. Gratis hasta 5 piscinas."
+  final_guide: "Calcular el volumen de la piscina"
+  faq:
+    - question: "¿Cuántas horas al día debo hacer funcionar la bomba de la piscina?"
+      answer: "Haz funcionar la bomba el tiempo suficiente para recambiar el agua al menos una vez al día — muchos técnicos apuntan a uno o dos recambios. Tiempo de recambio = volumen de la piscina ÷ (caudal en GPM × 60). Para una piscina de 15&nbsp;000 galones con una bomba de 60 GPM, un recambio tarda unas 4,2 horas, así que dos recambios suponen unas 8,3 horas de funcionamiento. Esta calculadora lo resuelve a partir de tu volumen y caudal."
+    - question: "¿Qué es el tiempo de recambio de la piscina?"
+      answer: "El tiempo de recambio es lo que tarda la bomba en hacer circular por el filtro un volumen de agua igual al de toda la piscina. Se calcula como volumen ÷ (caudal × 60 minutos). Un recambio más corto significa una filtración más rápida y una mejor distribución de los productos químicos. La mayoría de las piscinas residenciales se diseñan para un recambio de 8 horas o menos."
+    - question: "¿Cómo encuentro el caudal de mi bomba?"
+      answer: "El caudal (en galones por minuto) depende de la potencia de la bomba, el tamaño de la fontanería y la resistencia del sistema. La forma más precisa es leerlo en un caudalímetro de la línea de retorno, o estimarlo a partir de la curva de la bomba en su manual según la altura dinámica total del sistema. Los caudales residenciales típicos están entre 40 y 80 GPM."
+    - question: "¿Es mejor hacer funcionar la bomba de día o de noche?"
+      answer: "Haz funcionar al menos parte del ciclo de día, cuando la luz solar aumenta la demanda de cloro y el crecimiento de algas — circular entonces mantiene el desinfectante distribuido cuando la piscina más lo necesita. Muchos técnicos dividen el tiempo de funcionamiento o usan una bomba de velocidad variable más tiempo a baja velocidad, que mueve la misma agua de forma más eficiente y barata. El objetivo total de recambio diario no cambia."
+    - question: "¿Hacer funcionar la bomba más tiempo gasta más productos químicos?"
+      answer: "No — la circulación en sí no consume desinfectante, y un buen recambio ayuda a que los productos químicos actúen de forma eficiente al distribuirlos de manera uniforme y empujar el agua a través del filtro. El principal coste de un mayor tiempo de funcionamiento es la electricidad, y ahí es donde las bombas de velocidad variable ahorran dinero al mover el agua lentamente durante más horas."
+  js:
+    hrs: "h"
+    per_turnover: "h/recambio"
+    per_day: "h/día"
+    vol_unit_gal_aria: "Unidad de volumen: galones. Toca para cambiar."
+    vol_unit_l_aria: "Unidad de volumen: litros. Toca para cambiar."
+
+fr:
+  title: "Calculateur de temps de pompe et de renouvellement — heures par jour et temps de renouvellement"
+  description: "Calculateur gratuit de temps de pompe pour piscine. Saisissez le volume de votre piscine et le débit de la pompe pour connaître votre temps de renouvellement et le nombre d'heures par jour à faire tourner la pompe pour une bonne circulation."
+  h1: "Calculateur de temps de pompe"
+  subtitle: "Déterminez votre temps de renouvellement et le nombre d'heures par jour à faire tourner la pompe pour une bonne circulation — à partir du volume de votre piscine et du débit de la pompe."
+  inputs_heading: "Votre piscine et votre pompe"
+  label_volume: "Volume de la piscine"
+  volume_unit_aria: "Unité de volume : gallons. Touchez pour passer aux litres."
+  volume_help_prefix: "Pas sûr ?"
+  volume_help_link: "Utilisez le calculateur de volume &rarr;"
+  label_flow: "Débit de la pompe"
+  flow_help: "Les pompes résidentielles typiques fonctionnent entre 40 et 80 GPM."
+  label_turnovers: "Renouvellements par jour"
+  turnovers_help: "Un renouvellement par jour est le minimum courant ; deux est un objectif typique."
+  result_label: "Temps de fonctionnement quotidien"
+  result_unit: "heures / jour"
+  bd_turnover: "Un renouvellement complet"
+  bd_perday: "Eau déplacée par jour"
+  cta_app: "Enregistrez l'équipement par piscine dans l'app"
+  disclaimer: "À titre indicatif seulement. Le débit réel diminue à mesure que les filtres se chargent et varie selon la plomberie et la pression — lisez un débitmètre quand c'est possible. Les pompes à vitesse variable déplacent la même eau sur des heures plus longues et moins coûteuses."
+  how_heading: "Comment fonctionnent le renouvellement et le temps de pompe"
+  how_body: >-
+    <p>Le <strong>temps de renouvellement</strong> est le temps que met la pompe pour faire passer
+    dans le filtre un volume d'eau équivalent à toute la piscine :</p>
+    <p class="text-center font-semibold text-pool-dark">Renouvellement (heures) = Volume ÷ (Débit GPM × 60)</p>
+    <p>Pour renouveler l'eau plus d'une fois par jour, multipliez par votre nombre cible de renouvellements :</p>
+    <p class="text-center font-semibold text-pool-dark">Temps quotidien = Renouvellements × Temps de renouvellement</p>
+    <p>Pour une piscine de 15&nbsp;000 gallons avec une pompe de 60 GPM, un renouvellement prend 15&nbsp;000 ÷ (60 × 60) ≈ <strong>4,2 heures</strong>.
+    Viser deux renouvellements par jour revient à la faire tourner environ <strong>8,3 heures</strong>.</p>
+    <h3>Conseils pratiques</h3>
+    <ul>
+    <li><strong>Faites-la tourner en journée.</strong> La lumière du soleil augmente la demande en chlore, alors faites circuler l'eau quand la piscine a besoin que le désinfectant soit réparti.</li>
+    <li><strong>Tenez compte des filtres encrassés.</strong> Le débit baisse à mesure que le filtre se charge — prévoyez une marge ou mesurez le débit directement.</li>
+    <li><strong>Les pompes à vitesse variable</strong> atteignent le même renouvellement quotidien à plus basse vitesse sur davantage d'heures, en consommant beaucoup moins d'électricité.</li>
+    </ul>
+    <p>Besoin de votre volume d'abord ? Utilisez le <a href="/pool-volume-calculator/">calculateur de volume</a>.
+    Une bonne circulation aide aussi les produits du <a href="/chemical-dosing-calculator/">calculateur de dosage</a> à se répartir uniformément.</p>
+  faq_heading: "FAQ sur le temps de pompe"
+  final_title: "Optimisez votre tournée"
+  final_body: "PoolFlow garde l'équipement, le volume et la chimie de chaque piscine au même endroit — pour que chaque visite soit bien réglée. Hors ligne, au bord de la piscine. Gratuit jusqu'à 5 piscines."
+  final_guide: "Calculer le volume de la piscine"
+  faq:
+    - question: "Combien d'heures par jour dois-je faire tourner la pompe de ma piscine ?"
+      answer: "Faites tourner la pompe assez longtemps pour renouveler l'eau au moins une fois par jour — beaucoup de techniciens visent un à deux renouvellements. Temps de renouvellement = volume de la piscine ÷ (débit en GPM × 60). Pour une piscine de 15&nbsp;000 gallons avec une pompe de 60 GPM, un renouvellement prend environ 4,2 heures, donc deux renouvellements représentent environ 8,3 heures de fonctionnement. Ce calculateur le détermine à partir de votre volume et de votre débit."
+    - question: "Qu'est-ce que le temps de renouvellement d'une piscine ?"
+      answer: "Le temps de renouvellement est le temps que met la pompe pour faire circuler dans le filtre un volume d'eau égal à toute la piscine. Il se calcule comme volume ÷ (débit × 60 minutes). Un renouvellement plus court signifie une filtration plus rapide et une meilleure distribution des produits chimiques. La plupart des piscines résidentielles sont conçues pour un renouvellement de 8 heures ou moins."
+    - question: "Comment trouver le débit de ma pompe ?"
+      answer: "Le débit (en gallons par minute) dépend de la puissance de la pompe, de la taille de la plomberie et de la résistance du système. La méthode la plus précise est de le lire sur un débitmètre de la ligne de retour, ou de l'estimer à partir de la courbe de la pompe dans son manuel à la hauteur manométrique totale de votre système. Les débits résidentiels typiques se situent entre 40 et 80 GPM."
+    - question: "Vaut-il mieux faire tourner la pompe le jour ou la nuit ?"
+      answer: "Faites tourner au moins une partie du cycle en journée, quand la lumière du soleil augmente la demande en chlore et la croissance des algues — circuler alors maintient le désinfectant réparti quand la piscine en a le plus besoin. Beaucoup de techniciens fractionnent le temps de fonctionnement ou utilisent une pompe à vitesse variable plus longtemps à basse vitesse, qui déplace la même eau de façon plus efficace et économique. L'objectif total de renouvellement quotidien reste le même."
+    - question: "Faire tourner la pompe plus longtemps consomme-t-il plus de produits chimiques ?"
+      answer: "Non — la circulation en elle-même ne consomme pas de désinfectant, et un bon renouvellement aide en fait les produits chimiques à agir efficacement en les répartissant uniformément et en poussant l'eau à travers le filtre. Le principal coût d'un temps de fonctionnement plus long est l'électricité, et c'est là que les pompes à vitesse variable font économiser en déplaçant l'eau lentement sur davantage d'heures."
+  js:
+    hrs: "h"
+    per_turnover: "h/renouvellement"
+    per_day: "h/jour"
+    vol_unit_gal_aria: "Unité de volume : gallons. Touchez pour changer."
+    vol_unit_l_aria: "Unité de volume : litres. Touchez pour changer."
+
+de:
+  title: "Pumpenlaufzeit- & Umwälz-Rechner — tägliche Stunden und Umwälzzeit"
+  description: "Kostenloser Pumpenlaufzeit-Rechner für den Pool. Geben Sie Ihr Poolvolumen und die Förderleistung der Pumpe ein, um Ihre Umwälzzeit und die täglichen Pumpenstunden für eine richtige Zirkulation zu ermitteln."
+  h1: "Pumpenlaufzeit-Rechner"
+  subtitle: "Ermitteln Sie Ihre Umwälzzeit und die täglichen Pumpenstunden für eine richtige Zirkulation — aus Ihrem Poolvolumen und der Förderleistung der Pumpe."
+  inputs_heading: "Ihr Pool & Ihre Pumpe"
+  label_volume: "Poolvolumen"
+  volume_unit_aria: "Volumeneinheit: Gallonen. Tippen, um zu Litern zu wechseln."
+  volume_help_prefix: "Nicht sicher?"
+  volume_help_link: "Volumen-Rechner verwenden &rarr;"
+  label_flow: "Förderleistung der Pumpe"
+  flow_help: "Typische Pumpen für Privatpools laufen mit 40–80 GPM."
+  label_turnovers: "Umwälzungen pro Tag"
+  turnovers_help: "Eine Umwälzung pro Tag ist das übliche Minimum; zwei sind ein typisches Ziel."
+  result_label: "Tägliche Laufzeit"
+  result_unit: "Stunden / Tag"
+  bd_turnover: "Eine vollständige Umwälzung"
+  bd_perday: "Pro Tag bewegtes Wasser"
+  cta_app: "Ausrüstung je Pool in der App erfassen"
+  disclaimer: "Nur zur Orientierung. Die tatsächliche Förderleistung sinkt, wenn sich die Filter zusetzen, und variiert mit Verrohrung und Förderhöhe — lesen Sie nach Möglichkeit einen Durchflussmesser ab. Drehzahlgeregelte Pumpen bewegen dasselbe Wasser über längere, günstigere Stunden."
+  how_heading: "So funktionieren Umwälzung & Laufzeit"
+  how_body: >-
+    <p>Die <strong>Umwälzzeit</strong> ist die Zeit, die die Pumpe braucht, um eine Wassermenge in Höhe
+    des gesamten Pools durch den Filter zu drücken:</p>
+    <p class="text-center font-semibold text-pool-dark">Umwälzung (Stunden) = Volumen ÷ (Förderleistung GPM × 60)</p>
+    <p>Um das Wasser mehr als einmal pro Tag umzuwälzen, multiplizieren Sie mit Ihrer Zielanzahl an Umwälzungen:</p>
+    <p class="text-center font-semibold text-pool-dark">Tägliche Laufzeit = Umwälzungen × Umwälzzeit</p>
+    <p>Für einen Pool mit 15.000 Gallonen und einer 60-GPM-Pumpe dauert eine Umwälzung 15.000 ÷ (60 × 60) ≈ <strong>4,2 Stunden</strong>.
+    Zwei Umwälzungen pro Tag bedeuten etwa <strong>8,3 Stunden</strong> Laufzeit.</p>
+    <h3>Praktische Tipps</h3>
+    <ul>
+    <li><strong>Tagsüber laufen lassen.</strong> Sonnenlicht erhöht den Chlorbedarf, also zirkulieren Sie, wenn der Pool eine Verteilung des Desinfektionsmittels braucht.</li>
+    <li><strong>Verschmutzte Filter berücksichtigen.</strong> Die Förderleistung sinkt, wenn sich der Filter zusetzt — planen Sie Reserve ein oder messen Sie den Durchfluss direkt.</li>
+    <li><strong>Drehzahlgeregelte Pumpen</strong> erreichen dieselbe tägliche Umwälzung bei niedrigerer Drehzahl über mehr Stunden und verbrauchen dabei deutlich weniger Strom.</li>
+    </ul>
+    <p>Brauchen Sie zuerst Ihr Volumen? Verwenden Sie den <a href="/pool-volume-calculator/">Poolvolumen-Rechner</a>.
+    Eine gute Zirkulation hilft auch den Chemikalien aus dem <a href="/chemical-dosing-calculator/">Dosierungsrechner</a>, sich gleichmäßig zu verteilen.</p>
+  faq_heading: "FAQ zur Pumpenlaufzeit"
+  final_title: "Optimieren Sie Ihre Route"
+  final_body: "PoolFlow hält Ausrüstung, Volumen und Chemie jedes Pools an einem Ort — damit jeder Besuch eingestellt ist. Offline, am Beckenrand. Kostenlos für bis zu 5 Pools."
+  final_guide: "Poolvolumen berechnen"
+  faq:
+    - question: "Wie viele Stunden pro Tag sollte ich meine Poolpumpe laufen lassen?"
+      answer: "Lassen Sie die Pumpe lange genug laufen, um das Wasser mindestens einmal täglich umzuwälzen — viele Techniker streben ein bis zwei Umwälzungen an. Umwälzzeit = Poolvolumen ÷ (Förderleistung in GPM × 60). Für einen Pool mit 15.000 Gallonen und einer 60-GPM-Pumpe dauert eine Umwälzung etwa 4,2 Stunden, zwei Umwälzungen bedeuten also rund 8,3 Stunden Laufzeit. Dieser Rechner ermittelt das aus Ihrem Volumen und Ihrer Förderleistung."
+    - question: "Was ist die Umwälzzeit eines Pools?"
+      answer: "Die Umwälzzeit ist die Zeit, die die Pumpe braucht, um eine Wassermenge in Höhe des gesamten Pools durch den Filter zu zirkulieren. Sie wird als Volumen ÷ (Förderleistung × 60 Minuten) berechnet. Eine kürzere Umwälzung bedeutet schnellere Filtration und bessere Verteilung der Chemikalien. Die meisten Privatpools sind für eine Umwälzung von 8 Stunden oder weniger ausgelegt."
+    - question: "Wie finde ich die Förderleistung meiner Pumpe?"
+      answer: "Die Förderleistung (in Gallonen pro Minute) hängt von der Leistung der Pumpe, der Größe der Verrohrung und dem Widerstand des Systems ab. Am genauesten lesen Sie sie an einem Durchflussmesser in der Rücklaufleitung ab oder schätzen sie anhand der Pumpenkennlinie im Handbuch bei der Gesamtförderhöhe Ihres Systems. Typische Förderleistungen für Privatpools liegen zwischen 40 und 80 GPM."
+    - question: "Ist es besser, die Poolpumpe tagsüber oder nachts laufen zu lassen?"
+      answer: "Lassen Sie mindestens einen Teil des Zyklus tagsüber laufen, wenn Sonnenlicht den Chlorbedarf und das Algenwachstum erhöht — dann zu zirkulieren hält das Desinfektionsmittel verteilt, wenn der Pool es am meisten braucht. Viele Techniker teilen die Laufzeit auf oder nutzen eine drehzahlgeregelte Pumpe, die länger bei niedriger Drehzahl läuft und dasselbe Wasser effizienter und günstiger bewegt. Das tägliche Umwälzziel bleibt gleich."
+    - question: "Verbraucht eine längere Pumpenlaufzeit mehr Chemikalien?"
+      answer: "Nein — die Zirkulation selbst verbraucht kein Desinfektionsmittel, und eine gute Umwälzung hilft den Chemikalien sogar, effizient zu wirken, indem sie sie gleichmäßig verteilt und das Wasser durch den Filter drückt. Der Hauptkostenfaktor einer längeren Laufzeit ist der Strom, und genau hier sparen drehzahlgeregelte Pumpen Geld, indem sie das Wasser langsam über mehr Stunden bewegen."
+  js:
+    hrs: "Std."
+    per_turnover: "Std./Umwälzung"
+    per_day: "Std./Tag"
+    vol_unit_gal_aria: "Volumeneinheit: Gallonen. Tippen zum Wechseln."
+    vol_unit_l_aria: "Volumeneinheit: Liter. Tippen zum Wechseln."
+
+pt:
+  title: "Calculadora de tempo de bomba e renovação — horas diárias e tempo de renovação"
+  description: "Calculadora gratuita de tempo de bomba para piscina. Informe o volume da sua piscina e a vazão da bomba para descobrir o tempo de renovação e quantas horas por dia ligar a bomba para uma circulação adequada."
+  h1: "Calculadora de tempo de bomba"
+  subtitle: "Descubra o tempo de renovação e quantas horas por dia ligar a bomba para uma circulação adequada — a partir do volume da sua piscina e da vazão da bomba."
+  inputs_heading: "Sua piscina e bomba"
+  label_volume: "Volume da piscina"
+  volume_unit_aria: "Unidade de volume: galões. Toque para mudar para litros."
+  volume_help_prefix: "Não tem certeza?"
+  volume_help_link: "Use a calculadora de volume &rarr;"
+  label_flow: "Vazão da bomba"
+  flow_help: "Bombas residenciais típicas funcionam entre 40 e 80 GPM."
+  label_turnovers: "Renovações por dia"
+  turnovers_help: "Uma renovação por dia é o mínimo comum; duas é um objetivo típico."
+  result_label: "Tempo de funcionamento diário"
+  result_unit: "horas / dia"
+  bd_turnover: "Uma renovação completa"
+  bd_perday: "Água movida por dia"
+  cta_app: "Registre o equipamento por piscina no app"
+  disclaimer: "Apenas para orientação. A vazão real cai à medida que os filtros carregam e varia com o encanamento e a pressão — leia um medidor de vazão quando puder. Bombas de velocidade variável movem a mesma água por mais horas e de forma mais econômica."
+  how_heading: "Como funcionam a renovação e o tempo de bomba"
+  how_body: >-
+    <p>O <strong>tempo de renovação</strong> é quanto a bomba leva para empurrar pelo filtro
+    um volume de água equivalente a toda a piscina:</p>
+    <p class="text-center font-semibold text-pool-dark">Renovação (horas) = Volume ÷ (Vazão GPM × 60)</p>
+    <p>Para renovar a água mais de uma vez por dia, multiplique pelo seu número-alvo de renovações:</p>
+    <p class="text-center font-semibold text-pool-dark">Tempo diário = Renovações × Tempo de renovação</p>
+    <p>Para uma piscina de 15.000 galões com uma bomba de 60 GPM, uma renovação leva 15.000 ÷ (60 × 60) ≈ <strong>4,2 horas</strong>.
+    Mirar em duas renovações por dia significa ligá-la por cerca de <strong>8,3 horas</strong>.</p>
+    <h3>Dicas práticas</h3>
+    <ul>
+    <li><strong>Ligue durante o dia.</strong> A luz solar aumenta a demanda de cloro, então circule quando a piscina precisa distribuir o sanitizante.</li>
+    <li><strong>Considere filtros sujos.</strong> A vazão cai à medida que o filtro carrega — inclua margem ou meça a vazão diretamente.</li>
+    <li><strong>Bombas de velocidade variável</strong> atingem a mesma renovação diária em velocidade mais baixa por mais horas, usando muito menos eletricidade.</li>
+    </ul>
+    <p>Precisa do seu volume primeiro? Use a <a href="/pool-volume-calculator/">calculadora de volume</a>.
+    Uma boa circulação também ajuda os produtos da <a href="/chemical-dosing-calculator/">calculadora de dosagem</a> a se distribuírem de forma uniforme.</p>
+  faq_heading: "Perguntas frequentes sobre tempo de bomba"
+  final_title: "Otimize sua rota"
+  final_body: "O PoolFlow mantém o equipamento, o volume e a química de cada piscina em um só lugar — para que cada visita esteja ajustada. Offline, à beira da piscina. Grátis para até 5 piscinas."
+  final_guide: "Calcular o volume da piscina"
+  faq:
+    - question: "Quantas horas por dia devo ligar a bomba da piscina?"
+      answer: "Ligue a bomba por tempo suficiente para renovar a água pelo menos uma vez por dia — muitos técnicos miram em uma a duas renovações. Tempo de renovação = volume da piscina ÷ (vazão em GPM × 60). Para uma piscina de 15.000 galões com uma bomba de 60 GPM, uma renovação leva cerca de 4,2 horas, então duas renovações significam cerca de 8,3 horas de funcionamento. Esta calculadora resolve isso a partir do seu volume e vazão."
+    - question: "O que é o tempo de renovação da piscina?"
+      answer: "O tempo de renovação é quanto a bomba leva para circular pelo filtro um volume de água igual ao da piscina inteira. É calculado como volume ÷ (vazão × 60 minutos). Uma renovação mais curta significa filtração mais rápida e melhor distribuição dos produtos químicos. A maioria das piscinas residenciais é projetada para uma renovação de 8 horas ou menos."
+    - question: "Como descubro a vazão da minha bomba?"
+      answer: "A vazão (em galões por minuto) depende da potência da bomba, do tamanho do encanamento e da resistência do sistema. A forma mais precisa é lê-la em um medidor de vazão na linha de retorno, ou estimá-la pela curva da bomba no manual na altura manométrica total do seu sistema. As vazões residenciais típicas ficam entre 40 e 80 GPM."
+    - question: "É melhor ligar a bomba da piscina de dia ou de noite?"
+      answer: "Ligue pelo menos parte do ciclo durante o dia, quando a luz solar aumenta a demanda de cloro e o crescimento de algas — circular então mantém o sanitizante distribuído quando a piscina mais precisa. Muitos técnicos dividem o tempo de funcionamento ou usam uma bomba de velocidade variável por mais tempo em baixa velocidade, que move a mesma água de forma mais eficiente e barata. O objetivo total de renovação diária permanece o mesmo."
+    - question: "Ligar a bomba por mais tempo gasta mais produtos químicos?"
+      answer: "Não — a circulação em si não consome sanitizante, e uma boa renovação na verdade ajuda os produtos químicos a agir de forma eficiente, distribuindo-os uniformemente e empurrando a água pelo filtro. O principal custo de um tempo de funcionamento maior é a eletricidade, e é aí que as bombas de velocidade variável economizam dinheiro ao mover a água lentamente por mais horas."
+  js:
+    hrs: "h"
+    per_turnover: "h/renovação"
+    per_day: "h/dia"
+    vol_unit_gal_aria: "Unidade de volume: galões. Toque para mudar."
+    vol_unit_l_aria: "Unidade de volume: litros. Toque para mudar."
+
+nl:
+  title: "Pomplooptijd- & circulatierekenmachine — uren per dag en circulatietijd"
+  description: "Gratis pomplooptijd-calculator voor het zwembad. Voer je zwembadvolume en de pompcapaciteit in om je circulatietijd te vinden en hoeveel uur per dag je de pomp moet laten draaien voor een goede circulatie."
+  h1: "Pomplooptijd-calculator"
+  subtitle: "Bereken je circulatietijd en hoeveel uur per dag je de pomp moet laten draaien voor een goede circulatie — op basis van je zwembadvolume en de pompcapaciteit."
+  inputs_heading: "Je zwembad & pomp"
+  label_volume: "Zwembadvolume"
+  volume_unit_aria: "Volume-eenheid: gallons. Tik om naar liters te schakelen."
+  volume_help_prefix: "Niet zeker?"
+  volume_help_link: "Gebruik de volumecalculator &rarr;"
+  label_flow: "Pompcapaciteit"
+  flow_help: "Typische zwembadpompen voor thuis draaien 40–80 GPM."
+  label_turnovers: "Circulaties per dag"
+  turnovers_help: "Eén circulatie per dag is het gangbare minimum; twee is een typisch doel."
+  result_label: "Dagelijkse looptijd"
+  result_unit: "uur / dag"
+  bd_turnover: "Eén volledige circulatie"
+  bd_perday: "Verplaatst water per dag"
+  cta_app: "Leg apparatuur per zwembad vast in de app"
+  disclaimer: "Alleen ter indicatie. De werkelijke capaciteit daalt naarmate filters vollopen en varieert met leidingwerk en opvoerhoogte — lees een doorstroommeter af wanneer dat kan. Pompen met variabele snelheid verplaatsen hetzelfde water over langere, goedkopere uren."
+  how_heading: "Hoe circulatie & looptijd werken"
+  how_body: >-
+    <p>De <strong>circulatietijd</strong> is hoe lang de pomp erover doet om een hoeveelheid water
+    gelijk aan het hele zwembad door het filter te duwen:</p>
+    <p class="text-center font-semibold text-pool-dark">Circulatie (uren) = Volume ÷ (Capaciteit GPM × 60)</p>
+    <p>Om het water meer dan eens per dag te circuleren, vermenigvuldig je met je beoogde aantal circulaties:</p>
+    <p class="text-center font-semibold text-pool-dark">Dagelijkse looptijd = Circulaties × Circulatietijd</p>
+    <p>Voor een zwembad van 15.000 gallons met een pomp van 60 GPM duurt één circulatie 15.000 ÷ (60 × 60) ≈ <strong>4,2 uur</strong>.
+    Mikken op twee circulaties per dag betekent ongeveer <strong>8,3 uur</strong> draaien.</p>
+    <h3>Praktische tips</h3>
+    <ul>
+    <li><strong>Laat draaien overdag.</strong> Zonlicht verhoogt de chloorbehoefte, dus circuleer wanneer het zwembad het ontsmettingsmiddel verdeeld nodig heeft.</li>
+    <li><strong>Houd rekening met vuile filters.</strong> De capaciteit daalt naarmate het filter vollloopt — bouw marge in of meet de doorstroming rechtstreeks.</li>
+    <li><strong>Pompen met variabele snelheid</strong> halen dezelfde dagelijkse circulatie op lagere snelheid over meer uren, met veel minder stroomverbruik.</li>
+    </ul>
+    <p>Eerst je volume nodig? Gebruik de <a href="/pool-volume-calculator/">zwembadvolume-calculator</a>.
+    Een goede circulatie helpt ook de middelen uit de <a href="/chemical-dosing-calculator/">doseringscalculator</a> gelijkmatig te verdelen.</p>
+  faq_heading: "Veelgestelde vragen over pomplooptijd"
+  final_title: "Optimaliseer je route"
+  final_body: "PoolFlow houdt de apparatuur, het volume en de chemie van elk zwembad op één plek — zodat elk bezoek goed is afgesteld. Offline, aan de rand van het zwembad. Gratis voor maximaal 5 zwembaden."
+  final_guide: "Zwembadvolume berekenen"
+  faq:
+    - question: "Hoeveel uur per dag moet ik mijn zwembadpomp laten draaien?"
+      answer: "Laat de pomp lang genoeg draaien om het water minstens één keer per dag te circuleren — veel techneuten mikken op één tot twee circulaties. Circulatietijd = zwembadvolume ÷ (capaciteit in GPM × 60). Voor een zwembad van 15.000 gallons met een pomp van 60 GPM duurt één circulatie ongeveer 4,2 uur, dus twee circulaties betekenen ongeveer 8,3 uur draaien. Deze calculator rekent dit uit op basis van je volume en capaciteit."
+    - question: "Wat is de circulatietijd van een zwembad?"
+      answer: "De circulatietijd is hoe lang de pomp erover doet om een hoeveelheid water gelijk aan het hele zwembad door het filter te laten stromen. Het wordt berekend als volume ÷ (capaciteit × 60 minuten). Een kortere circulatie betekent snellere filtratie en een betere verdeling van de chemicaliën. De meeste zwembaden voor thuis zijn ontworpen voor een circulatie van 8 uur of korter."
+    - question: "Hoe vind ik de capaciteit van mijn pomp?"
+      answer: "De capaciteit (in gallons per minuut) hangt af van het vermogen van de pomp, de grootte van het leidingwerk en de weerstand van het systeem. De nauwkeurigste manier is om die af te lezen op een doorstroommeter in de retourleiding, of te schatten aan de hand van de pompcurve in de handleiding bij de totale opvoerhoogte van je systeem. Typische capaciteiten voor thuis liggen tussen 40 en 80 GPM."
+    - question: "Is het beter om de zwembadpomp overdag of 's nachts te laten draaien?"
+      answer: "Laat minstens een deel van de cyclus overdag draaien, wanneer zonlicht de chloorbehoefte en algengroei verhoogt — dan circuleren houdt het ontsmettingsmiddel verdeeld wanneer het zwembad het het hardst nodig heeft. Veel techneuten verdelen de looptijd of gebruiken een pomp met variabele snelheid die langer op lage snelheid draait, wat hetzelfde water efficiënter en goedkoper verplaatst. Het totale dagelijkse circulatiedoel blijft hetzelfde."
+    - question: "Verbruikt langer pompen meer chemicaliën?"
+      answer: "Nee — circulatie zelf verbruikt geen ontsmettingsmiddel, en een goede circulatie helpt de chemicaliën juist efficiënt te werken door ze gelijkmatig te verdelen en het water door het filter te duwen. De belangrijkste kostenpost van langere looptijd is elektriciteit, en daar besparen pompen met variabele snelheid geld door het water langzaam over meer uren te verplaatsen."
+  js:
+    hrs: "u"
+    per_turnover: "u/circulatie"
+    per_day: "u/dag"
+    vol_unit_gal_aria: "Volume-eenheid: gallons. Tik om te wisselen."
+    vol_unit_l_aria: "Volume-eenheid: liters. Tik om te wisselen."

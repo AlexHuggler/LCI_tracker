@@ -1,0 +1,543 @@
+# Pool Volume calculator strings, per language. Accessed as
+# site.data.tools_i18n.calc.volume[lang]. `js` holds the runtime strings injected
+# into assets/js/pool-volume.js via window.PF_VOLUME_I18N. %PRIMARY%/%SECONDARY% etc.
+# are replaced at runtime with formatted numbers.
+en:
+  title: "Pool Volume Calculator — Gallons & Liters for Any Pool Shape"
+  description: "Free pool volume calculator. Enter your pool's dimensions to instantly estimate gallons (or liters) for rectangular, round, oval, and freeform pools — the number every chemical dose depends on."
+  h1: "Pool Volume Calculator"
+  subtitle: "Estimate how many gallons (or liters) your pool holds. Pick a shape, enter the dimensions, and get the number every chemical dose depends on."
+  dimensions_heading: "Pool Dimensions"
+  unit_toggle_label: "ft / gal"
+  unit_toggle_aria: "Unit system: US (feet & gallons). Tap to switch to metric."
+  shape_heading: "Pool shape"
+  shape_group_aria: "Pool shape"
+  shape_rect: "Rectangle"
+  shape_round: "Round"
+  shape_oval: "Oval"
+  shape_free: "Freeform"
+  label_length: "Length"
+  label_width: "Width"
+  label_diameter: "Diameter"
+  label_longD: "Long diameter"
+  label_shortD: "Short diameter"
+  label_shallow: "Shallow-end depth"
+  label_deep: "Deep-end depth"
+  label_factor: "Shape factor"
+  factor_range: "0.45–0.55"
+  aria_length: "Length"
+  aria_length_slider: "Length slider"
+  aria_width: "Width"
+  aria_width_slider: "Width slider"
+  aria_diameter: "Diameter"
+  aria_diameter_slider: "Diameter slider"
+  aria_longD: "Long diameter"
+  aria_longD_slider: "Long diameter slider"
+  aria_shortD: "Short diameter"
+  aria_shortD_slider: "Short diameter slider"
+  aria_shallow: "Shallow-end depth"
+  aria_shallow_slider: "Shallow-end depth slider"
+  aria_deep: "Deep-end depth"
+  aria_deep_slider: "Deep-end depth slider"
+  aria_factor: "Shape factor"
+  aria_factor_slider: "Shape factor slider"
+  result_label: "Estimated Volume"
+  breakdown_heading: "How it adds up"
+  bd_avgdepth: "Average depth"
+  bd_constant: "Shape constant"
+  cta_app: "Store volume per pool in the app"
+  disclaimer: "An estimate for guidance only. Round your final volume to the nearest 500 gallons — variables like irregular contours and step-outs introduce their own margin of error. Confirm critical doses against your own measurements."
+  how_heading: "How Pool Volume Is Calculated"
+  how_body: >-
+    <p>Pool volume is the foundation of every chemical calculation. Get it wrong and every dose
+    downstream is wrong by the same percentage. Each pool shape uses surface dimensions, an
+    <strong>average depth</strong>, and a constant that converts cubic feet to gallons:</p>
+    <ul>
+    <li><strong>Rectangular:</strong> Length × Width × Average Depth × <strong>7.48</strong></li>
+    <li><strong>Round:</strong> Diameter × Diameter × Average Depth × <strong>5.9</strong></li>
+    <li><strong>Oval:</strong> Long Diameter × Short Diameter × Average Depth × <strong>5.9</strong></li>
+    <li><strong>Freeform / kidney:</strong> Length × Width × Average Depth × 7.48 × <strong>Shape Factor</strong> (0.45–0.55)</li>
+    </ul>
+    <p class="text-center font-semibold text-pool-dark">Average depth = (Shallow end + Deep end) ÷ 2</p>
+    <p>For example, a 30 × 15 ft pool with depths of 3.5 ft and 8 ft has an average depth of 5.75 ft,
+    so its volume is 30 × 15 × 5.75 × 7.48 ≈ <strong>19,355 gallons</strong> (round to 19,500).</p>
+    <p>Once you know your volume, plug it into the <a href="/chemical-dosing-calculator/">chemical dosing calculator</a>
+    to size pH, alkalinity, and calcium corrections, the <a href="/salt-calculator/">salt calculator</a> for your SWG,
+    or the <a href="/pump-run-time-calculator/">pump run-time calculator</a> for turnover. For the chemistry behind it all,
+    read our <a href="/blog/chemical-dosing-calculations-pool-service/">chemical dosing guide</a>.</p>
+  faq_heading: "Pool Volume FAQ"
+  final_title: "Calculate Volume Once, Dose Forever"
+  final_body: "PoolFlow stores each pool's volume and uses it to compute exact chemical doses from your own costs — automatically, offline, at poolside. Free for up to 5 pools."
+  final_cta_dosing: "Open the Dosing Calculator"
+  faq:
+    - question: "How do you calculate the volume of a swimming pool?"
+      answer: "Multiply the surface dimensions by the average depth and a shape constant. For a rectangular pool: Length × Width × Average Depth × 7.48 = gallons. For a round pool: Diameter × Diameter × Average Depth × 5.9. Average depth is (shallow end + deep end) ÷ 2. This calculator applies the right formula automatically once you pick your pool shape."
+    - question: "What is the average depth of a pool?"
+      answer: "Average depth is simply (shallow-end depth + deep-end depth) ÷ 2. A pool with a 3.5 ft shallow end and an 8 ft deep end has an average depth of 5.75 ft. If your pool is a constant depth, just enter the same value for both ends."
+    - question: "Why does pool volume matter for chemical dosing?"
+      answer: "Every dosing calculation scales with volume — a 20% error in volume means a 20% error in every chemical you add. Getting volume right is the single most important input for accurate pH, alkalinity, calcium, and salt corrections. Measure and calculate it once rather than inheriting an estimate from a previous service provider."
+    - question: "How do I calculate the volume of a freeform or kidney-shaped pool?"
+      answer: "Measure the longest length, the widest width, and the average depth, then apply a shape factor between 0.45 and 0.55 to account for the curved edges: Length × Width × Average Depth × 7.48 × Shape Factor. Use about 0.50 for a typical kidney shape. This calculator includes a shape-factor slider so you can dial it in."
+    - question: "How many gallons is a typical residential pool?"
+      answer: "Most residential in-ground pools hold between 15,000 and 30,000 gallons. A common 16×32 ft rectangular pool with an average depth of 5.5 ft holds roughly 21,000 gallons. Above-ground and spool (small pool) installations are often 5,000–12,000 gallons."
+  js:
+    gallons: "gallons"
+    liters: "liters"
+    avg_depth: "avg depth"
+    unit_ft: "ft"
+    unit_m: "m"
+    toggle_us: "ft / gal"
+    toggle_metric: "m / L"
+    aria_us: "Unit system: US (feet & gallons). Tap to switch to metric."
+    aria_metric: "Unit system: metric (meters & liters). Tap to switch to US."
+    locale: "en-US"
+
+es:
+  title: "Calculadora de volumen de piscina — galones y litros para cualquier forma"
+  description: "Calculadora gratuita de volumen de piscina. Introduce las dimensiones de tu piscina para estimar al instante los galones (o litros) de piscinas rectangulares, redondas, ovaladas y de forma libre: el número del que depende cada dosis química."
+  h1: "Calculadora de volumen de piscina"
+  subtitle: "Calcula cuántos galones (o litros) contiene tu piscina. Elige una forma, introduce las dimensiones y obtén el número del que depende cada dosis química."
+  dimensions_heading: "Dimensiones de la piscina"
+  unit_toggle_label: "ft / gal"
+  unit_toggle_aria: "Sistema de unidades: EE. UU. (pies y galones). Toca para cambiar a métrico."
+  shape_heading: "Forma de la piscina"
+  shape_group_aria: "Forma de la piscina"
+  shape_rect: "Rectangular"
+  shape_round: "Redonda"
+  shape_oval: "Ovalada"
+  shape_free: "Forma libre"
+  label_length: "Largo"
+  label_width: "Ancho"
+  label_diameter: "Diámetro"
+  label_longD: "Diámetro mayor"
+  label_shortD: "Diámetro menor"
+  label_shallow: "Profundidad lado poco profundo"
+  label_deep: "Profundidad lado profundo"
+  label_factor: "Factor de forma"
+  factor_range: "0,45–0,55"
+  aria_length: "Largo"
+  aria_length_slider: "Control deslizante de largo"
+  aria_width: "Ancho"
+  aria_width_slider: "Control deslizante de ancho"
+  aria_diameter: "Diámetro"
+  aria_diameter_slider: "Control deslizante de diámetro"
+  aria_longD: "Diámetro mayor"
+  aria_longD_slider: "Control deslizante de diámetro mayor"
+  aria_shortD: "Diámetro menor"
+  aria_shortD_slider: "Control deslizante de diámetro menor"
+  aria_shallow: "Profundidad lado poco profundo"
+  aria_shallow_slider: "Control deslizante de profundidad lado poco profundo"
+  aria_deep: "Profundidad lado profundo"
+  aria_deep_slider: "Control deslizante de profundidad lado profundo"
+  aria_factor: "Factor de forma"
+  aria_factor_slider: "Control deslizante de factor de forma"
+  result_label: "Volumen estimado"
+  breakdown_heading: "Cómo se calcula"
+  bd_avgdepth: "Profundidad media"
+  bd_constant: "Constante de forma"
+  cta_app: "Guarda el volumen por piscina en la app"
+  disclaimer: "Solo una estimación orientativa. Redondea el volumen final a los 500 galones más cercanos: variables como los contornos irregulares y los escalones introducen su propio margen de error. Confirma las dosis críticas con tus propias mediciones."
+  how_heading: "Cómo se calcula el volumen de la piscina"
+  how_body: >-
+    <p>El volumen de la piscina es la base de cada cálculo químico. Si te equivocas, cada dosis posterior
+    se equivoca en el mismo porcentaje. Cada forma de piscina usa las dimensiones de la superficie, una
+    <strong>profundidad media</strong> y una constante que convierte los pies cúbicos en galones:</p>
+    <ul>
+    <li><strong>Rectangular:</strong> Largo × Ancho × Profundidad media × <strong>7,48</strong></li>
+    <li><strong>Redonda:</strong> Diámetro × Diámetro × Profundidad media × <strong>5,9</strong></li>
+    <li><strong>Ovalada:</strong> Diámetro mayor × Diámetro menor × Profundidad media × <strong>5,9</strong></li>
+    <li><strong>Forma libre / riñón:</strong> Largo × Ancho × Profundidad media × 7,48 × <strong>Factor de forma</strong> (0,45–0,55)</li>
+    </ul>
+    <p class="text-center font-semibold text-pool-dark">Profundidad media = (Lado poco profundo + Lado profundo) ÷ 2</p>
+    <p>Por ejemplo, una piscina de 30 × 15 ft con profundidades de 3,5 ft y 8 ft tiene una profundidad media de 5,75 ft,
+    por lo que su volumen es 30 × 15 × 5,75 × 7,48 ≈ <strong>19 355 galones</strong> (redondea a 19 500).</p>
+    <p>Una vez que conozcas tu volumen, introdúcelo en la <a href="/chemical-dosing-calculator/">calculadora de dosificación química</a>
+    para ajustar las correcciones de pH, alcalinidad y calcio, en la <a href="/salt-calculator/">calculadora de sal</a> para tu clorador salino,
+    o en la <a href="/pump-run-time-calculator/">calculadora de tiempo de bomba</a> para la renovación del agua. Para la química detrás de todo esto,
+    lee nuestra <a href="/blog/chemical-dosing-calculations-pool-service/">guía de dosificación química</a>.</p>
+  faq_heading: "Preguntas frecuentes sobre el volumen de la piscina"
+  final_title: "Calcula el volumen una vez, dosifica para siempre"
+  final_body: "PoolFlow guarda el volumen de cada piscina y lo usa para calcular las dosis químicas exactas a partir de tus propios costes: de forma automática, sin conexión, junto a la piscina. Gratis para hasta 5 piscinas."
+  final_cta_dosing: "Abrir la calculadora de dosificación"
+  faq:
+    - question: "¿Cómo se calcula el volumen de una piscina?"
+      answer: "Multiplica las dimensiones de la superficie por la profundidad media y una constante de forma. Para una piscina rectangular: Largo × Ancho × Profundidad media × 7,48 = galones. Para una piscina redonda: Diámetro × Diámetro × Profundidad media × 5,9. La profundidad media es (lado poco profundo + lado profundo) ÷ 2. Esta calculadora aplica la fórmula correcta automáticamente en cuanto eliges la forma de tu piscina."
+    - question: "¿Cuál es la profundidad media de una piscina?"
+      answer: "La profundidad media es simplemente (profundidad del lado poco profundo + profundidad del lado profundo) ÷ 2. Una piscina con un lado poco profundo de 3,5 ft y un lado profundo de 8 ft tiene una profundidad media de 5,75 ft. Si tu piscina tiene profundidad constante, introduce el mismo valor en ambos extremos."
+    - question: "¿Por qué importa el volumen de la piscina para la dosificación química?"
+      answer: "Cada cálculo de dosificación se escala con el volumen: un error del 20 % en el volumen significa un error del 20 % en cada producto químico que añades. Acertar con el volumen es el dato más importante para correcciones precisas de pH, alcalinidad, calcio y sal. Mídelo y calcúlalo una vez en lugar de heredar una estimación de un proveedor de servicio anterior."
+    - question: "¿Cómo calculo el volumen de una piscina de forma libre o de riñón?"
+      answer: "Mide el largo máximo, el ancho máximo y la profundidad media, y luego aplica un factor de forma entre 0,45 y 0,55 para tener en cuenta los bordes curvos: Largo × Ancho × Profundidad media × 7,48 × Factor de forma. Usa unos 0,50 para una forma de riñón típica. Esta calculadora incluye un control deslizante de factor de forma para que puedas ajustarlo."
+    - question: "¿Cuántos galones tiene una piscina residencial típica?"
+      answer: "La mayoría de las piscinas residenciales enterradas contienen entre 15 000 y 30 000 galones. Una piscina rectangular común de 16×32 ft con una profundidad media de 5,5 ft contiene aproximadamente 21 000 galones. Las instalaciones elevadas y las mini piscinas (spool) suelen tener entre 5000 y 12 000 galones."
+  js:
+    gallons: "galones"
+    liters: "litros"
+    avg_depth: "prof. media"
+    unit_ft: "ft"
+    unit_m: "m"
+    toggle_us: "ft / gal"
+    toggle_metric: "m / L"
+    aria_us: "Sistema de unidades: EE. UU. (pies y galones). Toca para cambiar a métrico."
+    aria_metric: "Sistema de unidades: métrico (metros y litros). Toca para cambiar a EE. UU."
+    locale: "es-ES"
+
+fr:
+  title: "Calculateur de volume de piscine — gallons et litres pour toute forme"
+  description: "Calculateur gratuit de volume de piscine. Saisissez les dimensions de votre piscine pour estimer instantanément les gallons (ou litres) des piscines rectangulaires, rondes, ovales et de forme libre : le nombre dont dépend chaque dose chimique."
+  h1: "Calculateur de volume de piscine"
+  subtitle: "Estimez le nombre de gallons (ou de litres) que contient votre piscine. Choisissez une forme, saisissez les dimensions et obtenez le nombre dont dépend chaque dose chimique."
+  dimensions_heading: "Dimensions de la piscine"
+  unit_toggle_label: "ft / gal"
+  unit_toggle_aria: "Système d'unités : US (pieds et gallons). Touchez pour passer au métrique."
+  shape_heading: "Forme de la piscine"
+  shape_group_aria: "Forme de la piscine"
+  shape_rect: "Rectangulaire"
+  shape_round: "Ronde"
+  shape_oval: "Ovale"
+  shape_free: "Forme libre"
+  label_length: "Longueur"
+  label_width: "Largeur"
+  label_diameter: "Diamètre"
+  label_longD: "Grand diamètre"
+  label_shortD: "Petit diamètre"
+  label_shallow: "Profondeur côté petit bain"
+  label_deep: "Profondeur côté grand bain"
+  label_factor: "Facteur de forme"
+  factor_range: "0,45–0,55"
+  aria_length: "Longueur"
+  aria_length_slider: "Curseur de longueur"
+  aria_width: "Largeur"
+  aria_width_slider: "Curseur de largeur"
+  aria_diameter: "Diamètre"
+  aria_diameter_slider: "Curseur de diamètre"
+  aria_longD: "Grand diamètre"
+  aria_longD_slider: "Curseur de grand diamètre"
+  aria_shortD: "Petit diamètre"
+  aria_shortD_slider: "Curseur de petit diamètre"
+  aria_shallow: "Profondeur côté petit bain"
+  aria_shallow_slider: "Curseur de profondeur côté petit bain"
+  aria_deep: "Profondeur côté grand bain"
+  aria_deep_slider: "Curseur de profondeur côté grand bain"
+  aria_factor: "Facteur de forme"
+  aria_factor_slider: "Curseur de facteur de forme"
+  result_label: "Volume estimé"
+  breakdown_heading: "Comment c'est calculé"
+  bd_avgdepth: "Profondeur moyenne"
+  bd_constant: "Constante de forme"
+  cta_app: "Enregistrez le volume par piscine dans l'app"
+  disclaimer: "Une estimation à titre indicatif seulement. Arrondissez votre volume final aux 500 gallons les plus proches : des variables comme les contours irréguliers et les marches introduisent leur propre marge d'erreur. Confirmez les doses critiques avec vos propres mesures."
+  how_heading: "Comment le volume de la piscine est calculé"
+  how_body: >-
+    <p>Le volume de la piscine est la base de chaque calcul chimique. Si vous vous trompez, chaque dose
+    en aval est fausse du même pourcentage. Chaque forme de piscine utilise les dimensions de surface, une
+    <strong>profondeur moyenne</strong> et une constante qui convertit les pieds cubes en gallons :</p>
+    <ul>
+    <li><strong>Rectangulaire :</strong> Longueur × Largeur × Profondeur moyenne × <strong>7,48</strong></li>
+    <li><strong>Ronde :</strong> Diamètre × Diamètre × Profondeur moyenne × <strong>5,9</strong></li>
+    <li><strong>Ovale :</strong> Grand diamètre × Petit diamètre × Profondeur moyenne × <strong>5,9</strong></li>
+    <li><strong>Forme libre / haricot :</strong> Longueur × Largeur × Profondeur moyenne × 7,48 × <strong>Facteur de forme</strong> (0,45–0,55)</li>
+    </ul>
+    <p class="text-center font-semibold text-pool-dark">Profondeur moyenne = (Petit bain + Grand bain) ÷ 2</p>
+    <p>Par exemple, une piscine de 30 × 15 ft avec des profondeurs de 3,5 ft et 8 ft a une profondeur moyenne de 5,75 ft,
+    donc son volume est 30 × 15 × 5,75 × 7,48 ≈ <strong>19 355 gallons</strong> (arrondir à 19 500).</p>
+    <p>Une fois votre volume connu, saisissez-le dans le <a href="/chemical-dosing-calculator/">calculateur de dosage chimique</a>
+    pour dimensionner les corrections de pH, d'alcalinité et de calcium, le <a href="/salt-calculator/">calculateur de sel</a> pour votre électrolyseur,
+    ou le <a href="/pump-run-time-calculator/">calculateur de temps de pompe</a> pour le renouvellement. Pour la chimie derrière tout cela,
+    lisez notre <a href="/blog/chemical-dosing-calculations-pool-service/">guide de dosage chimique</a>.</p>
+  faq_heading: "FAQ sur le volume de la piscine"
+  final_title: "Calculez le volume une fois, dosez pour toujours"
+  final_body: "PoolFlow enregistre le volume de chaque piscine et l'utilise pour calculer les doses chimiques exactes à partir de vos propres coûts : automatiquement, hors ligne, au bord de la piscine. Gratuit jusqu'à 5 piscines."
+  final_cta_dosing: "Ouvrir le calculateur de dosage"
+  faq:
+    - question: "Comment calculer le volume d'une piscine ?"
+      answer: "Multipliez les dimensions de surface par la profondeur moyenne et une constante de forme. Pour une piscine rectangulaire : Longueur × Largeur × Profondeur moyenne × 7,48 = gallons. Pour une piscine ronde : Diamètre × Diamètre × Profondeur moyenne × 5,9. La profondeur moyenne est (petit bain + grand bain) ÷ 2. Ce calculateur applique automatiquement la bonne formule dès que vous choisissez la forme de votre piscine."
+    - question: "Quelle est la profondeur moyenne d'une piscine ?"
+      answer: "La profondeur moyenne est simplement (profondeur du petit bain + profondeur du grand bain) ÷ 2. Une piscine avec un petit bain de 3,5 ft et un grand bain de 8 ft a une profondeur moyenne de 5,75 ft. Si votre piscine est à profondeur constante, saisissez simplement la même valeur aux deux extrémités."
+    - question: "Pourquoi le volume de la piscine est-il important pour le dosage chimique ?"
+      answer: "Chaque calcul de dosage s'adapte au volume : une erreur de 20 % sur le volume signifie une erreur de 20 % sur chaque produit chimique que vous ajoutez. Avoir le bon volume est l'élément le plus important pour des corrections précises de pH, d'alcalinité, de calcium et de sel. Mesurez-le et calculez-le une fois plutôt que d'hériter d'une estimation d'un prestataire de service précédent."
+    - question: "Comment calculer le volume d'une piscine de forme libre ou en haricot ?"
+      answer: "Mesurez la longueur maximale, la largeur maximale et la profondeur moyenne, puis appliquez un facteur de forme entre 0,45 et 0,55 pour tenir compte des bords courbes : Longueur × Largeur × Profondeur moyenne × 7,48 × Facteur de forme. Utilisez environ 0,50 pour une forme en haricot typique. Ce calculateur inclut un curseur de facteur de forme pour que vous puissiez l'ajuster."
+    - question: "Combien de gallons contient une piscine résidentielle typique ?"
+      answer: "La plupart des piscines résidentielles enterrées contiennent entre 15 000 et 30 000 gallons. Une piscine rectangulaire courante de 16×32 ft avec une profondeur moyenne de 5,5 ft contient environ 21 000 gallons. Les installations hors-sol et les mini-piscines (spool) font souvent de 5 000 à 12 000 gallons."
+  js:
+    gallons: "gallons"
+    liters: "litres"
+    avg_depth: "prof. moy."
+    unit_ft: "ft"
+    unit_m: "m"
+    toggle_us: "ft / gal"
+    toggle_metric: "m / L"
+    aria_us: "Système d'unités : US (pieds et gallons). Touchez pour passer au métrique."
+    aria_metric: "Système d'unités : métrique (mètres et litres). Touchez pour passer aux unités US."
+    locale: "fr-FR"
+
+de:
+  title: "Poolvolumen-Rechner — Gallonen & Liter für jede Poolform"
+  description: "Kostenloser Poolvolumen-Rechner. Geben Sie die Maße Ihres Pools ein, um sofort die Gallonen (oder Liter) für rechteckige, runde, ovale und Freiform-Pools zu schätzen — die Zahl, von der jede Chemikaliendosis abhängt."
+  h1: "Poolvolumen-Rechner"
+  subtitle: "Schätzen Sie, wie viele Gallonen (oder Liter) Ihr Pool fasst. Wählen Sie eine Form, geben Sie die Maße ein und erhalten Sie die Zahl, von der jede Chemikaliendosis abhängt."
+  dimensions_heading: "Poolabmessungen"
+  unit_toggle_label: "ft / gal"
+  unit_toggle_aria: "Einheitensystem: US (Fuß und Gallonen). Tippen, um zu metrisch zu wechseln."
+  shape_heading: "Poolform"
+  shape_group_aria: "Poolform"
+  shape_rect: "Rechteckig"
+  shape_round: "Rund"
+  shape_oval: "Oval"
+  shape_free: "Freiform"
+  label_length: "Länge"
+  label_width: "Breite"
+  label_diameter: "Durchmesser"
+  label_longD: "Großer Durchmesser"
+  label_shortD: "Kleiner Durchmesser"
+  label_shallow: "Tiefe am flachen Ende"
+  label_deep: "Tiefe am tiefen Ende"
+  label_factor: "Formfaktor"
+  factor_range: "0,45–0,55"
+  aria_length: "Länge"
+  aria_length_slider: "Längenregler"
+  aria_width: "Breite"
+  aria_width_slider: "Breitenregler"
+  aria_diameter: "Durchmesser"
+  aria_diameter_slider: "Durchmesserregler"
+  aria_longD: "Großer Durchmesser"
+  aria_longD_slider: "Regler für großen Durchmesser"
+  aria_shortD: "Kleiner Durchmesser"
+  aria_shortD_slider: "Regler für kleinen Durchmesser"
+  aria_shallow: "Tiefe am flachen Ende"
+  aria_shallow_slider: "Regler für Tiefe am flachen Ende"
+  aria_deep: "Tiefe am tiefen Ende"
+  aria_deep_slider: "Regler für Tiefe am tiefen Ende"
+  aria_factor: "Formfaktor"
+  aria_factor_slider: "Formfaktor-Regler"
+  result_label: "Geschätztes Volumen"
+  breakdown_heading: "So setzt es sich zusammen"
+  bd_avgdepth: "Durchschnittliche Tiefe"
+  bd_constant: "Formkonstante"
+  cta_app: "Volumen pro Pool in der App speichern"
+  disclaimer: "Nur eine Schätzung zur Orientierung. Runden Sie Ihr endgültiges Volumen auf die nächsten 500 Gallonen — Variablen wie unregelmäßige Konturen und Stufen bringen ihre eigene Fehlertoleranz mit. Bestätigen Sie kritische Dosen anhand Ihrer eigenen Messungen."
+  how_heading: "Wie das Poolvolumen berechnet wird"
+  how_body: >-
+    <p>Das Poolvolumen ist die Grundlage jeder Chemikalienberechnung. Wenn es falsch ist, ist jede
+    nachgelagerte Dosis um denselben Prozentsatz falsch. Jede Poolform nutzt die Oberflächenmaße, eine
+    <strong>durchschnittliche Tiefe</strong> und eine Konstante, die Kubikfuß in Gallonen umrechnet:</p>
+    <ul>
+    <li><strong>Rechteckig:</strong> Länge × Breite × Durchschnittliche Tiefe × <strong>7,48</strong></li>
+    <li><strong>Rund:</strong> Durchmesser × Durchmesser × Durchschnittliche Tiefe × <strong>5,9</strong></li>
+    <li><strong>Oval:</strong> Großer Durchmesser × Kleiner Durchmesser × Durchschnittliche Tiefe × <strong>5,9</strong></li>
+    <li><strong>Freiform / Nierenform:</strong> Länge × Breite × Durchschnittliche Tiefe × 7,48 × <strong>Formfaktor</strong> (0,45–0,55)</li>
+    </ul>
+    <p class="text-center font-semibold text-pool-dark">Durchschnittliche Tiefe = (Flaches Ende + Tiefes Ende) ÷ 2</p>
+    <p>Ein Pool von 30 × 15 ft mit Tiefen von 3,5 ft und 8 ft hat zum Beispiel eine durchschnittliche Tiefe von 5,75 ft,
+    sein Volumen beträgt also 30 × 15 × 5,75 × 7,48 ≈ <strong>19.355 Gallonen</strong> (auf 19.500 runden).</p>
+    <p>Sobald Sie Ihr Volumen kennen, geben Sie es in den <a href="/chemical-dosing-calculator/">Chemikaliendosierungs-Rechner</a> ein,
+    um pH-, Alkalinitäts- und Kalziumkorrekturen zu bemessen, in den <a href="/salt-calculator/">Salzrechner</a> für Ihre Salzelektrolyse-Anlage
+    oder in den <a href="/pump-run-time-calculator/">Pumpenlaufzeit-Rechner</a> für den Wasserumlauf. Für die Chemie dahinter
+    lesen Sie unseren <a href="/blog/chemical-dosing-calculations-pool-service/">Leitfaden zur Chemikaliendosierung</a>.</p>
+  faq_heading: "FAQ zum Poolvolumen"
+  final_title: "Volumen einmal berechnen, für immer dosieren"
+  final_body: "PoolFlow speichert das Volumen jedes Pools und nutzt es, um exakte Chemikaliendosen aus Ihren eigenen Kosten zu berechnen — automatisch, offline, am Beckenrand. Kostenlos für bis zu 5 Pools."
+  final_cta_dosing: "Dosierungsrechner öffnen"
+  faq:
+    - question: "Wie berechnet man das Volumen eines Schwimmbeckens?"
+      answer: "Multiplizieren Sie die Oberflächenmaße mit der durchschnittlichen Tiefe und einer Formkonstante. Für ein rechteckiges Becken: Länge × Breite × Durchschnittliche Tiefe × 7,48 = Gallonen. Für ein rundes Becken: Durchmesser × Durchmesser × Durchschnittliche Tiefe × 5,9. Die durchschnittliche Tiefe ist (flaches Ende + tiefes Ende) ÷ 2. Dieser Rechner wendet automatisch die richtige Formel an, sobald Sie Ihre Poolform wählen."
+    - question: "Was ist die durchschnittliche Tiefe eines Pools?"
+      answer: "Die durchschnittliche Tiefe ist einfach (Tiefe am flachen Ende + Tiefe am tiefen Ende) ÷ 2. Ein Pool mit einem flachen Ende von 3,5 ft und einem tiefen Ende von 8 ft hat eine durchschnittliche Tiefe von 5,75 ft. Wenn Ihr Pool eine konstante Tiefe hat, geben Sie einfach denselben Wert für beide Enden ein."
+    - question: "Warum ist das Poolvolumen für die Chemikaliendosierung wichtig?"
+      answer: "Jede Dosierungsberechnung skaliert mit dem Volumen — ein Fehler von 20 % beim Volumen bedeutet einen Fehler von 20 % bei jeder Chemikalie, die Sie hinzufügen. Das richtige Volumen ist die wichtigste Eingabe für genaue pH-, Alkalinitäts-, Kalzium- und Salzkorrekturen. Messen und berechnen Sie es einmal, statt eine Schätzung von einem früheren Dienstleister zu übernehmen."
+    - question: "Wie berechne ich das Volumen eines Freiform- oder nierenförmigen Pools?"
+      answer: "Messen Sie die größte Länge, die größte Breite und die durchschnittliche Tiefe und wenden Sie dann einen Formfaktor zwischen 0,45 und 0,55 an, um die gekrümmten Ränder zu berücksichtigen: Länge × Breite × Durchschnittliche Tiefe × 7,48 × Formfaktor. Verwenden Sie etwa 0,50 für eine typische Nierenform. Dieser Rechner enthält einen Formfaktor-Regler, mit dem Sie ihn fein einstellen können."
+    - question: "Wie viele Gallonen fasst ein typischer Wohnpool?"
+      answer: "Die meisten privaten Einbaupools fassen zwischen 15.000 und 30.000 Gallonen. Ein gängiger rechteckiger Pool von 16×32 ft mit einer durchschnittlichen Tiefe von 5,5 ft fasst rund 21.000 Gallonen. Aufstellpools und Mini-Pools (Spools) haben oft 5.000 bis 12.000 Gallonen."
+  js:
+    gallons: "Gallonen"
+    liters: "Liter"
+    avg_depth: "Ø Tiefe"
+    unit_ft: "ft"
+    unit_m: "m"
+    toggle_us: "ft / gal"
+    toggle_metric: "m / L"
+    aria_us: "Einheitensystem: US (Fuß und Gallonen). Tippen, um zu metrisch zu wechseln."
+    aria_metric: "Einheitensystem: metrisch (Meter und Liter). Tippen, um zu US zu wechseln."
+    locale: "de-DE"
+
+pt:
+  title: "Calculadora de volume de piscina — galões e litros para qualquer formato"
+  description: "Calculadora gratuita de volume de piscina. Insira as dimensões da sua piscina para estimar instantaneamente os galões (ou litros) de piscinas retangulares, redondas, ovais e de formato livre — o número do qual depende cada dose química."
+  h1: "Calculadora de volume de piscina"
+  subtitle: "Estime quantos galões (ou litros) sua piscina comporta. Escolha um formato, insira as dimensões e obtenha o número do qual depende cada dose química."
+  dimensions_heading: "Dimensões da piscina"
+  unit_toggle_label: "ft / gal"
+  unit_toggle_aria: "Sistema de unidades: EUA (pés e galões). Toque para mudar para métrico."
+  shape_heading: "Formato da piscina"
+  shape_group_aria: "Formato da piscina"
+  shape_rect: "Retangular"
+  shape_round: "Redonda"
+  shape_oval: "Oval"
+  shape_free: "Formato livre"
+  label_length: "Comprimento"
+  label_width: "Largura"
+  label_diameter: "Diâmetro"
+  label_longD: "Diâmetro maior"
+  label_shortD: "Diâmetro menor"
+  label_shallow: "Profundidade do lado raso"
+  label_deep: "Profundidade do lado fundo"
+  label_factor: "Fator de forma"
+  factor_range: "0,45–0,55"
+  aria_length: "Comprimento"
+  aria_length_slider: "Controle deslizante de comprimento"
+  aria_width: "Largura"
+  aria_width_slider: "Controle deslizante de largura"
+  aria_diameter: "Diâmetro"
+  aria_diameter_slider: "Controle deslizante de diâmetro"
+  aria_longD: "Diâmetro maior"
+  aria_longD_slider: "Controle deslizante de diâmetro maior"
+  aria_shortD: "Diâmetro menor"
+  aria_shortD_slider: "Controle deslizante de diâmetro menor"
+  aria_shallow: "Profundidade do lado raso"
+  aria_shallow_slider: "Controle deslizante de profundidade do lado raso"
+  aria_deep: "Profundidade do lado fundo"
+  aria_deep_slider: "Controle deslizante de profundidade do lado fundo"
+  aria_factor: "Fator de forma"
+  aria_factor_slider: "Controle deslizante de fator de forma"
+  result_label: "Volume estimado"
+  breakdown_heading: "Como é calculado"
+  bd_avgdepth: "Profundidade média"
+  bd_constant: "Constante de forma"
+  cta_app: "Guarde o volume por piscina no app"
+  disclaimer: "Apenas uma estimativa para orientação. Arredonde seu volume final para os 500 galões mais próximos — variáveis como contornos irregulares e degraus introduzem sua própria margem de erro. Confirme doses críticas com suas próprias medições."
+  how_heading: "Como o volume da piscina é calculado"
+  how_body: >-
+    <p>O volume da piscina é a base de cada cálculo químico. Se errar, cada dose seguinte
+    fica errada na mesma porcentagem. Cada formato de piscina usa as dimensões da superfície, uma
+    <strong>profundidade média</strong> e uma constante que converte pés cúbicos em galões:</p>
+    <ul>
+    <li><strong>Retangular:</strong> Comprimento × Largura × Profundidade média × <strong>7,48</strong></li>
+    <li><strong>Redonda:</strong> Diâmetro × Diâmetro × Profundidade média × <strong>5,9</strong></li>
+    <li><strong>Oval:</strong> Diâmetro maior × Diâmetro menor × Profundidade média × <strong>5,9</strong></li>
+    <li><strong>Formato livre / rim:</strong> Comprimento × Largura × Profundidade média × 7,48 × <strong>Fator de forma</strong> (0,45–0,55)</li>
+    </ul>
+    <p class="text-center font-semibold text-pool-dark">Profundidade média = (Lado raso + Lado fundo) ÷ 2</p>
+    <p>Por exemplo, uma piscina de 30 × 15 ft com profundidades de 3,5 ft e 8 ft tem uma profundidade média de 5,75 ft,
+    então seu volume é 30 × 15 × 5,75 × 7,48 ≈ <strong>19.355 galões</strong> (arredonde para 19.500).</p>
+    <p>Assim que souber seu volume, insira-o na <a href="/chemical-dosing-calculator/">calculadora de dosagem química</a>
+    para dimensionar correções de pH, alcalinidade e cálcio, na <a href="/salt-calculator/">calculadora de sal</a> para seu gerador de cloro salino,
+    ou na <a href="/pump-run-time-calculator/">calculadora de tempo de bomba</a> para a renovação da água. Para a química por trás de tudo isso,
+    leia nosso <a href="/blog/chemical-dosing-calculations-pool-service/">guia de dosagem química</a>.</p>
+  faq_heading: "Perguntas frequentes sobre o volume da piscina"
+  final_title: "Calcule o volume uma vez, dose para sempre"
+  final_body: "O PoolFlow guarda o volume de cada piscina e o usa para calcular doses químicas exatas a partir dos seus próprios custos — automaticamente, offline, à beira da piscina. Grátis para até 5 piscinas."
+  final_cta_dosing: "Abrir a calculadora de dosagem"
+  faq:
+    - question: "Como se calcula o volume de uma piscina?"
+      answer: "Multiplique as dimensões da superfície pela profundidade média e por uma constante de forma. Para uma piscina retangular: Comprimento × Largura × Profundidade média × 7,48 = galões. Para uma piscina redonda: Diâmetro × Diâmetro × Profundidade média × 5,9. A profundidade média é (lado raso + lado fundo) ÷ 2. Esta calculadora aplica a fórmula correta automaticamente assim que você escolhe o formato da sua piscina."
+    - question: "Qual é a profundidade média de uma piscina?"
+      answer: "A profundidade média é simplesmente (profundidade do lado raso + profundidade do lado fundo) ÷ 2. Uma piscina com um lado raso de 3,5 ft e um lado fundo de 8 ft tem uma profundidade média de 5,75 ft. Se a sua piscina tem profundidade constante, basta inserir o mesmo valor em ambas as extremidades."
+    - question: "Por que o volume da piscina importa para a dosagem química?"
+      answer: "Cada cálculo de dosagem escala com o volume — um erro de 20% no volume significa um erro de 20% em cada produto químico que você adiciona. Acertar o volume é a entrada mais importante para correções precisas de pH, alcalinidade, cálcio e sal. Meça e calcule uma vez em vez de herdar uma estimativa de um prestador de serviço anterior."
+    - question: "Como calculo o volume de uma piscina de formato livre ou em formato de rim?"
+      answer: "Meça o maior comprimento, a maior largura e a profundidade média, e depois aplique um fator de forma entre 0,45 e 0,55 para considerar as bordas curvas: Comprimento × Largura × Profundidade média × 7,48 × Fator de forma. Use cerca de 0,50 para um formato de rim típico. Esta calculadora inclui um controle deslizante de fator de forma para você ajustá-lo."
+    - question: "Quantos galões tem uma piscina residencial típica?"
+      answer: "A maioria das piscinas residenciais enterradas comporta entre 15.000 e 30.000 galões. Uma piscina retangular comum de 16×32 ft com profundidade média de 5,5 ft comporta cerca de 21.000 galões. Instalações elevadas e mini piscinas (spool) costumam ter de 5.000 a 12.000 galões."
+  js:
+    gallons: "galões"
+    liters: "litros"
+    avg_depth: "prof. média"
+    unit_ft: "ft"
+    unit_m: "m"
+    toggle_us: "ft / gal"
+    toggle_metric: "m / L"
+    aria_us: "Sistema de unidades: EUA (pés e galões). Toque para mudar para métrico."
+    aria_metric: "Sistema de unidades: métrico (metros e litros). Toque para mudar para EUA."
+    locale: "pt-BR"
+
+nl:
+  title: "Poolvolume-calculator — gallons en liters voor elke poolvorm"
+  description: "Gratis poolvolume-calculator. Voer de afmetingen van uw zwembad in om direct de gallons (of liters) te schatten voor rechthoekige, ronde, ovale en vrijevorm-zwembaden — het getal waarvan elke chemische dosis afhangt."
+  h1: "Poolvolume-calculator"
+  subtitle: "Schat hoeveel gallons (of liters) uw zwembad bevat. Kies een vorm, voer de afmetingen in en krijg het getal waarvan elke chemische dosis afhangt."
+  dimensions_heading: "Zwembadafmetingen"
+  unit_toggle_label: "ft / gal"
+  unit_toggle_aria: "Eenhedenstelsel: VS (voet en gallons). Tik om naar metrisch te wisselen."
+  shape_heading: "Zwembadvorm"
+  shape_group_aria: "Zwembadvorm"
+  shape_rect: "Rechthoekig"
+  shape_round: "Rond"
+  shape_oval: "Ovaal"
+  shape_free: "Vrije vorm"
+  label_length: "Lengte"
+  label_width: "Breedte"
+  label_diameter: "Diameter"
+  label_longD: "Lange diameter"
+  label_shortD: "Korte diameter"
+  label_shallow: "Diepte ondiep einde"
+  label_deep: "Diepte diep einde"
+  label_factor: "Vormfactor"
+  factor_range: "0,45–0,55"
+  aria_length: "Lengte"
+  aria_length_slider: "Lengteschuif"
+  aria_width: "Breedte"
+  aria_width_slider: "Breedteschuif"
+  aria_diameter: "Diameter"
+  aria_diameter_slider: "Diameterschuif"
+  aria_longD: "Lange diameter"
+  aria_longD_slider: "Schuif lange diameter"
+  aria_shortD: "Korte diameter"
+  aria_shortD_slider: "Schuif korte diameter"
+  aria_shallow: "Diepte ondiep einde"
+  aria_shallow_slider: "Schuif diepte ondiep einde"
+  aria_deep: "Diepte diep einde"
+  aria_deep_slider: "Schuif diepte diep einde"
+  aria_factor: "Vormfactor"
+  aria_factor_slider: "Vormfactorschuif"
+  result_label: "Geschat volume"
+  breakdown_heading: "Hoe het wordt berekend"
+  bd_avgdepth: "Gemiddelde diepte"
+  bd_constant: "Vormconstante"
+  cta_app: "Sla volume per zwembad op in de app"
+  disclaimer: "Slechts een schatting ter indicatie. Rond uw uiteindelijke volume af op de dichtstbijzijnde 500 gallons — variabelen zoals onregelmatige contouren en uitsparingen brengen hun eigen foutmarge met zich mee. Bevestig kritieke doses aan de hand van uw eigen metingen."
+  how_heading: "Hoe het poolvolume wordt berekend"
+  how_body: >-
+    <p>Het poolvolume is de basis van elke chemische berekening. Als het verkeerd is, is elke
+    daaropvolgende dosis met hetzelfde percentage verkeerd. Elke zwembadvorm gebruikt de oppervlakteafmetingen, een
+    <strong>gemiddelde diepte</strong> en een constante die kubieke voet omrekent naar gallons:</p>
+    <ul>
+    <li><strong>Rechthoekig:</strong> Lengte × Breedte × Gemiddelde diepte × <strong>7,48</strong></li>
+    <li><strong>Rond:</strong> Diameter × Diameter × Gemiddelde diepte × <strong>5,9</strong></li>
+    <li><strong>Ovaal:</strong> Lange diameter × Korte diameter × Gemiddelde diepte × <strong>5,9</strong></li>
+    <li><strong>Vrije vorm / niervorm:</strong> Lengte × Breedte × Gemiddelde diepte × 7,48 × <strong>Vormfactor</strong> (0,45–0,55)</li>
+    </ul>
+    <p class="text-center font-semibold text-pool-dark">Gemiddelde diepte = (Ondiep einde + Diep einde) ÷ 2</p>
+    <p>Een zwembad van 30 × 15 ft met dieptes van 3,5 ft en 8 ft heeft bijvoorbeeld een gemiddelde diepte van 5,75 ft,
+    dus het volume is 30 × 15 × 5,75 × 7,48 ≈ <strong>19.355 gallons</strong> (afronden op 19.500).</p>
+    <p>Zodra u uw volume kent, voert u het in de <a href="/chemical-dosing-calculator/">chemische doseringscalculator</a> in
+    om pH-, alkaliteits- en calciumcorrecties te bepalen, in de <a href="/salt-calculator/">zoutcalculator</a> voor uw zoutelektrolyse,
+    of in de <a href="/pump-run-time-calculator/">pomplooptijdcalculator</a> voor de circulatie. Voor de chemie erachter
+    leest u onze <a href="/blog/chemical-dosing-calculations-pool-service/">gids voor chemische dosering</a>.</p>
+  faq_heading: "Veelgestelde vragen over poolvolume"
+  final_title: "Bereken het volume één keer, doseer voor altijd"
+  final_body: "PoolFlow slaat het volume van elk zwembad op en gebruikt het om exacte chemische doses te berekenen op basis van uw eigen kosten — automatisch, offline, aan de rand van het zwembad. Gratis voor maximaal 5 zwembaden."
+  final_cta_dosing: "Open de doseringscalculator"
+  faq:
+    - question: "Hoe bereken je het volume van een zwembad?"
+      answer: "Vermenigvuldig de oppervlakteafmetingen met de gemiddelde diepte en een vormconstante. Voor een rechthoekig zwembad: Lengte × Breedte × Gemiddelde diepte × 7,48 = gallons. Voor een rond zwembad: Diameter × Diameter × Gemiddelde diepte × 5,9. De gemiddelde diepte is (ondiep einde + diep einde) ÷ 2. Deze calculator past automatisch de juiste formule toe zodra u uw zwembadvorm kiest."
+    - question: "Wat is de gemiddelde diepte van een zwembad?"
+      answer: "De gemiddelde diepte is simpelweg (diepte ondiep einde + diepte diep einde) ÷ 2. Een zwembad met een ondiep einde van 3,5 ft en een diep einde van 8 ft heeft een gemiddelde diepte van 5,75 ft. Als uw zwembad een constante diepte heeft, voert u gewoon dezelfde waarde in voor beide uiteinden."
+    - question: "Waarom is het poolvolume belangrijk voor chemische dosering?"
+      answer: "Elke doseringsberekening schaalt mee met het volume — een fout van 20% in het volume betekent een fout van 20% in elke chemische stof die u toevoegt. Het juiste volume is de belangrijkste invoer voor nauwkeurige correcties van pH, alkaliteit, calcium en zout. Meet en bereken het één keer in plaats van een schatting van een vorige dienstverlener over te nemen."
+    - question: "Hoe bereken ik het volume van een zwembad met een vrije vorm of niervorm?"
+      answer: "Meet de grootste lengte, de grootste breedte en de gemiddelde diepte, en pas vervolgens een vormfactor tussen 0,45 en 0,55 toe om rekening te houden met de gebogen randen: Lengte × Breedte × Gemiddelde diepte × 7,48 × Vormfactor. Gebruik ongeveer 0,50 voor een typische niervorm. Deze calculator bevat een vormfactorschuif zodat u deze kunt fijnafstellen."
+    - question: "Hoeveel gallons heeft een typisch residentieel zwembad?"
+      answer: "De meeste residentiële ingebouwde zwembaden bevatten tussen de 15.000 en 30.000 gallons. Een gangbaar rechthoekig zwembad van 16×32 ft met een gemiddelde diepte van 5,5 ft bevat ongeveer 21.000 gallons. Bovengrondse en mini-zwembaden (spool) hebben vaak 5.000 tot 12.000 gallons."
+  js:
+    gallons: "gallons"
+    liters: "liters"
+    avg_depth: "gem. diepte"
+    unit_ft: "ft"
+    unit_m: "m"
+    toggle_us: "ft / gal"
+    toggle_metric: "m / L"
+    aria_us: "Eenhedenstelsel: VS (voet en gallons). Tik om naar metrisch te wisselen."
+    aria_metric: "Eenhedenstelsel: metrisch (meter en liter). Tik om naar VS te wisselen."
+    locale: "nl-NL"

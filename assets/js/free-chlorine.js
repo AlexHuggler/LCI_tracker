@@ -12,6 +12,9 @@
   var root = document.querySelector('[data-chlorine-calculator]');
   if (!root) return;
 
+  // Localized runtime strings injected by the page (window.PF_CHLORINE_I18N); English fallbacks below.
+  var I = (typeof window !== 'undefined' && window.PF_CHLORINE_I18N) || {};
+
   var RATIOS = {
     manual: { min: 0.05, target: 0.075, shock: 0.40 },
     swg:    { min: 0.04, target: 0.05,  shock: 0.40 }
@@ -40,14 +43,21 @@
     if (targetFc < minFc) targetFc = minFc;
     var shockFc = Math.max(half(state.cya * r.shock), 10);
 
+    var ppm = I.ppm || 'ppm';
     if (out.primary) out.primary.textContent = trim(minFc) + '–' + trim(targetFc);
-    if (out.min) out.min.textContent = trim(minFc) + ' ppm';
-    if (out.target) out.target.textContent = trim(targetFc) + ' ppm';
-    if (out.shock) out.shock.textContent = trim(shockFc) + ' ppm';
+    if (out.min) out.min.textContent = trim(minFc) + ' ' + ppm;
+    if (out.target) out.target.textContent = trim(targetFc) + ' ' + ppm;
+    if (out.shock) out.shock.textContent = trim(shockFc) + ' ' + ppm;
     if (out.formula) {
       var pct = (r.target * 100).toFixed(1).replace(/\.0$/, '');
-      out.formula.textContent = 'Target ≈ ' + pct + '% of ' + state.cya + ' ppm CYA' +
-        (state.type === 'swg' ? ' (saltwater)' : '') + ' = ' + trim(targetFc) + ' ppm. Shock at ~40% of CYA.';
+      var salt = state.type === 'swg' ? (I.saltwater || ' (saltwater)') : '';
+      var shock = I.shock_note || 'Shock at ~40% of CYA.';
+      out.formula.textContent = (I.formula || 'Target ≈ %PCT%% of %CYA% ppm CYA%SALT% = %FC% ppm. %SHOCK%')
+        .replace('%PCT%', pct)
+        .replace('%CYA%', state.cya)
+        .replace('%SALT%', salt)
+        .replace('%FC%', trim(targetFc))
+        .replace('%SHOCK%', shock);
     }
   }
 

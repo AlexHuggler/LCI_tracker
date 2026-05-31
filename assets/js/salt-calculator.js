@@ -10,6 +10,9 @@
   var root = document.querySelector('[data-salt-calculator]');
   if (!root) return;
 
+  // Localized runtime strings injected by the page (window.PF_SALT_I18N); English fallbacks below.
+  var I = (typeof window !== 'undefined' && window.PF_SALT_I18N) || {};
+
   var L_PER_GAL = 3.785411784;
   var LB_PER_GAL = 8.34;
   var KG_PER_LB = 0.45359237;
@@ -39,11 +42,13 @@
     var delta = state.target - state.current;
     if (delta <= 0) {
       if (out.primary) out.primary.textContent = '0';
-      if (out.secondary) out.secondary.textContent = 'lb — no salt needed';
+      if (out.secondary) out.secondary.textContent = I.secondary_none || 'lb — no salt needed';
       if (out.guidance) {
         out.guidance.textContent = delta === 0
-          ? 'You’re right at target. No salt needed.'
-          : 'You’re above target by ' + fmt(-delta) + ' ppm. Salt can’t be removed chemically — partially drain and refill with fresh water to dilute.';
+          ? (I.guidance_at_target || 'You’re right at target. No salt needed.')
+          : (I.guidance_over ||
+              'You’re above target by %PPM% ppm. Salt can’t be removed chemically — partially drain and refill with fresh water to dilute.')
+              .replace('%PPM%', fmt(-delta));
       }
       if (out.formula) out.formula.textContent = '';
       return;
@@ -55,12 +60,22 @@
 
     if (out.primary) out.primary.textContent = fmt(lbs);
     if (out.secondary) {
-      out.secondary.innerHTML = 'lb &nbsp;·&nbsp; ≈ ' + (Math.round(bags * 10) / 10) + ' bags (40 lb) &nbsp;·&nbsp; ' + fmt(kg) + ' kg';
+      out.secondary.innerHTML = (I.secondary || 'lb &nbsp;·&nbsp; ≈ %BAGS% bags (40 lb) &nbsp;·&nbsp; %KG% kg')
+        .replace('%BAGS%', (Math.round(bags * 10) / 10))
+        .replace('%KG%', fmt(kg));
     }
-    if (out.guidance) out.guidance.textContent = 'Raise salinity by ' + fmt(delta) + ' ppm. Add in stages with the pump running, then re-test after ~24 hours.';
+    if (out.guidance) {
+      out.guidance.textContent = (I.guidance_add ||
+        'Raise salinity by %PPM% ppm. Add in stages with the pump running, then re-test after ~24 hours.')
+        .replace('%PPM%', fmt(delta));
+    }
     if (out.formula) {
-      out.formula.textContent = '(' + fmt(state.target) + ' − ' + fmt(state.current) + ') ppm × ' + fmt(state.gallons) +
-        ' gal × 8.34 ÷ 1,000,000 = ' + fmt(lbs) + ' lb';
+      out.formula.textContent = (I.formula ||
+        '(%TARGET% − %CURRENT%) ppm × %GAL% gal × 8.34 ÷ 1,000,000 = %LBS% lb')
+        .replace('%TARGET%', fmt(state.target))
+        .replace('%CURRENT%', fmt(state.current))
+        .replace('%GAL%', fmt(state.gallons))
+        .replace('%LBS%', fmt(lbs));
     }
   }
 
@@ -85,7 +100,8 @@
         volNumber.value = gal; volRange.value = gal;
         this.textContent = 'gal';
       }
-      this.setAttribute('aria-label', 'Volume unit: ' + (volUnit === 'L' ? 'liters' : 'gallons') + '. Tap to switch.');
+      var unitName = volUnit === 'L' ? (I.unit_l || 'liters') : (I.unit_gal || 'gallons');
+      this.setAttribute('aria-label', (I.unit_aria || 'Volume unit: %UNIT%. Tap to switch.').replace('%UNIT%', unitName));
       render();
     });
   }

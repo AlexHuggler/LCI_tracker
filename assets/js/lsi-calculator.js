@@ -12,6 +12,9 @@
   var root = document.querySelector('[data-lsi-calculator]');
   if (!root) return;
 
+  // Localized runtime strings injected by the page (window.PF_LSI_I18N); English fallbacks below.
+  var I = (typeof window !== 'undefined' && window.PF_LSI_I18N) || {};
+
   // --- Lookup tables (°F / ppm -> factor), from the LSI explainer blog post ---
   var TF = [[32, 0.0], [37, 0.1], [46, 0.2], [53, 0.3], [60, 0.4], [66, 0.5], [76, 0.6], [84, 0.7], [94, 0.8], [105, 0.9]];
   var CF = [[25, 1.0], [50, 1.3], [75, 1.5], [100, 1.6], [150, 1.8], [200, 1.9], [250, 2.0], [300, 2.1], [400, 2.2], [500, 2.3], [800, 2.5], [1000, 2.6]];
@@ -77,15 +80,17 @@
   }
 
   function guidanceFor(stateKey, lsi) {
+    var signed = (lsi > 0 ? '+' : '') + round(lsi, 2);
     if (stateKey === 'balanced') {
-      return 'Your water is balanced (LSI between −0.3 and +0.3). It won’t corrode surfaces or form scale — maintain these levels.';
+      return I.guidance_balanced ||
+        'Your water is balanced (LSI between −0.3 and +0.3). It won’t corrode surfaces or form scale — maintain these levels.';
     }
     if (stateKey === 'corrosive') {
-      return 'Water is corrosive (LSI ' + (lsi > 0 ? '+' : '') + round(lsi, 2) +
-        '). Low LSI water can etch plaster, dissolve grout, and corrode metal fittings and heaters. To raise LSI, increase pH, total alkalinity, or calcium hardness.';
+      return (I.guidance_corrosive ||
+        'Water is corrosive (LSI %LSI%). Low LSI water can etch plaster, dissolve grout, and corrode metal fittings and heaters. To raise LSI, increase pH, total alkalinity, or calcium hardness.').replace('%LSI%', signed);
     }
-    return 'Water is scale‑forming (LSI +' + round(lsi, 2) +
-      '). High LSI water can deposit calcium scale on surfaces, salt cells, and heat exchangers, and cloud the water. To lower LSI, reduce pH, total alkalinity, or calcium hardness.';
+    return (I.guidance_scaling ||
+      'Water is scale-forming (LSI %LSI%). High LSI water can deposit calcium scale on surfaces, salt cells, and heat exchangers, and cloud the water. To lower LSI, reduce pH, total alkalinity, or calcium hardness.').replace('%LSI%', signed);
   }
 
   function render() {
@@ -95,7 +100,7 @@
 
     if (out.value) out.value.textContent = lsiDisplay;
     if (out.badge) out.badge.setAttribute('data-state', kind);
-    if (out.statusText) out.statusText.textContent = kind.charAt(0).toUpperCase() + kind.slice(1);
+    if (out.statusText) out.statusText.textContent = I['status_' + kind] || (kind.charAt(0).toUpperCase() + kind.slice(1));
     if (out.guidance) out.guidance.textContent = guidanceFor(kind, r.lsi);
 
     if (out.bTf) out.bTf.textContent = '+' + r.tf.toFixed(2);
@@ -104,9 +109,9 @@
     if (out.bAdj) out.bAdj.textContent = round(r.adj, 0) + ' ppm';
     if (out.bK) out.bK.textContent = '−' + r.k.toFixed(1);
     if (out.formula) {
-      out.formula.textContent = 'LSI = ' + state.pH.toFixed(1) + ' (pH) + ' + r.tf.toFixed(2) +
-        ' (temp) + ' + r.cf.toFixed(2) + ' (calcium) + ' + r.af.toFixed(2) +
-        ' (alkalinity) − ' + r.k.toFixed(1) + ' = ' + lsiDisplay;
+      out.formula.textContent = 'LSI = ' + state.pH.toFixed(1) + ' (' + (I.f_ph || 'pH') + ') + ' + r.tf.toFixed(2) +
+        ' (' + (I.f_temp || 'temp') + ') + ' + r.cf.toFixed(2) + ' (' + (I.f_calcium || 'calcium') + ') + ' + r.af.toFixed(2) +
+        ' (' + (I.f_alkalinity || 'alkalinity') + ') − ' + r.k.toFixed(1) + ' = ' + lsiDisplay;
     }
   }
 
