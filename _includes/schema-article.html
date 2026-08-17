@@ -6,7 +6,7 @@
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
   "author": { "@type": "Person", "name": {{ page.author | default: "PoolFlow Team" | jsonify }} },
-  "publisher": { "@id": "https://poolflowapp.com/#org" },
+  "publisher": { "@id": "https://poolflowapp.com/#publisher" },
   "description": {{ page.description | jsonify }},
   "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" }
 }

@@ -1,12 +1,12 @@
 ---
 layout: default
 title: "PoolFlow — Know Your Water. Know Your Route. Know Your Money."
-description: "The all-in-one iOS app for solo pool techs and pool service providers. Real-time LSI calculator, chemical dosing, route optimization, and profit analytics. Offline-first. Built for wet hands."
+description: "Offline-first iOS software for pool service pros: LSI, chemical dosing, route optimization, and profit analytics in the field."
 image: /assets/images/og-image.png
 lang: "en"
 hreflang_group: "homepage"
 og_locale: "en_US"
-og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl_NL"]
+og_locale_alternates: ["en_AU", "es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl_NL"]
 ---
 
 <!-- ============================================
@@ -31,7 +31,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
         <!-- App Store CTA -->
         <div id="download" class="mt-8 max-w-lg mx-auto lg:mx-0">
           <p class="text-sm font-medium text-blue-100 mb-3">Available now on the App Store.</p>
-          <a href="{{ site.app_store_url }}" class="inline-flex items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-nowrap">
+          <a href="{{ site.data.market.app_store.url }}" class="inline-flex max-w-full items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-normal">
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
             Find Your Money-Loser Pools — Free for 1 Month
           </a>
@@ -116,7 +116,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
       </div>
       <div class="bg-gray-800 rounded-2xl p-6 sm:p-8 ring-2 ring-emerald-500/50">
         <p class="text-sm font-medium uppercase tracking-wider text-gray-400 mb-2">40 pools on PoolFlow</p>
-        <p class="text-4xl sm:text-5xl font-bold text-emerald-400">$29.99<span class="text-lg font-normal text-gray-400">/mo</span></p>
+        <p class="text-4xl sm:text-5xl font-bold text-emerald-400">${{ site.data.market.pricing.monthly.price }}<span class="text-lg font-normal text-gray-400">/mo</span></p>
         <p class="mt-2 text-sm text-emerald-400/80">Every feature. Every pool. Flat price.</p>
       </div>
     </div>
@@ -154,7 +154,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
           Flags every pool where chemical costs eat past 30% of your service fee. See which pools to reprice, reroute, or drop.
         </p>
         <span class="inline-block text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5">
-          Worth: $100-200/mo in margin you'd otherwise never see
+          Uses your recorded fees and chemical costs
         </span>
       </article>
 
@@ -170,7 +170,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
           LSI calculator with CYA correction. Dosing recommendations priced from your actual inventory — your muriatic, your soda ash, your cost per ounce.
         </p>
         <span class="inline-block text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5">
-          Worth: ~$50/mo in precise dosing savings
+          Doses are costed from your inventory
         </span>
       </article>
 
@@ -181,7 +181,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"/>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-pool-dark mb-3">Save 30+ Minutes Every Route Day</h3>
+        <h3 class="text-xl font-bold text-pool-dark mb-3">Reduce Avoidable Drive Time</h3>
         <p class="text-gray-700 leading-relaxed mb-4">
           Nearest-neighbor + 2-opt algorithm with Apple Maps ETAs. Works without cell signal — in backyards, gated yards, rural stops.
         </p>
@@ -249,8 +249,8 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <div class="animate-on-scroll space-y-6">
       <div>
-        <p class="text-sm font-medium uppercase tracking-wider text-gray-500 mb-2">Total value of what you get</p>
-        <p class="text-5xl sm:text-6xl font-bold text-pool-dark">~$400+<span class="text-2xl font-normal text-gray-400">/mo</span></p>
+        <p class="text-sm font-medium uppercase tracking-wider text-gray-500 mb-2">Poolside workflow covered</p>
+        <p class="text-4xl sm:text-5xl font-bold text-pool-dark">Routes + chemistry + margin</p>
       </div>
       <div>
         <p class="text-sm font-medium uppercase tracking-wider text-gray-500 mb-2">What competitors charge for less</p>
@@ -329,7 +329,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
             <span class="text-gray-700 text-sm">Equipment tracking</span>
           </li>
         </ul>
-        <a href="{{ site.app_store_url }}" class="mt-8 block w-full text-center px-6 py-3 rounded-full border-2 border-pool-blue text-pool-blue font-semibold hover:bg-pool-blue hover:text-white transition-colors">
+        <a href="{{ site.data.market.app_store.url }}" class="mt-8 block w-full text-center px-6 py-3 rounded-full border-2 border-pool-blue text-pool-blue font-semibold hover:bg-pool-blue hover:text-white transition-colors">
           Download Now
         </a>
       </div>
@@ -344,13 +344,13 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
         </div>
         <h3 class="text-xl font-bold text-pool-dark mt-2">Pro Monthly</h3>
         <div class="mt-4 flex items-baseline">
-          <span class="text-5xl font-bold text-pool-dark">$29.99</span>
+          <span class="text-5xl font-bold text-pool-dark">${{ site.data.market.pricing.monthly.price }}</span>
           <span class="ml-2 text-gray-500">/month</span>
         </div>
         <p class="mt-1 text-sm text-gray-500 italic">That's less than one pool's monthly service fee</p>
         <p class="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-pool-blue bg-pool-light rounded-full px-3 py-1">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          1-month free trial
+          {{ site.data.market.pricing.trial_days }}-day free trial
         </p>
         <ul class="mt-8 space-y-4">
           <li class="flex items-start gap-3">
@@ -402,7 +402,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
             <span class="text-gray-700 text-sm">iCloud sync</span>
           </li>
         </ul>
-        <a href="{{ site.app_store_url }}" class="mt-8 block w-full text-center px-6 py-3 rounded-full bg-pool-blue text-white font-semibold hover:opacity-90 transition-opacity shadow-md">
+        <a href="{{ site.data.market.app_store.url }}" class="mt-8 block w-full text-center px-6 py-3 rounded-full bg-pool-blue text-white font-semibold hover:opacity-90 transition-opacity shadow-md">
           Download Now
         </a>
       </div>
@@ -411,9 +411,9 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
       <div class="pricing-card relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm animate-on-scroll" style="animation-delay: 0.3s">
         <!-- Save Badge -->
         <div class="absolute -top-4 left-1/2 -translate-x-1/2">
-          {% if site.annual_sale.active %}
+          {% if site.data.market.pricing.annual.sale_active %}
             <span class="inline-block bg-pool-green text-white text-sm font-semibold px-4 py-1 rounded-full">
-              {{ site.annual_sale.badge_text }}
+              Limited Time Sale
             </span>
           {% else %}
             <span class="inline-block bg-pool-green text-white text-sm font-semibold px-4 py-1 rounded-full">
@@ -422,28 +422,28 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
           {% endif %}
         </div>
         <h3 class="text-xl font-bold text-pool-dark mt-2">Pro Annual</h3>
-        {% if site.annual_sale.active %}
+        {% if site.data.market.pricing.annual.sale_active %}
           <div class="mt-4 flex items-baseline flex-wrap gap-x-3 gap-y-1">
-            <span class="text-5xl font-bold text-pool-dark">{{ site.annual_sale.price }}</span>
-            <span class="text-2xl text-gray-400 line-through">{{ site.annual_sale.original_price }}</span>
+            <span class="text-5xl font-bold text-pool-dark">${{ site.data.market.pricing.annual.sale_price }}</span>
+            <span class="text-2xl text-gray-400 line-through">${{ site.data.market.pricing.annual.regular_price }}</span>
             <span class="text-gray-500">/year</span>
           </div>
-          <p class="mt-2 text-sm font-semibold text-pool-green">Save {{ site.annual_sale.savings }} — limited time</p>
+          <p class="mt-2 text-sm font-semibold text-pool-green">Save ${{ site.data.market.pricing.annual.savings }} — limited time</p>
         {% else %}
           <div class="mt-4 flex items-baseline">
-            <span class="text-5xl font-bold text-pool-dark">$299.99</span>
+            <span class="text-5xl font-bold text-pool-dark">${{ site.data.market.pricing.annual.regular_price }}</span>
             <span class="ml-2 text-gray-500">/year</span>
           </div>
         {% endif %}
         <p class="mt-1 text-sm text-gray-500 italic">One pool covers a full year</p>
-        {% if site.annual_sale.active %}
-          <p class="mt-1 text-sm text-gray-700">{{ site.annual_sale.monthly_equivalent }}/mo billed annually</p>
+        {% if site.data.market.pricing.annual.sale_active %}
+          <p class="mt-1 text-sm text-gray-700">${{ site.data.market.pricing.annual.monthly_equivalent }}/mo billed annually</p>
         {% else %}
           <p class="mt-1 text-sm text-gray-700">$24.99/mo billed annually</p>
         {% endif %}
         <p class="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-pool-blue bg-pool-light rounded-full px-3 py-1">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          1-month free trial
+          {{ site.data.market.pricing.trial_days }}-day free trial
         </p>
         <ul class="mt-8 space-y-4">
           <li class="flex items-start gap-3">
@@ -459,7 +459,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
             <span class="text-gray-700 text-sm">Best value — 2 months free</span>
           </li>
         </ul>
-        <a href="{{ site.app_store_url }}" class="mt-8 block w-full text-center px-6 py-3 rounded-full border-2 border-pool-blue text-pool-blue font-semibold hover:bg-pool-blue hover:text-white transition-colors">
+        <a href="{{ site.data.market.app_store.url }}" class="mt-8 block w-full text-center px-6 py-3 rounded-full border-2 border-pool-blue text-pool-blue font-semibold hover:bg-pool-blue hover:text-white transition-colors">
           Download Now
         </a>
       </div>
@@ -492,11 +492,11 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
       There is no scenario where you lose by trying.
     </p>
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="{{ site.app_store_url }}" class="inline-flex items-center justify-center gap-2 bg-pool-blue text-white font-semibold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity shadow-lg text-lg">
+      <a href="{{ site.data.market.app_store.url }}" class="inline-flex max-w-full items-center justify-center gap-2 bg-pool-blue text-white font-semibold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity shadow-lg text-lg whitespace-normal">
         Start Free — 5 Pools, No Card Required
       </a>
-      <a href="{{ site.app_store_url }}" class="inline-flex items-center justify-center gap-2 border-2 border-pool-blue text-pool-blue font-semibold px-8 py-3.5 rounded-full hover:bg-pool-blue hover:text-white transition-colors text-lg">
-        Or start your free 1-month Pro trial
+      <a href="{{ site.data.market.app_store.url }}" class="inline-flex max-w-full items-center justify-center gap-2 border-2 border-pool-blue text-pool-blue font-semibold px-8 py-3.5 rounded-full hover:bg-pool-blue hover:text-white transition-colors text-lg whitespace-normal">
+        Or start your free {{ site.data.market.pricing.trial_days }}-day Pro trial
       </a>
     </div>
   </div>
@@ -543,7 +543,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
           <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
-          <p>Skimmer charges $98/mo base + $2/pool. At 40 pools, that's $178/mo. PoolFlow is $29.99/mo flat with no per-pool fees — and includes money-loser detection and LSI-linked dosing that Skimmer doesn't offer. CSV import takes 5 minutes. <a href="/compare/poolflow-vs-skimmer/" class="text-pool-blue hover:underline font-medium">See the full PoolFlow vs Skimmer comparison &rarr;</a></p>
+          <p>Skimmer charges $98/mo base + $2/pool. At 40 pools, that's $178/mo. PoolFlow is $29.99/mo flat with no per-pool fees — and includes money-loser detection and LSI-linked dosing that Skimmer doesn't offer. Verify both vendors' current terms before deciding. <a href="/compare/poolflow-vs-skimmer/" class="text-pool-blue hover:underline font-medium">See the full PoolFlow vs Skimmer comparison &rarr;</a></p>
         </div>
       </div>
 
@@ -554,7 +554,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
           <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
-          <p>Yes. No per-pool fees. No per-tech fees. No add-on charges. Unlimited pools, all features, one price. {% if site.annual_sale.active %}The annual plan is on sale at {{ site.annual_sale.price }}/yr ({{ site.annual_sale.monthly_equivalent }}/mo) — less than one pool's monthly service fee.{% else %}The annual plan is $24.99/mo ($299.99/yr) — less than one pool's monthly service fee.{% endif %}</p>
+          <p>Yes. No per-pool fees. No per-tech fees. No add-on charges. Unlimited pools, all features, one price. {% if site.data.market.pricing.annual.sale_active %}The annual plan is on sale at ${{ site.data.market.pricing.annual.sale_price }}/yr (${{ site.data.market.pricing.annual.monthly_equivalent }}/mo).{% else %}The annual plan is ${{ site.data.market.pricing.annual.regular_price }}/yr.{% endif %}</p>
         </div>
       </div>
 
@@ -565,7 +565,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
           <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
-          <p>About 5 minutes. Export your customer list as a CSV from your current app, drop it into PoolFlow's import tool. Pools, addresses, service days, and fees come over automatically.</p>
+          <p>PoolFlow supports CSV import for pool names, addresses, service days, fees, and specifications. The time required depends on the quality and format of your source file; review the preview and keep a backup before importing.</p>
         </div>
       </div>
 
@@ -620,7 +620,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
           <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
-          <p>PoolFlow uses a nearest-neighbor seeding algorithm improved with 2-opt optimization, combined with real Apple Maps driving time estimates. Most technicians save 30-60 minutes per day by optimizing their route order.</p>
+          <p>PoolFlow uses a nearest-neighbor seeding algorithm improved with 2-opt optimization, combined with Apple Maps driving-time estimates. Actual savings depend on route density, traffic, access windows, and the starting order.</p>
         </div>
       </div>
 
@@ -704,7 +704,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
         "name": "How does PoolFlow compare to Skimmer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Skimmer charges $98/mo base + $2/pool. At 40 pools, that's $178/mo. PoolFlow is $29.99/mo flat with no per-pool fees — and includes money-loser detection and LSI-linked dosing that Skimmer doesn't offer. CSV import takes 5 minutes."
+          "text": "Skimmer charges $98/mo base + $2/pool. At 40 pools, that's $178/mo. PoolFlow is $29.99/mo flat with no per-pool fees — and includes money-loser detection and LSI-linked dosing that Skimmer doesn't offer. Verify both vendors' current terms before deciding."
         }
       },
       {
@@ -712,7 +712,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
         "name": "Is $29.99/mo really everything?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. No per-pool fees. No per-tech fees. No add-on charges. Unlimited pools, all features, one price. {% if site.annual_sale.active %}The annual plan is on sale at {{ site.annual_sale.price }}/yr ({{ site.annual_sale.monthly_equivalent }}/mo) — less than one pool's monthly service fee.{% else %}The annual plan is $24.99/mo ($299.99/yr) — less than one pool's monthly service fee.{% endif %}"
+          "text": "Yes. No per-pool fees. No per-tech fees. No add-on charges. Unlimited pools, all features, one price. {% if site.data.market.pricing.annual.sale_active %}The annual plan is on sale at ${{ site.data.market.pricing.annual.sale_price }}/yr (${{ site.data.market.pricing.annual.monthly_equivalent }}/mo).{% else %}The annual plan is ${{ site.data.market.pricing.annual.regular_price }}/yr.{% endif %}"
         }
       },
       {
@@ -720,7 +720,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
         "name": "How long does it take to switch from another app?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "About 5 minutes. Export your customer list as a CSV from your current app, drop it into PoolFlow's import tool. Pools, addresses, service days, and fees come over automatically."
+          "text": "PoolFlow supports CSV import for pool names, addresses, service days, fees, and specifications. The time required depends on the quality and format of the source file; review the preview and keep a backup before importing."
         }
       },
       {
@@ -760,7 +760,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
         "name": "How does route optimization save time?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "PoolFlow uses a nearest-neighbor seeding algorithm improved with 2-opt optimization, combined with real Apple Maps driving time estimates. Most technicians save 30-60 minutes per day by optimizing their route order."
+          "text": "PoolFlow uses a nearest-neighbor seeding algorithm improved with 2-opt optimization, combined with Apple Maps driving-time estimates. Actual savings depend on route density, traffic, access windows, and the starting order."
         }
       },
       {
@@ -809,14 +809,14 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
       One Pool Covers a Full Year of PoolFlow.
     </h2>
     <p class="mt-6 text-lg sm:text-xl text-blue-100 leading-relaxed">
-      {% if site.annual_sale.active %}{{ site.annual_sale.monthly_equivalent }}/mo on annual — {{ site.annual_sale.price }}/yr, save {{ site.annual_sale.savings }}.{% else %}$24.99/mo on annual.{% endif %} Every feature. Every pool. No per-pool fees. Try free for 30 days.
+      {% if site.data.market.pricing.annual.sale_active %}${{ site.data.market.pricing.annual.monthly_equivalent }}/mo on annual — ${{ site.data.market.pricing.annual.sale_price }}/yr, save ${{ site.data.market.pricing.annual.savings }}.{% else %}${{ site.data.market.pricing.annual.regular_price }}/yr on annual.{% endif %} Every feature. Every pool. No per-pool fees. Try free for {{ site.data.market.pricing.trial_days }} days.
     </p>
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="{{ site.app_store_url }}" class="inline-flex items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-nowrap">
+      <a href="{{ site.data.market.app_store.url }}" class="inline-flex max-w-full items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-normal">
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         Start Your Free Trial
       </a>
-      <a href="{{ site.app_store_url }}" class="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-3.5 rounded-full hover:bg-white hover:text-pool-dark transition-colors text-lg whitespace-nowrap">
+      <a href="{{ site.data.market.app_store.url }}" class="inline-flex max-w-full items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-3.5 rounded-full hover:bg-white hover:text-pool-dark transition-colors text-lg whitespace-normal">
         Or try 5 pools free — no card, no time limit
       </a>
     </div>
@@ -825,7 +825,7 @@ og_locale_alternates: ["es_MX", "es_ES", "fr_FR", "fr_CA", "de_DE", "pt_BR", "nl
 
 <!-- Mobile Sticky CTA Bar (appears after scrolling past hero) -->
 <div class="mobile-sticky-cta fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 backdrop-blur border-t border-gray-200 px-4 py-3">
-  <a href="{{ site.app_store_url }}" class="block w-full text-center px-5 py-3 text-white font-semibold rounded-full text-sm transition-opacity hover:opacity-90" style="background-color: #53849F;">
+  <a href="{{ site.data.market.app_store.url }}" class="block w-full text-center px-5 py-3 text-white font-semibold rounded-full text-sm transition-opacity hover:opacity-90" style="background-color: #53849F;">
     Download PoolFlow
   </a>
 </div>

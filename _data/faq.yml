@@ -1,11 +1,11 @@
 - question: "How does PoolFlow compare to Skimmer?"
-  answer: "Skimmer charges $98/mo base + $2/pool. At 40 pools, that's $178/mo. PoolFlow is $29.99/mo flat with no per-pool fees — and includes money-loser detection and LSI-linked dosing that Skimmer doesn't offer. CSV import takes 5 minutes."
+  answer: "Skimmer charges $98/mo base + $2/pool. At 40 pools, that's $178/mo. PoolFlow is $29.99/mo flat with no per-pool fees — and includes money-loser detection and LSI-linked dosing that Skimmer doesn't offer. Verify both vendors' current terms before deciding."
 
 - question: "Is $29.99/mo really everything?"
   answer: "Yes. No per-pool fees. No per-tech fees. No add-on charges. Unlimited pools, all features, one price. The annual plan is $24.99/mo ($299.99/yr) — less than one pool's monthly service fee."
 
 - question: "How long does it take to switch from another app?"
-  answer: "About 5 minutes. Export your customer list as a CSV from your current app, drop it into PoolFlow's import tool. Pools, addresses, service days, and fees come over automatically."
+  answer: "PoolFlow supports CSV import for pool names, addresses, service days, fees, and specifications. The time required depends on the quality and format of the source file; review the preview and keep a backup before importing."
 
 - question: "Does PoolFlow work without internet?"
   answer: "Yes. PoolFlow is built offline-first. All your data is stored locally on your iPhone using Apple's SwiftData framework. The app works fully at poolside with no cell service required. Internet is only needed for iCloud sync (Pro feature) and address autocomplete."
@@ -20,7 +20,7 @@
   answer: "Jobber is a general field service tool — great for HVAC and plumbing, but it has zero pool-specific features. No LSI, no chemical dosing, no per-pool profit tracking. And route optimization on Jobber requires the $169/mo plan. PoolFlow includes it at $29.99."
 
 - question: "How does route optimization save time?"
-  answer: "PoolFlow uses a nearest-neighbor seeding algorithm improved with 2-opt optimization, combined with real Apple Maps driving time estimates. Most technicians save 30-60 minutes per day by optimizing their route order."
+  answer: "PoolFlow uses a nearest-neighbor seeding algorithm improved with 2-opt optimization, combined with Apple Maps driving-time estimates. Actual savings depend on route density, traffic, access windows, and the starting order."
 
 - question: "What is the Langelier Saturation Index (LSI)?"
   answer: "The LSI is a calculated number that predicts whether pool water will tend to dissolve (corrode) or deposit (scale) calcium carbonate. PoolFlow calculates LSI in real-time with CYA correction, factoring in pH, temperature, calcium hardness, total alkalinity, TDS, and cyanuric acid. An LSI between -0.3 and +0.3 is considered balanced."

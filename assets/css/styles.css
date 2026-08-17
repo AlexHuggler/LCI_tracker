@@ -1,6 +1,14 @@
 /* Critical styles - prevent FOUC */
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+}
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+img, svg, video, canvas {
+  max-width: 100%;
 }
 
 /* Page load fade-in */

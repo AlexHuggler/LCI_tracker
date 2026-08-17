@@ -1,0 +1,16 @@
+{
+  "locale": "en-AU",
+  "sets": {
+    "iphone": { "canvas": [1290, 2796] },
+    "ipad": { "canvas": [2064, 2752] }
+  },
+  "items": [
+    { "file": "01_route.png", "message": "Run every pool route in one app" },
+    { "file": "02_service_log.png", "message": "Log service in under 60 seconds" },
+    { "file": "03_lsi_dosing.png", "message": "Balance water with instant LSI & dosing" },
+    { "file": "04_route_optimisation.png", "message": "Optimise each service round" },
+    { "file": "05_profit.png", "message": "Track profit for every pool" },
+    { "file": "06_offline.png", "message": "Keep working through mobile blackspots" },
+    { "file": "07_volume_litres.png", "message": "Estimate pool volume in litres" }
+  ]
+}

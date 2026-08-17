@@ -3,39 +3,33 @@
   name: "English"
   native_name: "English"
   path: ""
-  app_store_url: "https://apps.apple.com/us/app/poolflow-pool-service-pro/id6759516755"
 
 - code: "es"
   hreflangs: ["es", "es-MX", "es-ES"]
   name: "Spanish"
   native_name: "Espa\u00F1ol"
   path: "/es"
-  app_store_url: "https://apps.apple.com/mx/app/poolflow-pool-service-pro/id6759516755"
 
 - code: "fr"
   hreflangs: ["fr", "fr-CA"]
   name: "French"
   native_name: "Fran\u00E7ais"
   path: "/fr"
-  app_store_url: "https://apps.apple.com/fr/app/poolflow-pool-service-pro/id6759516755"
 
 - code: "de"
   hreflangs: ["de"]
   name: "German"
   native_name: "Deutsch"
   path: "/de"
-  app_store_url: "https://apps.apple.com/de/app/poolflow-pool-service-pro/id6759516755"
 
 - code: "pt"
   hreflangs: ["pt", "pt-BR"]
   name: "Portuguese"
   native_name: "Portugu\u00EAs"
   path: "/pt"
-  app_store_url: "https://apps.apple.com/br/app/poolflow-pool-service-pro/id6759516755"
 
 - code: "nl"
   hreflangs: ["nl"]
   name: "Dutch"
   native_name: "Nederlands"
   path: "/nl"
-  app_store_url: "https://apps.apple.com/nl/app/poolflow-pool-service-pro/id6759516755"

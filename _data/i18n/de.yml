@@ -12,6 +12,7 @@ cta_available: "Jetzt im App Store verf\u00FCgbar."
 trust_no_account: "Kein Konto erforderlich"
 trust_no_server: "Kein Backend-Server"
 trust_data_local: "Deine Daten bleiben auf deinem Ger\u00E4t"
+trust_offline: "Funktioniert ohne Mobilfunksignal"
 
 features_title: "Alles Was Du Am Pool Brauchst"
 features_subtitle: "PoolFlow ersetzt Papierlisten, manuelle Berechnungen und Tabellen durch eine leistungsstarke App."
@@ -36,7 +37,7 @@ faq:
   - question: "Welche Sprachen unterst\u00FCtzt PoolFlow?"
     answer: "PoolFlow ist auf Deutsch, Englisch, Spanisch, Franz\u00F6sisch, Portugiesisch und Niederl\u00E4ndisch verf\u00FCgbar."
   - question: "Was kostet PoolFlow?"
-    answer: "PoolFlow ist kostenlos f\u00FCr bis zu 5 Pools. Der Pro-Plan kostet 29,99 $ USD/Monat oder 299,99 $ USD/Jahr mit einer 7-t\u00E4gigen kostenlosen Testphase."
+    answer: "PoolFlow ist für bis zu 5 Pools kostenlos. Der App Store zeigt Preis und Testangebot für Pro vor der Bestätigung an."
   - question: "Was ist der Langelier-S\u00E4ttigungsindex (LSI)?"
     answer: "Der LSI ist eine Formel, die vorhersagt, ob das Poolwasser korrosiv oder kalkbildend ist. PoolFlow berechnet ihn automatisch mit CYA-Korrektur f\u00FCr pr\u00E4zise Ergebnisse."
 

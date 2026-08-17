@@ -1,9 +1,24 @@
 <!-- Favicon -->
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/poolflow-icon-192.png">
 <link rel="apple-touch-icon" href="/assets/images/poolflow-icon-192.png">
+{% assign document_title = page.seo_title | default: page.title | default: site.title %}
+{% unless page.url == '/' or page.url == '/au/' %}
+  {% assign title_parts = document_title | split: ' — ' %}
+  {% if title_parts.size > 1 %}{% assign document_title = title_parts | first %}{% endif %}
+  {% assign document_title_size = document_title | size %}
+  {% if document_title_size > 60 %}{% assign document_title = document_title | truncate: 60, '…' %}{% endif %}
+{% endunless %}
+<title>{{ document_title | escape }}</title>
+{% assign document_description = page.description | default: site.description | strip_html | normalize_whitespace %}
+{% assign document_description_size = document_description | size %}
+{% if document_description_size > 160 %}{% assign document_description = document_description | truncate: 160, '…' %}{% endif %}
+<meta name="description" content="{{ document_description | escape }}">
 
 <!-- Canonical URL -->
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+{% if page.url == '/404.html' %}
+<meta name="robots" content="noindex, nofollow">
+{% endif %}
 
 <!-- hreflang tags for multilingual SEO -->
 {% include hreflang.html %}
@@ -40,37 +55,45 @@
 <meta name="twitter:image" content="{{ page.image | default: '/assets/images/og-image.png' | absolute_url }}">
 <meta name="twitter:image:alt" content="{{ seo_data.og_image_alt | default: 'PoolFlow — pool service management iOS app for solo pool techs and pool service providers' | escape }}">
 
-<!-- Organization schema (canonical @id referenced by all other schemas) -->
+<!-- Canonical entity graph referenced by product and article schemas -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://poolflowapp.com/#org",
-  "name": "Huggler Holdings LLC",
-  "legalName": "Huggler Holdings LLC",
-  "url": "https://poolflowapp.com",
-  "logo": {
-    "@type": "ImageObject",
-    "url": "https://poolflowapp.com/assets/images/poolflow-icon-512.png",
-    "width": 512,
-    "height": 512
-  },
-  "sameAs": [
-    "https://apps.apple.com/us/app/poolflow-pool-service-pro/id6759516755"
+  "@graph": [
+    {
+      "@type": "Brand",
+      "@id": "https://poolflowapp.com/#brand",
+      "name": "PoolFlow",
+      "url": "https://poolflowapp.com/",
+      "logo": "https://poolflowapp.com/assets/images/poolflow-icon-512.png"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://poolflowapp.com/#publisher",
+      "name": "PoolFlow",
+      "legalName": "Huggler Holdings LLC",
+      "url": "https://poolflowapp.com/",
+      "brand": { "@id": "https://poolflowapp.com/#brand" },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://poolflowapp.com/assets/images/poolflow-icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "sameAs": [
+        "{{ site.data.market.app_store.url }}",
+        "{{ site.data.market.app_store.au_url }}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://poolflowapp.com/#website",
+      "name": "PoolFlow",
+      "url": "https://poolflowapp.com/",
+      "inLanguage": "{{ page.lang | default: 'en' }}",
+      "availableLanguage": ["en", "en-AU", "es", "fr", "de", "pt", "nl"],
+      "publisher": { "@id": "https://poolflowapp.com/#publisher" }
+    }
   ]
-}
-</script>
-
-<!-- WebSite schema for LLMO/AEO (tells LLMs and answer engines about multilingual support) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://poolflowapp.com/#website",
-  "name": "PoolFlow",
-  "url": "https://poolflowapp.com",
-  "inLanguage": "{{ page.lang | default: 'en' }}",
-  "availableLanguage": ["en", "es", "fr", "de", "pt", "nl"],
-  "publisher": { "@id": "https://poolflowapp.com/#org" }
 }
 </script>

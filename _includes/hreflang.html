@@ -15,4 +15,11 @@
   <link rel="alternate" hreflang="{{ hreflang_code }}" href="{{ target_url | absolute_url }}">
     {% endfor %}
   {% endfor %}
+  {% if page.hreflang_group == "homepage" %}
+  <link rel="alternate" hreflang="en-AU" href="{{ '/au/' | absolute_url }}">
+  {% endif %}
+{% elsif page.url == "/au/" %}
+  <link rel="alternate" hreflang="en-AU" href="{{ '/au/' | absolute_url }}">
+  <link rel="alternate" hreflang="en-US" href="{{ '/' | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ '/' | absolute_url }}">
 {% endif %}

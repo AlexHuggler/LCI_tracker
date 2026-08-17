@@ -19,6 +19,7 @@ PoolFlow is published by Huggler Holdings LLC. It is an iOS-only mobile applicat
 PoolFlow's website and iOS app are available in:
 
 - English — https://poolflowapp.com/
+- English (Australia) — https://poolflowapp.com/au/
 - Spanish (Español) — https://poolflowapp.com/es/
 - French (Français) — https://poolflowapp.com/fr/
 - German (Deutsch) — https://poolflowapp.com/de/
@@ -37,11 +38,11 @@ PoolFlow's website and iOS app are available in:
 - iCloud sync across iPhone and iPad.
 - Offline-first — works with no internet, no cell signal.
 
-## Pricing
+## Plans and local pricing
 
 - Free tier — up to 5 pools, all core features
-- Pro Monthly — $29.99 USD/month, unlimited pools
-- Pro Annual — $299.99 USD/year (occasional sale: $199.99) with a 1-month free trial
+- Optional Pro subscription — unlimited pools and advanced features
+- Apple displays current local pricing and any introductory offer in the relevant App Store storefront
 
 ## Key concepts the app handles
 
@@ -53,6 +54,8 @@ PoolFlow's website and iOS app are available in:
 ## Important links
 
 - Homepage: https://poolflowapp.com/
+- Australia hub: https://poolflowapp.com/au/
+- Australia software comparison: https://poolflowapp.com/au/compare/
 - Blog (English, pool service business guides and chemistry tutorials): https://poolflowapp.com/blog/
 - Comparison vs. Skimmer: https://poolflowapp.com/compare/poolflow-vs-skimmer/
 - Privacy: https://poolflowapp.com/privacy-policy/
@@ -60,9 +63,6 @@ PoolFlow's website and iOS app are available in:
 
 ## App Store
 
-- United States: https://apps.apple.com/us/app/poolflow-pool-service-pro/id6759516755
-- Mexico: https://apps.apple.com/mx/app/poolflow-pool-service-pro/id6759516755
-- France: https://apps.apple.com/fr/app/poolflow-pool-service-pro/id6759516755
-- Germany: https://apps.apple.com/de/app/poolflow-pool-service-pro/id6759516755
-- Brazil: https://apps.apple.com/br/app/poolflow-pool-service-pro/id6759516755
-- Netherlands: https://apps.apple.com/nl/app/poolflow-pool-service-pro/id6759516755
+PoolFlow is available globally on the App Store: {{ site.data.market.app_store.url }}
+
+Australian storefront: {{ site.data.market.app_store.au_url }}

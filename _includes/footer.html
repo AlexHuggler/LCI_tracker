@@ -1,9 +1,10 @@
 {%- assign cur_lang = page.lang | default: "en" -%}
 {%- assign t = site.data.i18n[cur_lang] | default: site.data.i18n.en -%}
 {%- assign lp = "" -%}
-{%- assign store_url = site.app_store_url -%}
+{%- assign store_url = site.data.market.app_store.url -%}
+{%- if page.lang == "en-AU" -%}{%- assign store_url = site.data.market.app_store.au_url -%}{%- endif -%}
 {%- for l in site.data.languages -%}
-  {%- if l.code == cur_lang -%}{%- assign lp = l.path -%}{%- assign store_url = l.app_store_url -%}{%- endif -%}
+  {%- if l.code == cur_lang -%}{%- assign lp = l.path -%}{%- endif -%}
 {%- endfor -%}
 <footer class="bg-gray-900 text-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -59,6 +60,7 @@
           <li><a href="/compare/" class="text-gray-400 hover:text-white text-sm transition-colors">{{ t.footer.link_compare }}</a></li>
           <li><a href="/compare/poolflow-vs-skimmer/" class="text-gray-400 hover:text-white text-sm transition-colors">{{ t.footer.link_vs_skimmer }}</a></li>
           <li><a href="/compare/poolflow-vs-jobber/" class="text-gray-400 hover:text-white text-sm transition-colors">{{ t.footer.link_vs_jobber }}</a></li>
+          <li><a href="/au/" class="text-gray-400 hover:text-white text-sm transition-colors">PoolFlow Australia</a></li>
         </ul>
       </div>
 
@@ -68,6 +70,7 @@
         <ul class="space-y-2">
           <li><a href="/privacy-policy/" class="text-gray-400 hover:text-white text-sm transition-colors">{{ t.footer.link_privacy }}</a></li>
           <li><a href="/terms-of-use/" class="text-gray-400 hover:text-white text-sm transition-colors">{{ t.footer.link_terms }}</a></li>
+          <li><a href="/editorial-policy/" class="text-gray-400 hover:text-white text-sm transition-colors">Editorial policy</a></li>
         </ul>
       </div>
 
