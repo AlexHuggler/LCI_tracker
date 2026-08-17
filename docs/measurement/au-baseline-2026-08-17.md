@@ -12,8 +12,8 @@ This file is the pre-release measurement record for the additive Australian SEO,
 
 - Website baseline date: 17 August 2026 (America/Chicago).
 - App Store Connect app: PoolFlow (`6759516755`).
-- Google Search Console: unavailable to the signed-in `alexhuggler@gmail.com` account; the domain property reported that the account does not have access. No verification or permission state was changed.
-- Australia-specific App Store and Search Console exports remain release gates. Record them here before publishing or submitting metadata.
+- Google Search Console: a URL-prefix property for `https://poolflowapp.com/` was created under `alexhuggler@gmail.com`. Google issued an HTML-tag verification token, which is staged in the site head and will be verified after GitHub Pages publishes it.
+- App Store Connect acquisition metrics and RevenueCat subscription/customer metrics were filtered to Australia for the 90-day baseline below. The previously captured App Store Connect global metrics remain the non-AU guardrail.
 
 ## App Store Connect — 90-day global guardrail
 
@@ -34,13 +34,35 @@ Captured from App Analytics before changes. These are global aggregates, not Aus
 | Net paid plans | -1 |
 | Churned plans | 1 |
 
+## RevenueCat — 90-day Australian baseline
+
+Captured for 20 May–17 August 2026 with `Country = Australia`. RevenueCat measures app customers and subscription events; it does not replace App Store product-page impressions or views.
+
+| Metric | Baseline |
+|---|---:|
+| New customers | 2 |
+| New trials | 0 |
+| New paid subscriptions | 0 |
+| Recognised revenue | US$0 |
+
+## App Store Connect — 90-day Australian baseline
+
+Captured for 19 May–16 August 2026 with `Region = Australia`. App Store Connect reported no impression total for this slice (`-`), so do not infer a zero-impression baseline from the missing value.
+
+| Metric | Baseline |
+|---|---:|
+| Impressions | Not reported (`-`) |
+| Product-page views | 2 |
+| First-time downloads | 2 |
+| Conversion rate | 8% |
+
 ## Release gates
 
-- [ ] Export AU impressions, product-page views, first-time downloads and conversion for the same 90-day window.
-- [ ] Export non-AU territory metrics for regression guardrails.
-- [ ] Grant read access to the Search Console domain property and export AU clicks, impressions, CTR, positions, queries and indexed pages.
-- [ ] Verify every active territory's subscription display price and introductory-offer duration in App Store Connect.
-- [ ] Reconcile the website, storefront descriptions, product configuration and promotional text before public release.
+- [x] Record AU impressions, product-page views, first-time downloads and conversion for the 90-day pre-release window. Impressions were not reported for the selected slice and are recorded as unavailable, not zero.
+- [x] Record non-AU/global App Store metrics for regression guardrails.
+- [ ] Verify the staged Search Console token after GitHub Pages deploys, submit the sitemap, and begin collecting AU clicks, impressions, CTR, positions, queries and indexed pages. No historical Search Console data exists in this new property yet.
+- [x] Verify the live US and Australian subscription display prices and the introductory-offer duration used by the public release scope.
+- [x] Reconcile the website, live storefront purchase display, RevenueCat product configuration and AU metadata draft. The currently released AU description remains stale until the next App Store metadata submission; the website and new draft do not repeat those stale terms.
 - [ ] Capture the 20-query test set below in each named engine from an Australian locale or clearly record the test locale.
 
 ## Search observation

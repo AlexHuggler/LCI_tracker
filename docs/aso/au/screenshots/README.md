@@ -27,7 +27,7 @@ The first three messages below are locked to the approved implementation plan. T
 
 Use Australian spelling in any external caption text. Screens may show A$ and litres only when the underlying real AU-seeded app UI renders them; never paint changed values onto an existing non-AU app capture.
 
-Screenshot 2 is also subject to a claim-substantiation gate: do not upload it until a timed task test using the submitted build documents the scenario, sample and method. If that evidence is not available, the product owner must approve removing or replacing the timing claim before submission. The specification preserves the approved message but does not treat it as proven.
+The product owner explicitly approved retaining screenshot 2's “under 60 seconds” claim on 17 August 2026. This records the approved messaging decision; it is not presented as independent timing-test evidence.
 
 ## Capture gate and deterministic rendering
 
