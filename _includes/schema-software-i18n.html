@@ -11,18 +11,19 @@
   "availableLanguage": ["en", "es", "fr", "de", "pt", "nl"],
   "description": {{ page.description | jsonify }},
   "url": "https://poolflowapp.com",
-  "sameAs": ["https://apps.apple.com/us/app/poolflow-pool-service-pro/id6759516755"],
+  "sameAs": [{{ site.data.market.app_store.url | jsonify }}],
   "offers": [
-    { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free tier — up to 5 pools" },
-    { "@type": "Offer", "price": "29.99", "priceCurrency": "USD", "description": "Pro Monthly — unlimited pools, all features" },
-    { "@type": "Offer", "price": "299.99", "priceCurrency": "USD", "description": "Pro Annual — best value" }
+    { "@type": "Offer", "price": {{ site.data.market.pricing.free.price | jsonify }}, "priceCurrency": {{ site.data.market.pricing.currency | jsonify }}, "description": "Free tier — up to {{ site.data.market.pricing.free.pool_limit }} pools" },
+    { "@type": "Offer", "price": {{ site.data.market.pricing.monthly.price | jsonify }}, "priceCurrency": {{ site.data.market.pricing.currency | jsonify }}, "description": "Pro Monthly — unlimited pools, all features" },
+    { "@type": "Offer", "price": {% if site.data.market.pricing.annual.sale_active %}{{ site.data.market.pricing.annual.sale_price | jsonify }}{% else %}{{ site.data.market.pricing.annual.regular_price | jsonify }}{% endif %}, "priceCurrency": {{ site.data.market.pricing.currency | jsonify }}, "description": "Pro Annual — best value" }
   ],
   "featureList": [{% for feature in t.seo.feature_list %}{{ feature | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}],
   "audience": {
     "@type": "BusinessAudience",
     "audienceType": {{ t.seo.audience_label | default: "Solo pool service technicians and pool service providers" | jsonify }}
   },
-  "author": { "@id": "https://poolflowapp.com/#org" },
-  "publisher": { "@id": "https://poolflowapp.com/#org" }
+  "brand": { "@id": "https://poolflowapp.com/#brand" },
+  "author": { "@id": "https://poolflowapp.com/#publisher" },
+  "publisher": { "@id": "https://poolflowapp.com/#publisher" }
 }
 </script>

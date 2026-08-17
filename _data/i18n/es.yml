@@ -12,6 +12,7 @@ cta_available: "Disponible ahora en el App Store."
 trust_no_account: "Sin cuenta requerida"
 trust_no_server: "Sin servidor backend"
 trust_data_local: "Tus datos en tu dispositivo"
+trust_offline: "Funciona sin señal móvil"
 
 features_title: "Todo Lo Que Necesitas al Lado de la Piscina"
 features_subtitle: "PoolFlow reemplaza registros en papel, c\u00E1lculos manuales y hojas de c\u00E1lculo con una app poderosa."
@@ -36,7 +37,7 @@ faq:
   - question: "\u00BFQu\u00E9 idiomas soporta PoolFlow?"
     answer: "PoolFlow est\u00E1 disponible en espa\u00F1ol, ingl\u00E9s, franc\u00E9s, portugu\u00E9s, alem\u00E1n y neerland\u00E9s."
   - question: "\u00BFCu\u00E1nto cuesta PoolFlow?"
-    answer: "PoolFlow es gratis para hasta 5 piscinas. El plan Pro cuesta $29.99 USD/mes o $299.99 USD/a\u00F1o con una prueba gratuita de 7 d\u00EDas."
+    answer: "PoolFlow es gratis para hasta 5 piscinas. La App Store muestra el precio y la prueba actuales antes de confirmar la suscripción Pro."
   - question: "\u00BFQu\u00E9 es el \u00CDndice de Saturaci\u00F3n de Langelier (LSI)?"
     answer: "El LSI es una f\u00F3rmula que predice si el agua de la piscina es corrosiva o incrustante. PoolFlow lo calcula autom\u00E1ticamente con correcci\u00F3n de CYA para resultados precisos."
 

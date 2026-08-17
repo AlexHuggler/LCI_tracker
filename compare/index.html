@@ -11,7 +11,7 @@ breadcrumbs:
     url: "/compare/"
 faq:
   - question: "What is the best pool service app in 2026?"
-    answer: "For solo technicians and small crews, PoolFlow is the best pool service app in 2026. It costs $29.99/mo flat for unlimited pools and includes pool-specific features that general field service tools lack: real-time LSI calculation, chemical dosing from your actual inventory costs, per-pool profit analytics, and offline-first architecture. If you need invoicing and a customer portal, Skimmer is a pool-specific alternative, though it costs significantly more at scale."
+    answer: "There is no universal best choice. PoolFlow is designed for solo technicians who prioritise LSI, chemical dosing, per-pool margin and offline fieldwork. A business that needs invoicing, dispatch or a customer portal should compare a broader operations platform. Verify current prices and plan limits with each vendor before deciding."
   - question: "Is Skimmer or PoolFlow better for pool technicians?"
     answer: "PoolFlow is better for technicians focused on water chemistry, route efficiency, and profitability. It includes LSI calculation, chemical dosing, money-loser detection, and offline mode — none of which Skimmer offers. Skimmer is better if you need a customer portal and invoicing. PoolFlow costs $29.99/mo flat; Skimmer costs $98/mo base plus $2/pool, reaching $178/mo at 40 pools."
   - question: "Why shouldn't I use Jobber for pool service?"
@@ -21,7 +21,7 @@ faq:
   - question: "Can I use a general field service app for pool cleaning?"
     answer: "You can, but you'll lack critical pool-specific features. General apps like Jobber don't include LSI calculators, chemical dosing recommendations, water chemistry tracking, or per-pool profitability analysis. These features directly impact water quality, regulatory compliance, and your bottom line. A pool-specific app like PoolFlow, Skimmer, Pool Brain, Pool Office Manager, PoolCarePRO, or Pooltrakr will serve you better."
   - question: "What features should I look for in pool service software?"
-    answer: "Essential features for pool service software include: water chemistry tools (LSI calculator, chemical dosing), route optimization, service logging with photos, offline capability for fieldwork, and per-pool profit tracking. PoolFlow includes all of these at $29.99/mo. Also consider ease of switching — PoolFlow supports CSV import so you can migrate from any app in about 5 minutes."
+    answer: "Useful features can include water chemistry tools, route optimisation, service logs with photos, offline fieldwork and per-pool margin. Also consider invoicing and dispatch needs, data export and migration quality. PoolFlow supports CSV import, but migration time depends on the source file and should be tested with a backup."
 ---
 
 <!-- Breadcrumb -->
@@ -289,7 +289,7 @@ document.querySelectorAll('.faq-toggle').forEach(function(btn) {
     <h2 class="text-3xl sm:text-4xl font-bold text-white">Ready to Upgrade Your Pool Service?</h2>
     <p class="mt-4 text-lg text-blue-100">Start free with 5 pools. Upgrade to Pro for $29.99/mo — unlimited pools, every feature.</p>
     <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="{{ site.app_store_url }}" class="inline-flex items-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg">
+      <a href="{{ site.data.market.app_store.url }}" class="inline-flex max-w-full items-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-normal">
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         Download PoolFlow Free
       </a>

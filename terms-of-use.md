@@ -6,11 +6,9 @@ description: "PoolFlow terms of use. Understand your rights and responsibilities
 sitemap: true
 ---
 
-# Terms of Service
-
 Effective Date: February 24, 2026 · Last Updated: February 24, 2026
 
-These Terms of Service ("Terms") govern your use of the PoolFlow iOS application ("the App") developed by Huggler Holdings LLC. ("we", "us", "our"). By downloading, installing, or using PoolFlow, you agree to be bound by these Terms.
+These Terms of Service ("Terms") govern your use of the PoolFlow iOS application ("the App") developed by Huggler Holdings LLC ("we", "us", "our"). By downloading, installing, or using PoolFlow, you agree to be bound by these Terms.
 
 ## 1. Description of Service
 
@@ -34,7 +32,7 @@ PoolFlow does not require an account to use. All data is stored locally on your 
 - Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period
 - Your account will be charged for renewal within 24 hours prior to the end of the current period at the same price
 - You can manage and cancel subscriptions in your Apple ID Account Settings
-- A 1-month free trial is available for new subscribers; unused portions of the trial are forfeited upon purchasing a subscription
+- A {{ site.data.market.pricing.trial_days }}-day free trial is available for new subscribers; unused portions of the trial are forfeited upon purchasing a subscription
 
 ## 5. Acceptable Use
 
@@ -53,7 +51,7 @@ PoolFlow is provided "as is" and "as available" without warranties of any kind, 
 
 ## 7. Limitation of Liability
 
-To the maximum extent permitted by applicable law, Huggler Holdings LLC. shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, business, or goodwill, arising from your use of or inability to use the App. This includes, without limitation, any damages arising from:
+To the maximum extent permitted by applicable law, Huggler Holdings LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, business, or goodwill, arising from your use of or inability to use the App. This includes, without limitation, any damages arising from:
 
 - Reliance on dosing recommendations or water chemistry calculations
 - Data loss or corruption
@@ -64,7 +62,7 @@ In no event shall our total liability exceed the amount you have paid for the Ap
 
 ## 8. Intellectual Property
 
-PoolFlow and all related trademarks, logos, and content are the property of Huggler Holdings LLC.. You are granted a limited, non-exclusive, non-transferable license to use the App for its intended purpose, subject to these Terms.
+PoolFlow and all related trademarks, logos, and content are the property of Huggler Holdings LLC. You are granted a limited, non-exclusive, non-transferable license to use the App for its intended purpose, subject to these Terms.
 
 ## 9. Third-Party Services
 

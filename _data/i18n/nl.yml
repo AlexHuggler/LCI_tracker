@@ -12,6 +12,7 @@ cta_available: "Nu beschikbaar in de App Store."
 trust_no_account: "Geen account vereist"
 trust_no_server: "Geen backend-server"
 trust_data_local: "Je gegevens blijven op je apparaat"
+trust_offline: "Werkt zonder mobiel bereik"
 
 features_title: "Alles Wat Je Nodig Hebt Aan De Rand Van Het Zwembad"
 features_subtitle: "PoolFlow vervangt papieren logboeken, handmatige berekeningen en spreadsheets door \u00E9\u00E9n krachtige app."
@@ -36,7 +37,7 @@ faq:
   - question: "Welke talen ondersteunt PoolFlow?"
     answer: "PoolFlow is beschikbaar in het Nederlands, Engels, Spaans, Frans, Portugees en Duits."
   - question: "Hoeveel kost PoolFlow?"
-    answer: "PoolFlow is gratis voor maximaal 5 zwembaden. Het Pro-abonnement kost $ 29,99 USD/maand of $ 299,99 USD/jaar met een gratis proefperiode van 7 dagen."
+    answer: "PoolFlow is gratis voor maximaal 5 zwembaden. De App Store toont de actuele prijs en proefperiode voordat je een Pro-abonnement bevestigt."
   - question: "Wat is de Langelier Saturatie Index (LSI)?"
     answer: "De LSI is een formule die voorspelt of het zwembadwater corrosief of kalkvormend is. PoolFlow berekent het automatisch met CYA-correctie voor nauwkeurige resultaten."
 

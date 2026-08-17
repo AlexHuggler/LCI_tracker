@@ -1,0 +1,34 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% assign seen_urls = "|" %}
+  {% assign collections = site.collections | where_exp: 'collection', 'collection.output != false' %}
+  {% for collection in collections %}
+    {% assign docs = collection.docs | where_exp: 'doc', 'doc.sitemap != false' %}
+    {% for doc in docs %}
+      {% assign url = doc.url | replace: '/index.html', '/' %}
+      {% capture url_key %}|{{ url }}|{% endcapture %}
+      {% unless seen_urls contains url_key %}
+  <url>
+    <loc>{{ url | absolute_url | xml_escape }}</loc>
+    {% if doc.last_modified_at or doc.date %}<lastmod>{{ doc.last_modified_at | default: doc.date | date_to_xmlschema }}</lastmod>{% endif %}
+  </url>
+        {% assign seen_urls = seen_urls | append: url_key %}
+      {% endunless %}
+    {% endfor %}
+  {% endfor %}
+  {% assign pages = site.pages | where_exp: 'page', 'page.sitemap != false' | where_exp: 'page', 'page.url != "/404.html"' | where_exp: 'page', 'page.url != "/sitemap.xml"' %}
+  {% for page in pages %}
+    {% assign url = page.url | replace: '/index.html', '/' %}
+    {% capture url_key %}|{{ url }}|{% endcapture %}
+    {% unless seen_urls contains url_key %}
+  <url>
+    <loc>{{ url | absolute_url | xml_escape }}</loc>
+    {% if page.last_modified_at %}<lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>{% endif %}
+  </url>
+      {% assign seen_urls = seen_urls | append: url_key %}
+    {% endunless %}
+  {% endfor %}
+</urlset>

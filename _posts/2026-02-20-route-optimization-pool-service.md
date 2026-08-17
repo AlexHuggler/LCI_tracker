@@ -4,14 +4,14 @@ title: "Route Optimization for Pool Techs: Save Time, Serve More Pools"
 date: 2026-02-20
 categories: [business]
 tags: [route-optimization, efficiency, time-management, pool-service, route-planning]
-description: "Learn how route optimization saves pool techs 30-60 minutes daily. Covers geographic clustering, day-of-week strategies, and drive time reduction."
+description: "Learn how route optimisation can reduce avoidable pool-route drive time through geographic clustering, day-of-week planning and stop ordering."
 author: "PoolFlow Team"
 image: /assets/images/og-image.png
 executive_summary: |
   Route optimization can save pool service technicians 30 to 60 minutes every working day by minimizing unnecessary drive time between service stops. For a technician servicing 15 to 25 pools daily, inefficient routing can waste over an hour in the truck that could be spent servicing additional accounts or ending the day earlier. Effective route optimization strategies include geographic clustering, day-of-week assignment based on territory zones, and algorithmic stop ordering that accounts for traffic patterns and service duration. The goal is to maximize the ratio of productive service time to total working hours. Even simple improvements like grouping nearby pools and avoiding backtracking across town can yield 20 to 40 percent reductions in total daily mileage. This guide covers practical methods any pool technician can implement immediately, from manual route building to software-assisted optimization.
 faq:
   - question: "How much time can route optimization save?"
-    answer: "Most pool service technicians save 30 to 60 minutes per day through proper route optimization. This translates to roughly 2.5 to 5 hours per week, or 10 to 20 hours per month. The savings come from reduced drive time between stops, fewer instances of backtracking across service areas, and smarter day-of-week assignments that keep daily routes geographically tight. Technicians servicing 20 or more pools per day in spread-out suburban areas tend to see the largest gains."
+    answer: "Route optimisation can reduce drive time by limiting backtracking and keeping each day geographically coherent. The result varies with route density, traffic, access windows and the starting schedule, so measure actual distance and elapsed time before and after changing the route rather than relying on a universal estimate."
   - question: "How should I organize my pool route by day?"
     answer: "Assign each day of the week to a specific geographic zone or cluster of neighborhoods. Monday might cover your northern territory, Tuesday the east side, and so on. Within each day, order stops to minimize backtracking by starting at one end of the zone and working systematically toward the other. Account for service duration by scheduling pools with longer service times (larger pools, problem accounts) earlier in the day when you have more energy and a time buffer. Keep one or two flexible slots per day for callbacks and new customer visits."
 ---

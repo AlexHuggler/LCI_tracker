@@ -17,7 +17,7 @@ faq:
   - question: "How much does Skimmer cost for 40 pools?"
     answer: "Skimmer charges a $98/mo base fee plus $2 per pool per month. For 40 pools, that's $98 + $80 = $178/mo, or $2,136/year. PoolFlow charges a flat $29.99/mo for unlimited pools — no per-pool fees."
   - question: "Can I import my Skimmer data into PoolFlow?"
-    answer: "Yes. Export your customer list as a CSV from Skimmer, then import it into PoolFlow. Pool names, addresses, service days, and fees transfer automatically. Most technicians complete the switch in about 5 minutes."
+    answer: "PoolFlow supports CSV import for pool names, addresses, service days and fees. Export a copy of your source data, test the format and keep a backup; completion time depends on the source file and any cleanup it needs."
   - question: "Does PoolFlow have a customer portal like Skimmer?"
     answer: "PoolFlow does not currently offer a customer-facing portal. It focuses on technician-side tools: LSI calculation, chemical dosing, profit analytics, and route optimization. If you need customer-facing email reports, Skimmer includes that. However, PoolFlow's Pro plan includes PDF service reports you can share with customers."
   - question: "What features does PoolFlow have that Skimmer doesn't?"
@@ -54,7 +54,7 @@ faq:
       Skimmer charges $98/mo base plus $2 per pool. PoolFlow is $29.99/mo flat — unlimited pools, plus LSI calculation, chemical dosing, and profit analytics that Skimmer doesn't offer.
     </p>
     <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="{{ site.app_store_url }}" class="inline-flex items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg">
+      <a href="{{ site.data.market.app_store.url }}" class="inline-flex max-w-full items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-normal">
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         Try PoolFlow Free
       </a>
@@ -408,7 +408,7 @@ faq:
     </div>
 
     <div class="mt-12 text-center">
-      <a href="{{ site.app_store_url }}" class="inline-flex items-center justify-center gap-2 bg-pool-blue text-white font-semibold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity shadow-lg text-lg">
+      <a href="{{ site.data.market.app_store.url }}" class="inline-flex max-w-full items-center justify-center gap-2 bg-pool-blue text-white font-semibold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity shadow-lg text-lg whitespace-normal">
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         Start Your Free Migration
       </a>
@@ -472,7 +472,7 @@ document.querySelectorAll('.faq-toggle').forEach(function(btn) {
     <h2 class="text-3xl sm:text-4xl font-bold text-white">Ready to Stop Paying Per Pool?</h2>
     <p class="mt-4 text-lg text-blue-100">Switch from Skimmer in 5 minutes. Try PoolFlow free for 30 days.</p>
     <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="{{ site.app_store_url }}" class="inline-flex items-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg">
+      <a href="{{ site.data.market.app_store.url }}" class="inline-flex max-w-full items-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-normal">
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         Start Free Trial
       </a>

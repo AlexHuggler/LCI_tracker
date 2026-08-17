@@ -7,8 +7,8 @@ result strings are injected into the JS via window.PF_SALT_I18N.
 {%- assign tt = site.data.tools_i18n[cur_lang] | default: site.data.tools_i18n.en -%}
 {%- assign L = site.data.tools_i18n.calc.salt[cur_lang] | default: site.data.tools_i18n.calc.salt.en -%}
 {%- assign lp = "" -%}
-{%- assign store_url = site.app_store_url -%}
-{%- for l in site.data.languages -%}{%- if l.code == cur_lang -%}{%- assign lp = l.path -%}{%- assign store_url = l.app_store_url -%}{%- endif -%}{%- endfor -%}
+{%- assign store_url = site.data.market.app_store.url -%}
+{%- for l in site.data.languages -%}{%- if l.code == cur_lang -%}{%- assign lp = l.path -%}{%- endif -%}{%- endfor -%}
 
 <!-- Breadcrumb -->
 <nav aria-label="Breadcrumb" class="breadcrumb-nav bg-gray-50 pt-24 pb-3">

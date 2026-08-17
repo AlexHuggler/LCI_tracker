@@ -1,0 +1,58 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://poolflowapp.com/au/#software",
+      "name": "PoolFlow — Pool Service Pro",
+      "url": {{ page.url | absolute_url | jsonify }},
+      "downloadUrl": "https://apps.apple.com/au/app/poolflow-pool-service-pro/id6759516755",
+      "sameAs": ["https://apps.apple.com/au/app/poolflow-pool-service-pro/id6759516755"],
+      "description": {{ page.description | jsonify }},
+      "dateModified": {{ page.last_modified_at | default: '2026-08-17' | date: '%Y-%m-%d' | jsonify }},
+      "screenshot": "https://poolflowapp.com/assets/images/simulator-screenshot.webp",
+      "operatingSystem": "iOS",
+      "device": ["iPhone", "iPad"],
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Pool service management",
+      "inLanguage": "en-AU",
+      "availableLanguage": ["en-AU"],
+      "countriesSupported": "AU",
+      "featureList": [
+        "Offline-first pool service records",
+        "Pool chemical dosing in litres, kilograms and grams",
+        "Pool route optimisation",
+        "Per-pool profitability tracking",
+        "Water chemistry and LSI calculations",
+        "Service history and proof-of-service photos"
+      ],
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "Australian sole traders and solo pool service technicians",
+        "geographicArea": { "@type": "Country", "name": "Australia" }
+      },
+      "brand": { "@id": "https://poolflowapp.com/#brand" },
+      "publisher": { "@id": "https://poolflowapp.com/#publisher" }
+    }{% if page.faq %},
+    {
+      "@type": "FAQPage",
+      "@id": {{ page.url | append: '#faq' | absolute_url | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }},
+      "name": {{ page.title | append: ' FAQs' | jsonify }},
+      "inLanguage": "en-AU",
+      "mainEntity": [{% for item in page.faq %}
+        {
+          "@type": "Question",
+          "name": {{ item.question | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ item.answer | jsonify }}
+          }
+        }{% unless forloop.last %},{% endunless %}{% endfor %}
+      ],
+      "publisher": { "@id": "https://poolflowapp.com/#publisher" }
+    }{% endif %}
+  ]
+}
+</script>

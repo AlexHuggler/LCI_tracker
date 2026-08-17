@@ -1,0 +1,23 @@
+# One source of truth for store availability and public pricing. App Store
+# storefronts localize currency and tax at checkout, so site copy must not
+# imply a country-specific offer.
+app_store:
+  url: "https://apps.apple.com/app/id6759516755"
+  au_url: "https://apps.apple.com/au/app/poolflow-pool-service-pro/id6759516755"
+
+pricing:
+  currency: "USD"
+  trial_days: 30
+  free:
+    price: "0"
+    pool_limit: 5
+  monthly:
+    price: "29.99"
+    interval: "month"
+  annual:
+    regular_price: "299.99"
+    sale_price: "199.99"
+    sale_active: true
+    interval: "year"
+    monthly_equivalent: "16.67"
+    savings: "100"

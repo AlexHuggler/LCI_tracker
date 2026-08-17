@@ -6,11 +6,9 @@ description: "PoolFlow privacy policy. Learn how your data is handled. PoolFlow 
 sitemap: true
 ---
 
-# Privacy Policy
-
 Effective Date: February 24, 2026 · Last Updated: February 24, 2026
 
-PoolFlow ("we", "our", or "the app") is developed by Huggler Holdings LLC.. This Privacy Policy explains how information is collected, used, and protected when you use the PoolFlow iOS application.
+PoolFlow ("we", "our", or "the app") is developed by Huggler Holdings LLC. This Privacy Policy explains how information is collected, used, and protected when you use the PoolFlow iOS application.
 
 ## 1. Information We Collect
 
