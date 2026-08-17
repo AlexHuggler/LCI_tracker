@@ -27,6 +27,8 @@ The first three messages below are locked to the approved implementation plan. T
 
 Use Australian spelling in any external caption text. Screens may show A$ and litres only when the underlying real AU-seeded app UI renders them; never paint changed values onto an existing non-AU app capture.
 
+Screenshot 2 is also subject to a claim-substantiation gate: do not upload it until a timed task test using the submitted build documents the scenario, sample and method. If that evidence is not available, the product owner must approve removing or replacing the timing claim before submission. The specification preserves the approved message but does not treat it as proven.
+
 ## Capture gate and deterministic rendering
 
 An existing deterministic compositor can resize and compose real simulator captures, but its checked-in source images were captured with a US marketing seed. It cannot truthfully change the on-screen customer data, measurement system or currency. Therefore no upload-ready AU images are generated in this package.
