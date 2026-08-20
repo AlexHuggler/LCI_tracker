@@ -13,6 +13,7 @@
 
   // Localized runtime strings injected by the page (window.PF_TURNOVER_I18N); English fallbacks below.
   var I = (typeof window !== 'undefined' && window.PF_TURNOVER_I18N) || {};
+  var isAu = document.documentElement.lang === 'en-AU';
 
   var L_PER_GAL = 3.785411784;
 
@@ -48,7 +49,9 @@
     if (out.turnover) out.turnover.textContent = round(turnoverHrs, 1) + ' ' + hrs;
     if (out.perday) out.perday.textContent = volUnit === 'L' ? fmt(movedL) + ' L' : fmt(movedGal) + ' gal';
     if (out.formula) {
-      out.formula.textContent = fmt(state.gallons) + ' gal ÷ (' + state.flow + ' GPM × 60) = ' +
+      out.formula.textContent = (isAu
+        ? fmt(state.gallons * L_PER_GAL) + ' L ÷ (' + fmt(state.flow * L_PER_GAL) + ' L/min × 60) = '
+        : fmt(state.gallons) + ' gal ÷ (' + state.flow + ' GPM × 60) = ') +
         round(turnoverHrs, 1) + ' ' + (I.per_turnover || 'hrs/turnover') + ' × ' + state.turnovers + ' = ' + round(daily, 1) + ' ' + (I.per_day || 'hrs/day');
     }
   }
@@ -84,8 +87,18 @@
     if (num) num.addEventListener('input', function () { var n = parseFloat(this.value); if (isNaN(n)) return; if (range) range.value = this.value; state[key] = n; render(); });
     if (range) range.addEventListener('input', function () { var n = parseFloat(this.value); if (isNaN(n)) return; if (num) num.value = this.value; state[key] = n; render(); });
   }
-  bindPair(flowNum, flowRange, 'flow');
+  function bindFlow(num, range) {
+    if (num) num.addEventListener('input', function () { var n = parseFloat(this.value); if (isNaN(n)) return; if (range) range.value = this.value; state.flow = isAu ? n / L_PER_GAL : n; render(); });
+    if (range) range.addEventListener('input', function () { var n = parseFloat(this.value); if (isNaN(n)) return; if (num) num.value = this.value; state.flow = isAu ? n / L_PER_GAL : n; render(); });
+  }
+  bindFlow(flowNum, flowRange);
   bindPair(toNum, toRange, 'turnovers');
 
-  render();
+  if (isAu && volUnitBtn) {
+    volUnitBtn.click();
+    [flowNum, flowRange].forEach(function (el) { if (el) { el.min = 40; el.max = 600; el.step = 5; el.value = 225; } });
+    state.flow = 225 / L_PER_GAL;
+    render();
+  }
+  else render();
 })();

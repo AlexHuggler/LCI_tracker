@@ -1,0 +1,22 @@
+---
+layout: default
+title: "Pool Pump Run-Time Calculator Australia"
+description: "Estimate pool turnover and daily pump run time from volume in litres and flow rate for Australian pools."
+permalink: /au/pump-run-time-calculator/
+lang: en-AU
+market: au
+tool_slug: turnover
+page_path: pump-run-time-calculator
+hreflang_group: tool-turnover
+og_locale: en_AU
+how_body: >-
+  <p>Enter pool volume in litres, measured or manufacturer-rated flow in litres per minute, and the target turnovers per day. Turnover hours = litres ÷ (litres per minute × 60); daily run time is turnover hours multiplied by the chosen turnovers.</p><p>Actual flow changes with pump speed, plumbing resistance and filter condition, so use a flow meter or the pump curve where possible. This is a hydraulic estimate, not a universal operating recommendation. Start with the <a href="/au/pool-volume-calculator/">Australian pool volume calculator</a> if volume is unknown.</p>
+faq:
+  - question: "Does this Australian pump calculator use litres per minute?"
+    answer: "Yes. The Australian page accepts pool volume in litres and flow in litres per minute, and reports water moved per day in litres."
+  - question: "How is turnover time calculated?"
+    answer: "Divide pool volume in litres by flow in litres per minute, then divide by 60 to convert minutes to hours."
+  - question: "Is the result a required daily run time?"
+    answer: "No. It is a hydraulic estimate. Local conditions, sanitation method, equipment, filter loading and manufacturer guidance can change the appropriate schedule."
+---
+{% include tools/turnover.html %}

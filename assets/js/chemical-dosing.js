@@ -17,6 +17,7 @@
 
   // Localized runtime strings injected by the page (window.PF_DOSING_I18N); English fallbacks below.
   var I = (typeof window !== 'undefined' && window.PF_DOSING_I18N) || {};
+  var isAu = document.documentElement.lang === 'en-AU';
 
   var L_PER_GAL = 3.785411784;
 
@@ -64,7 +65,7 @@
     var dPh = state.ph.cur - state.ph.tgt;
     if (dPh > 0.001) {
       var floz = ceil(26 * (dPh / 0.2) * vf);
-      doses.push({ name: I.name_acid || 'Muriatic acid', sub: I.sub_acid || 'to lower pH', amount: floz, unit: unitFloz, extra: liquidNote(floz), cost: floz * COST.acid });
+      doses.push({ name: isAu ? 'Hydrochloric acid' : (I.name_acid || 'Muriatic acid'), sub: I.sub_acid || 'to lower pH', amount: floz, unit: unitFloz, extra: liquidNote(floz), cost: floz * COST.acid });
     } else if (dPh < -0.001) {
       var ozS = ceil(6 * (-dPh / 0.2) * vf);
       doses.push({ name: I.name_soda_ash || 'Soda ash', sub: I.sub_soda_ash || 'to raise pH', amount: ozS, unit: unitOz, extra: dryNote(ozS), cost: ozS * COST.sodaAsh });
@@ -98,8 +99,22 @@
 
     r.doses.forEach(function (d) {
       total += d.cost;
-      var amount = d.amount.toLocaleString('en-US');
-      var extra = d.extra ? ' <span class="text-gray-400">(' + d.extra + ')</span>' : '';
+      var displayAmount = d.amount;
+      var displayUnit = d.unit;
+      var displayExtra = d.extra;
+      if (isAu && d.unit === (I.unit_floz || 'fl oz')) {
+        var millilitres = d.amount * 29.5735;
+        displayAmount = millilitres >= 1000 ? (millilitres / 1000).toFixed(2) : Math.round(millilitres);
+        displayUnit = millilitres >= 1000 ? 'L' : 'mL';
+        displayExtra = null;
+      } else if (isAu) {
+        var grams = d.amount * 28.3495;
+        displayAmount = grams >= 1000 ? (grams / 1000).toFixed(2) : Math.round(grams);
+        displayUnit = grams >= 1000 ? 'kg' : 'g';
+        displayExtra = null;
+      }
+      var amount = Number(displayAmount).toLocaleString(isAu ? 'en-AU' : 'en-US', { maximumFractionDigits: 2 });
+      var extra = displayExtra ? ' <span class="text-gray-400">(' + displayExtra + ')</span>' : '';
       var row = document.createElement('div');
       row.className = 'flex items-start justify-between gap-3 bg-white rounded-lg p-3 border border-gray-200';
       row.innerHTML =
@@ -108,8 +123,8 @@
           '<p class="text-xs text-gray-500">' + d.sub + '</p>' +
         '</div>' +
         '<div class="text-right flex-shrink-0">' +
-          '<p class="font-bold text-pool-dark tabular-nums">' + amount + ' ' + d.unit + extra + '</p>' +
-          '<p class="text-xs text-gray-500 tabular-nums">' + money(d.cost) + '</p>' +
+          '<p class="font-bold text-pool-dark tabular-nums">' + amount + ' ' + displayUnit + extra + '</p>' +
+          (isAu ? '' : '<p class="text-xs text-gray-500 tabular-nums">' + money(d.cost) + '</p>') +
         '</div>';
       resultsEl.appendChild(row);
     });
@@ -122,7 +137,7 @@
     });
 
     if (emptyEl) emptyEl.hidden = (r.doses.length > 0 || r.notes.length > 0);
-    if (totalEl) totalEl.textContent = money(total);
+    if (totalEl && !isAu) totalEl.textContent = money(total);
   }
 
   // Volume binding
@@ -165,5 +180,6 @@
     if (tgt) tgt.addEventListener('input', function () { var n = parseFloat(this.value); if (!isNaN(n)) { state[key].tgt = n; render(); } });
   });
 
-  render();
+  if (isAu && volUnitBtn) volUnitBtn.click();
+  else render();
 })();

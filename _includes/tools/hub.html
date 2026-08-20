@@ -5,8 +5,10 @@ names/blurbs are keyed by slug and fall back to _data/tools.yml (English).
 {%- endcomment -%}
 {%- assign cur_lang = page.lang | default: "en" -%}
 {%- assign tt = site.data.tools_i18n[cur_lang] | default: site.data.tools_i18n.en -%}
+{%- assign tool_faq = page.faq | default: tt.hub.faq -%}
 {%- assign lp = "" -%}
 {%- assign store_url = site.data.market.app_store.url -%}
+{%- if cur_lang == "en-AU" -%}{%- assign lp = "/au" -%}{%- assign store_url = site.data.market.australia.app_store_url -%}{%- endif -%}
 {%- for l in site.data.languages -%}
   {%- if l.code == cur_lang -%}{%- assign lp = l.path -%}{%- endif -%}
 {%- endfor -%}
@@ -25,9 +27,9 @@ names/blurbs are keyed by slug and fall back to _data/tools.yml (English).
 <!-- HERO -->
 <section class="hero-gradient py-16 sm:py-24">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">{{ tt.hub.h1 }}</h1>
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">{% if cur_lang == "en-AU" %}Free Pool Service Tools Australia{% else %}{{ tt.hub.h1 }}{% endif %}</h1>
     <p class="mt-6 text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
-      {{ tt.hub.subtitle }}
+      {% if cur_lang == "en-AU" %}Metric-first calculators for water balance, litres, dosing, salt, circulation and chlorine—free, with no sign-up.{% else %}{{ tt.hub.subtitle }}{% endif %}
     </p>
   </div>
 </section>
@@ -42,7 +44,7 @@ names/blurbs are keyed by slug and fall back to _data/tools.yml (English).
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="{{ tool.icon }}"/></svg>
         </span>
         <h2 class="text-xl font-bold text-pool-dark group-hover:text-pool-blue transition-colors">{{ tt.names[tool.slug] | default: tool.name }}</h2>
-        <p class="mt-3 text-gray-600 leading-relaxed">{{ tt.blurbs[tool.slug] | default: tool.blurb }}</p>
+        <p class="mt-3 text-gray-600 leading-relaxed">{% if cur_lang == "en-AU" %}{% case tool.slug %}{% when "lsi" %}Check water balance with CYA correction and degrees Celsius.{% when "dosing" %}Estimate liquid doses in mL/L and dry doses in g/kg.{% when "volume" %}Estimate pool volume from metres, with litres as the primary result.{% when "salt" %}Calculate kilograms of salt and approximate 20 kg bags.{% when "chlorine" %}Set a practical free-chlorine target from CYA in ppm.{% when "turnover" %}Estimate turnover from litres and litres per minute.{% else %}{{ tool.blurb }}{% endcase %}{% else %}{{ tt.blurbs[tool.slug] | default: tool.blurb }}{% endif %}</p>
         <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-pool-blue">{{ tt.common.open_calculator }} &rarr;</span>
       </a>
       {% endfor %}
@@ -55,7 +57,7 @@ names/blurbs are keyed by slug and fall back to _data/tools.yml (English).
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-pool-dark">{{ tt.hub.why_heading }}</h2>
     <p class="mt-6 text-lg text-gray-700 leading-relaxed">
-      {{ tt.hub.why_body | replace: '%STORE%', store_url }}
+      {% if cur_lang == "en-AU" %}Use these calculators for a quick metric check at poolside. PoolFlow carries the same workflow into each pool record, including offline service history, routes and your own inventory costs. <a href="{{ store_url }}" class="text-pool-blue hover:underline">Open PoolFlow in the Australian App Store</a>.{% else %}{{ tt.hub.why_body | replace: '%STORE%', store_url }}{% endif %}
     </p>
   </div>
 </section>
@@ -67,7 +69,7 @@ names/blurbs are keyed by slug and fall back to _data/tools.yml (English).
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pool-dark">{{ tt.hub.faq_heading }}</h2>
     </div>
     <div class="space-y-4" id="faq-accordion" role="region" aria-label="Frequently Asked Questions">
-      {% for item in tt.hub.faq %}
+      {% for item in tool_faq %}
       <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
         <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset" aria-expanded="false">
           <span class="pr-4">{{ item.question }}</span>
@@ -103,7 +105,7 @@ document.querySelectorAll('#faq .faq-toggle').forEach(function(btn){
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         {{ tt.common.try_free }}
       </a>
-      <a href="/compare/" class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-3.5 rounded-full hover:bg-white hover:text-pool-dark transition-colors text-lg">
+      <a href="{% if cur_lang == 'en-AU' %}/au/compare/{% else %}/compare/{% endif %}" class="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-3.5 rounded-full hover:bg-white hover:text-pool-dark transition-colors text-lg">
         {{ tt.common.compare_apps }}
       </a>
     </div>
@@ -115,7 +117,7 @@ document.querySelectorAll('#faq .faq-toggle').forEach(function(btn){
 {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": {{ tt.hub.h1 | jsonify }},
+  "name": {{ page.title | default: tt.hub.h1 | jsonify }},
   "itemListElement": [{% for tool in site.data.tools %}
     { "@type": "ListItem", "position": {{ forloop.index }}, "name": {{ tt.names[tool.slug] | default: tool.name | jsonify }}, "url": {{ lp | append: tool.url | absolute_url | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}
   ]
@@ -125,7 +127,7 @@ document.querySelectorAll('#faq .faq-toggle').forEach(function(btn){
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{% for item in tt.hub.faq %}
+  "mainEntity": [{% for item in tool_faq %}
     { "@type": "Question", "name": {{ item.question | jsonify }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.answer | jsonify }} } }{% unless forloop.last %},{% endunless %}{% endfor %}
   ]
 }

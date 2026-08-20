@@ -169,5 +169,6 @@
     });
   }
 
-  render();
+  if (document.documentElement.lang === 'en-AU' && out.tempUnit) out.tempUnit.click();
+  else render();
 })();

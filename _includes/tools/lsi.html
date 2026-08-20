@@ -8,6 +8,7 @@ result strings are injected into the JS via window.PF_LSI_I18N.
 {%- assign L = site.data.tools_i18n.calc.lsi[cur_lang] | default: site.data.tools_i18n.calc.lsi.en -%}
 {%- assign lp = "" -%}
 {%- assign store_url = site.data.market.app_store.url -%}
+{%- if cur_lang == "en-AU" -%}{%- assign lp = "/au" -%}{%- assign store_url = site.data.market.australia.app_store_url -%}{%- endif -%}
 {%- for l in site.data.languages -%}{%- if l.code == cur_lang -%}{%- assign lp = l.path -%}{%- endif -%}{%- endfor -%}
 
 <!-- Breadcrumb -->
@@ -129,7 +130,7 @@ result strings are injected into the JS via window.PF_LSI_I18N.
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-pool-dark text-center mb-10">{{ L.how_heading }}</h2>
     <div class="prose prose-lg max-w-none prose-headings:text-pool-dark prose-a:text-pool-blue prose-a:no-underline hover:prose-a:underline">
-      {{ L.how_body }}
+      {% if cur_lang == "en-AU" %}{{ L.how_body | replace: 'href="/', 'href="/au/' | replace: 'href="/au/blog/', 'href="/blog/' }}{% else %}{{ L.how_body }}{% endif %}
     </div>
   </div>
 </section>
@@ -189,7 +190,7 @@ document.querySelectorAll('#faq .faq-toggle').forEach(function(btn) {
 
 <!-- Localized runtime strings for the calculator JS -->
 <script>window.PF_LSI_I18N = {{ L.js | jsonify }};</script>
-<script src="/assets/js/lsi-calculator.js" defer></script>
+<script src="/assets/js/lsi-calculator.js?v=20260820" defer></script>
 
 <!-- Structured data -->
 {% if L.faq %}
@@ -217,9 +218,9 @@ document.querySelectorAll('#faq .faq-toggle').forEach(function(btn) {
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Any (web browser)",
   "browserRequirements": "Requires JavaScript",
-  "description": {{ L.description | jsonify }},
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "publisher": { "@id": "https://poolflowapp.com/#org" }
+  "description": {{ page.description | default: L.description | jsonify }},
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "{% if cur_lang == 'en-AU' %}AUD{% else %}USD{% endif %}" },
+  "publisher": { "@id": "https://poolflowapp.com/#publisher" }
 }
 </script>
 
