@@ -38,8 +38,11 @@ assert(hreflang.include?('hreflang="en-AU"'), "homepage cluster must include en-
 
 au_home = read("au/index.html")
 assert(au_home.include?('lang: en-AU'), "AU homepage must declare en-AU")
-assert(au_home.include?(market.dig("app_store", "au_url")), "AU homepage must link the AU storefront")
-assert(au_home.include?("Free for up to five pools—see local App Store pricing."), "AU homepage must avoid unverified paid pricing")
+assert(au_home.include?('market: au'), "AU homepage must select the AU market")
+assert(au_home.include?("{% include homepage.html %}"), "US and AU homepages must share one homepage template")
+assert(market.dig("australia", "app_store_url") == market.dig("app_store", "au_url"), "AU storefront must have one canonical value")
+assert(market.dig("australia", "pricing", "monthly", "price") == "49.99", "AU monthly pricing must match the verified storefront")
+assert(market.dig("australia", "pricing", "annual", "regular_price") == "299.99", "AU annual pricing must match the verified storefront")
 
 landing = read("_layouts/landing-i18n.html")
 assert(!landing.include?("default: \"Works without cell signal\""), "offline trust copy must not fall back to English")

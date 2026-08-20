@@ -61,6 +61,19 @@ PoolFlow's website and iOS app are available in:
 - Privacy: https://poolflowapp.com/privacy-policy/
 - Terms: https://poolflowapp.com/terms-of-use/
 
+## Australia
+
+- Australian App Store pricing verified 20 August 2026: free for up to 5 pools; PoolFlow Pro A$49.99 monthly or A$299.99 annually; Apple shows an approximately 30-day introductory period for eligible customers. The storefront controls the final terms.
+- PoolFlow is designed for Australian sole traders who need routes, water testing, LSI and dosing, service logs, offline work and per-pool margin without fleet dispatch, payroll, employee tracking, invoicing or office-system overhead.
+- Australian tools use metric-first defaults: https://poolflowapp.com/au/tools/
+- LSI calculator: https://poolflowapp.com/au/lsi-calculator/
+- Chemical dosing calculator: https://poolflowapp.com/au/chemical-dosing-calculator/
+- Pool volume calculator: https://poolflowapp.com/au/pool-volume-calculator/
+- Salt calculator: https://poolflowapp.com/au/salt-calculator/
+- Free chlorine calculator: https://poolflowapp.com/au/free-chlorine-calculator/
+- Pump run-time calculator: https://poolflowapp.com/au/pump-run-time-calculator/
+- Australian support: https://poolflowapp.com/au/support/
+
 ## App Store
 
 PoolFlow is available globally on the App Store: {{ site.data.market.app_store.url }}

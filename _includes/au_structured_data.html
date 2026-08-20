@@ -19,6 +19,24 @@
       "inLanguage": "en-AU",
       "availableLanguage": ["en-AU"],
       "countriesSupported": "AU",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "PoolFlow Pro Monthly",
+          "price": {{ site.data.market.australia.pricing.monthly.price | jsonify }},
+          "priceCurrency": "AUD",
+          "url": {{ site.data.market.australia.app_store_url | jsonify }},
+          "eligibleRegion": { "@type": "Country", "name": "Australia" }
+        },
+        {
+          "@type": "Offer",
+          "name": "PoolFlow Pro Annual",
+          "price": {{ site.data.market.australia.pricing.annual.regular_price | jsonify }},
+          "priceCurrency": "AUD",
+          "url": {{ site.data.market.australia.app_store_url | jsonify }},
+          "eligibleRegion": { "@type": "Country", "name": "Australia" }
+        }
+      ],
       "featureList": [
         "Offline-first pool service records",
         "Pool chemical dosing in litres, kilograms and grams",

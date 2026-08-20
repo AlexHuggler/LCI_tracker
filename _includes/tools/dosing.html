@@ -7,8 +7,10 @@ injected into the JS via window.PF_DOSING_I18N.
 {%- assign cur_lang = page.lang | default: "en" -%}
 {%- assign tt = site.data.tools_i18n[cur_lang] | default: site.data.tools_i18n.en -%}
 {%- assign L = site.data.tools_i18n.calc.dosing[cur_lang] | default: site.data.tools_i18n.calc.dosing.en -%}
+{%- assign tool_faq = page.faq | default: L.faq -%}
 {%- assign lp = "" -%}
 {%- assign store_url = site.data.market.app_store.url -%}
+{%- if cur_lang == "en-AU" -%}{%- assign lp = "/au" -%}{%- assign store_url = site.data.market.australia.app_store_url -%}{%- endif -%}
 {%- for l in site.data.languages -%}{%- if l.code == cur_lang -%}{%- assign lp = l.path -%}{%- endif -%}{%- endfor -%}
 
 <!-- Breadcrumb -->
@@ -27,8 +29,8 @@ injected into the JS via window.PF_DOSING_I18N.
 <!-- HERO -->
 <section class="hero-gradient py-12 sm:py-16">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight">{{ L.h1 }}</h1>
-    <p class="mt-4 text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">{{ L.subtitle }}</p>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight">{% if cur_lang == "en-AU" %}Pool Chemical Dosing Calculator Australia{% else %}{{ L.h1 }}{% endif %}</h1>
+    <p class="mt-4 text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">{% if cur_lang == "en-AU" %}Enter litres and water readings to estimate liquid doses in mL/L and dry doses in g/kg—without generic US-dollar cost assumptions.{% else %}{{ L.subtitle }}{% endif %}</p>
   </div>
 </section>
 
@@ -46,11 +48,11 @@ injected into the JS via window.PF_DOSING_I18N.
           <div class="flex items-center justify-between mb-2">
             <label for="dose-vol" class="font-medium text-pool-dark">{{ L.label_vol }}</label>
             <div class="flex items-center gap-2">
-              <input id="dose-vol" type="number" data-dose-vol-number value="20000" min="1000" max="100000" step="500" inputmode="numeric" aria-label="{{ L.label_vol }}">
-              <button type="button" class="tool-unit" data-dose-vol-unit aria-label="{{ L.vol_aria_gal }}">{{ L.vol_unit_gal }}</button>
+              <input id="dose-vol" type="number" data-dose-vol-number value="{% if cur_lang == 'en-AU' %}75708{% else %}20000{% endif %}" min="{% if cur_lang == 'en-AU' %}4000{% else %}1000{% endif %}" max="{% if cur_lang == 'en-AU' %}190000{% else %}100000{% endif %}" step="{% if cur_lang == 'en-AU' %}1000{% else %}500{% endif %}" inputmode="numeric" aria-label="{{ L.label_vol }}">
+              <button type="button" class="tool-unit" data-dose-vol-unit aria-label="{% if cur_lang == 'en-AU' %}Volume unit: litres. Tap to switch.{% else %}{{ L.vol_aria_gal }}{% endif %}">{% if cur_lang == "en-AU" %}L{% else %}{{ L.vol_unit_gal }}{% endif %}</button>
             </div>
           </div>
-          <input type="range" data-dose-vol-range value="20000" min="1000" max="50000" step="500" aria-label="{{ L.label_vol }}">
+          <input type="range" data-dose-vol-range value="{% if cur_lang == 'en-AU' %}75708{% else %}20000{% endif %}" min="{% if cur_lang == 'en-AU' %}4000{% else %}1000{% endif %}" max="{% if cur_lang == 'en-AU' %}190000{% else %}50000{% endif %}" step="{% if cur_lang == 'en-AU' %}1000{% else %}500{% endif %}" aria-label="{{ L.label_vol }}">
           <p class="mt-1 text-xs text-gray-400">{{ L.vol_hint_pre }} <a href="{{ lp }}/pool-volume-calculator/" class="text-pool-blue hover:underline">{{ L.vol_hint_link }}</a></p>
         </div>
 
@@ -97,9 +99,13 @@ injected into the JS via window.PF_DOSING_I18N.
           <div class="space-y-3" data-dose-results></div>
           <p class="text-center text-gray-600 py-4" data-dose-empty hidden>{{ L.empty_note }}</p>
 
-          <div class="mt-4 pt-4 border-t border-gray-200/70 flex items-center justify-between">
+          <div class="mt-4 pt-4 border-t border-gray-200/70 {% if cur_lang == 'en-AU' %}text-center{% else %}flex items-center justify-between{% endif %}">
+            {% if cur_lang == "en-AU" %}
+            <span class="text-xs text-gray-500">Cost estimates are omitted here because chemical pricing varies by Australian supplier. PoolFlow can use your own inventory costs.</span>
+            {% else %}
             <span class="text-sm font-semibold text-pool-dark">{{ L.cost_label }}</span>
             <span class="text-xl font-bold text-pool-dark tabular-nums" data-dose-total>$0.00</span>
+            {% endif %}
           </div>
 
           <a href="{{ store_url }}" class="mt-6 flex items-center justify-center gap-2 bg-pool-blue text-white font-semibold px-5 py-3 rounded-full hover:opacity-90 transition-opacity text-sm text-center">
@@ -111,7 +117,7 @@ injected into the JS via window.PF_DOSING_I18N.
 
     </div>
 
-    <p class="mt-8 text-center text-xs text-gray-400 max-w-2xl mx-auto">{{ L.disclaimer }}</p>
+    <p class="mt-8 text-center text-xs text-gray-400 max-w-2xl mx-auto">{% if cur_lang == "en-AU" %}Starting estimate only. Confirm product concentration and label directions, use appropriate PPE, never mix chemicals, circulate and retest before adding more.{% else %}{{ L.disclaimer }}{% endif %}</p>
   </div>
 </section>
 
@@ -120,7 +126,7 @@ injected into the JS via window.PF_DOSING_I18N.
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-pool-dark text-center mb-10">{{ L.how_heading }}</h2>
     <div class="prose prose-lg max-w-none prose-headings:text-pool-dark prose-a:text-pool-blue prose-a:no-underline hover:prose-a:underline">
-      {{ L.how_body }}
+      {{ page.how_body | default: L.how_body }}
     </div>
   </div>
 </section>
@@ -132,7 +138,7 @@ injected into the JS via window.PF_DOSING_I18N.
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pool-dark">{{ L.faq_heading }}</h2>
     </div>
     <div class="space-y-4" id="faq-accordion" role="region" aria-label="Frequently Asked Questions">
-      {% for item in L.faq %}
+      {% for item in tool_faq %}
       <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
         <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset" aria-expanded="false">
           <span class="pr-4">{{ item.question }}</span>
@@ -179,15 +185,15 @@ document.querySelectorAll('#faq .faq-toggle').forEach(function(btn){
 
 <!-- Localized runtime strings for the calculator JS -->
 <script>window.PF_DOSING_I18N = {{ L.js | jsonify }};</script>
-<script src="/assets/js/chemical-dosing.js" defer></script>
+<script src="/assets/js/chemical-dosing.js?v=20260820" defer></script>
 
 <!-- Structured data -->
-{% if L.faq %}
+{% if tool_faq %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{% for item in L.faq %}
+  "mainEntity": [{% for item in tool_faq %}
     { "@type": "Question", "name": {{ item.question | jsonify }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.answer | jsonify }} } }{% unless forloop.last %},{% endunless %}{% endfor %}
   ]
 }
@@ -203,9 +209,9 @@ document.querySelectorAll('#faq .faq-toggle').forEach(function(btn){
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Any (web browser)",
   "browserRequirements": "Requires JavaScript",
-  "description": {{ L.description | jsonify }},
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "publisher": { "@id": "https://poolflowapp.com/#org" }
+  "description": {{ page.description | default: L.description | jsonify }},
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "{% if cur_lang == 'en-AU' %}AUD{% else %}USD{% endif %}" },
+  "publisher": { "@id": "https://poolflowapp.com/#publisher" }
 }
 </script>
 

@@ -1,7 +1,7 @@
 # Subscription truth audit — release blocker
 
 Date: 17 August 2026  
-Status: verified for the public website release scope; AU App Store metadata remains a separate next-version submission.
+Status: verified for the public website release scope; updated 20 August 2026 for the AU website pricing release. AU App Store metadata remains a separate next-version submission.
 
 ## Observed sources
 
@@ -20,10 +20,10 @@ Status: verified for the public website release scope; AU App Store metadata rem
 
 - Global and existing language pages use Apple's neutral App Store link.
 - `/au/` alone uses the Australian storefront.
-- Australian website and App Store draft copy avoid paid-price and trial-duration claims.
+- The Australian website uses the verified live storefront amounts (A$49.99 monthly and A$299.99 annually) and describes the introductory period as approximately 30 days, with Apple controlling final eligibility and terms.
 - Existing localized website FAQs now direct readers to the App Store for current local terms.
-- AU structured data publishes no unverified paid AUD offer or rating.
+- AU structured data publishes the verified AUD offers and no unverified rating.
 
 ## Required sign-off
 
-For future country pages that publish a numeric price, record that storefront’s live monthly and annual display prices and tax presentation before release. Existing global/localized pages use Apple’s storefront-localised link, while `/au/` deliberately remains price-neutral. Product owner Alex Huggler approved keeping the “Log service in under 60 seconds” marketing claim on 17 August 2026.
+For future country pages that publish a numeric price, record that storefront’s live monthly and annual display prices and tax presentation before release. Existing global/localized pages use Apple’s neutral storefront link; `/au/` uses the Australian storefront and the verified Australian terms above. Product owner Alex Huggler approved keeping the “Log service in under 60 seconds” marketing claim on 17 August 2026.

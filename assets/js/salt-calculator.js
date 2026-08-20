@@ -12,6 +12,7 @@
 
   // Localized runtime strings injected by the page (window.PF_SALT_I18N); English fallbacks below.
   var I = (typeof window !== 'undefined' && window.PF_SALT_I18N) || {};
+  var isAu = document.documentElement.lang === 'en-AU';
 
   var L_PER_GAL = 3.785411784;
   var LB_PER_GAL = 8.34;
@@ -42,7 +43,7 @@
     var delta = state.target - state.current;
     if (delta <= 0) {
       if (out.primary) out.primary.textContent = '0';
-      if (out.secondary) out.secondary.textContent = I.secondary_none || 'lb — no salt needed';
+      if (out.secondary) out.secondary.textContent = isAu ? 'kg — no salt needed' : (I.secondary_none || 'lb — no salt needed');
       if (out.guidance) {
         out.guidance.textContent = delta === 0
           ? (I.guidance_at_target || 'You’re right at target. No salt needed.')
@@ -58,11 +59,13 @@
     var bags = lbs / BAG_LB;
     var kg = lbs * KG_PER_LB;
 
-    if (out.primary) out.primary.textContent = fmt(lbs);
+    if (out.primary) out.primary.textContent = isAu ? fmt(kg) : fmt(lbs);
     if (out.secondary) {
-      out.secondary.innerHTML = (I.secondary || 'lb &nbsp;·&nbsp; ≈ %BAGS% bags (40 lb) &nbsp;·&nbsp; %KG% kg')
-        .replace('%BAGS%', (Math.round(bags * 10) / 10))
-        .replace('%KG%', fmt(kg));
+      out.secondary.innerHTML = isAu
+        ? 'kg &nbsp;·&nbsp; ≈ ' + (Math.round((kg / 20) * 10) / 10) + ' bags (20 kg)'
+        : (I.secondary || 'lb &nbsp;·&nbsp; ≈ %BAGS% bags (40 lb) &nbsp;·&nbsp; %KG% kg')
+          .replace('%BAGS%', (Math.round(bags * 10) / 10))
+          .replace('%KG%', fmt(kg));
     }
     if (out.guidance) {
       out.guidance.textContent = (I.guidance_add ||
@@ -70,12 +73,13 @@
         .replace('%PPM%', fmt(delta));
     }
     if (out.formula) {
-      out.formula.textContent = (I.formula ||
-        '(%TARGET% − %CURRENT%) ppm × %GAL% gal × 8.34 ÷ 1,000,000 = %LBS% lb')
-        .replace('%TARGET%', fmt(state.target))
-        .replace('%CURRENT%', fmt(state.current))
-        .replace('%GAL%', fmt(state.gallons))
-        .replace('%LBS%', fmt(lbs));
+      out.formula.textContent = isAu
+        ? '(' + fmt(state.target) + ' − ' + fmt(state.current) + ') ppm × ' + fmt(state.gallons * L_PER_GAL) + ' L ÷ 1,000,000 = ' + fmt(kg) + ' kg'
+        : (I.formula || '(%TARGET% − %CURRENT%) ppm × %GAL% gal × 8.34 ÷ 1,000,000 = %LBS% lb')
+          .replace('%TARGET%', fmt(state.target))
+          .replace('%CURRENT%', fmt(state.current))
+          .replace('%GAL%', fmt(state.gallons))
+          .replace('%LBS%', fmt(lbs));
     }
   }
 
@@ -114,5 +118,6 @@
   bindPair(curNum, curRange, 'current');
   bindPair(tgtNum, tgtRange, 'target');
 
-  render();
+  if (isAu && volUnitBtn) volUnitBtn.click();
+  else render();
 })();

@@ -174,4 +174,5 @@
   }
 
   applyShape();
+  if (document.documentElement.lang === 'en-AU' && out.unitBtn) out.unitBtn.click();
 })();

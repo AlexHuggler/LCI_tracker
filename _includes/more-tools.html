@@ -4,6 +4,7 @@
 {%- assign cur_lang = page.lang | default: "en" -%}
 {%- assign tt = site.data.tools_i18n[cur_lang] | default: site.data.tools_i18n.en -%}
 {%- assign lp = "" -%}
+{%- if cur_lang == "en-AU" -%}{%- assign lp = "/au" -%}{%- endif -%}
 {%- for l in site.data.languages -%}
   {%- if l.code == cur_lang -%}{%- assign lp = l.path -%}{%- endif -%}
 {%- endfor -%}
@@ -21,7 +22,7 @@
         </span>
         <span class="min-w-0">
           <span class="block font-semibold text-pool-dark group-hover:text-pool-blue transition-colors">{{ tt.names[tool.slug] | default: tool.name }}</span>
-          <span class="block mt-1 text-sm text-gray-600 leading-snug">{{ tt.blurbs[tool.slug] | default: tool.blurb }}</span>
+          <span class="block mt-1 text-sm text-gray-600 leading-snug">{% if cur_lang == "en-AU" %}{% case tool.slug %}{% when "lsi" %}Check water balance with CYA correction and degrees Celsius.{% when "dosing" %}Estimate liquid doses in mL/L and dry doses in g/kg.{% when "volume" %}Estimate pool volume from metres, with litres as the primary result.{% when "salt" %}Calculate kilograms of salt and approximate 20 kg bags.{% when "chlorine" %}Set a practical free-chlorine target from CYA in ppm.{% when "turnover" %}Estimate turnover from litres and litres per minute.{% else %}{{ tool.blurb }}{% endcase %}{% else %}{{ tt.blurbs[tool.slug] | default: tool.blurb }}{% endif %}</span>
         </span>
       </a>
       {% endunless %}{% endfor %}

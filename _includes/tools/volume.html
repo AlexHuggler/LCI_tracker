@@ -7,8 +7,10 @@ injected into the JS via window.PF_VOLUME_I18N.
 {%- assign cur_lang = page.lang | default: "en" -%}
 {%- assign tt = site.data.tools_i18n[cur_lang] | default: site.data.tools_i18n.en -%}
 {%- assign L = site.data.tools_i18n.calc.volume[cur_lang] | default: site.data.tools_i18n.calc.volume.en -%}
+{%- assign tool_faq = page.faq | default: L.faq -%}
 {%- assign lp = "" -%}
 {%- assign store_url = site.data.market.app_store.url -%}
+{%- if cur_lang == "en-AU" -%}{%- assign lp = "/au" -%}{%- assign store_url = site.data.market.australia.app_store_url -%}{%- endif -%}
 {%- for l in site.data.languages -%}{%- if l.code == cur_lang -%}{%- assign lp = l.path -%}{%- endif -%}{%- endfor -%}
 
 <!-- Breadcrumb -->
@@ -27,9 +29,9 @@ injected into the JS via window.PF_VOLUME_I18N.
 <!-- HERO -->
 <section class="hero-gradient py-12 sm:py-16">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight">{{ L.h1 }}</h1>
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white leading-tight">{% if cur_lang == "en-AU" %}Pool Volume Calculator Australia — Litres{% else %}{{ L.h1 }}{% endif %}</h1>
     <p class="mt-4 text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto leading-relaxed">
-      {{ L.subtitle }}
+      {% if cur_lang == "en-AU" %}Choose a pool shape, enter dimensions in metres and estimate volume in litres.{% else %}{{ L.subtitle }}{% endif %}
     </p>
   </div>
 </section>
@@ -43,7 +45,7 @@ injected into the JS via window.PF_VOLUME_I18N.
       <div class="lg:col-span-3">
         <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
           <h2 class="text-2xl font-bold text-pool-dark">{{ L.dimensions_heading }}</h2>
-          <button type="button" class="tool-unit" data-vol-unit aria-label="{{ L.unit_toggle_aria }}">{{ L.unit_toggle_label }}</button>
+          <button type="button" class="tool-unit" data-vol-unit aria-label="{% if cur_lang == 'en-AU' %}Unit system: metric (metres and litres). Tap to switch.{% else %}{{ L.unit_toggle_aria }}{% endif %}">{% if cur_lang == "en-AU" %}m / L{% else %}{{ L.unit_toggle_label }}{% endif %}</button>
         </div>
 
         <!-- Shape picker -->
@@ -61,7 +63,7 @@ injected into the JS via window.PF_VOLUME_I18N.
           <!-- Length -->
           <div class="tool-field" data-field="length">
             <div class="flex items-center justify-between mb-2">
-              <label for="vol-length" class="font-medium text-pool-dark">{{ L.label_length }} <span class="text-gray-400 font-normal text-sm" data-unit-label>ft</span></label>
+              <label for="vol-length" class="font-medium text-pool-dark">{{ L.label_length }} <span class="text-gray-400 font-normal text-sm" data-unit-label>{% if cur_lang == "en-AU" %}m{% else %}ft{% endif %}</span></label>
               <input id="vol-length" type="number" data-vol-number="length" value="32" min="5" max="80" step="1" inputmode="decimal" aria-label="{{ L.aria_length }}">
             </div>
             <input type="range" data-vol-range="length" value="32" min="5" max="80" step="1" aria-label="{{ L.aria_length_slider }}">
@@ -69,7 +71,7 @@ injected into the JS via window.PF_VOLUME_I18N.
           <!-- Width -->
           <div class="tool-field" data-field="width">
             <div class="flex items-center justify-between mb-2">
-              <label for="vol-width" class="font-medium text-pool-dark">{{ L.label_width }} <span class="text-gray-400 font-normal text-sm" data-unit-label>ft</span></label>
+              <label for="vol-width" class="font-medium text-pool-dark">{{ L.label_width }} <span class="text-gray-400 font-normal text-sm" data-unit-label>{% if cur_lang == "en-AU" %}m{% else %}ft{% endif %}</span></label>
               <input id="vol-width" type="number" data-vol-number="width" value="16" min="5" max="50" step="1" inputmode="decimal" aria-label="{{ L.aria_width }}">
             </div>
             <input type="range" data-vol-range="width" value="16" min="5" max="50" step="1" aria-label="{{ L.aria_width_slider }}">
@@ -77,7 +79,7 @@ injected into the JS via window.PF_VOLUME_I18N.
           <!-- Diameter -->
           <div class="tool-field" data-field="diameter" hidden>
             <div class="flex items-center justify-between mb-2">
-              <label for="vol-diameter" class="font-medium text-pool-dark">{{ L.label_diameter }} <span class="text-gray-400 font-normal text-sm" data-unit-label>ft</span></label>
+              <label for="vol-diameter" class="font-medium text-pool-dark">{{ L.label_diameter }} <span class="text-gray-400 font-normal text-sm" data-unit-label>{% if cur_lang == "en-AU" %}m{% else %}ft{% endif %}</span></label>
               <input id="vol-diameter" type="number" data-vol-number="diameter" value="24" min="5" max="50" step="1" inputmode="decimal" aria-label="{{ L.aria_diameter }}">
             </div>
             <input type="range" data-vol-range="diameter" value="24" min="5" max="50" step="1" aria-label="{{ L.aria_diameter_slider }}">
@@ -85,7 +87,7 @@ injected into the JS via window.PF_VOLUME_I18N.
           <!-- Long diameter -->
           <div class="tool-field" data-field="longD" hidden>
             <div class="flex items-center justify-between mb-2">
-              <label for="vol-longD" class="font-medium text-pool-dark">{{ L.label_longD }} <span class="text-gray-400 font-normal text-sm" data-unit-label>ft</span></label>
+              <label for="vol-longD" class="font-medium text-pool-dark">{{ L.label_longD }} <span class="text-gray-400 font-normal text-sm" data-unit-label>{% if cur_lang == "en-AU" %}m{% else %}ft{% endif %}</span></label>
               <input id="vol-longD" type="number" data-vol-number="longD" value="32" min="8" max="60" step="1" inputmode="decimal" aria-label="{{ L.aria_longD }}">
             </div>
             <input type="range" data-vol-range="longD" value="32" min="8" max="60" step="1" aria-label="{{ L.aria_longD_slider }}">
@@ -93,7 +95,7 @@ injected into the JS via window.PF_VOLUME_I18N.
           <!-- Short diameter -->
           <div class="tool-field" data-field="shortD" hidden>
             <div class="flex items-center justify-between mb-2">
-              <label for="vol-shortD" class="font-medium text-pool-dark">{{ L.label_shortD }} <span class="text-gray-400 font-normal text-sm" data-unit-label>ft</span></label>
+              <label for="vol-shortD" class="font-medium text-pool-dark">{{ L.label_shortD }} <span class="text-gray-400 font-normal text-sm" data-unit-label>{% if cur_lang == "en-AU" %}m{% else %}ft{% endif %}</span></label>
               <input id="vol-shortD" type="number" data-vol-number="shortD" value="16" min="5" max="40" step="1" inputmode="decimal" aria-label="{{ L.aria_shortD }}">
             </div>
             <input type="range" data-vol-range="shortD" value="16" min="5" max="40" step="1" aria-label="{{ L.aria_shortD_slider }}">
@@ -101,7 +103,7 @@ injected into the JS via window.PF_VOLUME_I18N.
           <!-- Shallow depth -->
           <div class="tool-field" data-field="shallow">
             <div class="flex items-center justify-between mb-2">
-              <label for="vol-shallow" class="font-medium text-pool-dark">{{ L.label_shallow }} <span class="text-gray-400 font-normal text-sm" data-unit-label>ft</span></label>
+              <label for="vol-shallow" class="font-medium text-pool-dark">{{ L.label_shallow }} <span class="text-gray-400 font-normal text-sm" data-unit-label>{% if cur_lang == "en-AU" %}m{% else %}ft{% endif %}</span></label>
               <input id="vol-shallow" type="number" data-vol-number="shallow" value="3.5" min="1" max="9" step="0.5" inputmode="decimal" aria-label="{{ L.aria_shallow }}">
             </div>
             <input type="range" data-vol-range="shallow" value="3.5" min="1" max="9" step="0.5" aria-label="{{ L.aria_shallow_slider }}">
@@ -109,7 +111,7 @@ injected into the JS via window.PF_VOLUME_I18N.
           <!-- Deep depth -->
           <div class="tool-field" data-field="deep">
             <div class="flex items-center justify-between mb-2">
-              <label for="vol-deep" class="font-medium text-pool-dark">{{ L.label_deep }} <span class="text-gray-400 font-normal text-sm" data-unit-label>ft</span></label>
+              <label for="vol-deep" class="font-medium text-pool-dark">{{ L.label_deep }} <span class="text-gray-400 font-normal text-sm" data-unit-label>{% if cur_lang == "en-AU" %}m{% else %}ft{% endif %}</span></label>
               <input id="vol-deep" type="number" data-vol-number="deep" value="6" min="1" max="15" step="0.5" inputmode="decimal" aria-label="{{ L.aria_deep }}">
             </div>
             <input type="range" data-vol-range="deep" value="6" min="1" max="15" step="0.5" aria-label="{{ L.aria_deep_slider }}">
@@ -129,8 +131,8 @@ injected into the JS via window.PF_VOLUME_I18N.
       <div class="lg:col-span-2">
         <div class="tool-result tool-result-primary rounded-2xl p-6 sm:p-8 lg:sticky lg:top-24">
           <p class="text-sm font-medium uppercase tracking-wider text-gray-500 text-center">{{ L.result_label }}</p>
-          <p class="tool-value text-5xl sm:text-6xl font-bold text-center my-3" data-vol-primary>23,933</p>
-          <p class="text-center text-gray-600 font-medium" data-vol-secondary>≈ 90,597 liters</p>
+          <p class="tool-value text-5xl sm:text-6xl font-bold text-center my-3" data-vol-primary>{% if cur_lang == "en-AU" %}90,597{% else %}23,933{% endif %}</p>
+          <p class="text-center text-gray-600 font-medium" data-vol-secondary>{% if cur_lang == "en-AU" %}L{% else %}≈ 90,597 liters{% endif %}</p>
 
           <div class="mt-6 pt-6 border-t border-gray-200/70">
             <p class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">{{ L.breakdown_heading }}</p>
@@ -151,7 +153,7 @@ injected into the JS via window.PF_VOLUME_I18N.
     </div>
 
     <p class="mt-8 text-center text-xs text-gray-400 max-w-2xl mx-auto">
-      {{ L.disclaimer }}
+      {% if cur_lang == "en-AU" %}Estimates are for guidance only. Round to a sensible litre value and allow for irregular contours, steps and benches before using the result for dosing.{% else %}{{ L.disclaimer }}{% endif %}
     </p>
   </div>
 </section>
@@ -161,7 +163,7 @@ injected into the JS via window.PF_VOLUME_I18N.
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-pool-dark text-center mb-10">{{ L.how_heading }}</h2>
     <div class="prose prose-lg max-w-none prose-headings:text-pool-dark prose-a:text-pool-blue prose-a:no-underline hover:prose-a:underline">
-      {{ L.how_body }}
+      {{ page.how_body | default: L.how_body }}
     </div>
   </div>
 </section>
@@ -173,7 +175,7 @@ injected into the JS via window.PF_VOLUME_I18N.
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-pool-dark">{{ L.faq_heading }}</h2>
     </div>
     <div class="space-y-4" id="faq-accordion" role="region" aria-label="Frequently Asked Questions">
-      {% for item in L.faq %}
+      {% for item in tool_faq %}
       <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
         <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset" aria-expanded="false">
           <span class="pr-4">{{ item.question }}</span>
@@ -220,15 +222,15 @@ document.querySelectorAll('#faq .faq-toggle').forEach(function(btn){
 
 <!-- Localized runtime strings for the calculator JS -->
 <script>window.PF_VOLUME_I18N = {{ L.js | jsonify }};</script>
-<script src="/assets/js/pool-volume.js" defer></script>
+<script src="/assets/js/pool-volume.js?v=20260820" defer></script>
 
 <!-- Structured data -->
-{% if L.faq %}
+{% if tool_faq %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [{% for item in L.faq %}
+  "mainEntity": [{% for item in tool_faq %}
     { "@type": "Question", "name": {{ item.question | jsonify }}, "acceptedAnswer": { "@type": "Answer", "text": {{ item.answer | jsonify }} } }{% unless forloop.last %},{% endunless %}{% endfor %}
   ]
 }
@@ -243,9 +245,9 @@ document.querySelectorAll('#faq .faq-toggle').forEach(function(btn){
   "applicationCategory": "UtilitiesApplication",
   "operatingSystem": "Any (web browser)",
   "browserRequirements": "Requires JavaScript",
-  "description": {{ L.description | jsonify }},
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "publisher": { "@id": "https://poolflowapp.com/#org" }
+  "description": {{ page.description | default: L.description | jsonify }},
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "{% if cur_lang == 'en-AU' %}AUD{% else %}USD{% endif %}" },
+  "publisher": { "@id": "https://poolflowapp.com/#publisher" }
 }
 </script>
 <script type="application/ld+json">

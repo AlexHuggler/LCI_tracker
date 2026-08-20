@@ -2,7 +2,15 @@
   Generates hreflang link tags for multilingual pages.
   Only outputs on pages that define `hreflang_group` in front matter.
 {% endcomment %}
-{% if page.hreflang_group %}
+{% if page.hreflang_group == "compare-markets" %}
+  <link rel="alternate" hreflang="en-US" href="{{ '/compare/' | absolute_url }}">
+  <link rel="alternate" hreflang="en-AU" href="{{ '/au/compare/' | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ '/compare/' | absolute_url }}">
+{% elsif page.hreflang_group == "support-markets" %}
+  <link rel="alternate" hreflang="en-US" href="{{ '/support/' | absolute_url }}">
+  <link rel="alternate" hreflang="en-AU" href="{{ '/au/support/' | absolute_url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ '/support/' | absolute_url }}">
+{% elsif page.hreflang_group %}
   {% for lang in site.data.languages %}
     {% if page.page_path %}
       {% assign target_url = lang.path | append: "/" | append: page.page_path | append: "/" %}
@@ -17,6 +25,8 @@
   {% endfor %}
   {% if page.hreflang_group == "homepage" %}
   <link rel="alternate" hreflang="en-AU" href="{{ '/au/' | absolute_url }}">
+  {% elsif page.page_path %}
+  <link rel="alternate" hreflang="en-AU" href="{{ '/au/' | append: page.page_path | append: '/' | absolute_url }}">
   {% endif %}
 {% elsif page.url == "/au/" %}
   <link rel="alternate" hreflang="en-AU" href="{{ '/au/' | absolute_url }}">
