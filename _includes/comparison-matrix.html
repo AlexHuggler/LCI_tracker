@@ -1,16 +1,18 @@
 {%- comment -%}
 Full feature-comparison matrix for /compare/ — Feature + PoolFlow + every
 competitor in _data/competitors.yml. Rows come from _data/comparison_features.yml
-(same source the per-competitor 3-col include uses), followed by a Pricing
-(40 Pools) group. This keeps the matrix in sync with the data so rows can't drift.
+(same source the per-competitor 3-col include uses), followed by published
+pricing. This keeps the matrix in sync with the data so rows can't drift.
 
-Competitor cell precedence: feature_notes[key] text > features[key] check > X.
+Competitor cell precedence: feature_notes[key] text > documented true >
+documented false > not verified. Missing data must never be rendered as absent.
 PoolFlow cell: row.poolflow true=check, false=X, string=text label.
 {%- endcomment -%}
 {%- assign competitors = site.data.competitors -%}
 {%- assign colcount = competitors.size | plus: 2 -%}
 {%- capture check_svg -%}<svg class="w-5 h-5 text-emerald-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>{%- endcapture -%}
 {%- capture x_svg -%}<svg class="w-5 h-5 text-red-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>{%- endcapture -%}
+{%- capture unknown_label -%}<span class="text-xs text-gray-500">Not verified</span>{%- endcapture -%}
 <div class="overflow-x-auto -mx-4 px-4 rounded-2xl border border-gray-200">
   <table class="comparison-table w-full" style="min-width: 1200px;">
     <thead>
@@ -35,11 +37,12 @@ PoolFlow cell: row.poolflow true=check, false=X, string=text label.
             {%- endif -%}
           </td>
           {%- for c in competitors -%}
-          {%- assign note = c.feature_notes[row.key] -%}
+            {%- assign note = c.feature_notes[row.key] -%}
           <td>
             {%- if note -%}<span class="text-xs text-gray-500">{{ note }}</span>
             {%- elsif c.features[row.key] -%}{{ check_svg }}
-            {%- else -%}{{ x_svg }}
+            {%- elsif c.features[row.key] == false -%}{{ x_svg }}
+            {%- else -%}{{ unknown_label }}
             {%- endif -%}
           </td>
           {%- endfor %}
@@ -47,23 +50,28 @@ PoolFlow cell: row.poolflow true=check, false=X, string=text label.
         {%- endfor %}
       {%- endfor %}
 
-      <!-- Pricing (40 Pools) -->
-      <tr class="category-row"><td colspan="{{ colcount }}">Pricing (40 Pools)</td></tr>
+      <!-- Published pricing -->
+      <tr class="category-row"><td colspan="{{ colcount }}">Published Pricing</td></tr>
       <tr>
-        <td class="text-sm text-gray-700">Monthly Cost</td>
-        <td class="poolflow-col"><span class="text-sm font-semibold text-emerald-600">$29.99</span></td>
+        <td class="text-sm text-gray-700">Starting price / model</td>
+        <td class="poolflow-col"><span class="text-sm font-semibold text-emerald-600">$29.99/mo flat</span></td>
         {%- for c in competitors -%}
-        {%- assign monthly = nil -%}
-        {%- for ex in c.pricing.examples -%}{%- if ex.pools == 40 -%}{%- assign monthly = ex.monthly -%}{%- endif -%}{%- endfor -%}
-        {%- if monthly >= 150 -%}{%- assign price_color = "text-red-500" -%}{%- else -%}{%- assign price_color = "text-amber-500" -%}{%- endif -%}
-        <td><span class="text-sm font-semibold {{ price_color }}">${{ monthly }}</span></td>
+        <td>
+          <span class="text-sm font-semibold text-gray-700">{{ c.pricing.card_value }}</span>
+          <span class="block mt-1 text-xs text-gray-500">{{ c.pricing.card_note }}</span>
+        </td>
         {%- endfor %}
       </tr>
       <tr>
         <td class="text-sm text-gray-700">Free Tier</td>
         <td class="poolflow-col"><span class="text-xs text-emerald-600">5 pools free</span></td>
-        {%- for c in competitors -%}<td>{{ x_svg }}</td>{%- endfor %}
+        {%- for c in competitors -%}
+        <td><span class="text-xs text-gray-500">{{ c.free_tier | default: "Not verified" }}</span></td>
+        {%- endfor %}
       </tr>
     </tbody>
   </table>
 </div>
+<p class="mt-4 text-xs text-gray-500 leading-relaxed">
+  ✓ means documented in the vendor sources linked on this page. “Not verified” means we did not find enough detail in the reviewed public material; it does not mean the feature is unavailable. Plan eligibility and pricing can change. Competitor facts reviewed August 20, 2026.
+</p>

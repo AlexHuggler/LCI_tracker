@@ -1,6 +1,7 @@
 # Feature rows for PoolFlow-vs-competitor comparison tables.
 # Rendered by _includes/comparison-feature-table.html.
-# `key` maps to a boolean in _data/competitors.yml -> features.
+# `key` maps to a documented boolean in _data/competitors.yml -> features.
+# Omitted keys are intentionally rendered as "Not verified", not false.
 # `poolflow` is PoolFlow's own value: true, false, or a string label.
 
 - category: "Pool Chemistry"

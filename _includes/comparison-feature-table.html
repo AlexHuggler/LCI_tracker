@@ -3,6 +3,7 @@ Renders the 3-column feature comparison table (Feature / PoolFlow / competitor).
 Usage: {% include comparison-feature-table.html competitor=competitor %}
 Reads feature rows from _data/comparison_features.yml and booleans from the
 competitor's `features` map in _data/competitors.yml.
+Omitted competitor features render as "Not verified", never as absent.
 {%- endcomment -%}
 {%- assign competitor = include.competitor -%}
 <div class="overflow-x-auto rounded-2xl border border-gray-200">
@@ -30,10 +31,15 @@ competitor's `features` map in _data/competitors.yml.
             {%- endif -%}
           </td>
           <td>
-            {%- if competitor.features[row.key] -%}
+            {%- assign note = competitor.feature_notes[row.key] -%}
+            {%- if note -%}
+              <span class="text-xs text-gray-500">{{ note }}</span>
+            {%- elsif competitor.features[row.key] -%}
               <svg class="w-5 h-5 text-emerald-500 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-            {%- else -%}
+            {%- elsif competitor.features[row.key] == false -%}
               <svg class="w-5 h-5 text-red-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            {%- else -%}
+              <span class="text-xs text-gray-500">Not verified</span>
             {%- endif -%}
           </td>
         </tr>
@@ -44,24 +50,27 @@ competitor's `features` map in _data/competitors.yml.
       <tr>
         <td class="text-sm text-gray-700">Monthly Price</td>
         <td class="poolflow-col"><span class="text-sm font-semibold text-emerald-600">$29.99 flat</span></td>
-        <td><span class="text-sm font-semibold text-red-500">{{ competitor.pricing.summary }}</span></td>
+        <td><span class="text-sm font-semibold text-gray-700">{{ competitor.pricing.card_value }}</span></td>
       </tr>
       <tr>
-        <td class="text-sm text-gray-700">Per-Pool Fees</td>
+        <td class="text-sm text-gray-700">Pricing Basis</td>
         <td class="poolflow-col"><span class="text-sm font-semibold text-emerald-600">None</span></td>
-        <td>
-          {%- if competitor.pricing.per_pool and competitor.pricing.per_pool > 0 -%}
-            <span class="text-sm text-red-500">${{ competitor.pricing.per_pool }}/pool/mo</span>
-          {%- else -%}
-            <span class="text-sm text-gray-600">None</span>
-          {%- endif -%}
-        </td>
+        <td><span class="text-sm text-gray-600">{{ competitor.pricing.card_note }}</span></td>
       </tr>
       <tr>
         <td class="text-sm text-gray-700">Free Tier</td>
         <td class="poolflow-col"><span class="text-sm text-emerald-600">5 pools free</span></td>
-        <td><span class="text-sm text-gray-600">—</span></td>
+        <td><span class="text-sm text-gray-600">{{ competitor.free_tier | default: "Not verified" }}</span></td>
       </tr>
     </tbody>
   </table>
 </div>
+<p class="mt-4 text-xs text-gray-500 leading-relaxed">
+  ✓ means documented in the linked vendor sources. “Not verified” means the reviewed public material was inconclusive; it does not mean the feature is unavailable. Plans and prices can change. Reviewed {{ competitor.verified_at | date: "%B %-d, %Y" }}.
+</p>
+<p class="mt-3 text-xs text-gray-500">
+  Sources:
+  {%- for source in competitor.sources %}
+    <a class="text-pool-blue hover:underline" href="{{ source.url }}" rel="noopener noreferrer">{{ source.label }}</a>{% unless forloop.last %}; {% endunless %}
+  {%- endfor %}.
+</p>

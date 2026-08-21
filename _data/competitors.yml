@@ -1,161 +1,126 @@
-# Competitor data for comparison pages
-# Used by /compare/ and /compare/poolflow-vs-skimmer/
-# Pricing accurate as of April 2026
+# Competitor facts used by the public comparison pages.
+# A true feature value means the feature was documented in the linked first-party
+# sources on verified_at. An omitted feature means "not verified", not "absent".
 
 - slug: "skimmer"
   name: "Skimmer"
   has_page: true
   type: "pool-specific"
   tagline: "Pool service management software"
+  verified_at: "2026-08-20"
+  sources:
+    - label: "Skimmer pricing"
+      url: "https://www.getskimmer.com/pricing"
+    - label: "Skimmer LSI setup and activation"
+      url: "https://help.getskimmer.com/article/219-lsi-setup-and-activation-web"
   pricing:
-    model: "base-plus-per-pool"
-    base: 98
-    per_pool: 2
-    card_note: "$98 + $2/pool"
+    model: "location-based"
+    card_value: "$49+"
+    card_note: "49 locations included; plan features vary"
     currency: "USD"
-    summary: "$98/mo base + $2/pool"
-    examples:
-      - pools: 40
-        monthly: 178
-      - pools: 60
-        monthly: 218
-      - pools: 80
-        monthly: 258
+    summary: "Getting Started begins at $49/mo for 49 serviced locations; Scaling Up begins at $98/mo and charges $2 for each additional location after 49"
+  feature_notes:
+    lsi_calculator: "Scaling Up+"
+    chemical_dosing: "Scaling Up+"
+    cost_linked_dosing: "Costs configurable"
+    route_optimization: "Scaling Up+"
+    unlimited_pools: "Location-based billing"
   features:
-    lsi_calculator: false
-    cya_correction: false
-    chemical_dosing: false
-    cost_linked_dosing: false
+    lsi_calculator: true
+    chemical_dosing: true
+    cost_linked_dosing: true
     route_optimization: true
-    profit_analytics: false
-    money_loser_detection: false
-    chemical_inventory: false
-    offline_first: false
-    wet_hand_ux: false
     service_logging: true
     photo_documentation: true
     csv_import: true
-    icloud_sync: false
     equipment_tracking: true
     customer_portal: true
     invoicing: true
-    multi_language: false
-    unlimited_pools: false
+    unlimited_pools: true
   highlights:
-    - "Customer portal with email reports"
-    - "QuickBooks integration"
-    - "Work order management"
-    - "Per-pool pricing scales with your business"
-  missing:
-    - "No LSI calculator or water chemistry analysis"
-    - "No chemical dosing recommendations"
-    - "No per-pool profit tracking"
-    - "No offline mode — requires internet"
-    - "Per-pool fees increase cost as you grow"
+    - "LSI and dosing calculator powered by Orenda on Scaling Up and higher plans"
+    - "Route optimization on Scaling Up and higher plans"
+    - "Customer portal, invoicing, work orders, and QuickBooks Online integration"
+  caveat: "Pricing is based on serviced locations, and feature access varies by plan."
 
 - slug: "jobber"
   name: "Jobber"
   has_page: true
   type: "general-fsm"
   tagline: "Field service management for home service businesses"
+  verified_at: "2026-08-20"
+  sources:
+    - label: "Jobber pricing"
+      url: "https://www.getjobber.com/pricing/"
+    - label: "Jobber route optimization"
+      url: "https://help.getjobber.com/en/articles/route-optimization-new-schedule/"
   pricing:
     model: "tiered"
-    base: 49
-    per_pool: 0
-    card_note: "Grow plan for routing"
+    card_value: "$49+"
+    card_note: "Monthly, one-user Core price; promotions and commitments vary"
     currency: "USD"
-    summary: "$49–$169/mo (route optimization at $169/mo only)"
-    examples:
-      - pools: 40
-        monthly: 169
-      - pools: 60
-        monthly: 169
-      - pools: 80
-        monthly: 169
+    summary: "Standard one-user monthly pricing begins at $49/mo; route optimization is listed on Connect, Grow, and Plus"
   feature_notes:
-    route_optimization: "$169/mo plan"
+    route_optimization: "Connect+"
+    profit_analytics: "Job costing on Grow+"
+    multi_language: "Spanish team app"
+    unlimited_pools: "No pool-count pricing"
   features:
-    lsi_calculator: false
-    cya_correction: false
-    chemical_dosing: false
-    cost_linked_dosing: false
     route_optimization: true
-    profit_analytics: false
-    money_loser_detection: false
-    chemical_inventory: false
-    offline_first: false
-    wet_hand_ux: false
+    profit_analytics: true
     service_logging: true
     photo_documentation: true
     csv_import: true
-    icloud_sync: false
-    equipment_tracking: false
     customer_portal: true
     invoicing: true
-    multi_language: false
-    unlimited_pools: true
+    multi_language: true
   highlights:
-    - "CRM and client hub for any home service"
-    - "Quoting, invoicing, and payment processing"
-    - "Job scheduling and dispatching"
-    - "Route optimization (Grow plan only, $169/mo)"
-  missing:
-    - "Zero pool-specific features — no LSI, no dosing"
-    - "Route optimization requires $169/mo Grow plan"
-    - "No chemical inventory or cost tracking"
-    - "No per-pool profitability analysis"
-    - "Built for HVAC, plumbing, and cleaning — not pools"
+    - "CRM, client hub, quoting, invoicing, payments, and scheduling"
+    - "Route optimization on Connect, Grow, and Plus"
+    - "Job costing on Grow and higher plans"
+  caveat: "Jobber's public feature list does not document native pool-water LSI or chemical-dosing tools."
 
 - slug: "pool-brain"
   name: "Pool Brain"
   has_page: true
   type: "pool-specific"
-  tagline: "Pool service route management"
+  tagline: "Pool service business platform"
+  verified_at: "2026-08-20"
+  sources:
+    - label: "Pool Brain help center"
+      url: "https://help.poolbrain.com/en/"
+    - label: "Pool Brain chemical settings"
+      url: "https://help.poolbrain.com/en/articles/6789830-chemical-settings-explained"
+    - label: "Pool Brain product comparison"
+      url: "https://poolcompanysoftware.poolbrain.com/skimmer-vs-poolbrain"
   pricing:
-    model: "flat"
-    base: 40
-    per_pool: 0
-    card_note: "Flat / no LSI"
+    model: "quote-based"
+    card_value: "Quote"
+    card_note: "Public flat starting price not listed"
     currency: "USD"
-    summary: "$40/mo"
-    examples:
-      - pools: 40
-        monthly: 40
-      - pools: 60
-        monthly: 40
-      - pools: 80
-        monthly: 40
+    summary: "Contact Pool Brain for current pricing; its public comparison gives a $245/mo example for three technicians servicing 240 pools"
+  feature_notes:
+    lsi_calculator: "Orenda integration"
+    offline_first: "Partial: AI dosing tab"
   features:
-    lsi_calculator: false
-    cya_correction: false
+    lsi_calculator: true
     chemical_dosing: true
-    cost_linked_dosing: false
+    cost_linked_dosing: true
     route_optimization: true
-    profit_analytics: false
-    money_loser_detection: false
-    chemical_inventory: false
-    offline_first: false
-    wet_hand_ux: false
+    profit_analytics: true
+    money_loser_detection: true
+    chemical_inventory: true
     service_logging: true
     photo_documentation: true
     csv_import: true
-    icloud_sync: false
     equipment_tracking: true
     customer_portal: true
-    invoicing: false
-    multi_language: false
-    unlimited_pools: true
+    invoicing: true
   highlights:
-    - "Pool-specific service management"
-    - "Basic chemical dosing recommendations"
-    - "Route management with GPS"
-    - "Customer portal for service reports"
-  missing:
-    - "No LSI calculator with CYA correction"
-    - "Dosing not linked to your actual chemical costs"
-    - "No per-pool profit analytics"
-    - "No offline mode"
-    - "No money-loser pool detection"
+    - "Orenda LSI and automatic chemical dosing"
+    - "Chemical-cost, inventory, route-profit, and low-profit reporting"
+    - "Customer portal, billing, QuickBooks, and route optimization"
+  caveat: "Public materials document offline dosing in the AI tab, not a fully offline-first application."
 
 - slug: "pool-office-manager"
   name: "Pool Office Manager"
@@ -163,203 +128,126 @@
   has_page: true
   type: "pool-specific"
   tagline: "Pool service business software"
+  verified_at: "2026-08-20"
+  sources:
+    - label: "Pool Office Manager features and pricing"
+      url: "https://poolofficemanager.com/"
   pricing:
-    model: "per-tech"
-    base: 30
-    per_pool: 0
-    card_note: "Per technician"
+    model: "per-user"
+    card_value: "$125+"
+    card_note: "First active user; $25 each additional user"
     currency: "USD"
-    summary: "$30/mo per technician"
-    examples:
-      - pools: 40
-        monthly: 30
-      - pools: 60
-        monthly: 30
-      - pools: 80
-        monthly: 30
+    summary: "$125/mo for the first active user plus $25/mo for each additional active user"
   features:
-    lsi_calculator: false
-    cya_correction: false
     chemical_dosing: true
-    cost_linked_dosing: false
     route_optimization: true
-    profit_analytics: false
-    money_loser_detection: false
-    chemical_inventory: false
-    offline_first: false
-    wet_hand_ux: false
+    profit_analytics: true
+    chemical_inventory: true
     service_logging: true
     photo_documentation: true
     csv_import: true
-    icloud_sync: false
     equipment_tracking: true
-    customer_portal: false
     invoicing: true
-    multi_language: false
-    unlimited_pools: true
   highlights:
-    - "Pool-focused CRM and scheduling"
-    - "Basic dosing suggestions"
-    - "Invoicing and payment tracking"
-    - "Affordable for solo techs"
-  missing:
-    - "No LSI calculator"
-    - "Dosing not cost-linked to your inventory"
-    - "No per-pool profit tracking"
-    - "No offline capability"
-    - "No customer-facing portal"
+    - "Chemical calculator, inventory, and customer profitability reporting"
+    - "Route scheduling, service reporting, and equipment tracking"
+    - "Invoicing, payments, and two-way QuickBooks Online sync"
+  caveat: "The public site describes a chemical calculator but does not label it as an LSI calculator."
 
 - slug: "pooltrac"
   name: "PoolTrac"
   has_page: false
   type: "pool-specific"
   tagline: "Pool route and service tracking"
+  verified_at: "2026-08-20"
+  sources:
+    - label: "PoolTrac pricing and features"
+      url: "https://www.pooltrac.com/pricing/"
   pricing:
-    model: "per-pool"
-    base: 0
-    per_pool: 1
-    card_note: "$1/pool/mo"
+    model: "per-visited-location"
+    card_value: "$1/location"
+    card_note: "$30 monthly minimum"
     currency: "USD"
-    summary: "$1/pool/mo"
-    examples:
-      - pools: 40
-        monthly: 40
-      - pools: 60
-        monthly: 60
-      - pools: 80
-        monthly: 80
+    summary: "$1 per visited location per month, with a $30 monthly minimum"
   features:
-    lsi_calculator: false
-    cya_correction: false
-    chemical_dosing: false
-    cost_linked_dosing: false
+    chemical_dosing: true
     route_optimization: true
-    profit_analytics: false
-    money_loser_detection: false
-    chemical_inventory: false
-    offline_first: false
-    wet_hand_ux: false
+    chemical_inventory: true
+    offline_first: true
     service_logging: true
     photo_documentation: true
-    csv_import: false
-    icloud_sync: false
-    equipment_tracking: false
-    customer_portal: false
-    invoicing: false
-    multi_language: false
+    customer_portal: true
+    invoicing: true
+    multi_language: true
     unlimited_pools: true
+  feature_notes:
+    unlimited_pools: "Per visited location"
   highlights:
-    - "Low per-pool pricing for small routes"
-    - "Basic service logging and route tracking"
-    - "Simple interface"
-    - "Photo documentation"
-  missing:
-    - "No water chemistry tools"
-    - "No chemical dosing or inventory"
-    - "No profit analytics"
-    - "No offline mode"
-    - "Per-pool pricing scales up with growth"
-    - "No invoicing or business tools"
+    - "Advanced chemical calculator and chemical inventory monitoring"
+    - "Route optimization and offline mode with automatic sync"
+    - "Customer portal, invoicing, and QuickBooks integration"
+  caveat: "Charges are based on locations actually visited, subject to the monthly minimum."
 
 - slug: "poolcarepro"
   name: "PoolCarePRO"
   has_page: false
   type: "pool-specific"
   tagline: "Pool service and repair management"
+  verified_at: "2026-08-20"
+  sources:
+    - label: "PoolCarePRO pricing"
+      url: "https://www.poolcarepro.com/pricing"
+    - label: "PoolCarePRO features"
+      url: "https://www.poolcarepro.com/features"
   pricing:
-    model: "tiered"
-    base: 59
-    per_pool: 0
-    card_note: "Standard plan"
+    model: "tiered-by-users"
+    card_value: "$39.95+"
+    card_note: "Pro includes 3 users"
     currency: "USD"
-    summary: "$59–$149/mo depending on plan"
-    examples:
-      - pools: 40
-        monthly: 99
-      - pools: 60
-        monthly: 99
-      - pools: 80
-        monthly: 149
+    summary: "Published plans run from $39.95/mo for 3 users to $99.95/mo for 40 users"
   features:
-    lsi_calculator: false
-    cya_correction: false
-    chemical_dosing: true
-    cost_linked_dosing: false
     route_optimization: true
-    profit_analytics: false
-    money_loser_detection: false
-    chemical_inventory: false
-    offline_first: false
-    wet_hand_ux: false
     service_logging: true
     photo_documentation: true
     csv_import: true
-    icloud_sync: false
+    equipment_tracking: true
+    invoicing: true
+    unlimited_pools: true
+  feature_notes:
+    unlimited_pools: "Plans priced by users"
+  highlights:
+    - "Pool chemistry tracking and service notifications"
+    - "Routing, repairs, invoicing, and automated billing"
+    - "Plans scale by included user count"
+  caveat: "The public feature page documents chemistry tracking but does not clearly document automatic dosing or LSI."
+
+- slug: "pooltrakr"
+  name: "Pooltrackr"
+  has_page: false
+  type: "pool-specific"
+  tagline: "Pool retail and service management platform"
+  verified_at: "2026-08-20"
+  sources:
+    - label: "Pooltrackr pricing"
+      url: "https://pooltrackr.com/pricing/"
+  pricing:
+    model: "regional-tiered"
+    card_value: "US: TBA"
+    card_note: "Public US price not posted"
+    currency: "USD"
+    summary: "US pricing is listed as TBA; published international plan pricing varies by region and plan"
+  features:
+    chemical_dosing: true
+    route_optimization: true
+    profit_analytics: true
+    chemical_inventory: true
+    service_logging: true
+    photo_documentation: true
     equipment_tracking: true
     customer_portal: true
     invoicing: true
-    multi_language: false
-    unlimited_pools: true
   highlights:
-    - "Built specifically for pool service companies"
-    - "Repair and maintenance work orders"
-    - "Customer portal with service history"
-    - "Basic chemical dosing recommendations"
-  missing:
-    - "No LSI calculator or CYA correction"
-    - "Dosing not linked to chemical costs"
-    - "No per-pool profit analytics"
-    - "No offline mode — requires connectivity"
-    - "Higher-tier plan needed for larger routes"
-
-- slug: "pooltrakr"
-  name: "Pooltrakr"
-  has_page: false
-  type: "pool-specific"
-  tagline: "Mobile pool service management"
-  pricing:
-    model: "flat"
-    base: 35
-    per_pool: 0
-    card_note: "Flat price"
-    currency: "USD"
-    summary: "$35/mo flat"
-    examples:
-      - pools: 40
-        monthly: 35
-      - pools: 60
-        monthly: 35
-      - pools: 80
-        monthly: 35
-  features:
-    lsi_calculator: false
-    cya_correction: false
-    chemical_dosing: false
-    cost_linked_dosing: false
-    route_optimization: true
-    profit_analytics: false
-    money_loser_detection: false
-    chemical_inventory: false
-    offline_first: false
-    wet_hand_ux: false
-    service_logging: true
-    photo_documentation: true
-    csv_import: false
-    icloud_sync: false
-    equipment_tracking: false
-    customer_portal: true
-    invoicing: false
-    multi_language: false
-    unlimited_pools: true
-  highlights:
-    - "Mobile-first design for field techs"
-    - "GPS route tracking"
-    - "Customer-facing service reports"
-    - "Affordable flat monthly rate"
-  missing:
-    - "No water chemistry analysis or LSI"
-    - "No chemical dosing recommendations"
-    - "No profit or cost analytics"
-    - "No offline mode"
-    - "No invoicing or payment tools"
-    - "No equipment tracking"
+    - "Water testing and chemical recommendations"
+    - "Inventory, point of sale, accounts, and profitability reporting"
+    - "Route optimization, invoicing, and customer communication"
+  caveat: "US pricing was still shown as TBA on the vendor's public pricing page."
