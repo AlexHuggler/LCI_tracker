@@ -51,7 +51,19 @@ end
   template = read(path)
   assert(template.include?("Not verified"), "#{path} must distinguish unknown features from unavailable features")
   assert(template.include?("== false"), "#{path} must reserve the red X for explicitly false feature data")
+  assert(!template.match?(/facts reviewed|reviewed \{\{|reviewed August/i), "#{path} must keep the access-date note beneath the hero")
 end
+
+comparison_layout = read("_layouts/competitor-comparison.html")
+comparison_index = read("compare/index.html")
+[comparison_layout, comparison_index].each do |template|
+  assert(template.include?('href="#comparison-data-note"'), "comparison hero must link its asterisk to the data note")
+  assert(template.include?('id="comparison-data-note"'), "comparison data note must sit in the hero")
+  assert(template.include?("publicly available vendor materials accessed"), "comparison note must describe the source access date")
+  assert(!template.match?(/facts reviewed|source-backed review/i), "comparison hero must not imply a formal fact review")
+end
+assert(!comparison_layout.include?("Competitor facts on this page were checked"), "vendor sources must use neutral access-date wording")
+assert(!comparison_index.match?(/reviewed August 20, 2026/i), "comparison hub must not label the access date as a review date")
 
 head = read("_includes/head.html")
 default_layout = read("_layouts/default.html")

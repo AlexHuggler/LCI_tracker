@@ -17,11 +17,15 @@ layout: default
 
 <section class="hero-gradient py-16 sm:py-24">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <p class="text-sm font-semibold uppercase tracking-wider text-blue-100">Facts reviewed {{ competitor.verified_at | date: "%B %-d, %Y" }}</p>
-    <h1 class="mt-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">PoolFlow vs {{ competitor.name }}</h1>
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">PoolFlow vs {{ competitor.name }}<sup><a href="#comparison-data-note" class="ml-1 text-xl sm:text-2xl align-super text-blue-100 hover:text-white" aria-label="See comparison data note">*</a></sup></h1>
     <p class="mt-6 text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">{{ page.intro }}</p>
   </div>
 </section>
+<div class="border-b border-gray-100 bg-white">
+  <p id="comparison-data-note" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs leading-relaxed text-gray-500">
+    * Comparison data reflects publicly available vendor materials accessed {{ competitor.verified_at | date: "%B %-d, %Y" }}. Prices, features, and plan availability may change; consult the linked vendor sources for current details.
+  </p>
+</div>
 
 <section class="py-16 sm:py-20 bg-white">
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,7 +57,7 @@ layout: default
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-3xl mx-auto mb-12">
       <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-pool-dark">Documented feature comparison</h2>
-      <p class="mt-4 text-gray-700">A check mark means a capability is documented in the reviewed sources. “Not verified” means the public material was inconclusive—not that the capability is unavailable.</p>
+      <p class="mt-4 text-gray-700">A check mark means a capability is documented in the linked sources. “Not verified” means the public material was inconclusive—not that the capability is unavailable.</p>
     </div>
     {% include comparison-feature-table.html competitor=competitor %}
   </div>
@@ -80,7 +84,7 @@ layout: default
 <section class="py-16 bg-pool-section">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-2xl font-bold text-pool-dark">Vendor sources</h2>
-    <p class="mt-3 text-gray-700">Competitor facts on this page were checked against these first-party pages on {{ competitor.verified_at | date: "%B %-d, %Y" }}:</p>
+    <p class="mt-3 text-gray-700">The publicly available first-party pages used for this comparison were accessed on {{ competitor.verified_at | date: "%B %-d, %Y" }}:</p>
     <ul class="mt-5 space-y-3">
       {% for source in competitor.sources %}
       <li><a class="text-pool-blue font-medium hover:underline" href="{{ source.url }}" rel="noopener noreferrer">{{ source.label }} &rarr;</a></li>

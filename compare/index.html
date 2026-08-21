@@ -18,10 +18,12 @@ faq:
   - question: "Can Jobber be used for pool service?"
     answer: "Yes. Jobber provides scheduling, route optimization on eligible plans, a client hub, quoting, invoicing, and job costing on higher plans. Its public feature list does not document native pool-water LSI or chemical-dosing tools, so technicians who need those tools should account for a separate workflow or choose pool-specific software."
   - question: "How much does pool service software cost?"
-    answer: "Pricing models differ enough that a single route-size estimate can be misleading. Vendors may charge by serviced location, user, plan, or region, and some use custom quotes. The table on this page lists each vendor's published starting price or pricing model as reviewed August 20, 2026."
-  - question: "How are the competitor claims on this page verified?"
-    answer: "We review first-party vendor pricing, product, and help-center pages; record the review date; qualify plan-specific features; and label inconclusive items as not verified. Not verified does not mean unavailable. Prices and features can change, so the linked vendor page remains the final authority."
+    answer: "Pricing models differ enough that a single route-size estimate can be misleading. Vendors may charge by serviced location, user, plan, or region, and some use custom quotes. The table on this page lists each vendor's published starting price or pricing model reflected in publicly available materials accessed August 20, 2026."
+  - question: "How is the comparison information maintained?"
+    answer: "We use first-party vendor pricing, product, and help-center pages; record the access date; qualify plan-specific features; and label inconclusive items as not verified. Not verified does not mean unavailable. Prices and features can change, so the linked vendor page remains the final authority."
 ---
+
+{%- assign comparison_data_date = site.data.competitors | map: "verified_at" | sort | last -%}
 
 <nav aria-label="Breadcrumb" class="breadcrumb-nav bg-gray-50 pt-24 pb-3">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,8 +37,7 @@ faq:
 
 <section class="hero-gradient py-16 sm:py-24">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <p class="text-sm font-semibold uppercase tracking-wider text-blue-100">Source-backed review · August 20, 2026</p>
-    <h1 class="mt-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">Pool Service Software Compared</h1>
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">Pool Service Software Compared<sup><a href="#comparison-data-note" class="ml-1 text-xl sm:text-2xl align-super text-blue-100 hover:text-white" aria-label="See comparison data note">*</a></sup></h1>
     <p class="mt-6 text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">
       Compare documented features, plan limits, and published pricing models. Where a vendor's public material is inconclusive, we say “not verified” instead of assuming the feature is unavailable.
     </p>
@@ -45,6 +46,11 @@ faq:
     </div>
   </div>
 </section>
+<div class="border-b border-gray-100 bg-white">
+  <p id="comparison-data-note" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs leading-relaxed text-gray-500">
+    * Comparison data reflects publicly available vendor materials accessed {{ comparison_data_date | date: "%B %-d, %Y" }}. Prices, features, and plan availability may change; consult the linked vendor sources for current details.
+  </p>
+</div>
 
 <section class="py-20 sm:py-28 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,7 +111,7 @@ faq:
       </div>
       {% endfor %}
     </div>
-    <p class="mt-6 text-center text-xs text-gray-500">USD unless the vendor states otherwise. Reviewed August 20, 2026; check the linked vendor source before purchasing.</p>
+    <p class="mt-6 text-center text-xs text-gray-500">USD unless the vendor states otherwise. Check the linked vendor source before purchasing.</p>
   </div>
 </section>
 
@@ -142,7 +148,7 @@ faq:
       <li>A check mark means the feature was documented. Missing public detail is labeled “not verified,” not “unavailable.”</li>
       <li>Plan-specific and partial capabilities are labeled in the table.</li>
       <li>Prices are presented as published models rather than invented route-size estimates.</li>
-      <li>Every competitor record includes sources and a review date. Corrections are welcomed at <a class="text-pool-blue hover:underline" href="mailto:contact@poolflowapp.com">contact@poolflowapp.com</a>.</li>
+      <li>Every competitor record includes sources and an access date. Corrections are welcomed at <a class="text-pool-blue hover:underline" href="mailto:contact@poolflowapp.com">contact@poolflowapp.com</a>.</li>
     </ol>
   </div>
 </section>
