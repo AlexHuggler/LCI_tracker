@@ -6,12 +6,12 @@
   description: "Exact dosing recommendations calculated from your actual chemical inventory and costs. Your chemicals, your prices."
   icon: "beaker"
 
-- title: "Sub-2-Minute Quick Log"
-  description: "Log a pool visit in under 2 minutes. Pre-filled readings from last visit, one-tap completion, proof-of-service photos."
+- title: "Quick Service Log"
+  description: "Use pre-filled readings from the last visit, one-tap completion, and proof-of-service photos. Actual logging time depends on the service."
   icon: "clipboard-check"
 
 - title: "Route Optimization"
-  description: "Save hours every week. Nearest-neighbor + 2-opt algorithm with Apple Maps driving time estimates."
+  description: "Nearest-neighbor seeding plus 2-opt optimization with Apple Maps driving-time estimates. Results depend on route density, traffic, and access constraints."
   icon: "map"
 
 - title: "Profit Analytics"

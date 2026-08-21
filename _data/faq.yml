@@ -1,8 +1,8 @@
 - question: "How does PoolFlow compare to Skimmer?"
-  answer: "Skimmer charges $98/mo base + $2/pool. At 40 pools, that's $178/mo. PoolFlow is $29.99/mo flat with no per-pool fees — and includes money-loser detection and LSI-linked dosing that Skimmer doesn't offer. Verify both vendors' current terms before deciding."
+  answer: "Both products are built for pool service. Skimmer documents Orenda-powered LSI and dosing plus route optimization on Scaling Up and higher plans, along with invoicing and a customer portal. PoolFlow emphasizes offline-first fieldwork, cost-linked dosing, and per-pool margin at a flat subscription price."
 
 - question: "Is $29.99/mo really everything?"
-  answer: "Yes. No per-pool fees. No per-tech fees. No add-on charges. Unlimited pools, all features, one price. The annual plan is $24.99/mo ($299.99/yr) — less than one pool's monthly service fee."
+  answer: "PoolFlow Pro is $29.99 per month with unlimited pools and no per-pool or per-technician fee. An annual option is also shown in the app; the App Store purchase screen is the final authority for the current price and trial."
 
 - question: "How long does it take to switch from another app?"
   answer: "PoolFlow supports CSV import for pool names, addresses, service days, fees, and specifications. The time required depends on the quality and format of the source file; review the preview and keep a backup before importing."
@@ -17,7 +17,7 @@
   answer: "Yes. PoolFlow supports CSV import for your customer and pool data. You can import names, addresses, service fees, and pool specifications from a spreadsheet."
 
 - question: "I'm on Jobber or another general FSM. Is PoolFlow better?"
-  answer: "Jobber is a general field service tool — great for HVAC and plumbing, but it has zero pool-specific features. No LSI, no chemical dosing, no per-pool profit tracking. And route optimization on Jobber requires the $169/mo plan. PoolFlow includes it at $29.99."
+  answer: "It depends on your workflow. Jobber documents client management, quotes, invoicing, payments, route optimization on Connect and higher plans, and job costing on Grow and higher plans. Its public feature list does not document native pool-water LSI or chemical dosing. PoolFlow is more focused on chemistry, offline poolside work, and per-pool margin."
 
 - question: "How does route optimization save time?"
   answer: "PoolFlow uses a nearest-neighbor seeding algorithm improved with 2-opt optimization, combined with Apple Maps driving-time estimates. Actual savings depend on route density, traffic, access windows, and the starting order."
@@ -32,4 +32,4 @@
   answer: "If you cancel Pro, you keep access until the end of your billing period. After that, you return to the free tier (5 pool limit). All your data remains on your device — nothing is deleted."
 
 - question: "Does PoolFlow support multiple languages?"
-  answer: "Yes. PoolFlow supports English, Spanish, French, Portuguese, and German. The app detects your device language automatically, or you can override it in Settings."
+  answer: "Yes. PoolFlow supports English, Spanish, French, German, Portuguese, and Dutch. The app detects your device language automatically, or you can override it in Settings."

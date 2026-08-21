@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 require "yaml"
+require "date"
 
 ROOT = File.expand_path("..", __dir__)
 
@@ -16,12 +17,41 @@ end
 market_path = File.join(ROOT, "_data/market.yml")
 market = File.exist?(market_path) ? YAML.load_file(market_path) : {}
 languages = YAML.load_file(File.join(ROOT, "_data/languages.yml"))
+competitors = YAML.load_file(File.join(ROOT, "_data/competitors.yml"))
 
 assert(market.dig("app_store", "url") == "https://apps.apple.com/app/id6759516755", "use one neutral App Store URL")
 assert(market.dig("app_store", "au_url") == "https://apps.apple.com/au/app/poolflow-pool-service-pro/id6759516755", "use the AU storefront only for AU acquisition pages")
 assert(market.dig("pricing", "trial_days") == 30, "centralize the 30-day trial")
 assert(market.dig("pricing", "monthly", "price") == "29.99", "centralize monthly pricing")
 assert(languages.none? { |language| language.key?("app_store_url") }, "do not use country-specific App Store URLs")
+
+competitors.each do |competitor|
+  label = competitor.fetch("name")
+  begin
+    verified_at = Date.iso8601(competitor.fetch("verified_at"))
+  rescue KeyError, Date::Error
+    verified_at = nil
+  end
+  assert(verified_at, "#{label} comparison must record a valid ISO verification date")
+  assert(verified_at <= Date.today, "#{label} comparison verification date cannot be in the future")
+  sources = competitor.fetch("sources", [])
+  assert(!sources.empty?, "#{label} comparison must cite at least one first-party source")
+  sources.each do |source|
+    assert(source["label"].to_s.strip != "", "#{label} source must have a label")
+    assert(source["url"].to_s.start_with?("https://"), "#{label} source must use an HTTPS URL")
+  end
+  pricing = competitor.fetch("pricing")
+  %w[card_value card_note summary].each do |field|
+    assert(pricing[field].to_s.strip != "", "#{label} pricing must include #{field}")
+  end
+  assert(!pricing.key?("examples"), "#{label} must not use unsourced pool-count price examples")
+end
+
+%w[_includes/comparison-matrix.html _includes/comparison-feature-table.html].each do |path|
+  template = read(path)
+  assert(template.include?("Not verified"), "#{path} must distinguish unknown features from unavailable features")
+  assert(template.include?("== false"), "#{path} must reserve the red X for explicitly false feature data")
+end
 
 head = read("_includes/head.html")
 default_layout = read("_layouts/default.html")

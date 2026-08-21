@@ -1,0 +1,123 @@
+---
+layout: default
+---
+{%- assign competitor = site.data.competitors | where: "slug", page.competitor_slug | first -%}
+
+<nav aria-label="Breadcrumb" class="breadcrumb-nav bg-gray-50 pt-24 pb-3">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <ol class="flex flex-wrap items-center gap-1 text-sm text-gray-500">
+      <li><a href="/">Home</a></li>
+      <li><span class="mx-1">/</span></li>
+      <li><a href="/compare/">Compare</a></li>
+      <li><span class="mx-1">/</span></li>
+      <li class="text-gray-900 font-medium">PoolFlow vs {{ competitor.name }}</li>
+    </ol>
+  </div>
+</nav>
+
+<section class="hero-gradient py-16 sm:py-24">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="text-sm font-semibold uppercase tracking-wider text-blue-100">Facts reviewed {{ competitor.verified_at | date: "%B %-d, %Y" }}</p>
+    <h1 class="mt-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">PoolFlow vs {{ competitor.name }}</h1>
+    <p class="mt-6 text-lg text-blue-100 max-w-3xl mx-auto leading-relaxed">{{ page.intro }}</p>
+  </div>
+</section>
+
+<section class="py-16 sm:py-20 bg-white">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <article class="rounded-2xl border-2 border-emerald-500 bg-emerald-50 p-8">
+        <p class="text-sm font-semibold uppercase tracking-wider text-emerald-700">PoolFlow Pro</p>
+        <p class="mt-2 text-4xl font-bold text-pool-dark">$29.99/mo</p>
+        <p class="mt-2 text-sm text-gray-600">Flat price with unlimited pools; a five-pool free tier is available.</p>
+        <ul class="mt-6 space-y-3 text-sm text-gray-700">
+          <li>LSI with CYA correction and chemical dosing</li>
+          <li>Offline-first field workflow and route optimization</li>
+          <li>Cost-linked inventory and per-pool profit analytics</li>
+        </ul>
+      </article>
+      <article class="rounded-2xl border border-gray-200 bg-pool-section p-8">
+        <p class="text-sm font-semibold uppercase tracking-wider text-gray-600">{{ competitor.name }}</p>
+        <p class="mt-2 text-4xl font-bold text-pool-dark">{{ competitor.pricing.card_value }}</p>
+        <p class="mt-2 text-sm text-gray-600">{{ competitor.pricing.summary }}.</p>
+        <ul class="mt-6 space-y-3 text-sm text-gray-700">
+          {% for highlight in competitor.highlights %}<li>{{ highlight }}</li>{% endfor %}
+        </ul>
+      </article>
+    </div>
+    <p class="mt-6 text-sm text-gray-600"><strong>Pricing context:</strong> {{ competitor.pricing.card_note }}. Prices, promotions, and plan eligibility can change; check the linked vendor source before buying.</p>
+  </div>
+</section>
+
+<section class="py-20 sm:py-28 bg-pool-section">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-pool-dark">Documented feature comparison</h2>
+      <p class="mt-4 text-gray-700">A check mark means a capability is documented in the reviewed sources. “Not verified” means the public material was inconclusive—not that the capability is unavailable.</p>
+    </div>
+    {% include comparison-feature-table.html competitor=competitor %}
+  </div>
+</section>
+
+<section class="py-20 sm:py-28 bg-white">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="rounded-2xl border border-gray-200 p-8">
+        <h2 class="text-2xl font-bold text-pool-dark">PoolFlow may fit if…</h2>
+        <p class="mt-4 text-gray-700 leading-relaxed">{{ page.poolflow_fit }}</p>
+      </div>
+      <div class="rounded-2xl border border-gray-200 p-8">
+        <h2 class="text-2xl font-bold text-pool-dark">{{ competitor.name }} may fit if…</h2>
+        <p class="mt-4 text-gray-700 leading-relaxed">{{ page.competitor_fit }}</p>
+      </div>
+    </div>
+    <div class="mt-8 bg-blue-50 border border-blue-100 rounded-2xl p-6 text-sm text-gray-700">
+      <strong>Qualification:</strong> {{ competitor.caveat }}
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-pool-section">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold text-pool-dark">Vendor sources</h2>
+    <p class="mt-3 text-gray-700">Competitor facts on this page were checked against these first-party pages on {{ competitor.verified_at | date: "%B %-d, %Y" }}:</p>
+    <ul class="mt-5 space-y-3">
+      {% for source in competitor.sources %}
+      <li><a class="text-pool-blue font-medium hover:underline" href="{{ source.url }}" rel="noopener noreferrer">{{ source.label }} &rarr;</a></li>
+      {% endfor %}
+    </ul>
+    <p class="mt-5 text-sm text-gray-600">If a vendor changes a price or feature, please send the current first-party link to <a class="text-pool-blue hover:underline" href="mailto:contact@poolflowapp.com">contact@poolflowapp.com</a>.</p>
+  </div>
+</section>
+
+{% if page.faq %}
+<section class="py-20 sm:py-28 bg-white">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-pool-dark text-center mb-12">Frequently asked questions</h2>
+    <div class="space-y-5">
+      {% for item in page.faq %}
+      <article class="rounded-xl border border-gray-200 p-6">
+        <h3 class="font-bold text-pool-dark">{{ item.question }}</h3>
+        <p class="mt-3 text-gray-700 leading-relaxed">{{ item.answer }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{% for item in page.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | jsonify }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.answer | jsonify }} }
+    }{% unless forloop.last %},{% endunless %}{% endfor %}]
+}
+</script>
+{% endif %}
+
+{% include schema-software.html %}
+{% include schema-comparison.html %}

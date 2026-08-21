@@ -25,15 +25,15 @@
           Know Your Water. Know Your Route.<br>
           Know Which Pools Pay.
           {% else %}
-          You Have Pools Losing You Money.<br>
-          You Just Can't See Them Yet.
+          Know Your Water.<br>
+          Know Your Route. Know Your Money.
           {% endif %}
         </h1>
         <p class="mt-6 text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
           {% if is_au %}
           Built for Australian sole traders: service rounds, water testing, dosing in litres, route optimisation and per-pool margin—without fleet-software overhead.
           {% else %}
-          Most solo techs have 2-3 pools where chemical costs eat past 30% of the service fee — that's $100-200/mo in margin, gone, every month. PoolFlow finds them.
+          Connect service fees, recorded chemical costs, water readings, and route work so you can review each pool's chemistry and margin from the field.
           {% endif %}
         </p>
 
@@ -42,7 +42,7 @@
           <p class="text-sm font-medium text-blue-100 mb-3">Available now on the App Store.</p>
           <a href="{{ market_store_url }}" class="inline-flex max-w-full items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-normal">
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            {% if is_au %}Open the Australian App Store — Free for 5 Pools{% else %}Find Your Money-Loser Pools — Free for {{ market_price.trial_days }} Days{% endif %}
+            {% if is_au %}Open the Australian App Store — Free for 5 Pools{% else %}Try PoolFlow Pro Free for {{ market_price.trial_days }} Days{% endif %}
           </a>
         </div>
 
@@ -124,13 +124,14 @@
         <p class="text-3xl sm:text-4xl font-bold text-red-400">Office overhead</p>
         <p class="mt-2 text-sm text-gray-500">Dispatch, staff and per-user complexity</p>
         {% else %}
-        <p class="text-sm font-medium uppercase tracking-wider text-gray-400 mb-2">40 pools elsewhere</p>
-        <p class="text-4xl sm:text-5xl font-bold text-red-400">$178<span class="text-lg font-normal text-gray-400">/mo</span></p>
-        <p class="mt-2 text-sm text-gray-500">Base fee + $2/pool/mo</p>
+        <p class="text-sm font-medium uppercase tracking-wider text-gray-400 mb-2">Competitor pricing</p>
+        <p class="text-3xl sm:text-4xl font-bold text-white">Varies by plan</p>
+        <p class="mt-2 text-sm text-gray-400">May be billed by user, location, plan, or quote</p>
+        <a href="/compare/" class="mt-3 inline-block text-sm font-medium text-blue-300 hover:underline">See sourced comparisons &rarr;</a>
         {% endif %}
       </div>
       <div class="bg-gray-800 rounded-2xl p-6 sm:p-8 ring-2 ring-emerald-500/50">
-        <p class="text-sm font-medium uppercase tracking-wider text-gray-400 mb-2">40 pools on PoolFlow</p>
+        <p class="text-sm font-medium uppercase tracking-wider text-gray-400 mb-2">PoolFlow Pro</p>
         <p class="text-4xl sm:text-5xl font-bold text-emerald-400">{{ market_symbol }}{{ market_price.monthly.price }}<span class="text-lg font-normal text-gray-400">/mo</span></p>
         <p class="mt-2 text-sm text-emerald-400/80">Every feature. Every pool. {% if is_au %}Flat Australian price.{% else %}Flat price.{% endif %}</p>
       </div>
@@ -166,7 +167,7 @@
         </div>
         <h3 class="text-xl font-bold text-pool-dark mb-3">Spot Money-Loser Pools Automatically</h3>
         <p class="text-gray-700 leading-relaxed mb-4">
-          Flags every pool where chemical costs eat past 30% of your service fee. See which pools to reprice, reroute, or drop.
+          Uses a 30% chemical-cost threshold to flag pools for review. See the service fee and recorded chemical spend behind each result.
         </p>
         <span class="inline-block text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5">
           Uses your recorded fees and chemical costs
@@ -201,7 +202,7 @@
           {% if is_au %}Nearest-neighbour + 2-opt algorithm with Apple Maps ETAs. Works without mobile reception — in backyards, gated properties and regional stops.{% else %}Nearest-neighbor + 2-opt algorithm with Apple Maps ETAs. Works without cell signal — in backyards, gated communities, and rural stops.{% endif %}
         </p>
         <span class="inline-block text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5">
-          {% if is_au %}Route optimisation is included—without a fleet or dispatch module.{% else %}Jobber charges $169/mo for routing that dies without WiFi. This is included.{% endif %}
+          {% if is_au %}Route optimisation is included—without a fleet or dispatch module.{% else %}Route optimization is included in PoolFlow Pro.{% endif %}
         </span>
       </article>
 
@@ -217,7 +218,7 @@
           No per-pool fees. No per-tech fees. 40 pools or 80 — same flat price.
         </p>
         <span class="inline-block text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5">
-          {% if is_au %}Designed for a sole trader, with no per-pool or per-technician charge.{% else %}Skimmer charges $2/pool/mo. At 40 pools that's $80/mo just in pool fees.{% endif %}
+          {% if is_au %}Designed for a sole trader, with no per-pool or per-technician charge.{% else %}PoolFlow Pro uses a flat subscription rather than per-location billing.{% endif %}
         </span>
       </article>
 
@@ -245,7 +246,7 @@
         </div>
         <div class="flex items-center gap-2">
           <svg class="w-4 h-4 text-pool-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-          {% if is_au %}Fast, pre-filled service logging{% else %}Sub-2-min service logging (pre-filled){% endif %}
+          Fast, pre-filled service logging
         </div>
         <div class="flex items-center gap-2">
           <svg class="w-4 h-4 text-pool-blue flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
@@ -268,11 +269,11 @@
         <p class="text-4xl sm:text-5xl font-bold text-pool-dark">Routes + chemistry + margin</p>
       </div>
       <div>
-        <p class="text-sm font-medium uppercase tracking-wider text-gray-500 mb-2">What competitors charge for less</p>
+        <p class="text-sm font-medium uppercase tracking-wider text-gray-500 mb-2">{% if is_au %}Alternative software structures{% else %}Published competitor pricing{% endif %}</p>
         {% if is_au %}
         <p class="text-3xl sm:text-4xl font-bold text-gray-400">Fleet modules + per-user overhead</p>
         {% else %}
-        <p class="text-4xl sm:text-5xl font-bold text-gray-400">$98-178<span class="text-xl font-normal text-gray-400">/mo</span></p>
+        <p class="text-3xl sm:text-4xl font-bold text-gray-400">Varies by plan, user, location, or quote</p>
         {% endif %}
       </div>
       <div>
@@ -358,7 +359,7 @@
         <!-- Most Popular Badge -->
         <div class="absolute -top-4 left-1/2 -translate-x-1/2">
           <span class="inline-block bg-pool-blue text-white text-sm font-semibold px-4 py-1 rounded-full">
-            Most Popular
+            Monthly Billing
           </span>
         </div>
         <h3 class="text-xl font-bold text-pool-dark mt-2">Pro Monthly</h3>
@@ -366,7 +367,7 @@
           <span class="text-4xl sm:text-5xl md:text-3xl lg:text-5xl font-bold text-pool-dark">{{ market_symbol }}{{ market_price.monthly.price }}</span>
           <span class="text-gray-500">/month</span>
         </div>
-        <p class="mt-1 text-sm text-gray-500 italic">{% if is_au %}Flat monthly subscription{% else %}That's less than one pool's monthly service fee{% endif %}</p>
+        <p class="mt-1 text-sm text-gray-500 italic">Flat monthly subscription</p>
         <p class="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-pool-blue bg-pool-light rounded-full px-3 py-1">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           {% if is_au %}Approx. {{ market_price.trial_days }}-day introductory period{% else %}{{ market_price.trial_days }}-day free trial{% endif %}
@@ -454,7 +455,7 @@
             <span class="text-gray-500">/year</span>
           </div>
         {% endif %}
-        <p class="mt-1 text-sm text-gray-500 italic">{% if is_au %}Lower effective monthly price{% else %}One pool covers a full year{% endif %}</p>
+        <p class="mt-1 text-sm text-gray-500 italic">Same Pro features, billed annually</p>
         {% if market_price.annual.sale_active %}
           <p class="mt-1 text-sm text-gray-700">{{ market_symbol }}{{ market_price.annual.monthly_equivalent }}/mo billed annually</p>
         {% else %}
@@ -475,7 +476,7 @@
             <svg class="w-5 h-5 text-pool-green flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
             </svg>
-            <span class="text-gray-700 text-sm">{% if is_au %}Best value — about {{ market_symbol }}{{ market_price.annual.monthly_equivalent }}/month billed annually{% else %}Best value — 2 months free{% endif %}</span>
+            <span class="text-gray-700 text-sm">Annual billing discount shown above</span>
           </li>
         </ul>
         <a href="{{ market_store_url }}" class="mt-8 block w-full text-center px-6 py-3 rounded-full border-2 border-pool-blue text-pool-blue font-semibold hover:bg-pool-blue hover:text-white transition-colors">
@@ -505,10 +506,10 @@
       {% if is_au %}Eligible customers can use PoolFlow during Apple's approximately {{ market_price.trial_days }}-day introductory period. Log services, optimise your route and review per-pool margin.{% else %}Use PoolFlow on your real pools for {{ market_price.trial_days }} days. Log services, optimize your route and review per-pool margin.{% endif %}
     </p>
     <p class="mt-4 text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
-      If it doesn't pay for itself, cancel with one tap. You keep everything you logged — every reading, every photo, every service record.
+      If Pro is not right for you, manage or cancel the subscription through Apple. Your locally stored service records remain on your device.
     </p>
     <p class="mt-4 text-lg font-semibold text-pool-dark">
-      {% if is_au %}Review Apple's current eligibility and terms before starting.{% else %}There is no scenario where you lose by trying.{% endif %}
+      {% if is_au %}Review Apple's current eligibility and terms before starting.{% else %}Review the five-pool free tier first, or use the Pro trial on your own workflow before the paid period begins.{% endif %}
     </p>
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="{{ market_store_url }}" class="inline-flex max-w-full items-center justify-center gap-2 bg-pool-blue text-white font-semibold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity shadow-lg text-lg whitespace-normal">
@@ -565,7 +566,7 @@
           {% if is_au %}
           <p>PoolFlow focuses on the poolside workflow for one technician: routes, service records, water testing, dosing and per-pool margin. Broader Australian platforms may be a better fit when you need invoicing, point of sale, staff permissions or fleet dispatch. <a href="/au/compare/" class="text-pool-blue hover:underline font-medium">Compare Australian options &rarr;</a></p>
           {% else %}
-          <p>Skimmer charges $98/mo base + $2/pool. At 40 pools, that's $178/mo. PoolFlow is $29.99/mo flat with no per-pool fees — and includes money-loser detection and LSI-linked dosing that Skimmer doesn't offer. Verify both vendors' current terms before deciding. <a href="/compare/poolflow-vs-skimmer/" class="text-pool-blue hover:underline font-medium">See the full PoolFlow vs Skimmer comparison &rarr;</a></p>
+          <p>Both products are built for pool service. Skimmer documents Orenda-powered LSI and dosing plus route optimization on Scaling Up and higher plans, along with invoicing and a customer portal. PoolFlow emphasizes offline-first fieldwork, cost-linked dosing, and per-pool margin at a flat subscription price. <a href="/compare/poolflow-vs-skimmer/" class="text-pool-blue hover:underline font-medium">See the sourced PoolFlow vs Skimmer comparison &rarr;</a></p>
           {% endif %}
         </div>
       </div>
@@ -635,7 +636,7 @@
           {% if is_au %}
           <p>PoolFlow is designed for a sole trader or solo technician who wants a focused field tool. If you need payroll, employee tracking, central dispatch, invoicing or a customer portal, choose a broader operations platform. <a href="/au/pool-service-software-for-sole-traders/" class="text-pool-blue hover:underline font-medium">See the sole-trader workflow &rarr;</a></p>
           {% else %}
-          <p>Jobber is a general field service tool — great for HVAC and plumbing, but it has zero pool-specific features. No LSI, no chemical dosing, no per-pool profit tracking. And route optimization on Jobber requires the $169/mo plan. PoolFlow includes it at $29.99. <a href="/compare/poolflow-vs-jobber/" class="text-pool-blue hover:underline font-medium">See the full PoolFlow vs Jobber comparison &rarr;</a></p>
+          <p>It depends on your workflow. Jobber documents client management, quotes, invoicing, payments, route optimization on Connect and higher plans, and job costing on Grow and higher plans. Its public feature list does not document native pool-water LSI or chemical dosing. PoolFlow is the more focused option when chemistry, offline poolside work, and per-pool margin are the priority. <a href="/compare/poolflow-vs-jobber/" class="text-pool-blue hover:underline font-medium">See the sourced PoolFlow vs Jobber comparison &rarr;</a></p>
           {% endif %}
         </div>
       </div>
@@ -732,7 +733,7 @@
         "name": "How does PoolFlow compare to Skimmer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Skimmer charges $98/mo base + $2/pool. At 40 pools, that's $178/mo. PoolFlow is $29.99/mo flat with no per-pool fees — and includes money-loser detection and LSI-linked dosing that Skimmer doesn't offer. Verify both vendors' current terms before deciding."
+          "text": "Both products are built for pool service. Skimmer documents Orenda-powered LSI and dosing plus route optimization on Scaling Up and higher plans, along with invoicing and a customer portal. PoolFlow emphasizes offline-first fieldwork, cost-linked dosing, and per-pool margin at a flat subscription price."
         }
       },
       {
@@ -780,7 +781,7 @@
         "name": "I'm on Jobber or another general FSM. Is PoolFlow better?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Jobber is a general field service tool — great for HVAC and plumbing, but it has zero pool-specific features. No LSI, no chemical dosing, no per-pool profit tracking. And route optimization on Jobber requires the $169/mo plan. PoolFlow includes it at $29.99."
+          "text": "It depends on your workflow. Jobber documents client management, quotes, invoicing, payments, route optimization on Connect and higher plans, and job costing on Grow and higher plans. Its public feature list does not document native pool-water LSI or chemical dosing. PoolFlow is the more focused option when chemistry, offline poolside work, and per-pool margin are the priority."
         }
       },
       {
@@ -855,7 +856,7 @@
 <section id="cta" class="hero-gradient py-20 sm:py-28">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
-      One Pool Covers a Full Year of PoolFlow.
+      Run Your Route With PoolFlow.
     </h2>
     <p class="mt-6 text-lg sm:text-xl text-blue-100 leading-relaxed">
       {% if market_price.annual.sale_active %}{{ market_symbol }}{{ market_price.annual.monthly_equivalent }}/mo on annual — {{ market_symbol }}{{ market_price.annual.sale_price }}/yr, save {{ market_symbol }}{{ market_price.annual.savings }}.{% else %}{{ market_symbol }}{{ market_price.annual.regular_price }}/yr on annual ({{ market_symbol }}{{ market_price.annual.monthly_equivalent }}/mo).{% endif %} Every feature. Every pool. No per-pool fees. {% if is_au %}Apple shows an approximately {{ market_price.trial_days }}-day introductory period for eligible customers.{% else %}Try free for {{ market_price.trial_days }} days.{% endif %}
