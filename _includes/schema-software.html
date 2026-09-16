@@ -10,7 +10,7 @@
   "availableLanguage": ["en", "es", "fr", "de", "pt", "nl"],
   "url": "https://poolflowapp.com",
   "sameAs": [{{ site.data.market.app_store.url | jsonify }}],
-  "description": "All-in-one pool service management app for solo pool techs and pool service providers — with real-time LSI calculator, chemical dosing, route optimization, and profit analytics.",
+  "description": "Pool service management app for solo pool techs and pool service providers — with real-time LSI calculation, chemical dosing, route optimization, and account-review flags based on service fees and recorded chemical costs.",
   "offers": [
     { "@type": "Offer", "price": {{ site.data.market.pricing.free.price | jsonify }}, "priceCurrency": {{ site.data.market.pricing.currency | jsonify }}, "description": "Free tier — up to {{ site.data.market.pricing.free.pool_limit }} pools" },
     { "@type": "Offer", "price": {{ site.data.market.pricing.monthly.price | jsonify }}, "priceCurrency": {{ site.data.market.pricing.currency | jsonify }}, "description": "Pro Monthly — unlimited pools, all features" },
@@ -20,7 +20,7 @@
     "Real-time LSI calculation with CYA correction",
     "Chemical dosing recommendations with cost tracking",
     "Route optimization with nearest-neighbor and 2-opt algorithms",
-    "Profit analytics with money-loser detection",
+    "Account-review flags based on a 30% chemical-cost threshold",
     "Service logging with proof-of-service photos",
     "Chemical inventory tracking with low-stock alerts",
     "CSV import/export and PDF reports",

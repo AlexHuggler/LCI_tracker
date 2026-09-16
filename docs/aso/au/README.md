@@ -9,7 +9,7 @@ Status: local working package only. Nothing in this directory is an App Store Co
 | Locale | `en-AU` | required |
 | App name | `PoolFlow: Pool Service Pro` | 26 / 30 characters; preserve the existing global title |
 | Subtitle | `Routes, Logs & Water Testing` | 28 / 30 characters |
-| Promotional text | `Built for solo Australian pool techs: offline routes, service logs, LSI dosing and per-pool profit—without fleet-software overhead. Free for 5 pools.` | exact approved, price-free copy; 149 / 170 characters |
+| Promotional text | `Built for solo Australian pool techs: offline routes, service logs, LSI dosing, plus service fees and chemical costs—without fleet overhead. Free for 5 pools.` | exact approved, price-free copy; 158 / 170 characters |
 | Keywords | `maintenance,cleaning,technician,software,planner,LSI,calculator,dosing,offline` | 78 / 100 UTF-8 bytes; preserves the approved starting field and avoids exact title/subtitle duplication |
 | Description / What’s New | [metadata.json](metadata.json) | validated locally |
 

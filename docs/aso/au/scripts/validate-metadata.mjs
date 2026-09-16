@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const APPROVED_PRICE_FREE_PROMOTIONAL_TEXT =
-  "Built for solo Australian pool techs: offline routes, service logs, LSI dosing and per-pool profit—without fleet-software overhead. Free for 5 pools.";
+  "Built for solo Australian pool techs: offline routes, service logs, LSI dosing, plus service fees and chemical costs—without fleet overhead. Free for 5 pools.";
 
 const limits = {
   name: 30,

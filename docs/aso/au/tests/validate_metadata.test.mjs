@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 import { validateMetadata } from "../scripts/validate-metadata.mjs";
 
 const approvedPromo =
-  "Built for solo Australian pool techs: offline routes, service logs, LSI dosing and per-pool profit—without fleet-software overhead. Free for 5 pools.";
+  "Built for solo Australian pool techs: offline routes, service logs, LSI dosing, plus service fees and chemical costs—without fleet overhead. Free for 5 pools.";
 
 test("the checked-in AU metadata file is valid", () => {
   const here = path.dirname(fileURLToPath(import.meta.url));

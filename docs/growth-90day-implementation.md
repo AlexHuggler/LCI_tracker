@@ -14,7 +14,7 @@
 - `npm run build:css`
 - `node --test docs/aso/au/tests/validate_metadata.test.mjs`
 - `node docs/aso/au/scripts/validate-metadata.mjs`
-- `bundle exec jekyll build` attempted; blocked before site compilation because Jekyll 3.9 on the installed Ruby 4.0 runtime cannot load the `csv` default gem through this bundle.
+- `bundle exec jekyll build` completed with a temporary Ruby 4 compatibility preload for Jekyll 3.9/Liquid 4 (`csv`, `bigdecimal`, and removed taint APIs); no compatibility files or dependency changes were added to the repository.
 - `git diff --check`
 
 ## Limitations

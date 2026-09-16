@@ -4,7 +4,7 @@ Use the checked-in values in [`metadata.json`](metadata.json) for the `en-AU` li
 
 ## Promotional text
 
-> Built for solo Australian pool techs: offline routes, service logs, LSI dosing and per-pool profit—without fleet-software overhead. Free for 5 pools.
+> Built for solo Australian pool techs: offline routes, service logs, LSI dosing, plus service fees and chemical costs—without fleet overhead. Free for 5 pools.
 
 ## Description
 
