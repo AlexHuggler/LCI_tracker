@@ -42,8 +42,12 @@
           <p class="text-sm font-medium text-blue-100 mb-3">Available now on the App Store.</p>
           <a href="{{ market_store_url }}" class="inline-flex max-w-full items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-normal">
             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-            {% if is_au %}Open the Australian App Store — Free for 5 Pools{% else %}Try PoolFlow Pro Free for {{ market_price.trial_days }} Days{% endif %}
+            {% if is_au %}Open the Australian App Store — Free for 5 Pools{% else %}Start Free — Up to 5 Pools{% endif %}
           </a>
+          <p class="mt-4 text-sm text-blue-100 leading-relaxed">
+            Try PoolFlow on five real pools. I’ll help you set up your first service round and review the results with you.
+            <a href="mailto:contact@poolflowapp.com?subject=PoolFlow%20assisted%20setup" class="font-semibold text-white underline underline-offset-4 hover:text-blue-100">Ask for assisted setup</a>
+          </p>
         </div>
 
         <div class="mt-4">
@@ -165,9 +169,9 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-pool-dark mb-3">Spot Money-Loser Pools Automatically</h3>
+        <h3 class="text-xl font-bold text-pool-dark mb-3">Flag Pools for an Account Review</h3>
         <p class="text-gray-700 leading-relaxed mb-4">
-          Uses a 30% chemical-cost threshold to flag pools for review. See the service fee and recorded chemical spend behind each result.
+          Uses a 30% chemical-cost threshold to flag pools for review. See the service fee and recorded chemical spend behind each result. This is an account-review hint, not a full net-profit calculation.
         </p>
         <span class="inline-block text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-4 py-1.5">
           Uses your recorded fees and chemical costs
@@ -370,7 +374,7 @@
         <p class="mt-1 text-sm text-gray-500 italic">Flat monthly subscription</p>
         <p class="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-pool-blue bg-pool-light rounded-full px-3 py-1">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          {% if is_au %}Approx. {{ market_price.trial_days }}-day introductory period{% else %}{{ market_price.trial_days }}-day free trial{% endif %}
+          Introductory offer may be available; Apple confirms eligibility
         </p>
         <ul class="mt-8 space-y-4">
           <li class="flex items-start gap-3">
@@ -463,7 +467,7 @@
         {% endif %}
         <p class="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-pool-blue bg-pool-light rounded-full px-3 py-1">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          {% if is_au %}Approx. {{ market_price.trial_days }}-day introductory period{% else %}{{ market_price.trial_days }}-day free trial{% endif %}
+          Introductory offer may be available; Apple confirms eligibility
         </p>
         <ul class="mt-8 space-y-4">
           <li class="flex items-start gap-3">
@@ -503,22 +507,26 @@
       Try It on Your Actual Route
     </h2>
     <p class="mt-6 text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
-      {% if is_au %}Eligible customers can use PoolFlow during Apple's approximately {{ market_price.trial_days }}-day introductory period. Log services, optimise your route and review per-pool margin.{% else %}Use PoolFlow on your real pools for {{ market_price.trial_days }} days. Log services, optimize your route and review per-pool margin.{% endif %}
+      Start with five real pools for free. Log services, {% if is_au %}optimise{% else %}optimize{% endif %} your route and review each pool's recorded service fee and chemical spend.
     </p>
     <p class="mt-4 text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
       If Pro is not right for you, manage or cancel the subscription through Apple. Your locally stored service records remain on your device.
     </p>
     <p class="mt-4 text-lg font-semibold text-pool-dark">
-      {% if is_au %}Review Apple's current eligibility and terms before starting.{% else %}Review the five-pool free tier first, or use the Pro trial on your own workflow before the paid period begins.{% endif %}
+      Apple may show an introductory offer for eligible customers. Check the App Store purchase screen for the offer and terms available to your account.
     </p>
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="{{ market_store_url }}" class="inline-flex max-w-full items-center justify-center gap-2 bg-pool-blue text-white font-semibold px-8 py-3.5 rounded-full hover:opacity-90 transition-opacity shadow-lg text-lg whitespace-normal">
         {% if is_au %}Start Free — Up to 5 Pools{% else %}Start Free — 5 Pools, No Card Required{% endif %}
       </a>
       <a href="{{ market_store_url }}" class="inline-flex max-w-full items-center justify-center gap-2 border-2 border-pool-blue text-pool-blue font-semibold px-8 py-3.5 rounded-full hover:bg-pool-blue hover:text-white transition-colors text-lg whitespace-normal">
-        {% if is_au %}View the introductory offer in the App Store{% else %}Or start your free {{ market_price.trial_days }}-day Pro trial{% endif %}
+        Check Pro offer eligibility in the App Store
       </a>
     </div>
+    <p class="mt-8 text-base text-gray-700 leading-relaxed">
+      Try PoolFlow on five real pools. I’ll help you set up your first service round and review the results with you.
+      <a href="mailto:contact@poolflowapp.com?subject=PoolFlow%20assisted%20setup" class="font-semibold text-pool-blue underline underline-offset-4 hover:opacity-80">Email me for assisted setup</a>
+    </p>
   </div>
 </section>
 
@@ -859,12 +867,12 @@
       Run Your Route With PoolFlow.
     </h2>
     <p class="mt-6 text-lg sm:text-xl text-blue-100 leading-relaxed">
-      {% if market_price.annual.sale_active %}{{ market_symbol }}{{ market_price.annual.monthly_equivalent }}/mo on annual — {{ market_symbol }}{{ market_price.annual.sale_price }}/yr, save {{ market_symbol }}{{ market_price.annual.savings }}.{% else %}{{ market_symbol }}{{ market_price.annual.regular_price }}/yr on annual ({{ market_symbol }}{{ market_price.annual.monthly_equivalent }}/mo).{% endif %} Every feature. Every pool. No per-pool fees. {% if is_au %}Apple shows an approximately {{ market_price.trial_days }}-day introductory period for eligible customers.{% else %}Try free for {{ market_price.trial_days }} days.{% endif %}
+      PoolFlow Pro is {{ market_symbol }}{{ market_price.monthly.price }}/month or {% if market_price.annual.sale_active %}{{ market_symbol }}{{ market_price.annual.sale_price }}/year{% else %}{{ market_symbol }}{{ market_price.annual.regular_price }}/year{% endif %}. Every feature. Every pool. No per-pool fees. Apple may show an introductory offer for eligible customers; confirm the offer and terms on the App Store purchase screen.
     </p>
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="{{ market_store_url }}" class="inline-flex max-w-full items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-normal">
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        Start Your Free Trial
+        Start Free — Up to 5 Pools
       </a>
       <a href="{{ market_store_url }}" class="inline-flex max-w-full items-center justify-center gap-2 border-2 border-white text-white font-semibold px-8 py-3.5 rounded-full hover:bg-white hover:text-pool-dark transition-colors text-lg whitespace-normal">
         Or try 5 pools free — no card, no time limit

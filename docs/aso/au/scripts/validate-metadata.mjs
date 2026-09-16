@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 export const APPROVED_PRICE_FREE_PROMOTIONAL_TEXT =
-  "Built for solo Australian pool techs: offline routes, service logs, LSI dosing and per-pool profit—without fleet-software overhead. Free for 5 pools.";
+  "Built for solo Australian pool techs: offline routes, service logs, LSI dosing, plus service fees and chemical costs—without fleet overhead. Free for 5 pools.";
 
 const limits = {
   name: 30,
@@ -82,6 +82,16 @@ export function validateMetadata(metadata) {
     if (!description.includes(marker)) {
       errors.push(`description must include AU marker: ${marker}.`);
     }
+  }
+
+  if (/\b(?:one[- ]week|7[- ]day|30[- ]day)\b/i.test(description)) {
+    errors.push("description must not promise a fixed introductory-offer duration.");
+  }
+  if (/\b(?:US\$|USD)|\$29\.99|\$199\.99/.test(description)) {
+    errors.push("description must not include US pricing.");
+  }
+  if (/introductory offer/i.test(description) && !/eligible/i.test(description)) {
+    errors.push("description must qualify an introductory offer by eligibility.");
   }
 
   return { errors, keywordBytes };
