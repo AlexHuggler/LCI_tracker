@@ -84,6 +84,16 @@ export function validateMetadata(metadata) {
     }
   }
 
+  if (/\b(?:one[- ]week|7[- ]day|30[- ]day)\b/i.test(description)) {
+    errors.push("description must not promise a fixed introductory-offer duration.");
+  }
+  if (/\b(?:US\$|USD)|\$29\.99|\$199\.99/.test(description)) {
+    errors.push("description must not include US pricing.");
+  }
+  if (/introductory offer/i.test(description) && !/eligible/i.test(description)) {
+    errors.push("description must qualify an introductory offer by eligibility.");
+  }
+
   return { errors, keywordBytes };
 }
 

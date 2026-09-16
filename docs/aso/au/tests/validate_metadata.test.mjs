@@ -64,3 +64,23 @@ test("enforces UTF-8 byte limits instead of JavaScript character counts", () => 
   assert.equal(result.keywordBytes, 102);
   assert.match(result.errors.join("\n"), /100 UTF-8 bytes/i);
 });
+
+test("rejects fixed trial durations and US prices in the AU description", () => {
+  const base = {
+    locale: "en-AU",
+    name: "PoolFlow: Pool Service Pro",
+    subtitle: "Routes, Logs & Water Testing",
+    promotionalText: approvedPromo,
+    keywords:
+      "maintenance,cleaning,technician,software,planner,LSI,calculator,dosing,offline",
+    whatsNew: "Stability fixes.",
+  };
+  const result = validateMetadata({
+    ...base,
+    description:
+      "Route optimisation for 50,000 litres. Start a 30-day trial, then pay US$29.99.",
+  });
+
+  assert.match(result.errors.join("\n"), /fixed introductory-offer duration/i);
+  assert.match(result.errors.join("\n"), /US pricing/i);
+});
