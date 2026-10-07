@@ -122,6 +122,14 @@ result strings are injected into the JS via window.PF_LSI_I18N.
     </div>
 
     <p class="mt-8 text-center text-xs text-gray-400 max-w-2xl mx-auto">{{ L.disclaimer }}</p>
+
+    {% if cur_lang == "en" %}
+    <aside class="mt-8 rounded-xl border border-gray-200 bg-pool-section p-6" aria-labelledby="lsi-route-cost-heading">
+      <h2 id="lsi-route-cost-heading" class="text-xl font-bold text-pool-dark">Service pools for customers?</h2>
+      <p class="mt-3 text-gray-600 leading-relaxed">Water balance is one part of a service visit. Use your own chemical, travel, labor and overhead costs to estimate a break-even monthly service fee.</p>
+      <a href="/pool-route-profit-calculator/" class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-gray-900 underline hover:opacity-90">Estimate your pool route costs &rarr;</a>
+    </aside>
+    {% endif %}
   </div>
 </section>
 
