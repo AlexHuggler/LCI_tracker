@@ -61,6 +61,7 @@
         <ul class="space-y-2">
           <li><a href="{% if page.lang == 'en-AU' %}/au/#australian-guides{% else %}/blog/{% endif %}" class="text-gray-400 hover:text-white text-sm transition-colors">{% if page.lang == "en-AU" %}Australian guides{% else %}{{ t.footer.link_blog }}{% endif %}</a></li>
           <li><a href="{{ lp }}/tools/" class="text-gray-400 hover:text-white text-sm transition-colors">{{ t.footer.link_tools }}</a></li>
+          {% if cur_lang == "en" %}<li><a href="/pool-route-profit-calculator/" class="text-gray-400 hover:text-white text-sm transition-colors">Pool Route Profit Calculator</a></li>{% endif %}
           <li><a href="{{ lp }}/lsi-calculator/" class="text-gray-400 hover:text-white text-sm transition-colors">{{ t.footer.link_lsi }}</a></li>
           <li><a href="{{ lp }}/#features" class="text-gray-400 hover:text-white text-sm transition-colors">{{ t.footer.link_features }}</a></li>
           <li><a href="{{ lp }}/#pricing" class="text-gray-400 hover:text-white text-sm transition-colors">{{ t.footer.link_pricing }}</a></li>

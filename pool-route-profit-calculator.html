@@ -1,0 +1,97 @@
+---
+layout: default
+title: "Pool Route Profit Calculator — Service Costs & Break-Even"
+description: "Free pool service route cost calculator. Include chemicals, travel, labor and overhead to estimate your monthly margin and break-even fee. No sign-up."
+permalink: /pool-route-profit-calculator/
+lang: "en"
+market: "us"
+og_locale: "en_US"
+---
+<link rel="stylesheet" href="/assets/css/route-cost-calculator.css">
+<section class="rc-shell" aria-labelledby="rc-heading">
+  <nav class="rc-breadcrumb" aria-label="Breadcrumb"><a href="/">PoolFlow</a> / <a href="/tools/">Free tools</a> / Route costs</nav>
+  <h1 class="rc-heading" id="rc-heading">What does your pool route really cost?</h1>
+  <p class="rc-intro">Service fees only tell half the story. Enter your chemicals, travel, time and overhead to estimate what remains each month. The starting numbers are an example; replace them with your own.</p>
+  <div class="rc-workspace">
+    <form id="route-cost-form" class="rc-form">
+      <fieldset>
+        <legend>Your service round</legend>
+        <div class="rc-fields">
+          <div class="rc-field"><label for="rc-pools">Pools on your route</label><input id="rc-pools" name="pools" type="number" value="40" min="1" max="5000" step="1" required inputmode="numeric"></div>
+          <div class="rc-field"><label for="rc-fee">Service fee / pool / month</label><input id="rc-fee" name="fee" type="number" value="160" min="0" max="100000" step="any" required inputmode="decimal"></div>
+          <div class="rc-field"><label for="rc-visits">Visits / pool / month</label><input id="rc-visits" name="visits" type="number" value="4.333333" min="0" max="31" step="any" required inputmode="decimal" aria-describedby="rc-visits-help"></div>
+          <div class="rc-field"><label for="rc-currency">Currency for every amount</label><select id="rc-currency"><option value="USD">USD — US dollars</option><option value="AUD">AUD — Australian dollars</option><option value="CAD">CAD — Canadian dollars</option><option value="GBP">GBP — British pounds</option><option value="EUR">EUR — euros</option></select></div>
+        </div>
+        <p class="rc-help" id="rc-visits-help">Weekly service averages 52 ÷ 12 = 4.33 visits/month. Currency changes the label, without converting your numbers.</p>
+      </fieldset>
+      <fieldset>
+        <legend>Time and costs per visit</legend>
+        <div class="rc-fields">
+          <div class="rc-field"><label for="rc-chemicals">Chemical cost / visit</label><input id="rc-chemicals" name="chemicals" type="number" value="4" min="0" max="100000" step="any" required inputmode="decimal"></div>
+          <div class="rc-field"><label for="rc-laborRate">Labor allowance / hour</label><input id="rc-laborRate" name="laborRate" type="number" value="32" min="0" max="10000" step="any" required inputmode="decimal" aria-describedby="rc-labor-help"></div>
+          <div class="rc-field"><label for="rc-serviceMinutes">Service minutes / visit</label><input id="rc-serviceMinutes" name="serviceMinutes" type="number" value="20" min="0" max="1440" step="any" required inputmode="decimal"></div>
+          <div class="rc-field"><label for="rc-driveMinutes">Drive minutes / visit</label><input id="rc-driveMinutes" name="driveMinutes" type="number" value="10" min="0" max="1440" step="any" required inputmode="decimal"></div>
+          <div class="rc-field"><label for="rc-distance" id="rc-distance-label">Miles per visit</label><input id="rc-distance" name="distance" type="number" value="4" min="0" max="10000" step="any" required inputmode="decimal"></div>
+          <div class="rc-field"><label for="rc-distanceCost" id="rc-unit-label">Vehicle cost / mile</label><input id="rc-distanceCost" name="distanceCost" type="number" value="0.50" min="0" max="1000" step="any" required inputmode="decimal"></div>
+          <div class="rc-field"><label for="rc-unit">Distance unit</label><select id="rc-unit"><option value="mi">Miles</option><option value="km">Kilometers</option></select></div>
+          <div class="rc-field"><label for="rc-overhead">Other overhead / month</label><input id="rc-overhead" name="overhead" type="number" value="700" min="0" max="10000000" step="any" required inputmode="decimal"></div>
+        </div>
+        <p class="rc-help" id="rc-labor-help">Allow for your own time or loaded payroll. Include insurance, tools, software and admin in overhead without counting the same cost twice. Include the drive to your first stop and home in your averages.</p>
+      </fieldset>
+      <fieldset>
+        <legend>Check a pricing scenario</legend>
+        <div class="rc-fields"><div class="rc-field"><label for="rc-targetMargin">Your target margin (%)</label><input id="rc-targetMargin" name="targetMargin" type="number" value="20" min="0" max="95" step="any" required inputmode="decimal"></div></div>
+        <p class="rc-help">This is your planning target, not a recommended industry rate.</p>
+      </fieldset>
+      <div class="rc-actions"><button id="rc-example" type="button" class="rc-button">Reset example</button><button id="rc-export" type="button" class="rc-button">Download estimate CSV</button></div>
+      <p class="rc-help">Your inputs stay in this page. No sign-up, no upload, no saved customer data.</p>
+    </form>
+    <aside class="rc-summary" aria-label="Monthly estimate">
+      <p id="rc-error" class="rc-error" role="alert" hidden></p>
+      <div id="rc-results" aria-live="polite" aria-atomic="true">
+        <h2>Remaining after your labor allowance</h2>
+        <p class="rc-main-number" id="rc-surplus">—</p>
+        <p class="rc-margin" id="rc-margin">Monthly planning estimate</p>
+        <dl class="rc-costs">
+          <div><dt>Service revenue</dt><dd id="rc-output-revenue">—</dd></div>
+          <div><dt>Chemicals</dt><dd id="rc-output-chemicals">—</dd></div>
+          <div><dt>Vehicle costs</dt><dd id="rc-output-travel">—</dd></div>
+          <div><dt>Labor allowance</dt><dd id="rc-output-labor">—</dd></div>
+          <div><dt>Other overhead</dt><dd id="rc-output-overhead">—</dd></div>
+          <div class="rc-total"><dt>Total entered costs</dt><dd id="rc-output-cost">—</dd></div>
+          <div><dt>Before labor allowance</dt><dd id="rc-output-beforeLabor">—</dd></div>
+          <div><dt>Service + drive time</dt><dd id="rc-routeHours">—</dd></div>
+        </dl>
+        <dl class="rc-costs rc-price-check">
+          <div><dt>Break-even fee / pool / month</dt><dd id="rc-output-breakEvenFee">—</dd></div>
+          <div><dt id="rc-targetLabel">Fee for your target margin</dt><dd id="rc-output-targetFee">—</dd></div>
+          <div><dt>Cost of one extra visit</dt><dd id="rc-output-extraVisitCost">—</dd></div>
+        </dl>
+        <p id="rc-note" class="rc-note"></p>
+      </div>
+      <div class="rc-offer">
+        <h3>Use real records on your next round.</h3>
+        <p>PoolFlow brings service logs, water readings and route work onto your iPhone or iPad. Pro adds recorded chemical-cost comparisons and unlimited pools. This calculator includes labor and overhead separately.</p>
+        <a class="rc-cta" href="{{ site.data.market.app_store.url }}">Try PoolFlow free on 5 pools</a>
+        <p class="rc-offer-note">PoolFlow is an iOS app. Free for up to five pools; optional Pro subscriptions are confirmed through Apple. <a href="/#pricing">View current US pricing</a>.</p>
+      </div>
+    </aside>
+  </div>
+  <noscript><p class="rc-error">Enable JavaScript to calculate the estimate. The method below shows every formula.</p></noscript>
+  <div class="rc-method">
+    <h2>How the estimate works</h2>
+    <p>Monthly revenue = pools × monthly service fee. Monthly visits = pools × visits per pool. Chemical and vehicle costs scale with visits. Labor allowance = visits × (service minutes + drive minutes) ÷ 60 × hourly allowance. Other overhead is one monthly amount.</p>
+    <p>Remaining amount = revenue − chemicals − vehicle costs − labor allowance − overhead. Break-even fee = total entered costs ÷ pools. Fee at your target margin = total entered costs ÷ (1 − target margin) ÷ pools. A 20% margin uses 0.20 in this formula; margin is different from markup.</p>
+    <h3>What to include in your numbers</h3>
+    <ul><li>Use actual chemical purchase costs and average usage across seasons.</li><li>Allow for fuel, vehicle wear and the distance from your first to last stop, including your return trip.</li><li>For employees, include payroll burden in labor. For an owner, enter a value for your own time and distinguish that allowance from cash paid out.</li><li>Add admin time, insurance, tools, software and other costs to overhead when they are not already included.</li></ul>
+    <p>This is a scenario estimate before taxes, debt payments, major repairs and capital purchases. It includes only the costs you enter; missing costs will overstate what remains. It does not forecast guaranteed profit or savings, calculate chemical doses, or replace your actual business records.</p>
+    <h3>Why a monthly average matters</h3>
+    <p>Four visits every month represents 48 visits per year. Weekly service over 52 weeks averages about 4.33 each month. Use your actual service agreement and skip weeks when choosing the visit count. Changing currency or distance units only changes labels; enter matching amounts yourself.</p>
+    <p><a href="/tools/">Explore the other free pool tools</a> · <a href="/support/">PoolFlow support</a></p>
+  </div>
+</section>
+<script src="/assets/js/route-cost-engine.js" defer></script>
+<script src="/assets/js/route-cost-calculator.js" defer></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Pool Route Profit Calculator","url":"https://poolflowapp.com/pool-route-profit-calculator/","applicationCategory":"BusinessApplication","operatingSystem":"Any modern browser","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"description":"Estimate pool service route costs, a monthly labor allowance and break-even service fees from your own inputs.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
