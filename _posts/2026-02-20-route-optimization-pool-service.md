@@ -160,4 +160,4 @@ Day-of-week assignment tools let you drag and drop customers between days while 
 
 The app tracks service duration at every stop, giving you the data needed to calculate your service-to-drive-time ratio and identify days that need rebalancing. When you add or lose a customer, PoolFlow suggests route adjustments that maintain geographic clustering across all days.
 
-With iCloud sync, your optimized routes stay current across all your devices, ensuring that whether you are planning at home or navigating in the field, you always have the most efficient path forward. Plans start at [$29.99/mo or $299.99/yr](/#pricing).
+With iCloud sync, your optimized routes stay current across all your devices, ensuring that whether you are planning at home or navigating in the field, you always have the most efficient path forward. Plans start at [${{ site.data.market.pricing.monthly.price }}/mo or ${{ site.data.market.pricing.annual.regular_price }}/yr](/#pricing).

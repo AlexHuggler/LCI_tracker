@@ -171,4 +171,4 @@ Service duration is captured automatically through timestamped check-in and chec
 
 CSV export lets you pull this data into spreadsheets for deeper analysis, while PDF service reports give you the documentation needed to support price conversations with customers.
 
-With profit analytics running continuously in the background, you always know which accounts are earning their keep and which are dragging your business down. Get started at [$29.99/mo or $299.99/yr](/#pricing).
+With profit analytics running continuously in the background, you always know which accounts are earning their keep and which are dragging your business down. Get started at [${{ site.data.market.pricing.monthly.price }}/mo or ${{ site.data.market.pricing.annual.regular_price }}/yr](/#pricing).

@@ -250,4 +250,4 @@ Each dose is logged with its cost so you always know what each pool is consuming
 
 **Equipment tracking** turns routine observations into revenue opportunities. When you log a worn pump bearing or a scaling salt cell, PoolFlow keeps that record so you can proactively recommend and schedule the repair, generating add-on service revenue.
 
-PoolFlow's **free tier** supports up to 5 pools, giving new operators the tools to track profitability from day one. **[PoolFlow Pro at $29.99 per month or $299.99 per year](/#pricing)** unlocks the full analytics suite for operators managing larger routes who need comprehensive cost and profitability data to make confident pricing decisions.
+PoolFlow's **free tier** supports up to 5 pools, giving new operators the tools to track profitability from day one. **[PoolFlow Pro at ${{ site.data.market.pricing.monthly.price }} per month or ${{ site.data.market.pricing.annual.regular_price }} per year](/#pricing)** unlocks the full analytics suite for operators managing larger routes who need comprehensive cost and profitability data to make confident pricing decisions.

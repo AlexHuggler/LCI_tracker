@@ -28,6 +28,16 @@
   <a href="#main-content" class="skip-to-content">Skip to content</a>
 
   {% include nav.html %}
+  {% assign pricing_notice_lang = page.lang | default: site.lang | default: "en" %}
+  {% assign pricing_notice_us = site.data.market.pricing.monthly.price | prepend: "$" %}
+  {% assign pricing_notice_au = site.data.market.australia.pricing.monthly.price | prepend: "A$" %}
+  {% if pricing_notice_lang contains "en" %}
+  {% if content contains pricing_notice_us or content contains pricing_notice_au %}
+  <aside class="bg-pool-dark text-white text-center px-4 py-3 text-sm" aria-label="Pricing update">
+    New Pro prices shown on this page apply from {{ site.data.market.pricing_effective_label }}. Confirm your local price and any eligible offer on Apple’s purchase screen.
+  </aside>
+  {% endif %}
+  {% endif %}
 
   <main id="main-content" class="flex-1" role="main">
     {{ content }}

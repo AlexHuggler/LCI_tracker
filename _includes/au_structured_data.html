@@ -25,6 +25,7 @@
           "name": "PoolFlow Pro Monthly",
           "price": {{ site.data.market.australia.pricing.monthly.price | jsonify }},
           "priceCurrency": "AUD",
+          "validFrom": {{ site.data.market.pricing_effective_date | jsonify }},
           "url": {{ site.data.market.australia.app_store_url | jsonify }},
           "eligibleRegion": { "@type": "Country", "name": "Australia" }
         },
@@ -33,6 +34,7 @@
           "name": "PoolFlow Pro Annual",
           "price": {{ site.data.market.australia.pricing.annual.regular_price | jsonify }},
           "priceCurrency": "AUD",
+          "validFrom": {{ site.data.market.pricing_effective_date | jsonify }},
           "url": {{ site.data.market.australia.app_store_url | jsonify }},
           "eligibleRegion": { "@type": "Country", "name": "Australia" }
         }

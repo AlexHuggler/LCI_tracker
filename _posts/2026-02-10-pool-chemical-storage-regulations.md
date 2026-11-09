@@ -164,4 +164,4 @@ The platform's **route optimization features** enable more efficient delivery sc
 
 **Digital record-keeping** through PoolFlow simplifies the documentation requirements for chemical inventory, usage logs, and service records that regulators expect to see during inspections.
 
-Start with PoolFlow's free tier for up to 5 pools, or upgrade to [PoolFlow Pro at $29.99/mo ($299.99/yr)](/#pricing) for full route management with complete inventory tracking and compliance documentation.
+Start with PoolFlow's free tier for up to 5 pools, or upgrade to [PoolFlow Pro at ${{ site.data.market.pricing.monthly.price }}/mo (${{ site.data.market.pricing.annual.regular_price }}/yr)](/#pricing) for full route management with complete inventory tracking and compliance documentation.

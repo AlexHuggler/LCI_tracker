@@ -40,6 +40,8 @@ PoolFlow's website and iOS app are available in:
 
 ## Plans and local pricing
 
+- From November 11, 2026: US PoolFlow Pro $4.99/month or $39.99/year. Prices vary by storefront; Apple’s purchase confirmation controls the applicable amount.
+
 - Free tier — up to 5 pools, all core features
 - Optional Pro subscription — unlimited pools and advanced features
 - Apple displays current local pricing and any introductory offer in the relevant App Store storefront
@@ -63,7 +65,7 @@ PoolFlow's website and iOS app are available in:
 
 ## Australia
 
-- Australian App Store pricing verified 20 August 2026: free for up to 5 pools; PoolFlow Pro A$49.99 monthly or A$299.99 annually; Apple shows an approximately 30-day introductory period for eligible customers. The storefront controls the final terms.
+- Australian App Store pricing scheduled for November 11, 2026 (verified November 9): free for up to 5 pools; PoolFlow Pro A$7.99 monthly or A$59.99 annually; Apple shows an approximately 30-day introductory period for eligible customers. The storefront controls the final terms.
 - PoolFlow is designed for Australian sole traders who need routes, water testing, LSI and dosing, service logs, offline work and per-pool margin without fleet dispatch, payroll, employee tracking, invoicing or office-system overhead.
 - Australian tools use metric-first defaults: https://poolflowapp.com/au/tools/
 - LSI calculator: https://poolflowapp.com/au/lsi-calculator/

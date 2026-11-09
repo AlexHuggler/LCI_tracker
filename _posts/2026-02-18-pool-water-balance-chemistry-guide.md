@@ -225,4 +225,4 @@ When any parameter falls outside its ideal range, PoolFlow calculates exact dosi
 
 Historical tracking across service visits reveals trends in every parameter, allowing technicians to anticipate problems and adjust proactively. For commercial accounts requiring [regulatory compliance](/blog/commercial-pool-vs-residential-regulations/), PoolFlow generates the documentation and audit trails that health departments require, while its route management features ensure every pool receives timely, consistent service.
 
-Start with PoolFlow's free tier for up to 5 pools, or upgrade to [PoolFlow Pro at $29.99/mo ($299.99/yr)](/#pricing) to manage your full route.
+Start with PoolFlow's free tier for up to 5 pools, or upgrade to [PoolFlow Pro at ${{ site.data.market.pricing.monthly.price }}/mo (${{ site.data.market.pricing.annual.regular_price }}/yr)](/#pricing) to manage your full route.

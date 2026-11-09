@@ -212,4 +212,4 @@ Building this structure into your [business operations](/blog/start-pool-service
 
 **Profit analytics.** The 30 percent chemical cost threshold keeps your seasonal pricing aligned with your actual costs.
 
-Start free with up to 5 pools on PoolFlow's free tier, or manage your full seasonal operation with [PoolFlow Pro at $29.99 per month or $299.99 per year](/#pricing).
+Start free with up to 5 pools on PoolFlow's free tier, or manage your full seasonal operation with [PoolFlow Pro at ${{ site.data.market.pricing.monthly.price }} per month or ${{ site.data.market.pricing.annual.regular_price }} per year](/#pricing).

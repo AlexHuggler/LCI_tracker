@@ -1,8 +1,11 @@
 # One source of truth for store availability and public pricing. Keep each
-# market's figures aligned with its live App Store storefront.
+# market's figures aligned with the confirmed App Store price schedule.
 app_store:
   url: "https://apps.apple.com/app/id6759516755"
   au_url: "https://apps.apple.com/au/app/poolflow-pool-service-pro/id6759516755"
+
+pricing_effective_date: "2026-11-11"
+pricing_effective_label: "November 11, 2026"
 
 pricing:
   currency: "USD"
@@ -11,15 +14,15 @@ pricing:
     price: "0"
     pool_limit: 5
   monthly:
-    price: "29.99"
+    price: "4.99"
     interval: "month"
   annual:
-    regular_price: "299.99"
-    sale_price: "199.99"
-    sale_active: true
+    regular_price: "39.99"
+    sale_price: "39.99"
+    sale_active: false
     interval: "year"
-    monthly_equivalent: "16.67"
-    savings: "100"
+    monthly_equivalent: "3.33"
+    savings: "19.89"
 
 australia:
   app_store_url: "https://apps.apple.com/au/app/poolflow-pool-service-pro/id6759516755"
@@ -31,12 +34,12 @@ australia:
       price: "0"
       pool_limit: 5
     monthly:
-      price: "49.99"
+      price: "7.99"
       interval: "month"
     annual:
-      regular_price: "299.99"
-      sale_price: "299.99"
+      regular_price: "59.99"
+      sale_price: "59.99"
       sale_active: false
       interval: "year"
-      monthly_equivalent: "25.00"
-      savings: "299.89"
+      monthly_equivalent: "5.00"
+      savings: "35.89"

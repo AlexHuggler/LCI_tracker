@@ -54,7 +54,7 @@ PoolFlow cell: row.poolflow true=check, false=X, string=text label.
       <tr class="category-row"><td colspan="{{ colcount }}">Published Pricing</td></tr>
       <tr>
         <td class="text-sm text-gray-700">Starting price / model</td>
-        <td class="poolflow-col"><span class="text-sm font-semibold text-emerald-600">$29.99/mo flat</span></td>
+        <td class="poolflow-col"><span class="text-sm font-semibold text-emerald-600">${{ site.data.market.pricing.monthly.price }}/mo flat</span></td>
         {%- for c in competitors -%}
         <td>
           <span class="text-sm font-semibold text-gray-700">{{ c.pricing.card_value }}</span>
