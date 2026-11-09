@@ -144,4 +144,4 @@ Every dose is logged with **cost tracking**, and **profit analytics** monitor th
 
 The **chemical inventory system** prevents mid-route supply shortages, while **route optimization** using nearest-neighbor and 2-opt algorithms minimizes drive time. Explore all [PoolFlow features](/#features) to see how dosing, tracking, and routing work together.
 
-Start with the free tier for up to 5 pools, or unlock the full dosing engine with PoolFlow Pro at [$29.99 per month or $299.99 per year](/#pricing).
+Start with the free tier for up to 5 pools, or unlock the full dosing engine with PoolFlow Pro at [${{ site.data.market.pricing.monthly.price }} per month or ${{ site.data.market.pricing.annual.regular_price }} per year](/#pricing).

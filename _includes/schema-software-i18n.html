@@ -14,8 +14,8 @@
   "sameAs": [{{ site.data.market.app_store.url | jsonify }}],
   "offers": [
     { "@type": "Offer", "price": {{ site.data.market.pricing.free.price | jsonify }}, "priceCurrency": {{ site.data.market.pricing.currency | jsonify }}, "description": "Free tier — up to {{ site.data.market.pricing.free.pool_limit }} pools" },
-    { "@type": "Offer", "price": {{ site.data.market.pricing.monthly.price | jsonify }}, "priceCurrency": {{ site.data.market.pricing.currency | jsonify }}, "description": "Pro Monthly — unlimited pools, all features" },
-    { "@type": "Offer", "price": {% if site.data.market.pricing.annual.sale_active %}{{ site.data.market.pricing.annual.sale_price | jsonify }}{% else %}{{ site.data.market.pricing.annual.regular_price | jsonify }}{% endif %}, "priceCurrency": {{ site.data.market.pricing.currency | jsonify }}, "description": "Pro Annual — best value" }
+    { "@type": "Offer", "price": {{ site.data.market.pricing.monthly.price | jsonify }}, "priceCurrency": {{ site.data.market.pricing.currency | jsonify }}, "validFrom": {{ site.data.market.pricing_effective_date | jsonify }}, "description": "Pro Monthly — unlimited pools, all features" },
+    { "@type": "Offer", "price": {% if site.data.market.pricing.annual.sale_active %}{{ site.data.market.pricing.annual.sale_price | jsonify }}{% else %}{{ site.data.market.pricing.annual.regular_price | jsonify }}{% endif %}, "priceCurrency": {{ site.data.market.pricing.currency | jsonify }}, "validFrom": {{ site.data.market.pricing_effective_date | jsonify }}, "description": "Pro Annual — best value" }
   ],
   "featureList": [{% for feature in t.seo.feature_list %}{{ feature | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}],
   "audience": {

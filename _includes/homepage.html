@@ -300,7 +300,7 @@
         Simple, Transparent Pricing
       </h2>
       <p class="mt-4 text-lg text-gray-700 leading-relaxed">
-        One price. Every feature. No per-pool fees. Ever.
+        New Pro prices from {{ site.data.market.pricing_effective_label }}. Apple’s purchase confirmation shows the applicable price and offer.
       </p>
     </div>
 
@@ -459,7 +459,7 @@
             <span class="text-gray-500">/year</span>
           </div>
         {% endif %}
-        <p class="mt-1 text-sm text-gray-500 italic">Same Pro features, billed annually</p>
+        <p class="mt-1 text-sm text-gray-500 italic">Same Pro features, billed annually. Savings compared with 12 monthly payments.</p>
         {% if market_price.annual.sale_active %}
           <p class="mt-1 text-sm text-gray-700">{{ market_symbol }}{{ market_price.annual.monthly_equivalent }}/mo billed annually</p>
         {% else %}
@@ -579,14 +579,14 @@
         </div>
       </div>
 
-      <!-- FAQ 2: Is $29.99 really everything? -->
+      <!-- FAQ 2: Monthly plan inclusions -->
       <div class="border border-gray-200 rounded-xl overflow-hidden bg-white animate-on-scroll">
         <button class="faq-toggle w-full flex items-center justify-between px-6 py-4 text-left font-semibold text-pool-dark hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-pool-blue focus:ring-inset" aria-expanded="false">
-          <span class="pr-4">Is {{ market_symbol }}{{ market_price.monthly.price }}/mo really everything?</span>
+          <span class="pr-4">What is included at {{ market_symbol }}{{ market_price.monthly.price }}/mo from {{ site.data.market.pricing_effective_label }}?</span>
           <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
-          <p>Yes. No per-pool fees. No per-tech fees. No add-on charges. Unlimited pools, all features, one price. {% if market_price.annual.sale_active %}The annual plan is on sale at {{ market_symbol }}{{ market_price.annual.sale_price }}/yr ({{ market_symbol }}{{ market_price.annual.monthly_equivalent }}/mo).{% else %}The annual plan is {{ market_symbol }}{{ market_price.annual.regular_price }}/yr ({{ market_symbol }}{{ market_price.annual.monthly_equivalent }}/mo).{% endif %}</p>
+          <p>Unlimited pools and all Pro features, with no per-pool fees, per-technician fees or add-on charges. {% if market_price.annual.sale_active %}The annual plan is on sale at {{ market_symbol }}{{ market_price.annual.sale_price }}/yr ({{ market_symbol }}{{ market_price.annual.monthly_equivalent }}/mo).{% else %}The annual plan is {{ market_symbol }}{{ market_price.annual.regular_price }}/yr ({{ market_symbol }}{{ market_price.annual.monthly_equivalent }}/mo).{% endif %}</p>
         </div>
       </div>
 
@@ -678,7 +678,7 @@
           <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
         </button>
         <div class="faq-content hidden px-6 pb-5 text-gray-700 leading-relaxed">
-          <p>No. PoolFlow does not operate a backend server. All data is stored locally on your device. If you upgrade to Pro, you can optionally enable iCloud sync, which stores data in your personal iCloud account — never on our servers.</p>
+          <p>Pool and service records are stored on your device. With Pro, PoolFlow automatically syncs supported records to your private iCloud account when iCloud is available to the app. Subscription processing uses Apple and RevenueCat; see our privacy policy for details.</p>
         </div>
       </div>
 
@@ -746,10 +746,10 @@
       },
       {
         "@type": "Question",
-        "name": "Is $29.99/mo really everything?",
+        "name": "What is included at ${{ site.data.market.pricing.monthly.price }}/mo from {{ site.data.market.pricing_effective_label }}?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. No per-pool fees. No per-tech fees. No add-on charges. Unlimited pools, all features, one price. {% if site.data.market.pricing.annual.sale_active %}The annual plan is on sale at ${{ site.data.market.pricing.annual.sale_price }}/yr (${{ site.data.market.pricing.annual.monthly_equivalent }}/mo).{% else %}The annual plan is ${{ site.data.market.pricing.annual.regular_price }}/yr.{% endif %}"
+          "text": "Unlimited pools and all Pro features, with no per-pool fees, per-technician fees or add-on charges. {% if site.data.market.pricing.annual.sale_active %}The annual plan is on sale at ${{ site.data.market.pricing.annual.sale_price }}/yr (${{ site.data.market.pricing.annual.monthly_equivalent }}/mo).{% else %}The annual plan is ${{ site.data.market.pricing.annual.regular_price }}/yr.{% endif %}"
         }
       },
       {
@@ -813,7 +813,7 @@
         "name": "Is my data stored on a server?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. PoolFlow does not operate a backend server. All data is stored locally on your device. If you upgrade to Pro, you can optionally enable iCloud sync, which stores data in your personal iCloud account — never on our servers."
+          "text": "Pool and service records are stored on your device. With Pro, PoolFlow automatically syncs supported records to your private iCloud account when iCloud is available to the app. Subscription processing uses Apple and RevenueCat; see our privacy policy for details."
         }
       },
       {
@@ -867,7 +867,7 @@
       Run Your Route With PoolFlow.
     </h2>
     <p class="mt-6 text-lg sm:text-xl text-blue-100 leading-relaxed">
-      PoolFlow Pro is {{ market_symbol }}{{ market_price.monthly.price }}/month or {% if market_price.annual.sale_active %}{{ market_symbol }}{{ market_price.annual.sale_price }}/year{% else %}{{ market_symbol }}{{ market_price.annual.regular_price }}/year{% endif %}. Every feature. Every pool. No per-pool fees. Apple may show an introductory offer for eligible customers; confirm the offer and terms on the App Store purchase screen.
+      From {{ site.data.market.pricing_effective_label }}, PoolFlow Pro is {{ market_symbol }}{{ market_price.monthly.price }}/month or {% if market_price.annual.sale_active %}{{ market_symbol }}{{ market_price.annual.sale_price }}/year{% else %}{{ market_symbol }}{{ market_price.annual.regular_price }}/year{% endif %}. Every feature. Every pool. No per-pool fees. Apple may show an introductory offer for eligible customers; confirm the offer and terms on the App Store purchase screen.
     </p>
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
       <a href="{{ market_store_url }}" class="inline-flex max-w-full items-center justify-center gap-2 bg-white text-pool-dark font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors shadow-lg text-lg whitespace-normal">

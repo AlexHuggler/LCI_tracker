@@ -125,4 +125,4 @@ Every dose is tracked with cost data.
 
 The **chemical inventory system** tracks your supplies, and **service logging** with photo documentation lets you record CYA test results and partial drain progress. PoolFlow's **profit analytics** flag accounts where chemical costs exceed the 30 percent threshold, which high-CYA pools frequently trigger due to excessive chlorine consumption.
 
-Get started with PoolFlow's free tier covering up to 5 pools, or upgrade to [PoolFlow Pro at $29.99 per month ($299.99 per year)](/#pricing) to manage your full route with complete chemistry tracking and analytics.
+Get started with PoolFlow's free tier covering up to 5 pools, or upgrade to [PoolFlow Pro at ${{ site.data.market.pricing.monthly.price }} per month (${{ site.data.market.pricing.annual.regular_price }} per year)](/#pricing) to manage your full route with complete chemistry tracking and analytics.

@@ -1,8 +1,8 @@
 - question: "How does PoolFlow compare to Skimmer?"
   answer: "Both products are built for pool service. Skimmer documents Orenda-powered LSI and dosing plus route optimization on Scaling Up and higher plans, along with invoicing and a customer portal. PoolFlow emphasizes offline-first fieldwork, cost-linked dosing, and per-pool margin at a flat subscription price."
 
-- question: "Is $29.99/mo really everything?"
-  answer: "PoolFlow Pro is $29.99 per month with unlimited pools and no per-pool or per-technician fee. An annual option is also shown in the app; the App Store purchase screen is the final authority for the current price and trial."
+- question: "What is included at $4.99/mo from November 11, 2026?"
+  answer: "From November 11, 2026, PoolFlow Pro is $4.99 per month with unlimited pools and no per-pool or per-technician fee. An annual option is also shown in the app; the App Store purchase screen is the final authority for the current price and trial."
 
 - question: "How long does it take to switch from another app?"
   answer: "PoolFlow supports CSV import for pool names, addresses, service days, fees, and specifications. The time required depends on the quality and format of the source file; review the preview and keep a backup before importing."
@@ -26,7 +26,7 @@
   answer: "The LSI is a calculated number that predicts whether pool water will tend to dissolve (corrode) or deposit (scale) calcium carbonate. PoolFlow calculates LSI in real-time with CYA correction, factoring in pH, temperature, calcium hardness, total alkalinity, TDS, and cyanuric acid. An LSI between -0.3 and +0.3 is considered balanced."
 
 - question: "Is my data stored on a server?"
-  answer: "No. PoolFlow does not operate a backend server. All data is stored locally on your device. If you upgrade to Pro, you can optionally enable iCloud sync, which stores data in your personal iCloud account — never on our servers."
+  answer: "Pool and service records are stored on your device. With Pro, PoolFlow automatically syncs supported records to your private iCloud account when iCloud is available to the app. Subscription processing uses Apple and RevenueCat; see our privacy policy for details."
 
 - question: "What happens if I cancel my subscription?"
   answer: "If you cancel Pro, you keep access until the end of your billing period. After that, you return to the free tier (5 pool limit). All your data remains on your device — nothing is deleted."
